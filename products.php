@@ -53,11 +53,14 @@
                     window for your home’s look and your family’s needs.
                 </p>
                 <div id=windowTypes>           
-                    <div id="vinylDiv">
-                        <img src="./assets/img/vinyl.png">
-                        <div id="vinylDesc">
+                    <div id="vinylDiv" class="item">
+                        <div class="imageContainer left">
+                            <img src="./assets/img/vinyl.png" alt="vinyl" class="example"/>
+                        </div>
+                        <div id="vinylDesc" class="descriptionContainer right">
                             <div id="vinylHeader">
                                 <h4>01</h4>
+                                <hr />
                                 <h4>Vinyl Windows</h4>
                             </div>
                             <p>
@@ -76,11 +79,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="woodDiv">
-                        <img src="./assets/img/wood.png">
-                        <div id="woodDesc">
+                    <div id="woodDiv" class="item">
+                        <div id="woodDesc" class="descriptionContainer left">
                             <div id="woodHeader">
                                 <h4>02</h4>
+                                <hr />
                                 <h4>Wood Windows</h4>
                             </div>
                             <p>
@@ -97,6 +100,9 @@
                                 <li>- High quality craftsmanship</li>
                             </ul>
                         </div>
+                        <div class="imageContainer right">
+                            <img src="./assets/img/wood.png" alt="wood" class="example"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -109,16 +115,19 @@
                     Increase the curb appeal of your home with a new entry door system from Oakville Windows & Doors. Whether you need a
                     replacement for your front door, back door, garden door, patio door or any other type of exterior door, we have a wide
                     selection to fit your needs and style. Our doors feature a 3 lock system to keep your home safe.
-                    <br />
+                    <br /><br />
                     From replacing a single door to upgrading all of the doors on your home for a beautiful, cohesive look, we work with you to
                     find the door with the right style, fit and features for you and your home. 
                 </p>
                 <div id="doorTypes">
-                    <div id="fibreglassDiv">
-                        <img src="./assets/img/fibreglass.png">
-                        <div id="fibreglassDesc">
+                    <div id="fibreglassDiv" class="item">
+                        <div class="imageContainer left">
+                            <img src="./assets/img/fibreglass.png" alt="fibreglass" class="example"/>
+                        </div>
+                        <div id="fibreglassDesc" class="descriptionContainer right">
                             <div id="fibreglassHeader">
                                 <h4>01</h4>
+                                <hr />
                                 <h4>Fibreglass Doors</h4>
                             </div>
                             <p>
@@ -139,11 +148,11 @@
                             </ul>
                         </div>
                     </div>
-                    <div id="steelDiv">
-                        <img src="./assets/img/steel.png">
-                        <div id="steelDesc">
+                    <div id="steelDiv" class="item">
+                        <div id="steelDesc" class="descriptionContainer left">
                             <div id="steelHeader">
                                 <h4>02</h4>
+                                <hr />
                                 <h4>Steel Doors</h4>
                             </div>
                             <p>
@@ -163,17 +172,19 @@
                                 <li>- Thousands of colours to choose from</li>
                             </ul>
                         </div>
+                        <div class="imageContainer right">
+                            <img src="./assets/img/steel.png" alt="steel" class="example">
+                        </div>
                     </div>
                 </div>
-                <div class="orange seperator">
-                    <p>
-                        Whether you<span class="quote">’</span>re looking for wood, fibreglass or steel
-                        door systems for your home, you can expect only
-                        the best quality from Oakville Windows & Doors.
-                        <br />
-                        <a href="#" alt="3Point" id="3Point">Learn more about our 3 lock system</a>
-                    </p>
-                </div>
+            </div>
+            <div class="orange seperator">
+                <p>
+                    Whether you<span class="quote">’</span>re looking for wood, fibreglass or steel
+                    door systems for your home, you can expect only
+                    the best quality from Oakville Windows & Doors.
+                </p>
+                <a href="#" alt="3Point" id="threePoint">Learn more about our 3 lock system</a>
             </div>
         </div>
     </body>

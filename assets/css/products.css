@@ -18,168 +18,305 @@
     src: url(../fonts/Arimo-Regular.ttf)
 }
 
-html {
-    height: auto;
-    color: black;
-    background-color: white;
-    font-family: "Arimo";
-    width: 100vw;
-    letter-spacing: 0.4pt;
-    overflow-x: hidden;
-}
-h1,h2,h3,h4,p {
-    font-family: "Arimo";
+@media only screen and ( min-width: 1200px )
+{
+    html {
+        height: auto;
+        color: black;
+        background-color: white;
+        font-family: "Arimo";
+        width: 100vw;
+        letter-spacing: 0.4pt;
+        overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4,p,li {
+        font-family: "Arimo";
+        direction: ltr;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    body {
+        text-align: center;
+    }
+
+    #main {
+        text-align: left;
+        margin: 0 auto;
+        width: 1250px;
+    }
+
+    nav {
+        display: inline-block;
+        height: 5vh;
+    }
+
+    nav > *, ul#nav > li {
+        display: inline-block;
+    }
+
+    ul#nav {
+        width: 900px;
+    }
+
+    ul#nav > li {
+        color: black;
+        vertical-align: middle;
+        height: 5vh;
+        margin-left: 2vw;
+        transition: color 0.25s, font-size 0.25s;
+    }
+
+    ul#nav > li:hover {
+        color: var(--orange);
+        font-size: larger;
+        cursor: pointer;
+    }
+
+    #logo {
+        height: 5vh;
+        max-width: 100%;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    h1 {
+        font-size: 3.5em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+
+    #services {
+        margin-top: 2em;
+        margin-bottom: 10em;
+    }
+
+    #windowInstallation > div, #doorInstallation > div {
+        position: relative;
+    }
+
+    #windowInstallation > .orange, #doorInstallation > .gray {
+        height: 37vh;
+        color: white;
+        vertical-align: bottom;
+        width: 60%;
+    }
+
+    #windowInstallation > .orange {
+        background-color: var(--orange);
+        margin-left: 40%;
+    }
+
+    #doorInstallation > .gray {
+        background-color: var(--gray);
+        margin-right: 40%;
+    }
+
+    h2, .arrow {
+        position: absolute;
+        bottom: 0;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 75px;
+    }
+
+    .arrow {
+        width: 2.5em;
+        bottom: 1.75em;
+    }
+
+    #windowInstallation > div > div > .arrow {
+        left: 400px;
+    }
+
+    #windowInstallation > div > div > h2 {
+        margin-left: 300px;
+    }
+
+    #doorInstallation > div > div > .arrow {
+        left: 250px;
+    }
+
+    #doorInstallation > div > div > h2 {
+        margin-left: 150px;
+    }
+
+    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #windowInstallation > div > div > #windowArrow, #doorInstallation > div > div > #doorArrow {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .blurb {
+        width: 55%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        background-color: white;
+        border-radius: 5px;
+        z-index: 2;
+        line-height: 1.5em;
+        margin-top: 5em;
+        font-size: 1em;
+        line-height: 1.75em;
+    }
+
+    #doorInstallation > .blurb {
+        float: right;
+        margin-right: 2em;
+        padding-left: 2em;
+    }
+
+    #windowInstallation > .blurb {
+        float: left;
+        margin-left: 2em;
+        padding-right: 1.25em;
+    }
+
+    h3 {
+        letter-spacing: 0.1pt;
+        font-size: 2em
+    }
+
+    .seperator {
+        background-color: var(--orange);
+        font-size: 2.25em;
+        letter-spacing: 1.5px;
+        line-height: 1.25em;
+        padding: 3em 5em;
+    }
+
+    a#threePoint {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 5px;
+        margin-bottom: -5em;
+        border-bottom: 3px solid white;
+    }
+
+    a#threePoint:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    img.example {
+        width: 425px;
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+    }
+
+    #windows, #doors {
+        margin-left: 3em;
+        margin-right: 4em;
+        display: block;
+    }
+
+    #doors {
+        margin-top: 8em;
+    }
+
+    #windows > p, #doors > p {
+        margin-right: 5em;
+        margin-bottom: 5em;
+        line-height: 1.5em;
+    }
+
+    .descriptionContainer {
+        width: 550px;
+    }
+
+    .imageContainer.left {
+        margin-right: 50%;
+    }
+
+    .imageContainer.right {
+        margin-left: 50%;
+    }
+
+    .descriptionContainer.left {
+        margin-right: 750px;
+    }
+
+    .descriptionContainer.right {
+        margin-left: 500px;
+    }
+
+    .item {
+        position: relative;
+    }
+
+    .item > .left {
+        position: absolute;
+        left: 0;
+    }
+
+    #vinylDiv {
+        margin-bottom: 12em;
+    }
+
+    #woodDiv {
+        margin-bottom: 10em;
+    }
+
+    #fibreglassDiv {
+        margin-bottom: 12em;
+    }
+
+    #steelDiv {
+        margin-bottom: 10em;
+    }
+
+    h4 {
+        display: inline-block;
+        color: var(--orange);
+        font-size: 1.5em;
+    }
+
+    hr {
+        display: inline-block;
+        width: 50px;
+        border-top: 2px solid var(--orange);
+        color: var(--orange);
+        vertical-align: middle;
+        margin-left: 1em;
+        margin-right: 1em;
+        line-height: 0.25em;
+    }
+
+    .hyphen > li {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .hyphen {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .descriptionContainer > p {
+        margin-bottom: 2em;
+    }
 }
 
-body {
-    text-align: center;
-}
 
-#main {
-    text-align: left;
-    margin: 0 auto;
-    width: 1200px;
-}
-
-nav {
-    display: inline-block;
-    height: 5vh;
-}
-
-nav > *, ul#nav > li {
-    display: inline-block;
-}
-
-ul#nav {
-    width: 900px;
-}
-
-ul#nav > li {
-    color: black;
-    vertical-align: middle;
-    height: 5vh;
-    margin-left: 2vw;
-    transition: color 0.25s, font-size 0.25s;
-}
-
-ul#nav > li:hover {
-    color: var(--orange);
-    font-size: larger
-}
-
-#logo {
-    height: 5vh;
-    max-width: 100%;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a#3Point {
-    color: white !important;
-    text-decoration: underline;
-}
-
-h1 {
-    font-size: 3em;
-    margin-left: 1em;
-    margin-bottom: 2em;
-}
-
-#services {
-    margin-top: 2em;
-    margin-bottom: 10em;
-}
-
-#windowInstallation > div, #doorInstallation > div {
-    position: relative;
-}
-
-#windowInstallation > .orange, #doorInstallation > .gray {
-    height: 30vh;
-    color: white;
-    vertical-align: bottom;
-    width: 70%;
-}
-
-#windowInstallation > .orange {
-    background-color: var(--orange);
-    margin-left: 30%;
-}
-
-#doorInstallation > .gray {
-    background-color: var(--gray);
-    margin-right: 30%;
-}
-
-h2, .arrow {
-    position: absolute;
-    bottom: 0;
-}
-
-h2 {
-    font-size: 2em;
-    margin-left: 250px;
-    margin-bottom: 75px;
-}
-
-.arrow {
-    width: 3em;
-    bottom: 1.75em;
-    left: 325px;
-}
-
-#windowInstallation > div > div > #windowArrow, #doorInstallation > div > div > #doorArrow {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s, opacity 0.5s linear;
-}
-
-#windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
-    visibility: visible;
-    opacity: 1;
-}
-
-.blurb {
-    width: 35%;
-    margin: 2em;
-    background-color: white;
-    border-radius: 5px;
-    z-index: 2;
-    line-height: 1.5em;
-    margin-top: 5em;
-}
-
-#doorInstallation > .blurb {
-    float: right;
-    margin-right: 10em;
-    padding-left: 2em;
-}
-
-#windowInstallation > .blurb {
-    float: left;
-    margin-left: 10em;
-}
-
-h3 {
-    letter-spacing: 0.1pt;
-    font-size: 1.75em
-}
-
-.seperator {
-    background-color: var(--orange);
-    height: 20em;
-    font-size: 2.25em;
-    letter-spacing: 1.5px;
-    line-height: 1.25em;
-    text-align: center;
-}
-
-.seperator > p {
-    text-align: left;
-    padding: 5em;
-}
 
 /*
     h1 - 95 pt
