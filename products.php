@@ -10,7 +10,7 @@
         <div id="main">
             <?php include('./layout/nav.html') ?>
             <h1>RESIDENTIAL SERVICES</h1>
-            <div>
+            <div id="services">
                 <div id="windowInstallation">
                     <div class="blurb">
                         <p>
@@ -22,16 +22,12 @@
                     </div>
                     <div class="orange">
                         <div>
-                            <h2>WINDOWS INSTALLATION</h2>
+                            <h2 id="windowHeader">WINDOW<br/>INSTALLATION</h2>
+                            <img src="./assets/img/arrow.png" alt="arrow" id="windowArrow" class="arrow"/>
                         </div>
                     </div>
                 </div>
                 <div id="doorInstallation">
-                    <div class="gray">
-                        <div>
-                            <h2>DOOR INSTALLATION</h2>
-                        </div>
-                    </div>
                     <div class="blurb">
                         <p>
                             Increase the curb appeal of your home with a new entry door
@@ -40,6 +36,12 @@
                             door or any other type of exterior door, we have a wide
                             selection to fit your needs and style.
                         </p>
+                    </div>
+                    <div class="gray">
+                        <div id="doorHeader">
+                            <h2>DOOR<br/>INSTALLATION</h2>
+                            <img src="./assets/img/arrow.png" alt="arrow" id="doorArrow" class="arrow"/>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,7 +77,7 @@
                         </div>
                     </div>
                     <div id="woodDiv">
-                        <img src="./assets/img/vinyl.png">
+                        <img src="./assets/img/wood.png">
                         <div id="woodDesc">
                             <div id="woodHeader">
                                 <h4>02</h4>
@@ -99,7 +101,7 @@
                 </div>
             </div>
             <div class="orange seperator">
-                <p> We're proud to provide our customers with only the best brands of wood and vinyl windows.</p>
+                <p> We<span class="quote">’</span>re proud to provide our customers with only the best brands of wood and vinyl windows.</p>
             </div>
             <div id="doors">
                 <h3>Door Installation</h3>
@@ -113,7 +115,7 @@
                 </p>
                 <div id="doorTypes">
                     <div id="fibreglassDiv">
-                        <img src="./assets/img/vinyl.png">
+                        <img src="./assets/img/fibreglass.png">
                         <div id="fibreglassDesc">
                             <div id="fibreglassHeader">
                                 <h4>01</h4>
@@ -138,7 +140,7 @@
                         </div>
                     </div>
                     <div id="steelDiv">
-                        <img src="./assets/img/vinyl.png">
+                        <img src="./assets/img/steel.png">
                         <div id="steelDesc">
                             <div id="steelHeader">
                                 <h4>02</h4>
@@ -165,7 +167,7 @@
                 </div>
                 <div class="orange seperator">
                     <p>
-                        Whether you’re looking for wood, fibreglass or steel
+                        Whether you<span class="quote">’</span>re looking for wood, fibreglass or steel
                         door systems for your home, you can expect only
                         the best quality from Oakville Windows & Doors.
                         <br />

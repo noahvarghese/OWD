@@ -22,8 +22,13 @@ html {
     height: auto;
     color: black;
     background-color: white;
-    font-family: Arimo;
+    font-family: "Arimo";
     width: 100vw;
+    letter-spacing: 0.4pt;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,p {
+    font-family: "Arimo";
 }
 
 body {
@@ -46,8 +51,7 @@ nav > *, ul#nav > li {
 }
 
 ul#nav {
-    width: 1040px;
-    font-weight: Arimo-Regular;
+    width: 900px;
 }
 
 ul#nav > li {
@@ -55,10 +59,12 @@ ul#nav > li {
     vertical-align: middle;
     height: 5vh;
     margin-left: 2vw;
+    transition: color 0.25s, font-size 0.25s;
 }
 
 ul#nav > li:hover {
     color: var(--orange);
+    font-size: larger
 }
 
 #logo {
@@ -75,34 +81,104 @@ a#3Point {
     text-decoration: underline;
 }
 
-.orange, .gray {
-    height: 20vh;
+h1 {
+    font-size: 3em;
+    margin-left: 1em;
+    margin-bottom: 2em;
+}
+
+#services {
+    margin-top: 2em;
+    margin-bottom: 10em;
+}
+
+#windowInstallation > div, #doorInstallation > div {
+    position: relative;
+}
+
+#windowInstallation > .orange, #doorInstallation > .gray {
+    height: 30vh;
     color: white;
     vertical-align: bottom;
-    width: 60%;
-    z-index: 1;
+    width: 70%;
 }
 
-.orange > h4, .gray > h4 {
-    text-align: bottom;
-    display: inline;
-}
-
-.orange {
+#windowInstallation > .orange {
     background-color: var(--orange);
-    float: right;
+    margin-left: 30%;
 }
 
-.gray {
+#doorInstallation > .gray {
     background-color: var(--gray);
-    float: left;
-    text-align: right;
+    margin-right: 30%;
+}
+
+h2, .arrow {
+    position: absolute;
+    bottom: 0;
+}
+
+h2 {
+    font-size: 2em;
+    margin-left: 250px;
+    margin-bottom: 75px;
+}
+
+.arrow {
+    width: 3em;
+    bottom: 1.75em;
+    left: 325px;
+}
+
+#windowInstallation > div > div > #windowArrow, #doorInstallation > div > div > #doorArrow {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+#windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
+    visibility: visible;
+    opacity: 1;
 }
 
 .blurb {
-    width: 50%;
+    width: 35%;
     margin: 2em;
+    background-color: white;
+    border-radius: 5px;
     z-index: 2;
+    line-height: 1.5em;
+    margin-top: 5em;
+}
+
+#doorInstallation > .blurb {
+    float: right;
+    margin-right: 10em;
+    padding-left: 2em;
+}
+
+#windowInstallation > .blurb {
+    float: left;
+    margin-left: 10em;
+}
+
+h3 {
+    letter-spacing: 0.1pt;
+    font-size: 1.75em
+}
+
+.seperator {
+    background-color: var(--orange);
+    height: 20em;
+    font-size: 2.25em;
+    letter-spacing: 1.5px;
+    line-height: 1.25em;
+    text-align: center;
+}
+
+.seperator > p {
+    text-align: left;
+    padding: 5em;
 }
 
 /*
