@@ -1,0 +1,116 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url(../fonts/Arimo-Bold.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../fonts/Arimo-Italic.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Regular;
+    src: url(../fonts/Arimo-Regular.ttf)
+}
+
+html {
+    height: auto;
+    color: black;
+    background-color: white;
+    font-family: Arimo;
+    width: 100vw;
+}
+
+body {
+    text-align: center;
+}
+
+#main {
+    text-align: left;
+    margin: 0 auto;
+    width: 1200px;
+}
+
+nav {
+    display: inline-block;
+    height: 5vh;
+}
+
+nav > *, ul#nav > li {
+    display: inline-block;
+}
+
+ul#nav {
+    width: 1040px;
+    font-weight: Arimo-Regular;
+}
+
+ul#nav > li {
+    color: black;
+    vertical-align: middle;
+    height: 5vh;
+    margin-left: 2vw;
+}
+
+ul#nav > li:hover {
+    color: var(--orange);
+}
+
+#logo {
+    height: 5vh;
+    max-width: 100%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a#3Point {
+    color: white !important;
+    text-decoration: underline;
+}
+
+.orange, .gray {
+    height: 20vh;
+    color: white;
+    vertical-align: bottom;
+    width: 60%;
+    z-index: 1;
+}
+
+.orange > h4, .gray > h4 {
+    text-align: bottom;
+    display: inline;
+}
+
+.orange {
+    background-color: var(--orange);
+    float: right;
+}
+
+.gray {
+    background-color: var(--gray);
+    float: left;
+    text-align: right;
+}
+
+.blurb {
+    width: 50%;
+    margin: 2em;
+    z-index: 2;
+}
+
+/*
+    h1 - 95 pt
+    h2 - 66pt
+    h3- 60pt
+    h4 - 40pt 
+    seperator - 71pt
+    seperator > a - 65pt
+    p - 32 pt
+*/
