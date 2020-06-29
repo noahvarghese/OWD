@@ -1,6 +1,7 @@
 :root {
     --orange: #FFA800;
     --gray: #888C8D;
+    --offwhite: #F2F2F2;
 }
 
 @font-face {
@@ -47,11 +48,15 @@
         text-align: left;
         margin: 0 auto;
         width: 1250px;
+        background-color: var(--offwhite);
     }
 
     nav {
         display: inline-block;
         height: 5vh;
+        padding-bottom: 2vh;
+        background-color: white;
+        width: 1250px;
     }
 
     nav > *, ul#nav > li {
@@ -77,8 +82,8 @@
         transition: color 0.25s, font-size 0.25s;
     }
 
-    ul#nav > li:hover {
-        color: var(--orange);
+    ul#nav > li:hover > a {
+        color: var(--orange) !important;
         font-size: larger;
         cursor: pointer;
     }
@@ -102,6 +107,7 @@
     #services {
         margin-top: 2em;
         margin-bottom: 10em;
+        background-color: white;
     }
 
     #windowInstallation > div, #doorInstallation > div {
@@ -138,6 +144,10 @@
     .arrow {
         width: 2.5em;
         bottom: 1.75em;
+    }
+
+    #windowInstallation, #doorInstallation {
+        background-color: var(--offwhite);
     }
 
     #windowInstallation > div > div > .arrow {
@@ -180,7 +190,7 @@
         width: 55%;
         padding-top: 1.5em;
         padding-bottom: 1.5em;
-        background-color: white;
+        background-color: var(--offwhite);
         border-radius: 5px;
         z-index: 2;
         line-height: 1.5em;
