@@ -63,6 +63,13 @@
     }
 
     ul#nav > li {
+        vertical-align: middle;
+        height: 5vh;
+    }
+
+    ul#nav > li > a {
+        text-decoration: none;
+        width: 100%;
         color: black;
         vertical-align: middle;
         height: 5vh;
@@ -147,6 +154,10 @@
 
     #doorInstallation > div > div > h2 {
         margin-left: 150px;
+    }
+
+    #windowInstallation:hover, #doorInstallation:hover {
+        cursor: pointer;
     }
 
     #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
