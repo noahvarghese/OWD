@@ -189,7 +189,7 @@
                     provide double pane glass
                     replacement, window
                     hardware repairs, exterior
-                    window caulking and more
+                    window caulking and more.
                 </p>
                 <p>
                     <a href="#" id="contactLink">Contact us</a> to inquire about
