@@ -1,3 +1,5 @@
+<?php require_once('../config/env.php') ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -35,7 +37,3 @@
             </div>
         </div>
         <?php include(Assets::footer()) ?>
-    </div>
-</body>
-
-</html>

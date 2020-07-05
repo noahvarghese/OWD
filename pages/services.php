@@ -202,8 +202,4 @@
                 <img id="windowRender" alt="window" src="<?= Assets::imageAssets('windowRender.png') ?>" />
             </div>
         </div>
-    </div>
     <?php include(Assets::footer()) ?>
-</body>
-
-</html>
