@@ -64,10 +64,44 @@
         margin-top: 2em;
     }
 
-    #services {
-        margin-top: 2em;
+    #banner > img {
+        margin-top: -1em;
+        width: 1250px;
+        margin-bottom: 2em;
+    }
+
+    .types {
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin-left: 6%;
+        margin-top: 10em;
         margin-bottom: 10em;
-        background-color: white;
+    }
+
+    #repairServices > h4 {
+        margin-top: 2em;    
+    }
+
+    #repairServices > div > img {
+        display: block;
+        margin: auto;
+    }
+
+    .types > div > img {
+        width: 30%;
+        margin-bottom: 1em;
+    }
+
+    .types > h4 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        color: black;
+    }
+
+    .types > p {
+        color: var(--gray);
+        font-size: 1.25em;
     }
 
     #windowInstallation > div, #doorInstallation > div {
@@ -180,7 +214,7 @@
         background-color: var(--orange);
         font-size: 2.25em;
         letter-spacing: 1.5px;
-        line-height: 1.25em;
+        line-height: 1.75em;
         padding: 3em 5em;
     }
 
@@ -296,6 +330,47 @@
     .descriptionContainer > p {
         margin-bottom: 2em;
     }
+
+    #repairs {
+        margin-top: 15em;
+        margin-bottom: 10em;
+    }
+
+    #repairs > div {
+        height: 100%;
+        width: 45%;
+        display: inline-block;
+        margin-top: 0;
+        padding-top: 0;
+        vertical-align: top;
+    }
+
+    #repairs > div > h2 {
+        position: relative;
+        color: var(--orange);
+        text-decoration: underline;
+    }
+
+    #repairsText {
+        margin-left: 5em;
+        line-height: 2em;
+    }
+
+    #repairsText > p {
+        width: 70%;
+        font-size: 1.5em;
+    }
+
+    #windowRender {
+        width: 100%;
+    }
+
+    #contactLink, #contactLink:visited {
+        text-decoration: none;
+        color: var(--orange);
+    }
+
+    
 }
 
 

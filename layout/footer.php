@@ -3,11 +3,11 @@
     <div id="leftFooter">
         <div id="location">
             <div id="locationImg">
-                <img />
+                <img class="footerImg" alt="location" src="<?=Assets::imageAssets('location.png')?>"/>
             </div>
-            <h3>OAKVILLE, ONTARIO</h3>
+            <h3 class="footerHdr">OAKVILLE, ONTARIO</h3>
         </div>
-        <h3>
+        <h3 class="footerHdr">
             Helping people find the
             perfect window or door
             for their home since 2010
@@ -15,25 +15,25 @@
     </div>
     <div id="rightFooter">
         <span id="social">
-            <img class="social" alt="instagram" src=""/>
-            <img class="social" alt="facebook" src=""/>
-            <img class="social" alt="twitter" src=""/>
-            <img class="social" alt="linkedIn" src=""/>
-            <img class="social" alt="email" src=""/>
+            <img class="social footerImg" id="instagram" alt="instagram" src="<?=Assets::imageAssets('instagramOrange.png')?>"/>
+            <img class="social footerImg" id="facebook" alt="facebook" src="<?=Assets::imageAssets('facebookOrange.png')?>"/>
+            <img class="social footerImg" id="twitter" alt="twitter" src="<?=Assets::imageAssets('twitterOrange.png')?>"/>
+            <img class="social footerImg" id="linkedIn" alt="linkedIn" src="<?=Assets::imageAssets('linkedInOrange.png')?>"/>
+            <img class="social footerImg" id="email" alt="email" src="<?=Assets::imageAssets('emailOrange.png')?>"/>
         </span>
         <div id="footerNav">
-            <span>
-                <h3>SERVICES</h3>
-                <h3>COMMERCIAL</h3>
-            </span> 
-            <span>
-                <h3>ABOUT</h3>
-                <h3>TESTIMONIALS</h3>
-            </span> 
-            <span>
-                <h3>BLOG</h3>
-                <h3>CONTACT</h3>
-            </span> 
+            <div>
+                <h3 class="footerHdr">SERVICES</h3>
+                <h3 class="footerHdr">COMMERCIAL</h3>
+            </div> 
+            <div>
+                <h3 class="footerHdr">ABOUT</h3>
+                <h3 class="footerHdr">TESTIMONIALS</h3>
+            </div> 
+            <div>
+                <h3 class="footerHdr">BLOG</h3>
+                <h3 class="footerHdr">CONTACT</h3>
+            </div> 
         </div>
     </div>
 </footer>

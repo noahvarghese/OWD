@@ -1,0 +1,37 @@
+footer {
+    margin: 0 auto;
+    margin-top: 2em;
+    padding: 0;
+    position: relative;
+}
+
+footer > hr {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.footerImg {
+    width: 3em;
+}
+
+.footerHdr {
+    font-size: 1.5em;
+    display: inline-block;
+}
+
+#footerNav {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-top: 20em;
+}
+
+#social > * {
+    margin-right: 1.25em;
+}
+
+#footerNav > div > .footerHdr {
+    width: 7em;
+    text-align: left;
+}

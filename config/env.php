@@ -32,6 +32,6 @@ class Assets
 
     public static function footer()
     {
-        return Assets::$layoutFolder . 'footer.html';
+        return Assets::$layoutFolder . 'footer.php';
     }
 }
