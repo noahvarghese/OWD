@@ -22,8 +22,8 @@
 
 nav {
     display: inline-block;
-    height: 5vh;
-    padding-bottom: 2vh;
+    height: 5em;
+    padding-bottom: 2em;
     width: 1250px;
     font-family: "Arimo";
     direction: ltr;
@@ -34,32 +34,33 @@ nav > *, ul#nav > li {
 }
 
 ul#nav {
-    width: 900px;
+    width: 850px;
 }
 
 ul#nav > li {
     vertical-align: middle;
-    height: 5vh;
+    height: 5em;
 }
 
 ul#nav > li > a {
     text-decoration: none;
     width: 100%;
+    display: block;
     color: var(--gray);
-    vertical-align: middle;
-    height: 5vh;
-    margin-left: 2em;
+    height: 100%;
+    margin-left: 1.75em;
     transition: color 0.25s, font-size 0.25s;
+    padding-top: 0.5em;
 }
 
 ul#nav > li:hover > a {
     color: var(--orange);
-    font-size: larger;
+    font-size: large;
     cursor: pointer;
 }
 
 #logo {
-    height: 5vh;
+    height: 5em;
     max-width: 100%;
     margin-left: 2em;
     margin-top: 2em;
