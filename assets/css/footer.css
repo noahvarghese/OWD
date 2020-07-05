@@ -1,30 +1,64 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+    --offwhite: #F2F2F2;
+}
+
 footer {
-    margin: 0 auto;
     margin-top: 2em;
     padding: 0;
     position: relative;
+    height: 20em;
+    padding-bottom: 8em;
 }
 
 footer > hr {
     width: 100%;
     margin: 0 auto;
     padding: 0;
+    border: 1px solid var(--gray);
+    width: 90%;
+    display: block;
+}
+
+#footerContents {
+    margin-top: 6em;
+    padding-bottom: 6em;
 }
 
 .footerImg {
-    width: 3em;
+    width: 2.5em;
 }
 
-.footerHdr {
-    font-size: 1.5em;
-    display: inline-block;
+#leftFooter {
+    float: left;
+    margin-left: 8em;
+}
+
+#rightFooter {
+    float: right;
+    margin-right: 8em;
+    margin-top: 1em;
+}
+
+#social { 
+    padding-bottom: 1em;
 }
 
 #footerNav {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin-top: 20em;
+    margin-top: 2em;
+}
+
+#footerNav > div > h3 {
+    margin-bottom: 0.5em;
+}
+
+.footerHdr {
+    display: inline-block;
+}
+
+#leftFooter > .footerHdr, #location > .footerHdr {
+    font-size: 1.5em;
 }
 
 #social > * {
@@ -32,6 +66,31 @@ footer > hr {
 }
 
 #footerNav > div > .footerHdr {
-    width: 7em;
+    width: 8em;
     text-align: left;
+    font-size: 1.25em;
+}
+
+#leftFooter > .footerHdr {
+    width: 15em;
+    text-align: left;
+    line-height: 1.5em;
+}
+
+#location {
+    margin-bottom: 1em;
+}
+
+#locationImg > img {
+    padding-top: 1em;
+    margin-left: -3em;
+}
+
+#location > #locationImg, #location > .footerHdr {
+    display: inline-block;
+}
+
+#location > .footerHdr {
+    padding-left: 1em;
+    vertical-align: top;
 }
