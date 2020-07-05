@@ -3,12 +3,12 @@
     <head>
         <title>Products</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="./assets/css/products.css"/>
-        <script type="text/javascript" src="./assets/js/products.js"></script>
+        <link rel="stylesheet" href="../assets/css/products.css"/>
+        <script type="text/javascript" src="../assets/js/products.js"></script>
     </head>
     <body>
         <div id="main">
-            <?php include('./layout/nav.html') ?>
+            <?php include('../layout/nav.html') ?>
             <h1>RESIDENTIAL SERVICES</h1>
             <div id="services">
                 <div id="windowInstallation">
@@ -23,7 +23,7 @@
                     <div class="orange">
                         <div>
                             <h2 id="windowHeader">WINDOW<br/>INSTALLATION</h2>
-                            <img src="./assets/img/arrow.png" alt="arrow" id="windowArrow" class="arrow"/>
+                            <img src="../assets/img/arrow.png" alt="arrow" id="windowArrow" class="arrow"/>
                         </div>
                     </div>
                 </div>
@@ -55,7 +55,7 @@
                 <div id=windowTypes>           
                     <div id="vinylDiv" class="item">
                         <div class="imageContainer left">
-                            <img src="./assets/img/vinyl.png" alt="vinyl" class="example"/>
+                            <img src="./assets/img/window1.png" alt="vinyl" class="example"/>
                         </div>
                         <div id="vinylDesc" class="descriptionContainer right">
                             <div id="vinylHeader">
@@ -101,7 +101,7 @@
                             </ul>
                         </div>
                         <div class="imageContainer right">
-                            <img src="./assets/img/wood.png" alt="wood" class="example"/>
+                            <img src="./assets/img/window2.png" alt="wood" class="example"/>
                         </div>
                     </div>
                 </div>
@@ -122,7 +122,7 @@
                 <div id="doorTypes">
                     <div id="fibreglassDiv" class="item">
                         <div class="imageContainer left">
-                            <img src="./assets/img/fibreglass.png" alt="fibreglass" class="example"/>
+                            <img src="./assets/img/door1.png" alt="fibreglass" class="example"/>
                         </div>
                         <div id="fibreglassDesc" class="descriptionContainer right">
                             <div id="fibreglassHeader">
@@ -173,7 +173,7 @@
                             </ul>
                         </div>
                         <div class="imageContainer right">
-                            <img src="./assets/img/steel.png" alt="steel" class="example">
+                            <img src="./assets/img/door2.png" alt="steel" class="example">
                         </div>
                     </div>
                 </div>
