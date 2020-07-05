@@ -1,14 +1,17 @@
+<?php require_once('../config/env.php') ?>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Products</title>
+        <title>Services</title>
         <meta charset="utf-8"/>
-        <link rel="stylesheet" href="../assets/css/products.css"/>
-        <script type="text/javascript" src="../assets/js/products.js"></script>
+        <link rel="stylesheet" href="<?=Assets::styleAssets('services.css')?>"/>
+        <link rel="stylesheet" href="<?=Assets::styleAssets('nav.css')?>"/>
+        <script type="text/javascript" src="<?=Assets::jsAssets('services.js')?>"></script>
     </head>
     <body>
         <div id="main">
-            <?php include('../layout/nav.html') ?>
+            <?php include(Assets::nav()) ?>
             <h1>RESIDENTIAL SERVICES</h1>
             <div id="services">
                 <div id="windowInstallation">
@@ -23,7 +26,7 @@
                     <div class="orange">
                         <div>
                             <h2 id="windowHeader">WINDOW<br/>INSTALLATION</h2>
-                            <img src="../assets/img/arrow.png" alt="arrow" id="windowArrow" class="arrow"/>
+                            <img src="<?=Assets::imageAssets('arrow.png')?>" alt="arrow" id="windowArrow" class="arrow"/>
                         </div>
                     </div>
                 </div>
@@ -40,7 +43,7 @@
                     <div class="gray">
                         <div id="doorHeader">
                             <h2>DOOR<br/>INSTALLATION</h2>
-                            <img src="./assets/img/arrow.png" alt="arrow" id="doorArrow" class="arrow"/>
+                            <img src="<?=Assets::imageAssets('arrow.png')?>" alt="arrow" id="doorArrow" class="arrow"/>
                         </div>
                     </div>
                 </div>
@@ -55,7 +58,7 @@
                 <div id=windowTypes>           
                     <div id="vinylDiv" class="item">
                         <div class="imageContainer left">
-                            <img src="./assets/img/window1.png" alt="vinyl" class="example"/>
+                            <img src="<?=Assets::imageAssets('window1.png')?>" alt="vinyl" class="example"/>
                         </div>
                         <div id="vinylDesc" class="descriptionContainer right">
                             <div id="vinylHeader">
@@ -101,7 +104,7 @@
                             </ul>
                         </div>
                         <div class="imageContainer right">
-                            <img src="./assets/img/window2.png" alt="wood" class="example"/>
+                            <img src="<?=Assets::imageAssets('window2.png')?>" alt="wood" class="example"/>
                         </div>
                     </div>
                 </div>
@@ -122,7 +125,7 @@
                 <div id="doorTypes">
                     <div id="fibreglassDiv" class="item">
                         <div class="imageContainer left">
-                            <img src="./assets/img/door1.png" alt="fibreglass" class="example"/>
+                            <img src="<?=Assets::imageAssets('door1.png')?>" alt="fibreglass" class="example"/>
                         </div>
                         <div id="fibreglassDesc" class="descriptionContainer right">
                             <div id="fibreglassHeader">
@@ -173,7 +176,7 @@
                             </ul>
                         </div>
                         <div class="imageContainer right">
-                            <img src="./assets/img/door2.png" alt="steel" class="example">
+                            <img src="<?=Assets::imageAssets('door2.png')?>" alt="steel" class="example">
                         </div>
                     </div>
                 </div>
