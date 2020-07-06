@@ -330,6 +330,7 @@
     #contactLink, #contactLink:visited {
         text-decoration: none;
         color: var(--orange);
+        transition: color 0.25s;
     }
 
     .downArrow {
@@ -342,6 +343,10 @@
     .types:hover > .downArrow {
         visibility: visible;
         opacity: 1;
+    }
+
+    #contactLink:hover {
+        color: var(--gray);
     }
 }
 
