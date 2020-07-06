@@ -41,6 +41,7 @@ class Assets
                         <link rel="stylesheet" href="' . Assets::styleAssets("nav.css") . '" />
                         <link rel="stylesheet" href="' . Assets::styleAssets('footer.css') . '" />
                         <link rel="stylesheet" href="' . Assets::styleAssets('main.css') . '" />
+                        <link rel="icon" type="image/x-icon" href="' . Assets::imageAssets('favicon.ico') . '"/>
                         <script type="text/javascript" src="' . Assets::jsAssets($jsFile) . '"></script>
                     </head>';
         echo $header;
