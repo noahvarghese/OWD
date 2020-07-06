@@ -1,8 +1,7 @@
 <?php require_once('../config/env.php') ?>
+<?= Assets::header('testimonials') ?>
+<?php include(Assets::nav()) ?>
 
-
-
-<?php include(Assets::header('testimonials')) ?>
 <h1>TESTIMONIALS</h1>
 <h2 id="blurb">
     Find out first-hand why our customers love<br />

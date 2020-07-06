@@ -11,12 +11,4 @@
                 <li><a href="#">BLOGS</a></li>
                 <li><a href="#">COMMERCIAL</a></li>
             </ul>
-            <div id="social">
-                <ul>
-                    <li id="facebook"></li>
-                    <li id="linkedin"></li>
-                    <li id="email"></li>
-                    <li id="instagram"></li>
-                </ul>
-            </div>
         </nav>

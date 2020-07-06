@@ -40,6 +40,7 @@ class Assets
                         <link rel="stylesheet" href="' . Assets::styleAssets($cssFile) . '" />
                         <link rel="stylesheet" href="' . Assets::styleAssets("nav.css") . '" />
                         <link rel="stylesheet" href="' . Assets::styleAssets('footer.css') . '" />
+                        <link rel="stylesheet" href="' . Assets::styleAssets('main.css') . '" />
                         <script type="text/javascript" src="' . Assets::jsAssets($jsFile) . '"></script>
                     </head>';
         echo $header;
