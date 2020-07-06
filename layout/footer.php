@@ -16,24 +16,24 @@
         </div>
         <div id="rightFooter">
             <span id="social">
-                <img class="social footerImg" id="instagram" alt="instagram" src="<?= Assets::imageAssets('instagramOrange.png') ?>" />
-                <img class="social footerImg" id="facebook" alt="facebook" src="<?= Assets::imageAssets('facebookOrange.png') ?>" />
-                <img class="social footerImg" id="twitter" alt="twitter" src="<?= Assets::imageAssets('twitterOrange.png') ?>" />
-                <img class="social footerImg" id="linkedIn" alt="linkedIn" src="<?= Assets::imageAssets('linkedInOrange.png') ?>" />
-                <img class="social footerImg" id="email" alt="email" src="<?= Assets::imageAssets('emailOrange.png') ?>" />
+                <a href="#"><img class="social footerImg" id="instagram" alt="instagram" src="<?= Assets::imageAssets('instagramOrange.png') ?>" /></a>
+                <a href="#"><img class="social footerImg" id="facebook" alt="facebook" src="<?= Assets::imageAssets('facebookOrange.png') ?>" /></a>
+                <a href="#"><img class="social footerImg" id="twitter" alt="twitter" src="<?= Assets::imageAssets('twitterOrange.png') ?>" /></a>
+                <a href="#"><img class="social footerImg" id="linkedIn" alt="linkedIn" src="<?= Assets::imageAssets('linkedInOrange.png') ?>" /></a>
+                <a href="#"><img class="social footerImg" id="email" alt="email" src="<?= Assets::imageAssets('emailOrange.png') ?>" /></a>
             </span>
             <div id="footerNav">
                 <div>
-                    <h3 class="footerHdr">SERVICES</h3>
-                    <h3 class="footerHdr">COMMERCIAL</h3>
+                    <a href="#"><h3 class="footerHdr">SERVICES</h3></a>
+                    <a href="#"><h3 class="footerHdr">COMMERCIAL</h3></a>
                 </div>
                 <div>
-                    <h3 class="footerHdr">ABOUT</h3>
-                    <h3 class="footerHdr">TESTIMONIALS</h3>
+                    <a href="#"><h3 class="footerHdr">ABOUT</h3></a>
+                    <a href="#"><h3 class="footerHdr">TESTIMONIALS</h3></a>
                 </div>
                 <div>
-                    <h3 class="footerHdr">BLOG</h3>
-                    <h3 class="footerHdr">CONTACT</h3>
+                    <a href="#"><h3 class="footerHdr">BLOG</h3></a>
+                    <a href="#"><h3 class="footerHdr">CONTACT</h3></a>
                 </div>
             </div>
         </div>
