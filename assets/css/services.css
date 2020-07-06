@@ -38,6 +38,7 @@
         margin-left: 6%;
         margin-top: 10em;
         margin-bottom: 10em;
+        text-decoration: none;
     }
 
     #repairServices > h4 {
@@ -331,7 +332,17 @@
         color: var(--orange);
     }
 
-    
+    .downArrow {
+        width: 2em;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    .types:hover > .downArrow {
+        visibility: visible;
+        opacity: 1;
+    }
 }
 
 

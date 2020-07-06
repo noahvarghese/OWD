@@ -116,4 +116,14 @@
     .rightReview {
         margin-left: 1em;
     }
+
+    .readMore, .readMore:visited {
+        text-decoration: none;
+        color: white;
+        transition: color 0.25s;
+    }
+
+    .readMore:hover {
+        color: var(--orange);
+    }
 }

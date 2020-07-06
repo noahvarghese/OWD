@@ -6,27 +6,30 @@
     <img alt="banner" src="<?= Assets::imageAssets('residentialHeader.png') ?>" />
 </div>
 <div id="services">
-    <div id="windowServices" class="types">
+    <a id="windowServices" class="types" href="#">
         <div>
             <img alt="windows" src="<?= Assets::imageAssets('windowOrange.png') ?>" />
         </div>
         <h4>WINDOWS</h4>
         <p>Choose from a selection of vinyl and wood windows</p>
-    </div>
-    <div id="doorServices" class="types">
+        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+    </a>
+    <a id="doorServices" class="types" href="#">
         <div>
             <img alt="doors" src="<?= Assets::imageAssets('doorOrange.png') ?>" />
         </div>
         <h4>DOORS</h4>
         <p>Choose from our selection of fibreglass and steel doors</p>
-    </div>
-    <div id="repairServices" class="types">
+        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+    </a>
+    <a id="repairServices" class="types" href="#">
         <div>
             <img alt="repairs" src="<?= Assets::imageAssets('wrenchOrange.png') ?>" />
         </div>
         <h4>REPAIRS</h4>
         <p>We provide efficient, quality and friendly repair services.</p>
-    </div>
+        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+    </a>
 </div>
 <div id="windows">
     <h3>Window Installation</h3>

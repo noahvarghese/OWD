@@ -27,7 +27,7 @@
                 received other quotes from other competitors, but only Andre truly understood
                 my needs and I felt comfortable working with him. I came to him with a very
                 tight timeline, so tight in fact that some of the competition thought that he was
-                just telling me what I wanted.... <a>READ MORE</a>
+                just telling me what I wanted.... <a class="readMore" href="#">READ MORE</a>
             </p>
         </div>
     </div>
@@ -49,7 +49,7 @@
                 few other companies, but none of them gave me the comfort that Jessica did,
                 and establishing rapport is VERY important to me. There was no pressure--just
                 honest advice, lots of knowledge and a great price. As for the install, I can
-                honestly say that Walter and his crew… <a>READ MORE</a>
+                honestly say that Walter and his crew.... <a class="readMore" href="#">READ MORE</a>
             </p>
         </div>
     </div>
@@ -71,7 +71,7 @@
                 our window replacements, so I called them to have a look at the defective
                 window. They will replaceit within 2 days at a very reasonable cost...even tho it
                 is not one of theirs’. Andre, the owner of oakville inspected the window the
-                same day that I called him...great service...<a>READ MORE</a>
+                same day that I called him...great service.... <a class="readMore" href="#">READ MORE</a>
             </p>
         </div>
     </div>
@@ -93,7 +93,7 @@
                 Jessica never tried to upsell but rather suggested good quality for the price of
                 the home. The crew cleaned up, and completely rebuilt the front bay window
                 which had so much more rot than they expected. The crew stayed until the job
-                was finished. We were very pleased with the… <a>READ MORE</a>
+                was finished. We were very pleased with the.... <a class="readMore" href="#">READ MORE</a>
             </p>
         </div>
     </div>
