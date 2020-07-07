@@ -100,6 +100,7 @@
 
     .orange {
         background-color: var(--orange);
+        margin-bottom: 6em;
     }
 
     .seperator {
