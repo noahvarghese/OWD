@@ -3,7 +3,7 @@
         <nav>
             <img src="<?= Assets::imageAssets('logo.png') ?>" alt="logo" id="logo" />
             <ul id="nav">
-                <li><a href="#">ABOUT</a></li>
+                <li><a href="../pages/about.php">ABOUT</a></li>
                 <li><a href="../pages/services.php">SERVICES</a></li>
                 <li><a href="#">GALLERY</a></li>
                 <li><a href="#">CONTACT</a></li>
