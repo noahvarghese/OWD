@@ -1,0 +1,213 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+    --offwhite: #F2F2F2;
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url(../fonts/Arimo-Bold.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../fonts/Arimo-Italic.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Regular;
+    src: url(../fonts/Arimo-Regular.ttf)
+}
+
+@media only screen and ( min-width: 1200px )
+{
+
+    .orange {
+        color: var(--orange);
+    }
+    
+    .gray {
+        color: var(--gray);
+    }
+
+    #contact {
+        width: 90%;
+        margin-left: 5%;
+    }
+    #form {
+        width: 35em;
+        border: 2px solid var(--orange);
+        position: relative;
+        float: left;
+        margin-bottom: 7em;
+        margin-right: 5em;
+    }
+
+    form {
+        padding: 4em 0em 4em 2em;
+    }
+
+    form > div > input:first-of-type {
+        margin-right: 3em;
+    }
+
+    input[type="checkbox"]  {
+        opacity: 0;
+        position: absolute;   
+    }
+    
+    input[type="checkbox"], label {
+        display: inline-block;
+        vertical-align: middle;
+        margin: 5px;
+        cursor: pointer;
+    }
+    
+    label{
+        position: relative;
+    }
+    
+    input[type="checkbox"] + label:before {
+        content: '';
+        background: #fff;
+        border: 2px solid var(--orange);
+        display: inline-block;
+        vertical-align: middle;
+        width: 18px;
+        height: 18px;
+        margin-right: 10px;
+        text-align: center;
+    }
+    
+    input[type="checkbox"]:checked + label:before {
+        background: var(--orange);
+        box-shadow: inset 0px 0px 0px 0px var(--orange);
+    }    
+    
+    input.border {
+        border: none;
+        border-bottom: 2px solid var(--orange);
+        font-size: 1.1em;
+        font-family: Arimo;
+        color: var(--gray);
+        width: 11em;
+        padding-bottom: 0.5em;
+        margin-bottom: 2em;
+        margin-right: 0em;
+        padding-left: 0.5em;
+    }
+    
+    input:focus {
+        outline: none;
+    }
+
+    #checkboxes > p {
+        font-size: 1.1em;
+    }
+
+    #checks > div {
+        margin-bottom: 0.75em;
+    }
+
+    #checks > div > * {
+        display: inline;
+    }
+
+    textarea {
+        height: 11em;
+        width: 27em;
+        margin-top: 2em;
+        margin-bottom: 4em;
+        border: 2px solid var(--orange);
+        outline: none;
+        font-family: Arimo;
+        font-size: 1.1em;
+        padding: 1em 0.5em 1em 0.5em;
+        color: var(--gray);
+    }
+
+    input[type=submit] {
+        padding: 0.5em 1.5em 0.5em 1.5em;
+        border: 2px solid var(--orange);
+        background-color: white;
+        color: var(--gray);
+        font-family: Arimo;
+        font-size: 1.25em;
+        transition: color 0.25s, border 0.25s;
+    }
+
+    input[type=submit]:hover {
+        cursor: pointer;
+        color: var(--orange);
+        border: 2px solid var(--gray);
+    }
+
+    #info {
+        font-family: Arimo;
+        margin-right: 4em;
+    }
+
+    #info > p {
+        line-height: 1.5em;
+        font-size: 1.25em;
+    }
+
+    #location {
+        margin-bottom: 2em;
+    }
+
+    #location > h2 {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+    
+    #location > p {
+        font-size: 1.5em;
+        line-height: 1.25em;
+        margin-bottom: 2em;
+    }
+
+    #phoneNumbers {
+        font-size: 1.25em;
+    }
+
+    #phoneNumbers > p {
+        padding: 0;
+        margin: 0;
+        line-height: 1.25em;
+    }
+
+    #hours > h2 {
+        margin-top: 2em;
+        margin-bottom: 2em;
+    }
+
+    #hours > p {
+        margin: 0;
+        padding: 0;
+        font-size: 1.5em;
+        line-height: 1.4em;
+    }
+
+    #hours > p > span:first-of-type {
+        float: left;
+        width: 6.5em;
+    }
+
+    #hours > p:last-of-type {
+        margin-bottom: 2em;
+    }
+
+    #exceptions > p {
+        margin: 0;
+        padding: 0;
+        line-height: 1.25em;
+    }
+
+
+    iframe {
+        width: 100%;
+        border: 2px solid var(--orange);
+        height: 450px;
+    }
+}

@@ -24,16 +24,16 @@
             </span>
             <div id="footerNav">
                 <div>
-                    <a href="#"><h3 class="footerHdr">SERVICES</h3></a>
+                    <a href="../pages/services.php"><h3 class="footerHdr">SERVICES</h3></a>
                     <a href="#"><h3 class="footerHdr">COMMERCIAL</h3></a>
                 </div>
                 <div>
-                    <a href="#"><h3 class="footerHdr">ABOUT</h3></a>
-                    <a href="#"><h3 class="footerHdr">TESTIMONIALS</h3></a>
+                    <a href="../pages/about.php"><h3 class="footerHdr">ABOUT</h3></a>
+                    <a href="../pages/testimonials.php"><h3 class="footerHdr">TESTIMONIALS</h3></a>
                 </div>
                 <div>
                     <a href="#"><h3 class="footerHdr">BLOG</h3></a>
-                    <a href="#"><h3 class="footerHdr">CONTACT</h3></a>
+                    <a href="../pages/contact.php"><h3 class="footerHdr">CONTACT</h3></a>
                 </div>
             </div>
         </div>

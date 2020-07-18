@@ -5,7 +5,7 @@
             <ul id="nav">
                 <li><a href="../pages/about.php">ABOUT</a></li>
                 <li><a href="../pages/services.php">SERVICES</a></li>
-                <li><a href="#">CONTACT</a></li>
+                <li><a href="../pages/contact.php">CONTACT</a></li>
                 <li><a href="#">COMMERCIAL</a></li>
                 <li><a href="#">GALLERY</a></li>
                 <li><a href="#">BLOGS</a></li>

@@ -36,14 +36,14 @@
     }
 
     #testimonials {
-        margin-left: 4em;
+        margin-left: 3em;
     }
 
     .individual {
         position: relative;
         z-index: 1;
         margin-bottom: 15em;
-        margin-left: 2em;
+        margin-left: 1em;
     }
 
     .quote {

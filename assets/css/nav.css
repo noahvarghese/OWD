@@ -52,13 +52,12 @@
         color: var(--gray);
         height: 100%;
         margin-left: 1.75em;
-        transition: color 0.25s, font-size 0.25s;
+        transition: color 0.25s;
         padding-top: 0.5em;
     }
 
     ul#nav > li:hover > a {
         color: var(--orange);
-        font-size: large;
         cursor: pointer;
     }
 
