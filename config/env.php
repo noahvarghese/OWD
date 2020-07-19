@@ -30,6 +30,8 @@ class Assets
         $jsFile = strtolower($page) . '.js';
         $cssFile = strtolower($page) . '.css';
 
+        $recaptcha = '<script src="https://www.google.com/recaptcha/api.js?render=6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw"></script>';
+
         $header = 
                     '<!DOCTYPE html>
                     <html>
@@ -44,8 +46,15 @@ class Assets
                         <link rel="icon" type="image/x-icon" href="' . Assets::imageAssets('favicon.ico') . '"/>
                         <script type="text/javascript" src="' . Assets::jsAssets($jsFile) . '"></script>
                         <script type="text/javascript" src="' . Assets::jsAssets('main.js') . '"></script>
-                        <script type="text/javascript" src="' . Assets::jsAssets('footer.js') . '"></script>
-                    </head>';
+                        <script type="text/javascript" src="' . Assets::jsAssets('footer.js') . '"></script>';
+
+        if ( $page === 'contact' )
+        {
+            $header.= $recaptcha;
+        }
+
+        $header .= '</head>';
+
         echo $header;
     }
 

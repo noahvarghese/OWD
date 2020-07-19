@@ -54,7 +54,7 @@
             <div id="messageDiv">
                 <textarea id="message" placeholder="MESSAGE"></textarea>
             </div>
-            <input type="submit" value="REQUEST QUOTE" />
+            <input type="submit" value="REQUEST QUOTE" id="submit" class="g-recaptcha" data-sitekey="6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw" data-callback='recaptchaCallback' data-action='submit' />
         </form>
     </div>
     <div id="info">
