@@ -9,17 +9,25 @@ window.addEventListener('load', () => {
             grecaptcha.ready(function() {
                 grecaptcha.execute('6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw', {action: 'submit'}).then(function(token) {
 
-                    const formEl = document.getElementById("contactForm");
-                    const formData = new FormData(formEl);
-                    const data = new URLSearchParams(formData);
+                    var formEl = document.getElementById("contactForm");
+                    console.log(new FormData(formEl));
                     
+                    var data = new URLSearchParams();
+
+                    for ( var pair of new FormData(formEl) )
+                    {
+                        data.append(pair[0], pair[1]);
+                    }
+
                     data.append("token", token);
+                    console.log(data);
                     
                     fetch("https://localhost.com", {
                         method: "POST",
                         body: data    
                     })
                     .then( () => {
+                        formEl.reset();
                         // display toast
                         var x = document.getElementById("snackbar");
                         x.className = "show";
