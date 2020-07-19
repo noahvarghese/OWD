@@ -41,36 +41,96 @@ if ( $_SERVER['REQUEST_METHOD'] === "POST" )
 
         $message = "<html><body>";
 
-        $businessContent = "<p>Hi there,<br /><br />We Just received a new quote request from your website.<br />Find the information below.</p>";
+        $businessContent = "<p>Hi there,<br /><br />We Just received a new quote request from your website. Find the information below.</p><br/><br/>";
 
-        $senderContent = "<p>Hi $fname, <br/><br/>We're glad that you have contacted us!<br/><br/>We have received your inquiry, and a member of our team will reach out to you shortly.<br /><br />Here is the information you have submitted for your records.</p>";
+        $senderContent = "<p>Hi $fname, <br/><br/>We're glad that you have contacted us!<br/><br/>We have received your inquiry, and a member of our team will reach out to you shortly.<br /><br />Here is the information you have submitted for your records.</p><br/><br/>";
 
-        $content = "<table>
-                        <tr><th>Name</th></tr>
-                        <tr><td>$fname $lname</td></tr>
-                        <tr><th>Phone</th></tr>
-                        <tr><td>$phone</td></tr>
-                        <tr><th>Email</th></tr>
-                        <tr><td>$email</td></tr>
-                        <tr><th>City</th></tr>
-                        <tr><td>$city</td></tr>
-                        <tr><th>Products of Interest</th></tr>
-                        <tr>
-                            <td><ul>";
+        $content = "<table width=\"99%\" border=\"0\" cellpadding=\"1\" cellspacing=\"0\" bgcolor=\"#EAEAEA\">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <table width=\"100%\" border=\"0\" cellpadding=\"5\" cellspacing=\"0\" bgcolor=\"#FFFFFF\">
+                                        <tbody>
+                                        <tr bgcolor=\"#EAF2FA\">
+                                            <td colspan=\"2\">
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <strong>Name</strong>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#FFFFFF\">
+                                            <td width=\"20\">&nbsp</td>
+                                            <td>
+                                                <font style=\"font-family:sans-serif;font-size:12px\">$fname $lname</font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#EAF2FA\">
+                                            <td colspan=\"2\">
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <strong>Phone</strong>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#FFFFFF\">
+                                            <td width=\"20\">&nbsp</td>
+                                            <td>
+                                                <font style=\"font-family:sans-serif;font-size:12px\">$phone</font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#EAF2FA\">
+                                            <td colspan=\"2\">
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <strong>Email</strong>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#FFFFFF\">
+                                            <td width=\"20\">&nbsp</td>
+                                            <td>
+                                                <font style=\"font-family:sans-serif;font-size:12px\">$email</font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#EAF2FA\">
+                                            <td colspan=\"2\">
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <strong>City</strong>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#FFFFFF\">
+                                            <td width=\"20\">&nbsp</td>
+                                            <td>
+                                                <font style=\"font-family:sans-serif;font-size:12px\">$city</font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#EAF2FA\">
+                                            <td colspan=\"2\">
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <strong>Products of Interest</strong>
+                                                </font>
+                                            </td>
+                                        </tr>
+                                        <tr bgcolor=\"#FFFFFF\">
+                                            <td>
+                                                <font style=\"font-family:sans-serif;font-size:12px\">
+                                                    <ul>";
         
         foreach ( $items as $item )
         {
             $content .= "<li>$item</li>";
         }
 
-        $content .= "</ul></td></tr>";
+        $content .= "</ul></font></td></tr>";
 
-        $content .= "<tr>
-                        <th>Comments</th>
+        $content .= "<tr bgcolor=\"#EAF2FA\">
+                        <td colspan=\"2\"><strong>Comments</strong></td>
                     </tr>
-                    <tr>
+                    <tr bgcolor=\"#FFFFFF\">
                         <td>$message</td>
                     </tr>
+                    </tbody>
+                    </table>
+                    </tbody>
                     </table>
                     </body>
                     </html>";
