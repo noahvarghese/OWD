@@ -135,4 +135,6 @@
 
 </div>
 
+<div id="snackbar">Message Sent...</div>
+
 <?php include(Assets::footer()) ?>

@@ -8,8 +8,23 @@ window.addEventListener('load', () => {
         {
             grecaptcha.ready(function() {
                 grecaptcha.execute('6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw', {action: 'submit'}).then(function(token) {
-                    // Add your logic to submit to your backend server here.
-                        
+
+                    const formEl = document.getElementById("contactForm");
+                    const formData = new FormData(formEl);
+                    const data = new URLSearchParams(formData);
+                    
+                    data.append("token", token);
+                    
+                    fetch("https://localhost.com", {
+                        method: "POST",
+                        body: data    
+                    })
+                    .then( () => {
+                        // display toast
+                        var x = document.getElementById("snackbar");
+                        x.className = "show";
+                        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+                    });
                 });
             });
         }
