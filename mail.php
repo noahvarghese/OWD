@@ -25,6 +25,19 @@ if ( $_SERVER['REQUEST_METHOD'] === "POST" )
 
     if ( $valid )
     {
+        $phoneRegex = "/^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/";
+
+        if ( preg_match($phoneRegex, $phone) !== 1 )
+            $valid = false;
+
+        $emailRegex = "/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/";
+
+        if ( preg_match($emailRegex, $email) !== 1 )
+            $valid = false;
+    }
+
+    if ( $valid )
+    {
 
         $message = "<html><body>";
 
