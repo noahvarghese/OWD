@@ -6,17 +6,17 @@
 
 <div id="contact">
     <div id="form">
-        <form autocomplete="on">
+        <form autocomplete="on" id="contactForm">
             <div>
-                <input type="text" name="fname" placeholder="FIRST NAME*" class="border" />
-                <input type="text" name="lname" placeholder="LAST NAME*" class="border" />
+                <input type="text" name="fname" placeholder="FIRST NAME*" class="border" id="fname"/>
+                <input type="text" name="lname" placeholder="LAST NAME*" class="border" id="lname"/>
             </div>
             <div>
-                <input type="email" name="email" placeholder="E-MAIL*" class="border" />
-                <input type="tel" name="phone" placeholder="PHONE*" class="border" />
+                <input type="email" name="email" placeholder="E-MAIL*" class="border" id="email" />
+                <input type="tel" name="phone" placeholder="PHONE*" class="border" id="phone" />
             </div>
             <div>
-                <input type="email" name="city" placeholder="CITY*" class="border" />
+                <input type="text" name="city" placeholder="CITY*" class="border" id="city" />
             </div>
             <div id="checkboxes">
                 <p class="gray">PRODUCTS OF INTEREST</p>
@@ -52,10 +52,11 @@
                 </div>
             </div>
             <div id="messageDiv">
-                <textarea id="message" placeholder="MESSAGE"></textarea>
+                <textarea id="message" placeholder="MESSAGE*"></textarea>
             </div>
             <input type="submit" value="REQUEST QUOTE" id="submit" class="g-recaptcha" data-sitekey="6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw" data-callback='recaptchaCallback' data-action='submit' />
         </form>
+        <div id="error" class="error"></div>
     </div>
     <div id="info">
 

@@ -1,5 +1,4 @@
-
-window.onload = () => {
+window.addEventListener('load', () => {
     var windows = document.getElementById("windowInstallation");
     var doors = document.getElementById("doorInstallation");
     
@@ -10,4 +9,4 @@ window.onload = () => {
     doors.onclick = () => {
         document.getElementById("doors").scrollIntoView();
     };
-};
+});

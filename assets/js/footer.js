@@ -1,4 +1,4 @@
-window.onload = () => {
+window.addEventListener('load', () => {
 
     var instagram = document.getElementById('instagram');
 
@@ -53,4 +53,4 @@ window.onload = () => {
     email.onmouseleave = () => {
         email.src = email.src.replace("Grey", "Orange");
     }
-};
+});

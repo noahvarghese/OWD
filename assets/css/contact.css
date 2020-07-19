@@ -124,6 +124,7 @@
         font-size: 1.1em;
         padding: 1em 0.5em 1em 0.5em;
         color: var(--gray);
+        resize: none;
     }
 
     input[type=submit] {
@@ -209,5 +210,21 @@
         width: 100%;
         border: 2px solid var(--orange);
         height: 450px;
+    }
+
+
+    .red::-webkit-input-placeholder {
+        color: red !important;
+    }
+
+    .red::placeholder {
+        color: red !important;
+    }
+
+    .error {
+        color: red;
+        font-size: 0.8em;
+        margin: -2em 0em 2em 2.5em;
+        font-family: Arimo;
     }
 }

@@ -30,7 +30,8 @@ class Assets
         $jsFile = strtolower($page) . '.js';
         $cssFile = strtolower($page) . '.css';
 
-        $recaptcha = '<script src="https://www.google.com/recaptcha/api.js?render=6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw"></script>';
+        $recaptcha = '<script type="text/javascript" src="' . Assets::jsAssets('recaptcha.js') . '"></script>
+                      <script src="https://www.google.com/recaptcha/api.js?render=6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw"></script>';
 
         $header = 
                     '<!DOCTYPE html>
