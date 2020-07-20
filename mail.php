@@ -9,7 +9,25 @@ if ( $_SERVER['REQUEST_METHOD'] === "POST" )
     $city = filter_var(strip_tags($_POST['city']), FILTER_SANITIZE_STRING);
     $message = filter_var(strip_tags($_POST['message']), FILTER_SANITIZE_STRING);
 
-    $items = $_POST['items'];
+    $products = [
+        ["windows", "Windows"],
+        ["entry", "Entry Door Systems"],
+        ["sliding", "Sliding Patio Doors"],
+        ["garage", "Garage Doors"],
+        ["porch", "Porch Enclosures"],
+        ["egress", "Egress Windows"],
+        ["other", "Other"]
+    ];
+
+    $items = array();
+
+    foreach ( $products as $item )
+    {
+        if ( isset($_POST[$item[0]]) )
+        {
+            $items[] = $item[1];
+        }
+    }
 
     $required = array($fname, $lname, $email, $phone, $city, $message);
 

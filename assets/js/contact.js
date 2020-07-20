@@ -16,13 +16,13 @@ window.addEventListener('load', () => {
 
                     for ( var pair of new FormData(formEl) )
                     {
+                        console.log(pair);
                         data.append(pair[0], pair[1]);
                     }
 
-                    data.append("token", token);
                     console.log(data);
                     
-                    fetch("https://localhost.com", {
+                    let response = fetch("http://localhost/OWD/mail.php", {
                         method: "POST",
                         body: data    
                     })
@@ -33,6 +33,8 @@ window.addEventListener('load', () => {
                         x.className = "show";
                         setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
                     });
+
+                    console.log(response);
                 });
             });
         }
