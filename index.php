@@ -5,7 +5,7 @@
     $action = isset($_GET["action"]) ? $_GET["action"] : "";
 
     include(Assets::header($action));
-    include(Assets::nav($action));
+    include(Assets::$layoutFolder . "nav.php");
 
     switch( $action )
     {
@@ -16,4 +16,6 @@
     
             break;
     }
+
+    include(Assets::$layoutFolder . "footer.php");
 ?>
