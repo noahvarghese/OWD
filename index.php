@@ -4,7 +4,6 @@
 
     $action = isset($_GET["action"]) ? $_GET["action"] : "";
 
-    include(Assets::header($action));
     include(Assets::$layoutFolder . "nav.php");
 
     switch( $action )

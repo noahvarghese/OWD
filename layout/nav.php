@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title><?= ucfirst($action) ?></title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="<?= STYLE_PATH . $action . ".css" ?>" />
-    <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css"?>" />
-    <link rel="stylesheet" href="<?= STYLE_PATH . "footer.css"?>" />
-    <link rel="stylesheet" href="<?= STYLE_PATH . "main.css"?>" />
-    <link rel="icon" type="image/x-icon" href="<?= IMG_PATH . "favicon.ico"?>"/>
-    <script type="text/javascript" src="<?= JS_PATH . $action . ".js"?>"></script>
-    <script type="text/javascript" src="<?= JS_PATH . "main.js"?>"></script>
-    <script type="text/javascript" src="<?= JS_PATH . "footer.js"?>"></script>
+    <head>
+        <title><?= ucfirst($action) ?></title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . $action . ".css" ?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css"?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . "footer.css"?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . "main.css"?>" />
+        <link rel="icon" type="image/x-icon" href="<?= IMG_PATH . "favicon.ico"?>"/>
+        <script type="text/javascript" src="<?= JS_PATH . $action . ".js"?>"></script>
+        <script type="text/javascript" src="<?= JS_PATH . "main.js"?>"></script>
+        <script type="text/javascript" src="<?= JS_PATH . "footer.js"?>"></script>
+
+    <?
+
+    if ( $action == "contact" )
+    {
+        
+    ?>
+        <script src="https://www.google.com/recaptcha/api.js?render=6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw"></script>
+    <?
+        
+    }
+
+    ?>
     
+    </head>
     <body>
     <div id="main">
         <nav>
