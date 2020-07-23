@@ -59,7 +59,7 @@ class Assets
         echo $header;
     }
 
-    public static function nav()
+    public static function nav($action)
     {
         return Assets::$layoutFolder . 'nav.php';
     }
