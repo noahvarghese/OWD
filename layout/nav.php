@@ -30,7 +30,7 @@
     <body>
     <div id="main">
         <nav>
-            <img src="<?= Assets::imageAssets('logo.png') ?>" alt="logo" id="logo" />
+            <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
             <ul id="nav">
                 <li><a href="../pages/about.php" class="<?= $action == 'about' ? 'selected' : '' ?>">ABOUT</a></li>
                 <li><a href="../pages/services.php" class="<?= $action == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
