@@ -1,7 +1,3 @@
-<?php require_once('../config/env.php') ?>
-<?= Assets::header('about') ?>
-<?php include(Assets::nav()) ?>
-
 <h1>ABOUT US</h1>
 <ul id="aboutNav">
     <li>
@@ -26,7 +22,7 @@
     </li>
 </ul>
 <div id="bannerLogo">
-    <img alt="banner logo" src="<?= Assets::imageAssets('logo.png') ?>" />
+    <img alt="banner logo" src="<?= IMG_PATH . "logo.png" ?>" />
 </div>
 <div class="orange seperator">
     <h2 class="contentHeader blackHeader" id="who">Who We Are</h2>
@@ -59,13 +55,13 @@
 <div id="items">
     <div id="firstLayer" class="layer icons">
         <div>
-            <img class="icon" id="localIcon" alt="local" src="<?= Assets::imageAssets('location.png') ?>" />
+            <img class="icon" id="localIcon" alt="local" src="<?= IMG_PATH . 'location.png' ?>" />
         </div>
         <div>
-            <img class="icon" id="canadaIcon" alt="canada" src="<?= Assets::imageAssets('canada.png') ?>" />
+            <img class="icon" id="canadaIcon" alt="canada" src="<?= IMG_PATH . 'canada.png' ?>" />
         </div>
         <div>
-            <img class="icon" id="pricingIcon" alt="pricing" src="<?= Assets::imageAssets('financing.png') ?>" />
+            <img class="icon" id="pricingIcon" alt="pricing" src="<?= IMG_PATH . 'financing.png' ?>" />
         </div>
     </div>
     <div id="secondLayer" class="layer labels">
@@ -96,13 +92,13 @@
     </div>
     <div id="thirdLayer" class="layer icons">
         <div>
-            <img class="icon" id="warrantyIcon" alt="warranty" src="<?= Assets::imageAssets('warranty.png') ?>" />
+            <img class="icon" id="warrantyIcon" alt="warranty" src="<?= IMG_PATH . 'warranty.png' ?>" />
         </div>
         <div>
-            <img class="icon" id="showroomIcon" alt="showroom" src="<?= Assets::imageAssets('storeFront.png') ?>" />
+            <img class="icon" id="showroomIcon" alt="showroom" src="<?= IMG_PATH . 'storeFront.png' ?>" />
         </div>
         <div>
-            <img class="icon" id="approvalIcon" alt="pre-approval" src="<?= Assets::imageAssets('certified.png') ?>" />
+            <img class="icon" id="approvalIcon" alt="pre-approval" src="<?= IMG_PATH . 'certified.png' ?>" />
         </div>
     </div>
     <div id="fourthLayer" class="layer labels">
@@ -151,4 +147,3 @@
         </div>
     </div>
 </div>
-<?php include(Assets::footer()) ?>

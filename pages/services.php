@@ -1,34 +1,30 @@
-<?php require_once('../config/env.php') ?>
-<?= Assets::header('services') ?>
-<?php include(Assets::nav()) ?>
-
 <div id="banner">
-    <img alt="banner" src="<?= Assets::imageAssets('residentialHeader.png') ?>" />
+    <img alt="banner" src="<?= IMG_PATH . 'residentialHeader.png' ?>" />
 </div>
 <div id="services">
     <a id="windowServices" class="types" href="#">
         <div>
-            <img alt="windows" src="<?= Assets::imageAssets('windowOrange.png') ?>" />
+            <img alt="windows" src="<?= IMG_PATH . 'windowOrange.png' ?>" />
         </div>
         <h4>WINDOWS</h4>
         <p>Choose from a selection of vinyl and wood windows</p>
-        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+        <img alt="arrow" class="downArrow" src="<?= IMG_PATH . 'arrowGrey.png' ?>" />
     </a>
     <a id="doorServices" class="types" href="#">
         <div>
-            <img alt="doors" src="<?= Assets::imageAssets('doorOrange.png') ?>" />
+            <img alt="doors" src="<?= IMG_PATH . 'doorOrange.png' ?>" />
         </div>
         <h4>DOORS</h4>
         <p>Choose from our selection of fibreglass and steel doors</p>
-        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+        <img alt="arrow" class="downArrow" src="<?= IMG_PATH . 'arrowGrey.png' ?>" />
     </a>
     <a id="repairServices" class="types" href="#">
         <div>
-            <img alt="repairs" src="<?= Assets::imageAssets('wrenchOrange.png') ?>" />
+            <img alt="repairs" src="<?= IMG_PATH . 'wrenchOrange.png' ?>" />
         </div>
         <h4>REPAIRS</h4>
         <p>We provide efficient, quality and friendly repair services.</p>
-        <img alt="arrow" class="downArrow" src="<?= Assets::imageAssets('arrowGrey.png') ?>" />
+        <img alt="arrow" class="downArrow" src="<?= IMG_PATH . 'arrowGrey.png' ?>" />
     </a>
 </div>
 <div id="windows">
@@ -41,7 +37,7 @@
     <div id=windowTypes>
         <div id="vinylDiv" class="item">
             <div class="imageContainer left">
-                <img src="<?= Assets::imageAssets('window1.png') ?>" alt="vinyl" class="example" />
+                <img src="<?= IMG_PATH . 'window1.png' ?>" alt="vinyl" class="example" />
             </div>
             <div id="vinylDesc" class="descriptionContainer right">
                 <div id="vinylHeader">
@@ -87,7 +83,7 @@
                 </ul>
             </div>
             <div class="imageContainer right">
-                <img src="<?= Assets::imageAssets('window2.png') ?>" alt="wood" class="example" />
+                <img src="<?= IMG_PATH . 'window2.png' ?>" alt="wood" class="example" />
             </div>
         </div>
     </div>
@@ -108,7 +104,7 @@
     <div id="doorTypes">
         <div id="fibreglassDiv" class="item">
             <div class="imageContainer left">
-                <img src="<?= Assets::imageAssets('door1.png') ?>" alt="fibreglass" class="example" />
+                <img src="<?= IMG_PATH . 'door1.png' ?>" alt="fibreglass" class="example" />
             </div>
             <div id="fibreglassDesc" class="descriptionContainer right">
                 <div id="fibreglassHeader">
@@ -159,7 +155,7 @@
                 </ul>
             </div>
             <div class="imageContainer right">
-                <img src="<?= Assets::imageAssets('door2.png') ?>" alt="steel" class="example">
+                <img src="<?= IMG_PATH . 'door2.png' ?>" alt="steel" class="example">
             </div>
         </div>
     </div>
@@ -189,7 +185,6 @@
         </p>
     </div>
     <div>
-        <img id="windowRender" alt="window" src="<?= Assets::imageAssets('windowRender.png') ?>" />
+        <img id="windowRender" alt="window" src="<?= IMG_PATH . 'windowRender.png' ?>" />
     </div>
 </div>
-<?php include(Assets::footer()) ?>

@@ -1,7 +1,3 @@
-<?php require_once('../config/env.php') ?>
-<?= Assets::header('testimonials') ?>
-<?php include(Assets::nav()) ?>
-
 <h1>TESTIMONIALS</h1>
 <h2 id="blurb">
     Find out first-hand why our customers love<br />
@@ -10,7 +6,7 @@
 <div id="testimonials">
     <div class="individual">
         <div class="leftQuote quote">
-            <img alt="quotation marks" src="<?= Assets::imageAssets('quotation.png') ?>" />
+            <img alt="quotation marks" src="<?= IMG_PATH . "quotation.png" ?>" />
         </div>
         <div class="leftFrom from">
             <h3>Trevor</h3>
@@ -33,7 +29,7 @@
     </div>
     <div class="individual">
         <div class="rightQuote quote">
-            <img alt="quotation marks" src="<?= Assets::imageAssets('quotation.png') ?>" />
+            <img alt="quotation marks" src="<?= IMG_PATH . "quotation.png" ?>" />
         </div>
         <div class="rightFrom from">
             <h3>Victoria</h3>
@@ -55,7 +51,7 @@
     </div>
     <div class="individual">
         <div class="leftQuote quote">
-            <img alt="quotation marks" src="<?= Assets::imageAssets('quotation.png') ?>" />
+            <img alt="quotation marks" src="<?= IMG_PATH . "quotation.png" ?>" />
         </div>
         <div class="leftFrom from">
             <h3>Gerry</h3>
@@ -77,7 +73,7 @@
     </div>
     <div class="individual">
         <div class="rightQuote quote">
-            <img alt="quotation marks" src="<?= Assets::imageAssets('quotation.png') ?>" />
+            <img alt="quotation marks" src="<?= IMG_PATH . "quotation.png" ?>" />
         </div>
         <div class="rightFrom from">
             <h3>Debbie</h3>
@@ -98,4 +94,3 @@
         </div>
     </div>
 </div>
-<?php include(Assets::footer()) ?>

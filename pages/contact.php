@@ -1,7 +1,3 @@
-<?php require_once('../config/env.php') ?>
-<?= Assets::header('contact') ?>
-<?php include(Assets::nav()) ?>
-
 <h1>CONTACT US</h1>
 
 <div id="contact">
@@ -136,5 +132,3 @@
 </div>
 
 <div id="snackbar">Message Sent...</div>
-
-<?php include(Assets::footer()) ?>
