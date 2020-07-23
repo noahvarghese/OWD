@@ -1,10 +1,11 @@
 <?php
-    require_once("config.php");
-    require_once("assets.php");
+    require_once("./config/config.php");
 
     $action = isset($_GET["action"]) ? $_GET["action"] : "";
 
     include(LAYOUT_PATH . "nav.php");
+
+    $results = array();
 
     switch( $action )
     {
