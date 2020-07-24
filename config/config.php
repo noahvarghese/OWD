@@ -1,7 +1,7 @@
 <?php
 
 ini_set("display_errors", true);
-date_default_timezone_set("Canada/Toronto");
+date_default_timezone_set("America/Toronto");
 define("ASSETS_PATH", "./assets/");
 define("STYLE_PATH", ASSETS_PATH . "css/");
 define("JS_PATH", ASSETS_PATH . "js/");
