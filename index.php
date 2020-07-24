@@ -1,7 +1,7 @@
 <?php
     require_once("./config/config.php");
 
-    $action = isset($_GET["action"]) ? $_GET["action"] : "";
+    $action = isset($_GET["action"]) ? $_GET["action"] : "about";
 
     include(LAYOUT_PATH . "nav.php");
 

@@ -24,7 +24,7 @@
 @media only screen and ( min-width: 1200px )
 {
     .selected {
-        color: var(--orange);
+        color: var(--orange) !important;
     }
 
     nav {
