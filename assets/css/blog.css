@@ -2,6 +2,7 @@
     --orange: #FFA800;
     --gray: #888C8D;
     --offwhite: #F2F2F2;
+    --orangeOpaque: rgba(255, 170, 0, 0.7);
 }
 
 @font-face {
@@ -22,18 +23,104 @@
 @media only screen and ( min-width: 1200px )
 {
     #main > h1 {
-        margin-bottom: 1em;
+        margin-left: 0.5em;
+        margin-bottom: 0.75em;
     }
 
     #pageDescription { 
+        margin-left: 1em;
         color: var(--orange);
         line-height: 1.5em;
         font-size: 1.5em;
         width: 40em;
-        margin-left: 2.25em;
     }
 
     #container {
-        margin-left: 3em;
+        margin-left: 1em;
+        margin-top: 8em;
+    }
+
+    #banner {
+        width: 100%;
+        height: 450px;
+    }
+
+    a.blogLink {
+        text-decoration: none;
+    }
+
+    #newest {
+        color: white;
+        position: relative;
+    }
+
+    #newest > div {
+        background-color: var(--orangeOpaque);
+        width: 45%;
+        padding-left: 1.25em;
+        padding-right: 5em;
+        padding-top: 2em;
+        padding-bottom: 1em;
+        position: absolute;
+        right: 0;
+        margin-top: 8em;
+        float: right;
+    }
+
+    #newest > div > p {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .older > div > p > span {
+        color: var(--orange);
+    }
+
+    a:not(#newest) > div > h2 {
+        color: black;
+    }
+
+    a:not(#newest) > div > p {
+        color: var(--gray);
+    }
+
+    a:not(#newest) > div > p > span {
+        color: var(--orange);
+    }
+
+    .horizontal {
+        display: inline-flex;
+    }
+
+    .horizontal:not(:last-of-type) {
+        margin-bottom: 5em;
+    }
+
+    .horizontal:last-of-type {
+        margin-bottom: 10em;
+    }
+
+
+    .horizontal:first-of-type {
+        margin-top: 10em;
+    }
+
+    .horizontal > a:not(:last-of-type) {
+        margin-right: 3.5em;
+    }
+
+    .horizontal > a, .horizontal > a > img {
+        width: 590px;
+    }
+
+    .horizontal > a > div > h2 {
+        font-size: 1.25em;
+        margin-top: 2em;
+        margin-bottom: 0;
+    }
+
+    .horizontal > a > div > p {
+        line-height: 1.5em;
+        margin-top: 1em;
     }
 }

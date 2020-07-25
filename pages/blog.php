@@ -7,22 +7,23 @@
 </p>
 <div id="container">
     <a id="newest" href="index.php?action=blogPost" class="blogLink">
-        <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>"/>
         <div>
             <h2>DOES HUMIDITY AFFECT WINDOWS?</h2>
             <p class="blogDescription" id="bannerDescription">
-                At Oakville Windows & Doors, we’re committed to providing you with excellent
-                service – even after your window or door installation is finished. Stay up to date
-                with all of the latest industry trends, maintenance advice and need-to-know
-                information for your new windows and doors with our blog.
+                Humidity is excess moisture circulating in your home. If your
+                home has too much humidity, the first place that you will notice
+                this will likely be on your windows — but this doesn’t mean that
+                your windows are the problem. If you’ve ever asked the question, “Does Humidity Affect Windows?”, read on for the answer
+                and some helpful solutions...
                 <span class="readMore">READ MORE</span>
             </p>
         </div>
+        <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>" class="banner"/>
     </a>
     <div id="older">
         <div class="horizontal">
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog2.jpg" ?>"/>
+                <img src="<?= IMG_PATH . "tempBlog2.jpg" ?>" class="banner">
                 <div>
                     <h2>How Your Old Windows & Doors May Be Affecting Your Home?</h2>
                     <p class="blogDescription">
@@ -35,7 +36,7 @@
                 </div>
             </a>
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog3.jpg" ?>"/>
+                <img src="<?= IMG_PATH . "tempBlog3.jpg" ?>" class="banner"/>
                 <div>
                     <h2>Window Installations: Retrofit Vs. Brick-To-Brick</h2>
                     <p class="blogDescription">
@@ -50,7 +51,7 @@
         </div>
         <div class="horizontal">
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog4.jpg" ?>"/>
+                <img src="<?= IMG_PATH . "tempBlog4.jpg" ?>" class="banner"/>
                 <div>
                     <h2>How To Increase Your Home’s Natural Light With Windows</h2>
                     <p class="blogDescription">
@@ -63,7 +64,7 @@
                 </div>
             </a>
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog5.jpg" ?>"/>
+                <img src="<?= IMG_PATH . "tempBlog5.jpg" ?>" class="banner"/>
                 <div>
                     <h2>How To Choose A New Front Door</h2>
                     <p class="blogDescription">
