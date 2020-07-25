@@ -6,7 +6,7 @@
     information for your new windows and doors with our blog.
 </p>
 <div id="container">
-    <a id="newest" href="index?action=blogPost" class="blogLink">
+    <a id="newest" href="index.php?action=blogPost" class="blogLink">
         <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>"/>
         <div>
             <h2>DOES HUMIDITY AFFECT WINDOWS?</h2>
