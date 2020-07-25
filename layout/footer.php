@@ -32,7 +32,7 @@
                     <a href="index.php?action=testimonials"><h3 class="footerHdr">TESTIMONIALS</h3></a>
                 </div>
                 <div>
-                    <a href="#"><h3 class="footerHdr">BLOG</h3></a>
+                    <a href="index.php?action=blog"><h3 class="footerHdr">BLOG</h3></a>
                     <a href="index.php?action=contact"><h3 class="footerHdr">CONTACT</h3></a>
                 </div>
             </div>

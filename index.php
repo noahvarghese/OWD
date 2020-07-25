@@ -6,10 +6,12 @@
     include(LAYOUT_PATH . "nav.php");
 
     $results = array();
+    $results["title"] = $action;
 
     switch( $action )
     {
         case 'about':
+            $results["title"] = $action;
             include(PAGE_PATH . "about.php");
             break;
         case 'services':
@@ -24,13 +26,14 @@
         case 'gallery':
             include(PAGE_PATH . "notYet.php");
             break;
-        case 'blogs':
-            include(PAGE_PATH . "blogs.php");
+        case 'blog':
+            include(PAGE_PATH . "blog.php");
             break;
         case 'testimonials':
             include(PAGE_PATH . "testimonials.php");
             break;
         case 'blogPost':
+            $results["title"] = "blog";
             include(PAGE_PATH . "blogPost.php");
             break;
         default:
