@@ -68,7 +68,7 @@
         <div class="firstLabel">
             <h3>LOCAL MATTERS</h3>
             <p>
-                Oakville Windows & Doors are a
+                Oakville Windows & Doors is a
                 local, family owned business,
                 commited to providing care and
                 service for our community.
