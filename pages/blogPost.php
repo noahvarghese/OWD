@@ -72,5 +72,23 @@
     </div>
 </div>
 <div id="recent">
-<h3>RECENT POSTS</h3>
+    <h3>RECENT POSTS</h3>
+    <div>
+        <div class="recentBlog">
+            <img alt="small1" src="<?= IMG_PATH . "tempBlogSmall1.jpg" ?>"/>
+            <h4>How Your old Windows & Doors May Be Affecting Your Home?</h4>
+        </div>
+        <div class="recentBlog">
+            <img alt="small2" src="<?= IMG_PATH . "tempBlogSmall2.jpg" ?>"/>
+            <h4>Window Installations: Retrofit Vs. Brick-To-Brick</h4>
+        </div>
+        <div class="recentBlog">
+            <img alt="small3" src="<?= IMG_PATH . "tempBlogSmall3.jpg" ?>"/>
+            <h4>How To Increase Your Home’s Natural Light With Windows</h4>
+        </div>
+        <div class="recentBlog">
+            <img alt="small4" src="<?= IMG_PATH . "tempBlogSmall4.jpg" ?>"/>
+            <h4>How To Choose A New Front Door</h4>
+        </div>
+    </div>
 </div>
