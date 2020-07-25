@@ -4,7 +4,7 @@
     <head>
         <title><?= ucfirst($results["title"]) ?></title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?= STYLE_PATH . $results["title"] . ".css" ?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . $results["css"] . ".css" ?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "footer.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "main.css"?>" />

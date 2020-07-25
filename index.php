@@ -6,6 +6,7 @@
     $results = array();
     $results["title"] = $action;
     $results["page"] = "";
+    $results["css"] = $action;
 
     switch( $action )
     {
@@ -33,6 +34,7 @@
             break;
         case 'blogPost':
             $results["title"] = "blog";
+            $results["css"] = "blogPost";
             $results["page"] = PAGE_PATH . "blogPost.php";
             break;
         default:

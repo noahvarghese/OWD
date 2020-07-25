@@ -22,19 +22,19 @@
 @media only screen and ( min-width: 1200px )
 {
     .banner {
-        width: 100%;
+        width: 1250px;
         height: 450px;
         margin-top: 5em;
     }
 
-    h1 {
+    #main > h1 {
         text-align: center;
-        margin-left: -1em;
+        margin-left: -0.25em;
     }
 
     #description > p {
         font-family: Arimo;
-        margin-left: 6em;
+        margin-left: 5.25em;
         margin-right: 4em;
         line-height: 1.5em;
         margin-bottom: 2em;
@@ -46,7 +46,7 @@
 
     #author > span:first-of-type {
         margin-right: 4em;
-        margin-left: 10em;
+        margin-left: 8em;
     }
 
     #blogSocial {
@@ -121,7 +121,7 @@
     }
 
     .recentBlog:first-of-type {
-        margin-left: 1em;
+        margin-left: 1.75em;
     }
 
     .recentBlog:not(:last-of-type) {
