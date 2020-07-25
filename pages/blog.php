@@ -7,7 +7,7 @@
 </p>
 <div id="container">
     <a id="newest" href="index.php?action=blogPost" class="blogLink">
-        <div>
+        <div id="newestDescription">
             <h2>DOES HUMIDITY AFFECT WINDOWS?</h2>
             <p class="blogDescription" id="bannerDescription">
                 Humidity is excess moisture circulating in your home. If your
@@ -18,12 +18,16 @@
                 <span class="readMore">READ MORE</span>
             </p>
         </div>
-        <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>" class="banner"/>
+        <div id="bannerImgContainer">
+            <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>" class="banner" />
+        </div>
     </a>
     <div id="older">
         <div class="horizontal">
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog2.jpg" ?>" class="banner">
+                <div class="imgContainer"> 
+                    <img src="<?= IMG_PATH . "tempBlog2.jpg" ?>" class="banner">
+                </div>
                 <div>
                     <h2>How Your Old Windows & Doors May Be Affecting Your Home?</h2>
                     <p class="blogDescription">
@@ -36,7 +40,9 @@
                 </div>
             </a>
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog3.jpg" ?>" class="banner"/>
+                <div class="imgContainer"> 
+                    <img src="<?= IMG_PATH . "tempBlog3.jpg" ?>" class="banner" />
+                </div>
                 <div>
                     <h2>Window Installations: Retrofit Vs. Brick-To-Brick</h2>
                     <p class="blogDescription">
@@ -51,7 +57,9 @@
         </div>
         <div class="horizontal">
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog4.jpg" ?>" class="banner"/>
+                <div class="imgContainer"> 
+                    <img src="<?= IMG_PATH . "tempBlog4.jpg" ?>" class="banner" />
+                </div>
                 <div>
                     <h2>How To Increase Your Home’s Natural Light With Windows</h2>
                     <p class="blogDescription">
@@ -64,14 +72,16 @@
                 </div>
             </a>
             <a href="#" class="blogLink">
-                <img src="<?= IMG_PATH . "tempBlog5.jpg" ?>" class="banner"/>
+                <div class="imgContainer"> 
+                    <img src="<?= IMG_PATH . "tempBlog5.jpg" ?>" class="banner" />
+                </div>
                 <div>
                     <h2>How To Choose A New Front Door</h2>
                     <p class="blogDescription">
                         Your front door is a major part of your home, both aesthetically
                         and functionally, so it’s important to choose the right one. If
                         you are looking to replace your front door, here’s what you
-                        should... 
+                        should...
                         <span class="readMore">READ MORE</span>
                     </p>
                 </div>
