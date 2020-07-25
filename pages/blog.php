@@ -6,7 +6,7 @@
     information for your new windows and doors with our blog.
 </p>
 <div id="container">
-    <a id="newest" href="index?action=blogPost">
+    <a id="newest" href="index?action=blogPost" class="blogLink">
         <img id="banner" alt="bannerImage" src="<?= IMG_PATH . "tempBlog1.jpg" ?>"/>
         <div>
             <h2>DOES HUMIDITY AFFECT WINDOWS?</h2>
@@ -21,7 +21,7 @@
     </div>
     <div id="older">
         <div class="horizontal">
-            <a>
+            <a href="#" class="blogLink">
                 <img src="<?= IMG_PATH . "tempBlog2.jpg" ?>"/>
                 <div>
                     <h2>How Your Old Windows & Doors May Be Affecting Your Home?</h2>
@@ -34,7 +34,7 @@
                     </p>
                 </div>
             </a>
-            <a>
+            <a href="#" class="blogLink">
                 <img src="<?= IMG_PATH . "tempBlog3.jpg" ?>"/>
                 <div>
                     <h2>Window Installations: Retrofit Vs. Brick-To-Brick</h2>
@@ -49,7 +49,7 @@
             </a>
         </div>
         <div class="horizontal">
-            <a>
+            <a href="#" class="blogLink">
                 <img src="<?= IMG_PATH . "tempBlog4.jpg" ?>"/>
                 <div>
                     <h2>How To Increase Your Home’s Natural Light With Windows</h2>
@@ -62,7 +62,7 @@
                     </p>
                 </div>
             </a>
-            <a>
+            <a href="#" class="blogLink">
                 <img src="<?= IMG_PATH . "tempBlog5.jpg" ?>"/>
                 <div>
                     <h2>How To Choose A New Front Door</h2>

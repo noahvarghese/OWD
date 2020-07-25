@@ -3,10 +3,10 @@
 
     $action = isset($_GET["action"]) ? $_GET["action"] : "about";
 
-    include(LAYOUT_PATH . "nav.php");
-
     $results = array();
     $results["title"] = $action;
+
+    include(LAYOUT_PATH . "nav.php");
 
     switch( $action )
     {
