@@ -37,7 +37,7 @@
                 <li><a href="index.php?action=contact" class="<?= $action == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
                 <li><a href="#" class="<?= $action == 'commercial' ? 'selected' : '' ?>">COMMERCIAL</a></li>
                 <li><a href="#" class="<?= $action == 'gallery' ? 'selected' : '' ?>">GALLERY</a></li>
-                <li><a href="#" class="<?= $action == 'blogs' ? 'selected' : '' ?>">BLOGS</a></li>
+                <li><a href="index.php?action=blogPost" class="<?= $action == 'blogs' ? 'selected' : '' ?>">BLOGS</a></li>
                 <li><a href="index.php?action=testimonials" class="<?= $action == 'testimonials' ? 'selected' : '' ?>">TESTIMONIALS</a></li>
             </ul>
         </nav>

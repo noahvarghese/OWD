@@ -30,6 +30,9 @@
         case 'testimonials':
             include(PAGE_PATH . "testimonials.php");
             break;
+        case 'blogPost':
+            include(PAGE_PATH . "blogPost.php");
+            break;
         default:
             include(PAGE_PATH . "404.php");
             break;
