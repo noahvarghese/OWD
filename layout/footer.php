@@ -28,7 +28,7 @@
                     <a href="#"><h3 class="footerHdr">COMMERCIAL</h3></a>
                 </div>
                 <div>
-                    <a href="index.php?action=about"><h3 class="footerHdr">ABOUT</h3></a>
+                    <a href="index.php?action=home"><h3 class="footerHdr">HOME</h3></a>
                     <a href="index.php?action=testimonials"><h3 class="footerHdr">TESTIMONIALS</h3></a>
                 </div>
                 <div>

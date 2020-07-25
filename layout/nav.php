@@ -4,7 +4,7 @@
     <head>
         <title><?= ucfirst($results["title"]) ?></title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?= STYLE_PATH . $action . ".css" ?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . $results["title"] . ".css" ?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "footer.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "main.css"?>" />
@@ -32,7 +32,7 @@
         <nav>
             <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
             <ul id="nav">
-                <li><a href="index.php?action=about" class="<?= $results["title"] == 'about' ? 'selected' : '' ?>">ABOUT</a></li>
+                <li><a href="index.php?action=about" class="<?= $results["title"] == 'home' ? 'selected' : '' ?>">HOME</a></li>
                 <li><a href="index.php?action=services" class="<?= $results["title"] == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
                 <li><a href="index.php?action=contact" class="<?= $results["title"] == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
                 <li><a href="#" class="<?= $results["title"] == 'commercial' ? 'selected' : '' ?>">COMMERCIAL</a></li>
