@@ -18,7 +18,7 @@
                 <span class="readMore">READ MORE</span>
             </p>
         </div>
-    </div>
+    </a>
     <div id="older">
         <div class="horizontal">
             <a href="#" class="blogLink">
