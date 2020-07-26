@@ -5,6 +5,7 @@
 
     $results = array();
     $results["title"] = $action;
+    $results["css"] = $action;
     $results["page"] = "";
 
     $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "hey";
