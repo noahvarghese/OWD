@@ -1,7 +1,7 @@
 <?php
     require_once("./config/config.php");
 
-    $action = isset($_GET["action"]) ? $_GET["action"] : "about";
+    $action = isset($_GET["action"]) ? $_GET["action"] : "home";
 
     $results = array();
     $results["title"] = $action;
