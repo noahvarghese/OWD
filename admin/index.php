@@ -11,7 +11,7 @@
 
     if ( isset( $username ) )
     {
-        include("./adminNav.php");
+        include("./nav.php");
         
         switch ( $action )
         {
@@ -27,7 +27,7 @@
                 include("./blog.php");
                 break;
             case 'addBlog':
-                $results['title'] = 'Add Post';
+                $results["title"] = "Add Post";
                 include("./blogPost.php");
                 break;
             default:

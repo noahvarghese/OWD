@@ -4,8 +4,11 @@
 <head>
     <title><?= ucfirst($results["title"]) ?></title>
     <meta charset="utf-8" />
+    <link rel="stylesheet" href="<?= STYLE_PATH . $results["css"] . ".css" ?>" />
+    <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css" ?>" />
     <link rel="stylesheet" href="<?= STYLE_PATH . "admin.css" ?>" />
     <link rel="icon" type="image/x-icon" href="<?= IMG_PATH . "favicon.ico" ?>" />
+    <script type="text/javascript" src="<?= JS_PATH . $action . ".js" ?>"></script>
     <script type="text/javascript" src="<?= JS_PATH . "admin.js" ?>"></script>
 </head>
 
