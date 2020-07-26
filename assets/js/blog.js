@@ -17,6 +17,27 @@ window.addEventListener("load", () => {
     banner.addEventListener("mouseleave", () => {
         banner.style.transform = "scale(1)";
     });
+});
 
+window.addEventListener("scroll", () => {
+
+    var snackbar = document.getElementById("loadSnackbar");
+
+    var footer = document.getElementById("footerContents");// Get it's position in the viewport
+    var bounding = footer.getBoundingClientRect();
     
+    if 
+    (
+        bounding.top >= 0 && 
+        bounding.left >= 0 &&
+        bounding.right <= (window.innerWidth || document.documentElement.clientWidth) &&
+        bounding.bottom <= (window.innerHeight || document.documentElement.clientHeight)
+    ) 
+    {
+        snackbar.classList.add("show");     
+    } 
+    else
+    {
+        snackbar.classList.remove("show");  
+    }
 });

@@ -89,3 +89,4 @@
         </div>
     </div>
 </div>
+<div id="loadSnackbar" class="hide">Load More...</div>
