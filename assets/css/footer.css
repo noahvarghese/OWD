@@ -121,4 +121,15 @@
     #footerNav > div > a:hover {
         color: var(--orange);
     }
+
+    p#copyright {
+        color: var(--gray);
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        font-size: 1em;
+        width: 7em;
+        left: 50%;
+        margin-left: -3.5em;
+    }
 }

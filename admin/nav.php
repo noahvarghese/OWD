@@ -23,5 +23,6 @@
             <li><a href="index.php?action=blog" class="<?= $results["title"] == 'blog' ? 'selected' : '' ?>">BLOG</a></li>
             <li><a href="index.php?action=comments" class="<?= $results["title"] == 'comments' ? 'selected' : '' ?>">COMMENTS</a></li>
         </ul>
+        <p id="copyright">&#169 N<sup>2</sup> Designs</p>
     </nav>
     <div id="main">

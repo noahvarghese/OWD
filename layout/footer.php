@@ -37,6 +37,7 @@
                 </div>
             </div>
         </div>
+        <p id="copyright">&#169 N<sup>2</sup> Designs</p>
     </div>
 </footer>
 </div>
