@@ -1,5 +1,5 @@
 <?php
-    require_once("../config/config.php");
+    require_once("./config/config.php");
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "home";
 
@@ -7,9 +7,9 @@
     $results["title"] = $action;
     $results["page"] = "";
 
-    $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "";
+    $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "hey";
 
-    if ( isset( $_SESSION['user'] ) == false )
+    if ( isset( $username ) )
     {
         include("./adminNav.php");
         
@@ -27,11 +27,10 @@
                 include("./blog.php");
                 break;
             case 'addBlog':
-                $results["title"] = "blog";
+                $results['title'] = 'Add Post';
                 include("./blogPost.php");
                 break;
             default:
-            echo $action;
                 include("./404.php");
                 break;
         }
