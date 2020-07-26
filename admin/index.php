@@ -12,7 +12,6 @@
 
     if ( isset( $username ) )
     {
-        include("./nav.php");
         
         switch ( $action )
         {
@@ -25,16 +24,19 @@
             case 'gallery':
                 break;
             case 'blog':
-                include("./blog.php");
+                $results["page"] = "./blog.php";
                 break;
             case 'addBlog':
                 $results["title"] = "Add Post";
-                include("./blogPost.php");
+                $results["page"] = "./blogPost.php";
                 break;
             default:
-                include("./404.php");
+                $results["page"] = "./404.php";
                 break;
         }
+
+        include("./nav.php");
+        include($results["page"]);
     }
     else
     {
