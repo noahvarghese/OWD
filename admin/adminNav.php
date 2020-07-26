@@ -4,7 +4,7 @@
     <head>
         <title><?= ucfirst($action) ?></title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?="." . STYLE_PATH . "admin.css"?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . "admin.css"?>" />
         <link rel="icon" type="image/x-icon" href="<?= IMG_PATH . "favicon.ico"?>"/>
         <script type="text/javascript" src="<?= JS_PATH . "admin.js"?>"></script>    
     </head>

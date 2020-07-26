@@ -16,7 +16,7 @@
         <label for="content1">Section 1 Content:</label>
         <textarea name="content1" id="content1" class="content"></textarea>
     </div>
-    <button value="Add Section"></button>
+    <button>Add Section</button>
     <div>
         <input type="submit" value="Save"/>
         <input type="submit" value="Publish"/>

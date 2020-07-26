@@ -4,9 +4,9 @@
     $action = isset($_GET["action"]) ? $_GET["action"] : "";
     $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "";
 
-    if ( $_SESSION['user'] )
+    if ( isset( $_SESSION['user'] ) == false )
     {
-        include("." . PAGE_PATH . "adminNav.php");
+        include("./adminNav.php");
         
         switch ( $action )
         {
@@ -20,13 +20,17 @@
                 break;
             case 'blog':
                 break;
+            case 'addBlog':
+                include("./blogPost.php");
+                break;
             default:
-                include("." . PAGE_PATH . "404.php");
+            echo $action;
+                include("./404.php");
                 break;
         }
     }
     else
     {
-        include("." . PAGE_PATH . "login.php");
+        include("./login.php");
     }
 ?>
