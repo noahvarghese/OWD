@@ -74,29 +74,29 @@
 <div id="recent">
     <h3>RECENT POSTS</h3>
     <div>
-        <div class="recentBlog">
+        <a class="recentBlog" href="#">
             <div class="imgContainer">
                 <img alt="small1" src="<?= IMG_PATH . "tempBlogSmall1.jpg" ?>" />
             </div>
             <h4>How Your old Windows & Doors May Be Affecting Your Home?</h4>
-        </div>
-        <div class="recentBlog">
+        </a>
+        <a class="recentBlog" href="#">
             <div class="imgContainer">
                 <img alt="small2" src="<?= IMG_PATH . "tempBlogSmall2.jpg" ?>" />
             </div>
             <h4>Window Installations: Retrofit Vs. Brick-To-Brick</h4>
-        </div>
-        <div class="recentBlog">
+        </a>
+        <a class="recentBlog" href="#">
             <div class="imgContainer">
                 <img alt="small3" src="<?= IMG_PATH . "tempBlogSmall3.jpg" ?>" />
             </div>
             <h4>How To Increase Your Home’s Natural Light With Windows</h4>
-        </div>
-        <div class="recentBlog">
+        </a>
+        <a class="recentBlog" href="#">
             <div class="imgContainer">
                 <img alt="small4" src="<?= IMG_PATH . "tempBlogSmall4.jpg" ?>" />
             </div>
             <h4>How To Choose A New Front Door</h4>
-        </div>
+        </a>
     </div>
 </div>
