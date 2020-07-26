@@ -34,6 +34,17 @@
         width: 1250px;
         font-family: "Arimo";
         direction: ltr;
+        position: relative;
+        /*
+        can do a fixed nav
+        
+        position: fixed;
+        background-color: white;
+        top: 0;
+        padding-bottom: 4em;
+        margin-bottom: 10em;
+        z-index: 10;
+        */
     }
 
     nav > *, ul#nav > li {
@@ -41,12 +52,18 @@
     }
 
     ul#nav {
-        width: 850px;
+        width: 1000px;
+        margin-left: 0em;
+        float: right;
+        z-index: 2;
+        position: absolute;
+        top: 4em;
+        right: -7em;
     }
 
     ul#nav > li {
         vertical-align: middle;
-        height: 5em;
+        height: 3em;
     }
 
     ul#nav > li > a {
@@ -55,20 +72,27 @@
         display: block;
         color: var(--gray);
         height: 100%;
-        margin-left: 1.75em;
         transition: color 0.25s;
         padding-top: 0.5em;
+        font-size: 1.2em;
+        margin-top: -1em;
+        margin-right: 1.25em !important;
     }
 
+    ul#nav > li > a:last-of-type {
+        margin-right: 0;
+    }
+    
     ul#nav > li:hover > a {
         color: var(--orange);
         cursor: pointer;
     }
 
     #logo {
+        float: left;
         height: 5em;
         max-width: 100%;
-        margin-left: 2em;
         margin-top: 2em;
+        z-index: 1;
     }
 }

@@ -2,9 +2,9 @@
 <html>
 
     <head>
-        <title><?= ucfirst($action) ?></title>
+        <title><?= ucfirst($results["title"]) ?></title>
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="<?= STYLE_PATH . $action . ".css" ?>" />
+        <link rel="stylesheet" href="<?= STYLE_PATH . $results["css"] . ".css" ?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "footer.css"?>" />
         <link rel="stylesheet" href="<?= STYLE_PATH . "main.css"?>" />
@@ -15,7 +15,7 @@
 
     <?
 
-    if ( $action == "contact" )
+    if ( $results["title"] == "contact" )
     {
         
     ?>
@@ -32,12 +32,12 @@
         <nav>
             <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
             <ul id="nav">
-                <li><a href="index.php?action=about" class="<?= $action == 'about' ? 'selected' : '' ?>">ABOUT</a></li>
-                <li><a href="index.php?action=services" class="<?= $action == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
-                <li><a href="index.php?action=contact" class="<?= $action == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
-                <li><a href="#" class="<?= $action == 'commercial' ? 'selected' : '' ?>">COMMERCIAL</a></li>
-                <li><a href="#" class="<?= $action == 'gallery' ? 'selected' : '' ?>">GALLERY</a></li>
-                <li><a href="index.php?action=blogPost" class="<?= $action == 'blogs' ? 'selected' : '' ?>">BLOGS</a></li>
-                <li><a href="index.php?action=testimonials" class="<?= $action == 'testimonials' ? 'selected' : '' ?>">TESTIMONIALS</a></li>
+                <li><a href="index.php?action=home" class="<?= $results["title"] == 'home' ? 'selected' : '' ?>">HOME</a></li>
+                <li><a href="index.php?action=services" class="<?= $results["title"] == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
+                <li><a href="index.php?action=contact" class="<?= $results["title"] == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
+                <li><a href="#" class="<?= $results["title"] == 'commercial' ? 'selected' : '' ?>">COMMERCIAL</a></li>
+                <li><a href="#" class="<?= $results["title"] == 'gallery' ? 'selected' : '' ?>">GALLERY</a></li>
+                <li><a href="index.php?action=blog" class="<?= $results["title"] == 'blog' ? 'selected' : '' ?>">BLOG</a></li>
+                <li><a href="index.php?action=testimonials" class="<?= $results["title"] == 'testimonials' ? 'selected' : '' ?>">TESTIMONIALS</a></li>
             </ul>
         </nav>
