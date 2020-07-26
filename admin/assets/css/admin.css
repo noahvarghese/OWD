@@ -82,3 +82,7 @@ nav > ul > li > a:hover {
 nav > ul > li:last-of-type {
     border-bottom: 1px solid white;
 }
+
+.selected {
+    color: var(--orange);
+}
