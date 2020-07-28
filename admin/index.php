@@ -8,9 +8,7 @@
     $results["css"] = $action;
     $results["page"] = "";
 
-    $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "hey";
-
-    if ( isset( $username ) )
+    if ( isset( $_SESSION['username'] ) )
     {
         
         switch ( $action )
@@ -23,23 +21,27 @@
                 break;
             case 'gallery':
                 break;
+            case 'addGallery':
+                $results["page"] = PAGE_PATH . "addGallery.php";
+                break;
             case 'blog':
-                $results["page"] = "./blog.php";
+                $results["page"] = PAGE_PATH . "blog.php";
                 break;
             case 'addBlog':
                 $results["title"] = "Add Post";
-                $results["page"] = "./blogPost.php";
+                $results["page"] = PAGE_PATH . "blogPost.php";
                 break;
             default:
-                $results["page"] = "./404.php";
+                $results["page"] = PAGE_PATH . "404.php";
                 break;
         }
 
-        include("./nav.php");
-        include($results["page"]);
+        include(LAYOUT_PATH . "nav.php");
     }
     else
     {
-        include("./login.php");
+        $results["page"] = PAGE_PATH . "login.php";
     }
+    
+    include($results["page"]);
 ?>

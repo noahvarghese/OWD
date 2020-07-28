@@ -1,8 +1,6 @@
-
-
 #addBlog {
-    margin-top: 10em;
-    margin-left: 20em;
+    margin-top: 2em;
+    margin-left: 40em;
 }
 
 form {
@@ -15,8 +13,16 @@ button {
     font-size: 2em;
 }
 
+h1 {
+    margin-bottom: 1em;
+}
+
 button:first-of-type {
     margin-bottom: 2em;
+}
+
+button#delete {
+    margin-top: 2em;
 }
 
 #sectionBtns {
@@ -60,4 +66,9 @@ textarea {
 input[type=submit], input[type=reset] {
     font-size: 2em;
     width: 30%;
+}
+
+input[type=file] {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
 }

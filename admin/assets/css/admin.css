@@ -19,7 +19,7 @@
     src: url(../../../assets/fonts/rimo-Regular.ttf)
 }
 
-#main {
+#main > *:not(form#login) {
     margin: 0;
     padding: 0;
     margin-left: 40em;

@@ -3,6 +3,10 @@
     <button>Back</button>
     <form>
         <div>
+            <label for="banner">Banner Image:</label>
+            <input type="file" id="banner" name="banner"/>
+        </div>
+        <div>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" />
         </div>
@@ -32,5 +36,6 @@
             <input type="submit" value="Save" />
             <input type="submit" value="Publish" />
         </div>
+        <button id="delete">Delete Post</button>
     </form>
 </div>

@@ -1,0 +1,76 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+    --offwhite: #F2F2F2;
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url(../../../assets/fonts/Arimo-Bold.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../../../assets/fonts/Arimo-Italic.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Regular;
+    src: url(../../../assets/fonts/rimo-Regular.ttf)
+}
+
+form#login {
+    background-color: var(--offwhite);
+    width: 55em;
+    margin: 0 auto;
+    margin-top: 5em;
+    padding: 2em;
+    text-align: center;
+    border-radius: 0.5em;
+    border: 1px solid var(--gray);
+}
+
+button {
+    width: 30em;
+    font-size: 1.5em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin: auto;
+    margin-top: 2em;
+    outline: none;
+    background-color: white;
+    cursor: pointer;
+    border-radius: 0.25em;
+    font-family: Arimo;
+}
+
+button:hover {
+    background-color: var(--gray);
+    color: white;
+    border: 2px solid var(--orange);
+}
+
+#login > div {
+    display: inline-block;
+}
+
+label {
+    font-size: 1.25em;
+    margin-top: 1.5em;
+    margin-right: 1.5em;
+}
+
+input[type=text], input[type=password] {
+    width: 25em;
+    height: 2em;
+    font-size: 1.25em;
+}
+
+input[type=password] {
+    margin-left: 0.1em;
+    margin-top: 0.5em;
+}
+
+img {
+    margin-bottom: 2em;
+}

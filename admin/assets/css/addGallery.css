@@ -1,0 +1,50 @@
+#addGallery {
+    margin-top: 2em;
+    margin-left: 40em;
+}
+
+form {
+    width: 44em;
+}
+
+button {
+    width: 20em;
+    height: 2em;
+    font-size: 2em;
+}
+
+h1 {
+    margin-bottom: 1em;
+}
+
+button:first-of-type {
+    margin-bottom: 2em;
+}
+
+button#delete {
+    margin-top: 2em;
+}
+
+input[type=submit], input[type=reset] {
+    margin-top: 2em;
+    font-size: 2em;
+    width: 30%;
+}
+
+input[type=file] {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
+}
+
+form > div > label {
+    display: block;
+}
+
+label, input {
+    font-size: 1.25em;
+}
+
+input[type=text]{
+    width: 31.6em;
+    margin-top: 0.5em;
+}
