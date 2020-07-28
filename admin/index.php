@@ -5,7 +5,7 @@
 
     $action = "addBlog";
     $_SESSION['username'] = "";
-    
+
     $results = array();
     $results["title"] = $action;
     $results["css"] = $action;
@@ -25,22 +25,22 @@
             case 'gallery':
                 break;
             case 'blog':
-                $results["page"] = "./blog.php";
+                $results["page"] = PAGE_PATH . "blog.php";
                 break;
             case 'addBlog':
                 $results["title"] = "Add Post";
-                $results["page"] = "./blogPost.php";
+                $results["page"] = PAGE_PATH . "blogPost.php";
                 break;
             default:
-                $results["page"] = "./404.php";
+                $results["page"] = PAGE_PATH . "404.php";
                 break;
         }
 
-        include("./nav.php");
+        include(LAYOUT_PATH . "nav.php");
     }
     else
     {
-        $results["page"] = "./login.php";
+        $results["page"] = PAGE_PATH . "login.php";
     }
     include($results["page"]);
 ?>

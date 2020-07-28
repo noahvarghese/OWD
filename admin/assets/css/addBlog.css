@@ -1,5 +1,5 @@
 #addBlog {
-    margin-top: 10em;
+    margin-top: 2em;
     margin-left: 40em;
 }
 
@@ -15,6 +15,10 @@ button {
 
 button:first-of-type {
     margin-bottom: 2em;
+}
+
+button:last-of-type {
+    margin-top: 2em;
 }
 
 #sectionBtns {

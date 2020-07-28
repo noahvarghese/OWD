@@ -1,5 +1,5 @@
-<div id="addBlog">
-    <h1>Add Blog Post</h1>
+<div id="addGallery">
+    <h1>Add Gallery Image</h1>
     <button>Back</button>
     <form>
         <div>
@@ -36,6 +36,5 @@
             <input type="submit" value="Save" />
             <input type="submit" value="Publish" />
         </div>
-        <button>Delete Post</button>
     </form>
 </div>
