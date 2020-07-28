@@ -9,7 +9,8 @@
         <script type="text/javascript" src="<?= JS_PATH . "admin.js"?>"></script>    
     </head>
     <body>
-        <form autocomplete="on" method="POST" action="">
+        <form autocomplete="on" method="POST" action="" id="login">
+            <img alt="logo" src="<?= IMG_PATH . "logo.png" ?>"/>
             <div>
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username"/>
@@ -18,7 +19,7 @@
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password"/>
             </div>
-            <input type="submit" value="Login"/>
+            <button type="submit" value="Login">Submit</button>
         </form>
     </body>
 </html>
