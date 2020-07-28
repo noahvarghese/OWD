@@ -3,38 +3,18 @@
     <button>Back</button>
     <form>
         <div>
-            <label for="banner">Banner Image:</label>
-            <input type="file" id="banner" name="banner"/>
+            <label for="image">Image:</label>
+            <input type="file" id="image" name="image"/>
         </div>
         <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" />
-        </div>
-        <div>
-            <label for="intro">Introduction:</label>
-            <textarea id="intro" name="intro"></textarea>
-        </div>
-        <div id="sectionList">
-            <div class="section">
-                <h2>Section 1</h2>
-                <div>
-                    <label for="heading1">Header:</label>
-                    <input type="text" id="heading1" name="heading1" class="header">
-                </div>
-                <div>
-                    <label for="content1">Content:</label>
-                    <textarea name="content1" id="content1" class="content"></textarea>
-                </div>
-            </div>
-        </div>
-        <div id="sectionBtns">
-            <button id="delBtn">Delete Section</button>
-            <button id="addBtn">Add Section</button>
+            <label for="description">Description:</label>
+            <input type="text" id="description" name="description" />
         </div>
         <div>
             <input type="reset" value="Clear" />
             <input type="submit" value="Save" />
-            <input type="submit" value="Publish" />
+            <input type="submit" value="Post" />
         </div>
+        <button id="delete">Delete Image</button>
     </form>
 </div>

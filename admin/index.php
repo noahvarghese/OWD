@@ -3,7 +3,7 @@
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "home";
 
-    $action = "addBlog";
+    $action = "addGallery";
     $_SESSION['username'] = "";
 
     $results = array();
@@ -23,6 +23,9 @@
             case 'contact':
                 break;
             case 'gallery':
+                break;
+            case 'addGallery':
+                $results["page"] = PAGE_PATH . "addGallery.php";
                 break;
             case 'blog':
                 $results["page"] = PAGE_PATH . "blog.php";
