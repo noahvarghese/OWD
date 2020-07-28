@@ -36,6 +36,6 @@
             <input type="submit" value="Save" />
             <input type="submit" value="Publish" />
         </div>
-        <button>Delete Post</button>
+        <button id="delete">Delete Post</button>
     </form>
 </div>

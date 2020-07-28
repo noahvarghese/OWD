@@ -13,11 +13,15 @@ button {
     font-size: 2em;
 }
 
+h1 {
+    margin-bottom: 1em;
+}
+
 button:first-of-type {
     margin-bottom: 2em;
 }
 
-button:last-of-type {
+button#delete {
     margin-top: 2em;
 }
 
