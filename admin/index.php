@@ -8,9 +8,7 @@
     $results["css"] = $action;
     $results["page"] = "";
 
-    $username = isset( $_SESSION['username'] ) ? $_SESSION['username'] : "hey";
-
-    if ( isset( $username ) )
+    if ( isset( $_SESSION['username'] ) )
     {
         
         switch ( $action )
@@ -36,10 +34,10 @@
         }
 
         include("./nav.php");
-        include($results["page"]);
     }
     else
     {
-        include("./login.php");
+        $results["page"] = "./login.php";
     }
+    include($results["page"]);
 ?>
