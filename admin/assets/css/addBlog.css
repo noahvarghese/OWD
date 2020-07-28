@@ -1,8 +1,6 @@
-
-
 #addBlog {
     margin-top: 10em;
-    margin-left: 20em;
+    margin-left: 40em;
 }
 
 form {
@@ -60,4 +58,9 @@ textarea {
 input[type=submit], input[type=reset] {
     font-size: 2em;
     width: 30%;
+}
+
+input[type=file] {
+    margin-top: 0.5em;
+    margin-bottom: 2em;
 }

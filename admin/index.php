@@ -3,6 +3,9 @@
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "home";
 
+    $action = "addBlog";
+    $_SESSION['username'] = "";
+    
     $results = array();
     $results["title"] = $action;
     $results["css"] = $action;
