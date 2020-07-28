@@ -47,7 +47,7 @@ button {
 button:hover {
     background-color: var(--gray);
     color: white;
-    border-color: var(--orange);
+    border: 2px solid var(--orange);
 }
 
 #login > div {
