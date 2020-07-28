@@ -3,9 +3,6 @@
     session_start();
     $action = isset($_GET["action"]) ? $_GET["action"] : "home";
 
-    $action = "addGallery";
-    $_SESSION['username'] = "";
-
     $results = array();
     $results["title"] = $action;
     $results["css"] = $action;
@@ -45,5 +42,6 @@
     {
         $results["page"] = PAGE_PATH . "login.php";
     }
+    
     include($results["page"]);
 ?>
