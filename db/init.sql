@@ -1,0 +1,99 @@
+DROP DATABASE IF EXISTS OWD;
+
+CREATE DATABASE OWD;
+
+DROP TABLE IF EXISTS PHOTO;
+
+CREATE TABLE PHOTO (
+    id INT NOT NULL AUTO_INCREMENT,
+    file_id VARCHAR(20) NOT NULL,
+    file_name VARCHAR(255) NOT NULL,
+    created_date DATETIME NOT NULL,
+    file BLOB NOT NULL,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS GALLERY;
+
+CREATE TABLE GALLERY (
+    id INT NOT NULL AUTO_INCREMENT,
+    description VARCHAR(255) NOT NULL,
+    published_date DATETIME NOT NULL,
+    created_date DATETIME NOT NULL,
+    last_modified_date DATETIME NOT NULL,
+    file_id INT NOT NULL,
+    thumbnail_id INT NOT NULL,
+    PRIMARY Key (id),
+    FOREIGN KEY (file_id) REFERENCES PHOTO(id)
+    FOREIGN KEY (thumbnail_id) REFERENCES PHOTO(id)
+);
+
+DROP TABLE IF EXISTS AUTHOR;
+
+CREATE TABLE AUTHOR (
+    id INT NOT NULL AUTO_INCREMENT,
+    author VARCHAR(255) NOT NULL,
+    PRIMARY KEY (id)
+);
+
+DROP TABLE IF EXISTS BLOG;
+
+CREATE TABLE BLOG (
+    id INT NOT NULL AUTO_INCREMENT,
+    title VARCHAR(255) NOT NULL,
+    author_id int NOT NULL,
+    published_date DATETIME,
+    last_modified_date DATETIME NOT NULL,
+    created_date DATETIME NOT NULL,
+    introduction VARCHAR(MAX),
+    banner_id INT,
+    thubmnail_id INT,
+    mid_size_thumbnail_id INT,
+    PRIMARY KEY (id),
+    FOREIGN KEY (author_id) REFERENCES AUTHOR(id),
+    FOREIGN KEY (banner_id) REFERENCES PHOTO(id),
+    FOREIGN KEY (thubmnail_id) REFERENCES PHOTO(id),
+    FOREIGN KEY (mid_size_thumbnail_id) REFERENCES PHOTO(id),
+);
+
+DROP TABLE IF EXISTS CATEGORIES;
+
+CREATE TABLE CATEGORIES (
+    id INT NOT NULL AUTO_INCREMENT,
+    category VARCHAR(255) NOT NULL,
+    post_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (post_id) REFERENCES BLOG(id)
+);
+
+DROP TABLE IF EXISTS TAGS;
+
+CREATE TABLE TAGS (
+    id INT NOT NULL AUTO_INCREMENT,
+    tag VARCHAR(255) NOT NULL,
+    post_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (post_id) REFERENCES BLOG(id)
+);
+
+DROP TABLE IF EXISTS SECTION;
+
+CREATE TABLE SECTION (
+    id INT NOT NULL AUTO_INCREMENT,
+    post_id INT NOT NULL,
+    header VARCHAR(255),
+    body VARCHAR(MAX) NOT NULL,
+    index INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (post_id) REFERENCES BLOG(id)
+);
+
+DROP TABLE IF EXISTS COMMENTS;
+
+CREATE TABLE COMMENTS (
+    id INT NOT NULL AUTO_INCREMENT,
+    created_date DATETIME NOT NULL,
+    author_id INT NOT NULL,
+    PRIMARY KEY (id),
+    FOREIGN KEY (author_id) REFERENCES AUTHOR(id)
+);

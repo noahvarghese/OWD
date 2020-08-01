@@ -20,11 +20,14 @@
             case 'contact':
                 break;
             case 'gallery':
+                $results["title"] = "Gallery";
                 break;
             case 'addGallery':
+                $results["title"] = "Add Image";
                 $results["page"] = PAGE_PATH . "addGallery.php";
                 break;
             case 'blog':
+                $results["title"] = "Blog";
                 $results["page"] = PAGE_PATH . "blog.php";
                 break;
             case 'addBlog':
