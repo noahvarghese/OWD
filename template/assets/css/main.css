@@ -1,0 +1,66 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+    --offwhite: #F2F2F2;
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url(../fonts/Arimo-Bold.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../fonts/Arimo-Italic.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Regular;
+    src: url(../fonts/Arimo-Regular.ttf)
+}
+
+@media only screen and ( min-width: 1200px )
+{
+    html {
+        height: auto;
+        color: black;
+        background-color: white;
+        font-family: "Arimo";
+        width: 100vw;
+        letter-spacing: 0.4pt;
+        overflow-x: hidden;
+    }
+
+    h1,h2,h3,h4,p,li {
+        font-family: "Arimo";
+        direction: ltr;
+    }
+
+    p {
+        font-size: 1.25em;
+    }
+
+    body {
+        text-align: center;
+        width: 1250px;
+        /*
+        background-color: var(--offwhite);
+        */
+        margin: 0 auto;
+    }
+
+    #main {
+        text-align: left;
+        margin: 0 auto;
+        /*
+        background-color: var(--offwhite);
+        */
+    }
+
+    h1 {
+        font-size: 3.5em;
+        margin-left: 1em;
+        margin-bottom: 2em;
+        margin-top: 2em;
+    }
+}

@@ -1,0 +1,363 @@
+:root {
+    --orange: #FFA800;
+    --gray: #888C8D;
+    --offwhite: #F2F2F2;
+}
+
+@font-face {
+    font-family: Arimo;
+    src: url(../fonts/Arimo-Bold.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Italic;
+    src: url(../fonts/Arimo-Italic.ttf)
+}
+
+@font-face {
+    font-family: Arimo-Regular;
+    src: url(../fonts/Arimo-Regular.ttf)
+}
+
+@media only screen and ( min-width: 1200px )
+{
+    ul {
+        list-style-type: none;
+    }
+
+    #banner > img {
+        margin-top: 3em;
+        width: 1250px;
+        margin-bottom: 2em;
+    }
+
+    .types {
+        width: 25%;
+        display: inline-block;
+        text-align: center;
+        margin-left: 6%;
+        margin-top: 10em;
+        margin-bottom: 10em;
+        text-decoration: none;
+    }
+
+    #repairServices > h4 {
+        margin-top: 2em;    
+    }
+
+    #repairServices > div > img {
+        display: block;
+        margin: auto;
+    }
+
+    .types > div > img {
+        width: 30%;
+        margin-bottom: 1em;
+    }
+
+    .types > h4 {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        color: black;
+    }
+
+    .types > p {
+        color: var(--gray);
+        font-size: 1.25em;
+    }
+
+    #windowInstallation > div, #doorInstallation > div {
+        position: relative;
+    }
+
+    #windowInstallation > .orange, #doorInstallation > .gray {
+        height: 37vh;
+        color: white;
+        vertical-align: bottom;
+        width: 60%;
+    }
+
+    #windowInstallation > .orange {
+        background-color: var(--orange);
+        margin-left: 40%;
+    }
+
+    #doorInstallation > .gray {
+        background-color: var(--gray);
+        margin-right: 40%;
+    }
+
+    h2, .arrow {
+        position: absolute;
+        bottom: 0;
+    }
+
+    h2 {
+        font-size: 2.5em;
+        margin-bottom: 75px;
+    }
+
+    .arrow {
+        width: 2.5em;
+        bottom: 1.75em;
+    }
+
+    #windowInstallation, #doorInstallation {
+        background-color: var(--offwhite);
+    }
+
+    #windowInstallation > div > div > .arrow {
+        left: 400px;
+    }
+
+    #windowInstallation > div > div > h2 {
+        margin-left: 300px;
+    }
+
+    #doorInstallation > div > div > .arrow {
+        left: 250px;
+    }
+
+    #doorInstallation > div > div > h2 {
+        margin-left: 150px;
+    }
+
+    #windowInstallation:hover, #doorInstallation:hover {
+        cursor: pointer;
+    }
+
+    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #windowInstallation > div > div > #windowArrow, #doorInstallation > div > div > #doorArrow {
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .blurb {
+        width: 55%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        background-color: var(--offwhite);
+        border-radius: 5px;
+        z-index: 2;
+        line-height: 1.5em;
+        margin-top: 5em;
+        font-size: 1em;
+        line-height: 1.75em;
+    }
+
+    #doorInstallation > .blurb {
+        float: right;
+        margin-right: 2em;
+        padding-left: 2em;
+    }
+
+    #windowInstallation > .blurb {
+        float: left;
+        margin-left: 2em;
+        padding-right: 1.25em;
+    }
+
+    h3 {
+        letter-spacing: 0.1pt;
+        font-size: 2em
+    }
+
+    .seperator {
+        background-color: var(--orange);
+        font-size: 2.25em;
+        letter-spacing: 1.5px;
+        line-height: 1.75em;
+        padding: 3em 5em;
+    }
+
+    a#threePoint {
+        color: white;
+        text-decoration: none;
+        padding-bottom: 5px;
+        margin-bottom: -5em;
+        border-bottom: 3px solid white;
+    }
+
+    a#threePoint:visited {
+        color: white;
+        text-decoration: none;
+    }
+
+    img.example {
+        width: 425px;
+        display: block;
+        padding: 0;
+        margin: 0 auto;
+        box-shadow: 20px 20px 20px var(--gray);
+    }
+
+    #windows, #doors {
+        margin-left: 3em;
+        margin-right: 4em;
+        display: block;
+    }
+
+    #doors {
+        margin-top: 8em;
+    }
+
+    #windows > p, #doors > p {
+        margin-right: 5em;
+        margin-bottom: 5em;
+        line-height: 1.5em;
+    }
+
+    .descriptionContainer {
+        width: 550px;
+    }
+
+    .imageContainer.left {
+        margin-right: 50%;
+    }
+
+    .imageContainer.right {
+        margin-left: 50%;
+    }
+
+    .descriptionContainer.left {
+        margin-right: 750px;
+    }
+
+    .descriptionContainer.right {
+        margin-left: 500px;
+    }
+
+    .item {
+        position: relative;
+    }
+
+    .item > .left {
+        position: absolute;
+        left: 0;
+    }
+
+    #vinylDiv {
+        margin-bottom: 12em;
+    }
+
+    #woodDiv {
+        margin-bottom: 10em;
+    }
+
+    #fibreglassDiv {
+        margin-bottom: 12em;
+    }
+
+    #steelDiv {
+        margin-bottom: 10em;
+    }
+
+    h4 {
+        display: inline-block;
+        color: var(--orange);
+        font-size: 1.5em;
+    }
+
+    hr {
+        display: inline-block;
+        width: 50px;
+        border-top: 2px solid var(--orange);
+        color: var(--orange);
+        vertical-align: middle;
+        margin-left: 1em;
+        margin-right: 1em;
+        line-height: 0.25em;
+    }
+
+    .hyphen > li {
+        font-size: 1em;
+        line-height: 1.5em;
+    }
+
+    .hyphen {
+        margin-left: 0;
+        padding-left: 0;
+    }
+
+    .descriptionContainer > p {
+        margin-bottom: 2em;
+    }
+
+    #repairs {
+        margin-top: 15em;
+        margin-bottom: 10em;
+    }
+
+    #repairs > div {
+        height: 100%;
+        width: 45%;
+        display: inline-block;
+        margin-top: 0;
+        padding-top: 0;
+        vertical-align: top;
+    }
+
+    #repairs > div > h2 {
+        position: relative;
+        color: var(--orange);
+        text-decoration: underline;
+    }
+
+    #repairsText {
+        margin-left: 5em;
+        line-height: 2em;
+    }
+
+    #repairsText > p {
+        width: 70%;
+        font-size: 1.5em;
+    }
+
+    #windowRender {
+        width: 100%;
+    }
+
+    #contactLink, #contactLink:visited {
+        text-decoration: none;
+        color: var(--orange);
+        transition: color 0.25s;
+    }
+
+    .downArrow {
+        width: 2em;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    .types:hover > .downArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #contactLink:hover {
+        color: var(--gray);
+    }
+}
+
+
+
+/*
+    h1 - 95 pt
+    h2 - 66pt
+    h3- 60pt
+    h4 - 40pt 
+    seperator - 71pt
+    seperator > a - 65pt
+    p - 32 pt
+*/
