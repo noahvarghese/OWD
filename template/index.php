@@ -11,32 +11,32 @@
     switch( $action )
     {
         case 'home':
-            $results["page"] = TEMPLATE_PATH . "home.php";
+            $results["page"] = PAGE_PATH . "home.php";
             break;
         case 'services':
-            $results["page"] = TEMPLATE_PATH . "services.php";
+            $results["page"] = PAGE_PATH . "services.php";
             break;
         case 'contact':
-            $results["page"] = TEMPLATE_PATH . "contact.php";
+            $results["page"] = PAGE_PATH . "contact.php";
             break;
         case 'commercial':
-            $results["page"] = TEMPLATE_PATH . "notYet.php";
+            $results["page"] = PAGE_PATH . "notYet.php";
             break;
         case 'gallery':
-            $results["page"] = TEMPLATE_PATH . "notYet.php";
+            $results["page"] = PAGE_PATH . "notYet.php";
             break;
         case 'blog':
-            $results["page"] = TEMPLATE_PATH . "blog.php";
+            $results["page"] = PAGE_PATH . "blog.php";
             break;
         case 'testimonials':
-            $results["page"] = TEMPLATE_PATH . "testimonials.php";
+            $results["page"] = PAGE_PATH . "testimonials.php";
             break;
         case 'blogPost':
             $results["title"] = "blog";
-            $results["page"] = TEMPLATE_PATH . "blogPost.php";
+            $results["page"] = PAGE_PATH . "blogPost.php";
             break;
         default:
-            $results["page"] = TEMPLATE_PATH . "404.php";
+            $results["page"] = PAGE_PATH . "404.php";
             break;
     }
 
