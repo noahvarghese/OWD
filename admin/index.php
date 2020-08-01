@@ -24,22 +24,22 @@
             case 'gallery':
                 break;
             case 'blog':
-                $results["page"] = "./blog.php";
+                $results["page"] = "blog.php";
                 break;
             case 'addBlog':
                 $results["title"] = "Add Post";
-                $results["page"] = "./blogPost.php";
+                $results["page"] = "blogPost.php";
                 break;
             default:
-                $results["page"] = "./404.php";
+                $results["page"] = "404.php";
                 break;
         }
 
-        include("./nav.php");
-        include($results["page"]);
+        include( LAYOUT_PATH . "nav.php");
+        include(PAGE_PATH . $results["page"]);
     }
     else
     {
-        include("./login.php");
+        include(PAGE_PATH . "login.php");
     }
 ?>
