@@ -20,6 +20,10 @@ function getAuthorizationHeader() {
     return $headers;
 }
 
+function verifyHeader($headers) {
+
+}
+
 function decrypt($string) {
 
     $fields = [
