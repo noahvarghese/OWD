@@ -1,7 +1,7 @@
 <?php
 
     class Tag {
-        var $id;
+        var $tag_id;
         var $tag;
         var $post_id;
         

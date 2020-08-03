@@ -1,7 +1,7 @@
 <?php
 
     class Category {
-        var $id;
+        var $cateogry_id;
         var $category;
         var $post_id;
         
