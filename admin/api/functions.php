@@ -1,6 +1,5 @@
 <?php
 
-
 function getAuthorizationHeader() {
     $headers = null;
 
@@ -19,4 +18,33 @@ function getAuthorizationHeader() {
     }
 
     return $headers;
+}
+
+function decrypt($string) {
+
+    $fields = [
+        'crypt' => 'decrypt',
+        'string' => $string
+    ];
+
+    $postvars='';
+    $sep='';
+    foreach($fields as $key=>$value)
+    {
+            $postvars.= $sep.urlencode($key).'='.urlencode($value);
+            $sep='&';
+    }
+    
+    $ch = curl_init();
+    
+    curl_setopt($ch,CURLOPT_URL, "tools.nvarghese.com/cryptoTool/index.php");
+    curl_setopt($ch,CURLOPT_POST,count($fields));
+    curl_setopt($ch,CURLOPT_POSTFIELDS,$postvars);
+    curl_setopt($ch,CURLOPT_RETURNTRANSFER,true);
+    
+    $result = curl_exec($ch);
+    
+    curl_close($ch);
+
+    return $result["result"];
 }
