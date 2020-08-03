@@ -1,7 +1,7 @@
 <?php
 
 require_once("./util/functions.php");
-require_once("./util/db.php");
+require_once("./util/sql.php");
 
 
 if ( $_SERVER["REQUEST_METHOD"] === "POST" )
@@ -13,7 +13,9 @@ if ( $_SERVER["REQUEST_METHOD"] === "POST" )
     if ( verifyHeader($header) )
     {
         if ( isset($_POST["tag"]) ) {
-            $tag = filter_var(trim(htmlspecialchars($_POST["tag"]), FILTER_SANITIZE_STRING));
+            $tag = new Tag();
+            $tag->tag = filter_var(trim(htmlspecialchars($_POST["tag"]), FILTER_SANITIZE_STRING));
+            sqlAccess::upsert($tag);
         }
     }
 }

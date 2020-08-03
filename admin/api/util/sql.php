@@ -3,11 +3,11 @@
     require_once('../util/db.php');
 
     class sqlAccess {
+        
         /**
          * Takes a model and will update the fields if it exists already,
          * else it will isnert into the tables
          */
-
         public static function upsert($model) {
 
             $modelName = strtoupper(get_class($model));
