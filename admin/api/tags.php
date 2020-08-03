@@ -1,7 +1,7 @@
 <?php
 
-include("functions.php");
-include("db.php");
+require_once("./util/functions.php");
+require_once("./util/db.php");
 
 
 if ( $_SERVER["REQUEST_METHOD"] === "POST" )
