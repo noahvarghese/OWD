@@ -3,6 +3,76 @@
     require_once('../util/db.php');
 
     class sqlAccess {
+
+        public static function selectModel($model) {
+
+            $modelName = strtoupper(get_class($model));
+            $keys = $model->getKeys();
+            $values = [];
+
+            $cmd = "";
+            $whereClause = " WHERE";
+
+            for ( $i = 0; $i < count($keys); $i++ ) {
+
+                $type = gettype($keys[$i]);
+                $key = key($keys[$i]);
+                $val = $keys[$i];
+
+                $whereClause .= (" $key=?");
+
+                if ( $type === "string" ) {
+                    $values[] = strval($val);
+                }
+                else if ( $type === "integer" ) {
+                    $values[] = intval($val);
+                }
+                else if ( $type === "boolean" ) {
+                    $values[] = $val ? 1 : 0;
+                } 
+                else if ( $keys[$i] instanceof DateTime ) {
+                    $values = $val->format('Y-m-d H:i:s');
+                }
+                else {
+                    $values[] = strval($val);
+                }
+
+                if ( $i < (count($keys - 1))) {
+                    $whereClause .= " AND";
+                }
+            }
+
+            $selectTable = "SELECT";
+            $props = get_object_vars($model);
+
+            for ( $i = 0; $i < count($props); $i++ ) {
+                $property = $props[$i];
+                $selectTable .= (" $property");
+
+                if ( $i < (count($props - 1))) {
+                    $whereClause .= ",";
+                }
+            }
+
+            $selectTable .= " FROM $modelName";
+            $cmd = $selectTable . $whereClause;
+
+            $stmt = sqlConnect::db()->query($cmd);
+            $stmt->execute($values);
+            $data = $stmt->fetchAll();
+
+            $model = new $modelName();
+
+            for ( $i = 0; $i < count($data); $i++ ) {
+
+                $key = key($data[$i]);
+                $val = $data[$i];
+
+                $model->$key = $val;
+            }
+
+            return $model;
+        }
         
         /**
          * Takes a model and will update the fields if it exists already,
@@ -25,14 +95,7 @@
                 for ( $i = 0; $i < (count($props)); $i++ ) {
 
                     $attributes .= key($props);
-                    $placeholders .= "?";
-
-                    if ( $i < count($props) - 1 )
-                    {
-                         $attributes .= ", ";
-                         $placeholders .= ",";
-                    }
-                        
+                    $placeholders .= "?";                        
 
                     $type = gettype($props[$i]);
                     $val = $props[$i];
@@ -51,6 +114,13 @@
                     }
                     else {
                         $values[] = strval($val);
+                    }
+
+
+                    if ( $i < count($props) - 1 )
+                    {
+                         $attributes .= ", ";
+                         $placeholders .= ",";
                     }
                 }
 
@@ -67,11 +137,6 @@
 
                     $cmd .= (key($props) . "=?");
 
-                    if ( $i < count($props) - 1 )
-                    {
-                         $cmd .= ", ";
-                    }
-
                     $type = gettype($props[$i]);
                     $val = $props[$i];
 
@@ -89,6 +154,12 @@
                     }
                     else {
                         $values[] = strval($val);
+                    }
+
+
+                    if ( $i < count($props) - 1 )
+                    {
+                         $cmd .= ", ";
                     }
                 }
 
