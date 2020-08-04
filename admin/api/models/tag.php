@@ -1,15 +1,14 @@
 <?php
 
     class Tag {
-        var $tag_id;
+        var $id;
         var $tag;
-        var $post_id;
         
         public function defineMapping() {
             echo [
-                $this->id,
-                $this->tag,
-                $this->post_id
+                "id" => $this->id,
+                "tag" => $this->tag,
+                "pos_id" => $this->post_id
             ];
         }
 
