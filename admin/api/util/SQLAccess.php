@@ -1,8 +1,30 @@
 <?php
 
-    require_once('../util/db.php');
+    require_once("./functions.php");
 
-    class sqlAccess {
+    class SQLAccess {
+
+        private static $database =  "OWD";
+        private static $options = [
+            PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_BOTH,
+            PDO::ATTR_EMULATE_PREPARES => false
+        ];
+        private static $char = "utf8";
+        private static $server = "mysql.nvarghese.com";
+        private static $user = "owd";
+        private static $pwd = "zqpThWqiFEgZp9+n8B4NWEf6ZnZxiABOr5r7wn11H2M=";
+
+        
+        private static function db() {
+            return new PDO(
+                "mysql:host=" . SqlAccess::$server . 
+                ";dbname=" . SqlAccess::$database . 
+                ";charset=" . SqlAccess::$char, 
+                SqlAccess::$user, 
+                decrypt(SqlAccess::$pwd), 
+                SqlAccess::$options);
+        }
 
         public static function selectModel($model) {
 
@@ -57,7 +79,7 @@
             $selectTable .= " FROM $modelName";
             $cmd = $selectTable . $whereClause;
 
-            $stmt = sqlConnect::db()->query($cmd);
+            $stmt = SqlAccess::db()->query($cmd);
             $stmt->execute($values);
             $data = $stmt->fetchAll();
 
@@ -198,7 +220,7 @@
                 $cmd .= $whereClause;
             }     
     
-            $stmt = sqlConnect::db()->query($cmd);
+            $stmt = SqlAccess::db()->query($cmd);
             $success = $stmt->execute($values);
             return $success;
         }
@@ -259,7 +281,7 @@
                 $cmd = "SELECT COUNT(*) FROM $modelName";
             }
 
-            $stmt = sqlConnect::db()->query($cmd);
+            $stmt = SqlAccess::db()->query($cmd);
             $stmt->execute($values);
             $data = $stmt->fetchAll();
     
