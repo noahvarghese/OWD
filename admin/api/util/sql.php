@@ -13,58 +13,121 @@
             $modelName = strtoupper(get_class($model));
             $props = get_object_vars($model);
     
-            $sql = "";
-            $whereClause = "";
+            $cmd = "";
             $values = [];
     
-            if ( sqlAccess::countModel($model) > 0 )
+            if ( sqlAccess::countModel($model, true, false) === 0 )
             {
-                $sql = "UPDATE $modelName SET ";
-                $whereClause = "WHERE ";
-                $attributes = "";
+                $cmd = "INSERT INTO $modelName ";
+                $attributes = " (";
+                $placeholders = " VALUES (";
 
-                $keys = $model->getKeys();
+                for ( $i = 0; $i < (count($props)); $i++ ) {
 
-                
+                    $attributes .= key($props);
+                    $placeholders .= "?";
 
+                    if ( $i < count($props) - 1 )
+                    {
+                         $attributes .= ", ";
+                         $placeholders .= ",";
+                    }
+                        
+
+                    $type = gettype($props[$i]);
+                    $val = $props[$i];
+
+                    if ( $type === "string" ) {
+                        $values[] = strval($val);
+                    }
+                    else if ( $type === "integer" ) {
+                        $values[] = intval($val);
+                    }
+                    else if ( $type === "boolean" ) {
+                        $values[] = $val ? 1 : 0;
+                    } 
+                    else if ( $props[$i] instanceof DateTime ) {
+                        $values = $val->format('Y-m-d H:i:s');
+                    }
+                    else {
+                        $values[] = strval($val);
+                    }
+                }
+
+                $attributes .= ")";
+                $placeholders .= ")";
+
+                $cmd .= ($attributes . $placeholders);
             }
             else
             {
-                $sql = "INSERT INTO $modelName (";
+                $cmd = "UPDATE $modelName SET (";
 
-                $attributes = "";
-                $placeholders = "";
+                for ( $i = 0; $i < (count($props)); $i++ ) {
 
-    
-                for ( $i = 0; $i < count($props); $i++ ) {
-                    if ( $props[$i] != "" ) {
-                        if ( $i === 0 )
-                        {
-                            $attributes .= "(";
-                            $placeholders .= "(";
-                        }
+                    $cmd .= (key($props) . "=?");
 
-                        $attributes .= key($props);
-                        $placeholders .= "?";
+                    if ( $i < count($props) - 1 )
+                    {
+                         $cmd .= ", ";
+                    }
 
-                        if ( $i < count($props) - 1 )
-                        {
-                             $attributes .= ", ";
-                             $placeholders .= ",";
-                        }
-                        else
-                        {
-                            $attributes .= ")";
-                            $placeholders .= ")";
-                        }    
-                        
-                        $values[] = $props[$i];
+                    $type = gettype($props[$i]);
+                    $val = $props[$i];
+
+                    if ( $type === "string" ) {
+                        $values[] = strval($val);
+                    }
+                    else if ( $type === "integer" ) {
+                        $values[] = intval($val);
+                    }
+                    else if ( $type === "boolean" ) {
+                        $values[] = $val ? 1 : 0;
+                    } 
+                    else if ( $props[$i] instanceof DateTime ) {
+                        $values = $val->format('Y-m-d H:i:s');
+                    }
+                    else {
+                        $values[] = strval($val);
                     }
                 }
+
+                $keys = $model->getKeys();
+                $whereClause = " WHERE";
+
+                for ( $i = 0; $i < count($keys); $i++ ) {
+                    
+                    $type = gettype($keys[$i]);
+                    $key = key($keys[$i]);
+                    $val = $keys[$i];
+
+                    $whereClause .= (" $key=?");
+
+                    if ( $type === "string" ) {
+                        $values[] = strval($val);
+                    }
+                    else if ( $type === "integer" ) {
+                        $values[] = intval($val);
+                    }
+                    else if ( $type === "boolean" ) {
+                        $values[] = $val ? 1 : 0;
+                    } 
+                    else if ( $keys[$i] instanceof DateTime ) {
+                        $values = $val->format('Y-m-d H:i:s');
+                    }
+                    else {
+                        $values[] = strval($val);
+                    }
+
+                    if ( $i < (count($keys - 1))) {
+                        $whereClause .= " AND";
+                    }
+                }
+
+                $cmd .= $whereClause;
             }     
     
-    
-            $stmt = sqlConnect::db()->query($sql . $whereClause);
+            $stmt = sqlConnect::db()->query($cmd);
             $success = $stmt->execute($values);
             return $success;
         }
@@ -124,39 +187,12 @@
             else {
                 $cmd = "SELECT COUNT(*) FROM $modelName";
             }
-            
+
             $stmt = sqlConnect::db()->query($cmd);
             $stmt->execute($values);
             $data = $stmt->fetchAll();
     
-            return $data[0];
-        }
-
-        public static function getID($model) {
-
-            $modelName = strtoupper(get_class($model));
-
-            if ( $model->id == "" ) {
-                $id = "SELECT id FROM $modelName WHERE "
-            }
-            else {
-                return $model->id;
-            }
-            
-        }
-
-        private static function getPreparedUpdateFields($model) {
-            $returnValue = [[]];
-            $keys = $model->getKeys();
-
-        }
-
-        private static function getPreparedSelectFields($model) {
-
-        }
-
-        private static function getPreparedInsertFields($model) {
-
+            return intval($data[0]);
         }
     }    
 ?>
