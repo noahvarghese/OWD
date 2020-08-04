@@ -1,6 +1,6 @@
 <?php 
 
-    abstract class abstractModel {
+    abstract class AbstractModel {
         
         /** 
          * @Author: Noah Varghese 
