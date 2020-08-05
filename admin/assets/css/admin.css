@@ -6,17 +6,17 @@
 
 @font-face {
     font-family: Arimo;
-    src: url(../../../assets/fonts/Arimo-Bold.ttf)
+    src: url(./admin/assets/fonts/Arimo-Bold.ttf)
 }
 
 @font-face {
     font-family: Arimo-Italic;
-    src: url(../../../assets/fonts/Arimo-Italic.ttf)
+    src: url(./admin/assets/fonts/Arimo-Italic.ttf)
 }
 
 @font-face {
     font-family: Arimo-Regular;
-    src: url(../../../assets/fonts/rimo-Regular.ttf)
+    src: url(./admin/assets/fonts/rimo-Regular.ttf)
 }
 
 #main > *:not(form#login) {

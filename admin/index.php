@@ -16,6 +16,8 @@
         switch ( $action )
         {
             case 'home':
+                $results["title"] = "Home";
+                $results["page"] = PAGE_PATH . "home.php";
                 break;
             case 'services':
                 break;
