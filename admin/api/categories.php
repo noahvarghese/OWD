@@ -15,7 +15,13 @@ if ( $_SERVER["REQUEST_METHOD"] === "POST" )
         if ( isset($_POST["category"]) ) {
             $category = new Category();
             $category->category = filter_var(trim(htmlspecialchars($_POST["category"]), FILTER_SANITIZE_STRING));
-            sqlAccess::upsert($category);
+
+            if ( sqlAccess::upsert($category) ) {
+                http_response_code(200);
+            }
+            else {
+                http_response_code(500);
+            }
         }
     }
 }
