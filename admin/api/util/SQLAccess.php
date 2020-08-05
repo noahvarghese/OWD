@@ -22,7 +22,7 @@
                 ";dbname=" . SqlAccess::$database . 
                 ";charset=" . SqlAccess::$char, 
                 SqlAccess::$user, 
-                decrypt(SqlAccess::$pwd), 
+                Functions::decrypt(SqlAccess::$pwd), 
                 SqlAccess::$options);
         }
 
