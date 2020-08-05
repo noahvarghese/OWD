@@ -1,10 +1,10 @@
 <?php
 
     class Category extends AbstractModel {
-        var $cateogry_id;
-        var $category;
+        public int $cateogry_id;
+        public string $category;
 
-        public function getKeys() {
+        public function getKeys() : array {
             $props = get_object_vars($this);
 
             return [
@@ -12,7 +12,7 @@
             ];
         }
 
-        public function getListKeys() {
+        public function getListKeys() : array {
             $props = get_object_vars($this);
 
             return [

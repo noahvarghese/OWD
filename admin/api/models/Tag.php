@@ -1,10 +1,11 @@
 <?php
 
     class Tag extends AbstractModel {
-        var $id;
-        var $tag;
+        
+        public int $id;
+        public string $tag;
 
-        public function getKeys() {
+        public function getKeys() :array {
             $props = get_object_vars($this);
 
             return [
@@ -12,7 +13,7 @@
             ];
         }
 
-        public function getListKeys() {
+        public function getListKeys() : array {
             $props = get_object_vars($this);
 
             return [
