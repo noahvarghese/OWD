@@ -12,6 +12,12 @@ class BlogPost extends AbstractModel {
     public int $banner_id;
     public int $thumbnail_id;
     public int $mid_size_thumbnail_id;
+    public string $banner;
+    public string $banner_name;
+    public string $mid_size_thumbnail;
+    public string $mid_size_thumbnail_name;
+    public string $thumbnail;
+    public string $thumbnail_name;
 
     public function getKeys() : array {
         $props = get_object_vars($this);
