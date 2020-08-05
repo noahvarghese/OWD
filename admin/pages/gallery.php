@@ -8,8 +8,7 @@
         <th>Date Created</th>
     </tr>
     <?php
-    foreach ( $image in $TPL["images"] )
-    {
+    foreach ( $TPL["images"] as $image ) {
         ?>
         <tr>
             <td><?= $image["thumbnail"] ?></td>

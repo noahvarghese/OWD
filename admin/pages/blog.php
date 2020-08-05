@@ -10,7 +10,7 @@
         <th>Date Created</th>
     </tr>
     <?php
-    foreach ( $post in $TPL["posts"] )
+    foreach ( $TPL["posts"] as $post )
     {
         ?>
         <tr>
