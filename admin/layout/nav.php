@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title><?= ucfirst($results["title"]) ?></title>
+    <title><?= ucwords($results["title"]) ?></title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="<?= STYLE_PATH . $results["css"] . ".css" ?>" />
     <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css" ?>" />
@@ -16,12 +16,12 @@
     <nav>
         <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
         <ul id="nav">
-            <li><a href="index.php?action=home" class="<?= $results["title"] == 'home' ? 'selected' : '' ?>">HOME</a></li>
-            <li><a href="index.php?action=services" class="<?= $results["title"] == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
-            <li><a href="index.php?action=contact" class="<?= $results["title"] == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
-            <li><a href="index.php?action=gallery" class="<?= $results["title"] == 'gallery' ? 'selected' : '' ?>">GALLERY</a></li>
-            <li><a href="index.php?action=blog" class="<?= $results["title"] == 'blog' ? 'selected' : '' ?>">BLOG</a></li>
-            <li><a href="index.php?action=comments" class="<?= $results["title"] == 'comments' ? 'selected' : '' ?>">COMMENTS</a></li>
+            <li><a href="index.php?action=home" class="<?= strtolower($results["title"]) == 'home' ? 'selected' : '' ?>">HOME</a></li>
+            <li><a href="index.php?action=services" class="<?= strtolower($results["title"]) == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
+            <li><a href="index.php?action=contact" class="<?= strtolower($results["title"]) == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
+            <li><a href="index.php?action=gallery" class="<?= strtolower($results["title"]) == ('gallery' || 'add image') ? 'selected' : '' ?>">GALLERY</a></li>
+            <li><a href="index.php?action=blog" class="<?= strtolower($results["title"]) == ('blog' || 'add post') ? 'selected' : '' ?>">BLOG</a></li>
+            <li><a href="index.php?action=comments" class="<?= strtolower($results["title"]) == 'comments' ? 'selected' : '' ?>">COMMENTS</a></li>
         </ul>
         <p id="copyright">&#169 N<sup>2</sup> Designs</p>
     </nav>

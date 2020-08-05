@@ -16,7 +16,7 @@
         switch ( $action )
         {
             case 'home':
-                $results["title"] = "Home";
+                $results["title"] = "home";
                 $results["page"] = PAGE_PATH . "home.php";
                 break;
             case 'services':
@@ -24,14 +24,14 @@
             case 'contact':
                 break;
             case 'gallery':
-                $results["title"] = "Gallery";
+                $results["title"] = "gallery";
                 break;
             case 'addGallery':
                 $results["title"] = "Add Image";
                 $results["page"] = PAGE_PATH . "addGallery.php";
                 break;
             case 'blog':
-                $results["title"] = "Blog";
+                $results["title"] = "blog";
                 $results["page"] = PAGE_PATH . "blog.php";
                 break;
             case 'addBlog':
