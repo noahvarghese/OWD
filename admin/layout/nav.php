@@ -1,3 +1,5 @@
+<?php $title = strtolower($results["title"]); ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -16,12 +18,78 @@
     <nav>
         <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
         <ul id="nav">
-            <li><a href="index.php?action=home" class="<?= strtolower($results["title"]) == 'home' ? 'selected' : '' ?>">HOME</a></li>
-            <li><a href="index.php?action=services" class="<?= strtolower($results["title"]) == 'services' ? 'selected' : '' ?>">SERVICES</a></li>
-            <li><a href="index.php?action=contact" class="<?= strtolower($results["title"]) == 'contact' ? 'selected' : '' ?>">CONTACT</a></li>
-            <li><a href="index.php?action=gallery" class="<?= strtolower($results["title"]) == ('gallery' || 'add image') ? 'selected' : '' ?>">GALLERY</a></li>
-            <li><a href="index.php?action=blog" class="<?= strtolower($results["title"]) == ('blog' || 'add post') ? 'selected' : '' ?>">BLOG</a></li>
-            <li><a href="index.php?action=comments" class="<?= strtolower($results["title"]) == 'comments' ? 'selected' : '' ?>">COMMENTS</a></li>
+            <li>
+                <a href="index.php?action=home" class="<?
+
+                if ( $title === 'home' ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+
+                ?>">HOME</a>
+            </li>
+            <li>
+                <a href="index.php?action=services" class="<?
+
+                if ( $title === 'services' ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+
+                ?>">SERVICES</a>
+            </li>
+            <li>
+                <a href="index.php?action=contact" class="<?
+                
+                if ( $title === 'contact' ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+                
+                ?>">CONTACT</a>
+            </li>
+            <li>
+                <a href="index.php?action=gallery" class="<?
+
+                if ( $title === 'gallery' || $title === "add image" ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+
+                ?>">GALLERY</a>
+                >
+            <li>
+                <a href="index.php?action=blog" class="<?
+                
+                if ( $title === 'blog' || $title === "add post" ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+                
+                ?>">BLOG</a>
+            </li>
+            <li>
+                <a href="index.php?action=comments" class="<?
+                
+                if ( $title === 'comments' ) {
+                    echo "selected";
+                } 
+                else {
+                    echo "";
+                } 
+                
+                ?>">COMMENTS</a>
+            </li>
         </ul>
         <p id="copyright">&#169 N<sup>2</sup> Designs</p>
     </nav>
