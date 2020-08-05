@@ -4,7 +4,7 @@ class GalleryImage extends AbstractModel {
 
     public int $id;
     public string $description;
-    public DateTime $published_date;
+    public ?DateTime $published_date;
     public DateTime $created_date;
     public DateTime $last_modified_date;
     public int $file_id;

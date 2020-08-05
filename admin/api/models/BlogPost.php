@@ -5,7 +5,7 @@ class BlogPost extends AbstractModel {
     public int $id;
     public string $title;
     public int $author_id;
-    public DateTime $published_date;
+    public ?DateTime $published_date;
     public DateTime $last_modified_date;
     public DateTime $created_date;
     public string $introduction;
