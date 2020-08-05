@@ -3,12 +3,22 @@
     <button>Back</button>
     <form>
         <div>
-            <label for="banner">Banner Image:</label>
-            <input type="file" id="banner" name="banner"/>
-        </div>
-        <div>
             <label for="title">Title:</label>
             <input type="text" id="title" name="title" />
+        </div>
+        <div>
+            <label for="banner">Banner Image:</label>
+            <input type="file" id="banner" name="banner" />
+        </div>
+        <div>
+            <label for="category">Categories:</label>
+            <select name="category" multiple>
+            </select>
+        </div>
+        <div>
+            <label for="tag">Tags:</label>
+            <select name="tag" multiple>
+            </select>
         </div>
         <div>
             <label for="intro">Introduction:</label>
