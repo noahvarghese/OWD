@@ -10,6 +10,7 @@
         <th>Date Created</th>
     </tr>
     <?php
+    /*
     foreach ( $TPL["posts"] as $post )
     {
         ?>
@@ -23,5 +24,6 @@
         </tr>
         <?php
     }
+    */
     ?>
 </table>

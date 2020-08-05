@@ -8,6 +8,8 @@
     $results["css"] = $action;
     $results["page"] = "";
 
+    $_SESSION['username'] = "hi";
+
     if ( isset( $_SESSION['username'] ) )
     {
         
