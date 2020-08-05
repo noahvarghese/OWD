@@ -83,4 +83,56 @@ window.addEventListener("load", () => {
         if ( document.getElementsByClassName("section").length === 1 )
             document.getElementById("delBtn").style.display = "none"
     }
+
+    document.getElementById("AddCategory").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.getElementById("NewCategory").style.display = "block";
+    });
+
+    document.getElementById("AddTag").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.getElementById("NewTag").style.display = "block";
+    });
+
+    document.getElementById("ClearCategory").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.getElementById("NewCategoryInput").value = "";
+        this.style.display = "none";
+    });
+
+    document.getElementById("ClearTag").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        document.getElementById("NewTagInput").value = "";
+        this.style.display = "none";
+    });
+
+    document.getElementById("SubmitCategory").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        category = document.getElementById("NewCategoryInput").value;
+
+        await fetch();
+
+        // reload categories on success
+
+        document.getElementById("NewCategoryInput").value = "";
+        this.style.display = "none";
+    });
+
+    document.getElementById("SubmitTag").addEventListener("click", (e) => {
+        e.preventDefault();
+
+        tag = document.getElementById("NewTagInput").value;
+
+        await fetch();
+
+        // reload tags on success
+
+        document.getElementById("NewTagInput").value = "";
+        this.style.display = "none";
+    });
 });
