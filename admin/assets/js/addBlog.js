@@ -62,7 +62,6 @@ var createNewSection = ()=> {
 
 window.addEventListener("load", () => {
 
-    console.log("yoyoy");
     var addBtn = document.getElementById("addBtn");
 
     addBtn.onclick = (e) => {
@@ -88,28 +87,27 @@ window.addEventListener("load", () => {
     document.getElementById("AddCategory").addEventListener("click", (e) => {
         e.preventDefault();
 
-        document.getElementById("NewCategory").style.display = "block";
+        document.getElementById("NewCategory").style.visibility = "visible";
     });
 
     document.getElementById("AddTag").addEventListener("click", (e) => {
         e.preventDefault();
 
-        document.getElementById("NewTag").style.display = "block";
+        document.getElementById("NewTag").style.visibility = "visible";
     });
 
     document.getElementById("ClearCategory").addEventListener("click", (e) => {
         e.preventDefault();
 
         document.getElementById("NewCategoryInput").value = "";
-        document.getElementById("NewCategory").style.display = "hidden";
+        document.getElementById("NewCategory").style.visibility = "hidden";
     });
 
     document.getElementById("ClearTag").addEventListener("click", (e) => {
         e.preventDefault();
 
         document.getElementById("NewTagInput").value = "";
-        console.log(this);
-        document.getElementById("NewTag").style.display = "hidden";
+        document.getElementById("NewTag").style.visibility = "hidden";
     });
 
     document.getElementById("SubmitCategory").addEventListener("click", async (e) => {
@@ -117,12 +115,12 @@ window.addEventListener("load", () => {
 
         category = document.getElementById("NewCategoryInput").value;
 
-        await fetch();
+        //await fetch();
 
         // reload categories on success
 
         document.getElementById("NewCategoryInput").value = "";
-        this.style.display = "none";
+        document.getElementById("NewCategory").style.visibility = "hidden";
     });
 
     document.getElementById("SubmitTag").addEventListener("click", async (e) => {
@@ -130,11 +128,11 @@ window.addEventListener("load", () => {
 
         tag = document.getElementById("NewTagInput").value;
 
-        await fetch();
+        //await fetch();
 
         // reload tags on success
 
         document.getElementById("NewTagInput").value = "";
-        this.style.display = "none";
+        document.getElementById("NewTag").style.visibility = "hidden";
     });
 });

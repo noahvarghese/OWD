@@ -72,11 +72,6 @@ input[type=file] {
     margin-bottom: 2em;
 }
 
-.AddNew {
-    width: 44em;
-    display: none;
-}
-
 select {
     display: block;
     margin-top: 1em;
@@ -91,6 +86,39 @@ select {
 
 #holders {
     width: 40em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.AddNew {
+    width: 25em;
+    height: 15em;
+    padding-left: 4em;
+    padding-right: 4em;
+    border-radius: 5px;
+    border: 1px solid var(--gray);
+    visibility: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 5;
+    margin-left: -22em;
+    margin-top: -12.5em;
+    background-color: var(--offwhite);
+}
+
+.AddNew > input {
+    width: 20em;
+}
+
+.AddNew > div > button {
+    width: 6em;
+    height: 1.75em;
+    font-size: 1.5em;
+}
+
+.AddNew > div {
+    width: 25em;
     display: flex;
     justify-content: space-between;
 }
