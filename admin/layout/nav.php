@@ -4,7 +4,7 @@
 <html>
 
 <head>
-    <title><?= ucwords($results["title"]) ?></title>
+    <title><?= ucwords($title) ?></title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="<?= STYLE_PATH . $results["css"] . ".css" ?>" />
     <link rel="stylesheet" href="<?= STYLE_PATH . "nav.css" ?>" />
@@ -19,73 +19,72 @@
         <img src="<?= IMG_PATH . "logo.png" ?>" alt="logo" id="logo" />
         <ul id="nav">
             <li>
-                <a href="index.php?action=home" class="<?
+                <a href="index.php?action=home" class="<?php
 
-                if ( $title === 'home' ) {
-                    echo "selected";
+                if ( $title == 'home' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
 
                 ?>">HOME</a>
             </li>
             <li>
-                <a href="index.php?action=services" class="<?
+                <a href="index.php?action=services" class="<?php
 
-                if ( $title === 'services' ) {
-                    echo "selected";
+                if ( $title == 'services' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
 
                 ?>">SERVICES</a>
             </li>
             <li>
-                <a href="index.php?action=contact" class="<?
+                <a href="index.php?action=contact" class="<?php
                 
-                if ( $title === 'contact' ) {
-                    echo "selected";
+                if ( $title == 'contact' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
                 
                 ?>">CONTACT</a>
             </li>
             <li>
-                <a href="index.php?action=gallery" class="<?
+                <a href="index.php?action=gallery" class="<?php
 
-                if ( $title === 'gallery' || $title === "add image" ) {
-                    echo "selected";
+                if ( $title == 'gallery' || $title == 'add image' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
 
                 ?>">GALLERY</a>
-                >
             <li>
-                <a href="index.php?action=blog" class="<?
+                <a href="index.php?action=blog" class="<?php
                 
-                if ( $title === 'blog' || $title === "add post" ) {
-                    echo "selected";
+                if ( $title == 'blog' || $title == 'add post' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
                 
                 ?>">BLOG</a>
             </li>
             <li>
-                <a href="index.php?action=comments" class="<?
+                <a href="index.php?action=comments" class="<?php
                 
-                if ( $title === 'comments' ) {
-                    echo "selected";
+                if ( $title == 'comments' ) {
+                    echo 'selected';
                 } 
                 else {
-                    echo "";
+                    echo '';
                 } 
                 
                 ?>">COMMENTS</a>

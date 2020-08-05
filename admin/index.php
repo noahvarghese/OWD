@@ -16,7 +16,7 @@
         switch ( $action )
         {
             case 'home':
-                $results["title"] = "home";
+                $results["title"] = "Home";
                 $results["page"] = PAGE_PATH . "home.php";
                 break;
             case 'services':
@@ -24,14 +24,14 @@
             case 'contact':
                 break;
             case 'gallery':
-                $results["title"] = "gallery";
+                $results["title"] = "Gallery";
                 break;
             case 'addGallery':
                 $results["title"] = "Add Image";
                 $results["page"] = PAGE_PATH . "addGallery.php";
                 break;
             case 'blog':
-                $results["title"] = "blog";
+                $results["title"] = "Blog";
                 $results["page"] = PAGE_PATH . "blog.php";
                 break;
             case 'addBlog':
@@ -51,4 +51,5 @@
     }
     
     include($results["page"]);
+    include(LAYOUT_PATH . "footer.php");
 ?>
