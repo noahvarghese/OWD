@@ -62,6 +62,7 @@ var createNewSection = ()=> {
 
 window.addEventListener("load", () => {
 
+    console.log("yoyoy");
     var addBtn = document.getElementById("addBtn");
 
     addBtn.onclick = (e) => {
@@ -100,17 +101,18 @@ window.addEventListener("load", () => {
         e.preventDefault();
 
         document.getElementById("NewCategoryInput").value = "";
-        this.style.display = "none";
+        document.getElementById("NewCategory").style.display = "hidden";
     });
 
     document.getElementById("ClearTag").addEventListener("click", (e) => {
         e.preventDefault();
 
         document.getElementById("NewTagInput").value = "";
-        this.style.display = "none";
+        console.log(this);
+        document.getElementById("NewTag").style.display = "hidden";
     });
 
-    document.getElementById("SubmitCategory").addEventListener("click", (e) => {
+    document.getElementById("SubmitCategory").addEventListener("click", async (e) => {
         e.preventDefault();
 
         category = document.getElementById("NewCategoryInput").value;
@@ -123,7 +125,7 @@ window.addEventListener("load", () => {
         this.style.display = "none";
     });
 
-    document.getElementById("SubmitTag").addEventListener("click", (e) => {
+    document.getElementById("SubmitTag").addEventListener("click", async (e) => {
         e.preventDefault();
 
         tag = document.getElementById("NewTagInput").value;
