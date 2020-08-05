@@ -71,3 +71,26 @@ input[type=file] {
     margin-top: 0.5em;
     margin-bottom: 2em;
 }
+
+.AddNew {
+    width: 44em;
+    display: none;
+}
+
+select {
+    display: block;
+    margin-top: 1em;
+}
+
+#AddCategory, #AddTag {
+    width: 14em;
+    height: 2em;
+    margin-top: 1em;
+    font-size: 1.25em;
+}
+
+#holders {
+    width: 40em;
+    display: flex;
+    justify-content: space-between;
+}

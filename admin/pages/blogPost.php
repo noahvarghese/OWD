@@ -3,24 +3,26 @@
     <button>Back</button>
     <form>
         <div>
-            <label for="title">Title:</label>
-            <input type="text" id="title" name="title" />
-        </div>
-        <div>
             <label for="banner">Banner Image:</label>
             <input type="file" id="banner" name="banner" />
         </div>
-        <div>
-            <label for="category">Categories:</label>
-            <select name="category" multiple>
-            </select>
-            <button id="AddCategory">Add New Category</button>
+        <div id="holders">
+            <div id="category">
+                <label for="category">Categories:</label>
+                <select name="category" multiple>
+                </select>
+                <button id="AddCategory">Add New Category</button>
+            </div>
+            <div id="tag">
+                <label for="tag">Tags:</label>
+                <select name="tag" multiple>
+                </select>
+                <button id="AddTag">Add New Tag</button>
+            </div>
         </div>
         <div>
-            <label for="tag">Tags:</label>
-            <select name="tag" multiple>
-            </select>
-            <button id="AddTag">Add New Tag</button>
+            <label for="title">Title:</label>
+            <input type="text" id="title" name="title" />
         </div>
         <div>
             <label for="intro">Introduction:</label>
@@ -50,18 +52,18 @@
         </div>
         <button id="delete">Delete Post</button>
     </form>
-</div>
 
-<div class="AddNew" id="NewCategory">
-    <h1>Add New Category</h1>
-    <input type="text" id="NewCategoryInput"/>
-    <button id="ClearCategory">Cancel</button>
-    <button id="SubmitCategory">Add</button>
-</div>
+    <div class="AddNew" id="NewCategory">
+        <h1>Add New Category</h1>
+        <input type="text" id="NewCategoryInput" />
+        <button id="ClearCategory">Cancel</button>
+        <button id="SubmitCategory">Add</button>
+    </div>
 
-<div class="AddNew" id="NewTag">
-    <h1>Add New Tag</h1>
-    <input type="text" id="NewTagInput"/>
-    <button id="ClearTag">Cancel</button>
-    <button id="SubmitTag">Add</button>
+    <div class="AddNew" id="NewTag">
+        <h1>Add New Tag</h1>
+        <input type="text" id="NewTagInput" />
+        <button id="ClearTag">Cancel</button>
+        <button id="SubmitTag">Add</button>
+    </div>
 </div>

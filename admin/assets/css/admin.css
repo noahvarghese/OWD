@@ -19,10 +19,14 @@
     src: url(./admin/assets/fonts/rimo-Regular.ttf)
 }
 
-#main > *:not(form#login) {
-    margin: 0;
-    padding: 0;
-    margin-left: 40em;
+#main {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#main > * {
+    display: inline-block;
+    text-align: left;
 }
 
 html {
