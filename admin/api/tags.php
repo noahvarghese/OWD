@@ -1,7 +1,7 @@
 <?php
 
-require_once("./util/functions.php");
-require_once("./util/sql.php");
+require_once("./util/Functions.php");
+require_once("./util/SQLAccess.php");
 
 
 if ( $_SERVER["REQUEST_METHOD"] === "POST" )
