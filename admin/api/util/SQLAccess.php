@@ -4,19 +4,19 @@
 
     class SQLAccess {
 
-        private static $database =  "OWD";
-        private static $options = [
+        private static string $database =  "OWD";
+        private static array $options = [
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
             PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_BOTH,
             PDO::ATTR_EMULATE_PREPARES => false
         ];
-        private static $char = "utf8";
-        private static $server = "mysql.nvarghese.com";
-        private static $user = "owd";
-        private static $pwd = "zqpThWqiFEgZp9+n8B4NWEf6ZnZxiABOr5r7wn11H2M=";
+        private static string $char = "utf8";
+        private static string $server = "mysql.nvarghese.com";
+        private static string $user = "owd";
+        private static string $pwd = "zqpThWqiFEgZp9+n8B4NWEf6ZnZxiABOr5r7wn11H2M=";
 
         
-        private static function db() {
+        private static function db() : PDO {
             return new PDO(
                 "mysql:host=" . SqlAccess::$server . 
                 ";dbname=" . SqlAccess::$database . 
@@ -26,7 +26,7 @@
                 SqlAccess::$options);
         }
 
-        public static function selectListModel($model, $predefinedWhere = "") {
+        public static function selectListModel($model, $predefinedWhere = "") : array {
 
             $list = [];
             $modelName = strtoupper(get_class($model));
@@ -109,7 +109,7 @@
             return $list;
         } 
 
-        public static function selectModel($model) {
+        public static function selectModel($model) : AbstractModel {
 
             $modelName = strtoupper(get_class($model));
             $keys = $model->getKeys();
@@ -184,7 +184,7 @@
          * Takes a model and will update the fields if it exists already,
          * else it will isnert into the tables
          */
-        public static function upsert($model) {
+        public static function upsert($model) : bool {
 
             $modelName = strtoupper(get_class($model));
             $props = get_object_vars($model);
@@ -309,7 +309,7 @@
             return $success;
         }
     
-        public static function countModel($model, $useKeys = true, $searchList = true, $predefinedWhere = "") {
+        public static function countModel($model, $useKeys = true, $searchList = true, $predefinedWhere = "") : int {
 
             $modelName = strtoupper(get_class($model));
             $cmd = "";
