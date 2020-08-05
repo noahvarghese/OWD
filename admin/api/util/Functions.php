@@ -25,7 +25,7 @@ class Functions {
         return true;
     }
     
-    public static function decrypt($string) : string {
+    public static function decrypt(string $string) : string {
     
         $fields = [
             'crypt' => 'decrypt',

@@ -8,9 +8,9 @@ if ( $_SERVER["REQUEST_METHOD"] === "POST" )
 {
     $tag = null;
 
-    $header = getAuthorizationHeader();
+    $header = Functions::getAuthorizationHeader();
 
-    if ( verifyHeader($header) )
+    if ( Functions::verifyHeader($header) )
     {
         if ( isset($_POST["tag"]) ) {
             $tag = new Tag();

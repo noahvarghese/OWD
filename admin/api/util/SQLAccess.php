@@ -26,7 +26,7 @@
                 SqlAccess::$options);
         }
 
-        public static function selectListModel($model, $predefinedWhere = "") : array {
+        public static function selectListModel(AbstractModel $model, ?string $predefinedWhere = "") : array {
 
             $list = [];
             $modelName = strtoupper(get_class($model));
@@ -109,7 +109,7 @@
             return $list;
         } 
 
-        public static function selectModel($model) : AbstractModel {
+        public static function selectModel(AbstractModel $model) : AbstractModel {
 
             $modelName = strtoupper(get_class($model));
             $keys = $model->getKeys();
