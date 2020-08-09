@@ -41,7 +41,7 @@ CREATE TABLE GALLERY (
     file_id INT NOT NULL,
     thumbnail_id INT NOT NULL,
     PRIMARY Key (id),
-    FOREIGN KEY (file_id) REFERENCES PHOTO(id)
+    FOREIGN KEY (file_id) REFERENCES PHOTO(id),
     FOREIGN KEY (thumbnail_id) REFERENCES PHOTO(id)
 );
 
@@ -62,7 +62,7 @@ CREATE TABLE BLOG (
     published_date DATETIME,
     last_modified_date DATETIME NOT NULL,
     created_date DATETIME NOT NULL,
-    introduction VARCHAR(MAX),
+    introduction TEXT,
     banner_id INT,
     thubmnail_id INT,
     mid_size_thumbnail_id INT,
@@ -70,7 +70,7 @@ CREATE TABLE BLOG (
     FOREIGN KEY (author_id) REFERENCES AUTHOR(id),
     FOREIGN KEY (banner_id) REFERENCES PHOTO(id),
     FOREIGN KEY (thubmnail_id) REFERENCES PHOTO(id),
-    FOREIGN KEY (mid_size_thumbnail_id) REFERENCES PHOTO(id),
+    FOREIGN KEY (mid_size_thumbnail_id) REFERENCES PHOTO(id)
 );
 
 DROP TABLE IF EXISTS CATEGORIES;
@@ -113,8 +113,8 @@ CREATE TABLE SECTION (
     id INT NOT NULL AUTO_INCREMENT,
     post_id INT NOT NULL,
     header VARCHAR(255),
-    body VARCHAR(MAX) NOT NULL,
-    index INT NOT NULL,
+    body TEXT NOT NULL,
+    post_index INT NOT NULL,
     PRIMARY KEY (id),
     FOREIGN KEY (post_id) REFERENCES BLOG(id)
 );
