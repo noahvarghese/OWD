@@ -4,7 +4,6 @@
 
 DIR=`realpath $0`
 
-
 if [ "$EUID" -ne 0 ]
     then echo "Please run as root"
     exit
@@ -15,6 +14,27 @@ if ! command -v docker &> /dev/null
     exit
 fi
 
+# check for docker name and whether to run in the background or not
+while test $# -gt 0; do
+    case "$1" in
+        -bg|--background)
+            shift
+            export BACKGROUND=true
+            ;;
+        -n|--name)
+            shift
+            if test $# -gt 0; then
+                export NAME=$1
+            else
+                echo "No image name specified"
+                exit 1
+            fi
+            shift
+            ;;
+    esac
+done
+
+# check if docker is running
 pgrep docker >/dev/null 2>&1
 
 #check return status of last command
@@ -34,7 +54,8 @@ if [ $? -eq 0 ]
     fi
 fi
 
-docker build $DIR/dockerfile
+docker build $DIR/. --tag $NAME
+docker run $NAME
 
 
 
