@@ -14,6 +14,7 @@ function printHelp {
 
 # gets directory path to script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+BACKGROUND="false"
 
 
 # displays all arguments
@@ -29,7 +30,7 @@ while test "$#" -gt 0; do
     case "$1" in
         -bg|--background)
             shift
-            export BACKGROUND=true
+            export BACKGROUND="true"
             ;;
         -n|--name)
             shift
@@ -97,14 +98,32 @@ if [ $? -ne 0 ]; then
         exit 1
     fi
 fi
-echo "Building container..."
-docker build $DIR/. --tag $NAME
-echo "Running container..."
 
-DOCKERCMD=("docker run ${NAME} --name ${NAME} -p 80:80 443:443")
+# Checks if docker image exists
+EXISTS=$(docker images -q $NAME 2> /dev/null)
+# Check if image is running
+RUNNING=$(docker inspect $NAME | grep \"Running\")
 
-if test $BACKGROUND == "true"; then
-    export DOCKERCMD+=" -d"
+# if docker image exists
+# and if docker image is running
+# stop image
+# then remove docker image
+if [[ "$EXISTS" != ""]]; then
+    if [["$RUNNING" == "\"Running\": true,"]]; then
+        docker stop $NAME
+    fi
+    docker rm $NAME
 fi
 
-"${DOCKERCMD[@]"
+# build image
+echo "Building container..."
+docker build $DIR/. --tag $NAME
+
+# Run image
+if test "$BACKGROUND" = "true"; then
+    echo "Running detached container..."
+    docker run -p 80:80 --name $NAME -d $NAME
+else
+    echo "Running container..."
+    docker run -p 80:80 --name $NAME $NAME
+fi
