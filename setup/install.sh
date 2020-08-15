@@ -100,4 +100,11 @@ fi
 echo "Building container..."
 docker build $DIR/. --tag $NAME
 echo "Running container..."
-#docker run $NAME --name $NAME -d 80:80 443:443
+
+DOCKERCMD=("docker run ${NAME} --name ${NAME} -p 80:80 443:443")
+
+if test $BACKGROUND == "true"; then
+    export DOCKERCMD+=" -d"
+fi
+
+"${DOCKERCMD[@]"
