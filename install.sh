@@ -45,7 +45,7 @@ while test "$#" -gt 0; do
                     set -- $1
                     NAME=$*
 
-                    if $NAME != ""
+                    if [ $NAME != "" ]; then
                         export NAME=$1
                         NAMEFOUND="true"
                     fi

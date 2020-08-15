@@ -38,8 +38,8 @@ while test "$#" -gt 0; do
                     set -- $1
                     NAME=$*
 
-                    if $NAME != ""
-                        export NAME=$1
+                    if [ $NAME != "" ]; then
+                        NAME=$1
                         NAMEFOUND="true"
                     fi
                 fi
