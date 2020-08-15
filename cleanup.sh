@@ -1,4 +1,6 @@
-#! /bin/bash
+#!/bin/bash
+# Script to cleanup docker after development/deployment/testing etc
+
 
 function printHelp {
     echo "Mandatory arguments:"
@@ -6,11 +8,6 @@ function printHelp {
     echo "Optional arguments"
     echo "    -bg | --background    if option is set, specifies if container will run detached or not"
 }
-
-# script to setup docker and build docker file
-
-# gets full path including script
-#SOURCE=`realpath $0`
 
 # gets directory path to script
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
@@ -28,10 +25,6 @@ NAMEFOUND=false
 # check for docker name and whether to run in the background or not
 while test "$#" -gt 0; do
     case "$1" in
-        -bg|--background)
-            shift
-            export BACKGROUND="true"
-            ;;
         -n|--name)
             shift
             if test $# -gt 0; then
@@ -76,34 +69,6 @@ if test "$EUID" -ne 0; then
     exit 1
 fi
 
-# Check if docker installed
-if ! command -v docker &> /dev/null; then
-    echo "Please install docker and retry the script."
-    exit 1
-fi
-
-# check if docker is running
-pgrep docker >/dev/null 2>&1
-
-#check return status of last command
-if [ $? -ne 0 ]; then
-    echo "Starting docker..."
-    sudo systemctl start docker >/dev/null 2>&1
-
-    if test "$?" -ne 0; then
-        echo "Unable to start docker, please check 'systemctl status docker' OR 'journalctl -xe'"
-        exit 1
-    fi
-
-    echo "Enabling docker..."
-    sudo systemctl enable docker >/dev/null 2>&1
-
-    if test "$?" -ne 0; then
-        echo "Unable to enable docker service, please enable manually."
-        exit 1
-    fi
-fi
-
 # Checks if docker image exists
 IMAGE_EXISTS=$(docker images -q $NAME 2> /dev/null)
 # Checks if a process was created
@@ -144,17 +109,4 @@ if [ "$IMAGE_EXISTS" != "" ]; then
     if ! docker rmi $(docker images -q $NAME); then
         exit 1
     fi
-fi
-
-# build image
-echo "Building container..."
-docker build $DIR/. --tag $NAME
-
-# Run image
-if test "$BACKGROUND" = "true"; then
-    echo "Running detached container..."
-    docker run -p 80:80 --name $NAME -d $NAME
-else
-    echo "Running container..."
-    docker run -p 80:80 --name $NAME $NAME
 fi
