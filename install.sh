@@ -100,7 +100,9 @@ if [ $? -ne 0 ]; then
 fi
 
 # Checks if docker image exists
-EXISTS=$(docker images -q $NAME 2> /dev/null)
+IMAGE_EXISTS=$(docker images -q $NAME 2> /dev/null)
+# Checks if a process was created
+PROCESS_EXISTS=$(docker ps -aqf "name=$NAME")
 # Check if image is running
 RUNNING=$(docker inspect $NAME | grep \"Running\")
 
@@ -108,7 +110,7 @@ RUNNING=$(docker inspect $NAME | grep \"Running\")
 # and if docker image is running
 # stop image
 # then remove docker image
-if [ "$EXISTS" != "" ]; then
+if [ "$IMAGE_EXISTS" != "" ]; then
 
     # Remove whitespace around result
     # this was causing it to not work
@@ -124,9 +126,17 @@ if [ "$EXISTS" != "" ]; then
         fi
     fi
 
-    echo "Removing existing container..."
+    if [ "$PROCESS_EXISTS" != "" ]; then
+        echo "Removing existing container..."
+        # Removed from processes
+        if ! docker rm $NAME > /dev/null; then
+            exit 1
+        fi
+    fi
 
-    if ! docker rm $NAME > /dev/null; then
+    echo "Removing existing image..."
+    # Removed from images
+    if ! docker rmi $(docker images -q $NAME); then
         exit 1
     fi
 fi
