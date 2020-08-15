@@ -103,19 +103,32 @@ fi
 EXISTS=$(docker images -q $NAME 2> /dev/null)
 # Check if image is running
 RUNNING=$(docker inspect $NAME | grep \"Running\")
-echo $RUNNING
 
 # if docker image exists
 # and if docker image is running
 # stop image
 # then remove docker image
 if [ "$EXISTS" != "" ]; then
-    if [ "$RUNNING" = '"Running": true,' ]; then
-        echo "Stopping container..."
-        docker stop $NAME
+
+    # Remove whitespace around result
+    # this was causing it to not work
+    set -- $RUNNING
+    RUNNING=$*
+
+    if [ "$RUNNING" == '"Running": true,' ]; then
+
+        echo "Stopping running container with name: $NAME..."
+
+        if ! docker stop $NAME > /dev/null; then
+            exit 1
+        fi
     fi
-    echo "Removing container..."
-    docker rm $NAME
+
+    echo "Removing existing container..."
+
+    if ! docker rm $NAME > /dev/null; then
+        exit 1
+    fi
 fi
 
 # build image
