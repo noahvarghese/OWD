@@ -8,5 +8,5 @@ RUN docker-php-ext-enable imagick
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 # Install and update project dependencies
-RUN php composer.phar install && php composer.phar update
+RUN composer install && composer update
 
