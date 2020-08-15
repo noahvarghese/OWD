@@ -103,15 +103,18 @@ fi
 EXISTS=$(docker images -q $NAME 2> /dev/null)
 # Check if image is running
 RUNNING=$(docker inspect $NAME | grep \"Running\")
+echo $RUNNING
 
 # if docker image exists
 # and if docker image is running
 # stop image
 # then remove docker image
-if [[ "$EXISTS" != ""]]; then
-    if [["$RUNNING" == "\"Running\": true,"]]; then
+if [ "$EXISTS" != "" ]; then
+    if [ "$RUNNING" = '"Running": true,' ]; then
+        echo "Stopping container..."
         docker stop $NAME
     fi
+    echo "Removing container..."
     docker rm $NAME
 fi
 
