@@ -3,10 +3,11 @@ Backend
 - Connect and test login functionality
 - Connect and test blog/gallery upload
 - Connect and test blog/gallery display
-- Look at reworking routing to use nicer urls
-    - eg image name/blog anme in url instead of id
-        make it look like a directory without file extensions 
-            www.owd.com/blog instead of www.owd.com/index?action=blog
+
+                - Look at reworking routing to use nicer urls
+                    - eg image name/blog anme in url instead of id
+                        make it look like a directory without file extensions 
+                            www.owd.com/blog instead of www.owd.com/index?action=blog
 
 Frontend
 - Do gallery and commercial templates (desktop)
