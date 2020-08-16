@@ -13,4 +13,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 COPY . /var/www/html/
 # Install and update project dependencies
 RUN composer install && composer update
+# Need to create and copy over custom httpd.conf
+# And restart httpd
 
