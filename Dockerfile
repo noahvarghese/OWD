@@ -14,5 +14,7 @@ COPY . /var/www/html/
 # Install and update project dependencies
 RUN composer install && composer update
 # Need to create and copy over custom httpd.conf
+# Need one for development and one for prod
+# Need ssl certs
 # And restart httpd
 
