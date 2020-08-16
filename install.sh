@@ -26,10 +26,11 @@ fi
 NAMEFOUND=false
 
 # check for docker name and whether to run in the background or not
-while test "$#" -gt 0; do
+while [ $# -gt 0 ]; do
     case "$1" in
         -bg|--background)
             shift
+            # not working for some reason
             export BACKGROUND="true"
             ;;
         -n|--name)
@@ -42,11 +43,12 @@ while test "$#" -gt 0; do
                     printHelp
                     exit 1
                 else
-                    set -- $1
-                    NAME=$*
+
+                    NAME=$1
+                    NAME="$(echo -e "${NAME}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
                     if [ $NAME != "" ]; then
-                        export NAME=$1
+                        export $NAME
                         NAMEFOUND="true"
                     fi
                 fi
