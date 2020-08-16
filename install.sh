@@ -45,6 +45,7 @@ while [ $# -gt 0 ]; do
                 else
 
                     NAME=$1
+                    # Trim whitespace
                     NAME="$(echo -e "${NAME}" | sed -e 's/^[[:space:]]*//' -e 's/[[:space:]]*$//')"
 
                     if [ $NAME != "" ]; then

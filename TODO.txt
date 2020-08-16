@@ -1,15 +1,12 @@
 Backend
-- Do image monipulation scripts
+- Do image manipulation scripts
 - Connect and test login functionality
 - Connect and test blog/gallery upload
 - Connect and test blog/gallery display
 
-                - Look at reworking routing to use nicer urls
-                    - eg image name/blog anme in url instead of id
-                        make it look like a directory without file extensions 
-                            www.owd.com/blog instead of www.owd.com/index?action=blog
-
+               
 Frontend
+- Set up custom 404 page
 - Do gallery and commercial templates (desktop)
 - Rework desktop (home/about/windows/doors/repairs)
 - Test design ideas
@@ -19,7 +16,18 @@ Deploying
 - Run sql script to make sure database is set up (Develpment mostly)
 - look into transferring ssl certs, and automating creation in dockerfile
 - Apache conf (demo and prod)
-- Add transfer to dockerfile
+- Add apache conf transfer to dockerfile
+- Transfer 404 page to apache
 - Look into decoupling apache and php, what it would take to connect those 2 servers
     - looks like the php server will still have apache running?
     - looks like maybe the apache only is configured by a load balancer and redirects?
+
+
+#SEO
+
+Done
+    Backend
+        - Look at reworking routing to use nicer urls
+            eg image name/blog anme in url instead of id
+                make it look like a directory without file extensions 
+                    www.owd.com/blog instead of www.owd.com/index?action=blog
