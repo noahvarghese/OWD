@@ -8,15 +8,18 @@ description: At Oakville Windows & Doors, we take the safety and security of
 image: /img/break-ins-e1500913086456.jpg
 section:
   - heading: ""
-    content: >-
-      <p>That’s why all of our vinyl windows have a multi-point locking system.
+    content: >+
+      That’s why all of our vinyl windows have a multi-point locking system.
       This system is the highest quality and most secure option available to
-      homeowners.</p>
+      homeowners.
 
-      <p>Our doors are commercially-rated, and are four times stronger than typical residential door frames. Like our windows, our doors also come with a multi-point locking system to keep your home safe.</p>
-
-      <p>Check out some of these other tips for adding extra security to your home:</p>
-
+  - content: Our doors are commercially-rated, and are four times stronger than
+      typical residential door frames. Like our windows, our doors also come
+      with a multi-point locking system to keep your home safe.
+  - content: "Check out some of these other tips for adding extra security to your
+      home:"
+  - content: >-
+      
       <ul>
 
       <li>If your windows or doors don’t have multi-point locking systems, consider having one or two extra locks installed or have your windows and doors replaced</li>
