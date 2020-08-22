@@ -32,7 +32,7 @@ collections:
         name: 'section'
         widget: 'list'
         fields: 
-          - { label: 'Heading', name: 'heading', widget: 'string' }
+          - { label: 'Heading', name: 'heading', widget: 'string', required: false }
           - { label: 'Content', name: 'content', widget: 'markdown'}    
       
   - name: 'gallery'
