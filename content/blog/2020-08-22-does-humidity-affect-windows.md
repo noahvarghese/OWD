@@ -1,4 +1,6 @@
 ---
+type: blog
+category: blog
 title: DOES HUMIDITY AFFECT WINDOWS?
 date: 2019-12-02T14:49:34.687Z
 description: Humidity is excess moisture circulating in your home. If your home
