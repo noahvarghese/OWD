@@ -1,12 +1,15 @@
 ---
 title: How Your Old Windows & Doors May Be Affecting Your Home
 date: 2019-10-01T19:24:20.671Z
+descNoHMTL: Every homeowner knows that windows and doors are an important part
+  of their house, but do you know how your old windows and doors might be
+  impacting your home?
 description: >+
   Every homeowner knows that <a
-  href="https://oakvillewd.com/windows">windows</a> and <a
-  href="https://oakvillewd.com/doors/">doors</a> are an important part of their
-  house, but do you know how your old windows and doors might be impacting your
-  home?
+  href="https://oakvillewd.com/windows"><strong>windows</strong></a> and <a
+  href="https://oakvillewd.com/doors/"><strong>doors</strong></a> are an
+  important part of their house, but do you know how your old windows and doors
+  might be impacting your home?
 
 image: /img/istock-463226639-1.jpg
 section:
@@ -55,7 +58,7 @@ section:
       components come standard in most new windows and doors, and can help
       improve your home’s security.
 
-  - content: >+
+  - content: >
       No matter what your reasons for installing new windows and doors, the team
       at Oakville Windows & Doors can help. <a
       href="https://oakvillewd.com/contact/"><strong>Contact us to get
