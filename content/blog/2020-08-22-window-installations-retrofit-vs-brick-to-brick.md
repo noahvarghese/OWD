@@ -7,7 +7,7 @@ description: At Oakville Windows & Doors, it’s important to us that you
   installations, and it’s essential to choose the right one. Always be sure to
   ask your window salesperson what type of installation you are being quoted
   for.
-image: /img/3.jpg
+image: /img/window-installations-retrofit-vs-brick-to-brick.jpg
 section:
   - heading: Retrofit Window Installations
     content: >-

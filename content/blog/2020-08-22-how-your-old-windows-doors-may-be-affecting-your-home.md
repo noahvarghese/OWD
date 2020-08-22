@@ -4,7 +4,7 @@ date: 2019-10-01T15:01:56.640Z
 description: Every homeowner knows that windows and doors are an important part
   of their house, but do you know how your old windows and doors might be
   impacting your home?
-image: /img/2.jpg
+image: /img/how-your-old-windows-and-doors-may-be-affecting-your-home.jpg
 section:
   - heading: How Your Old Windows & Doors May Be Affecting Your Home
     content: Curb appeal is important for a number of reasons, from showing off your

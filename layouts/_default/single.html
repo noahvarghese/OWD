@@ -3,6 +3,37 @@
 {{ partial "header" . }}
 
 <div class="content container">
+
+  {{ if eq .Section "blog" }}
+  <div id="bannerImgContainer">
+      <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
+  </div>
+  <h1 class="BlogPost title">{{ .Params.title }}</h1>
+  <div id="description">
+      <p>
+          <strong>{{ .Params.description }}</strong>
+      </p>
+      <p id="author">
+          <span>BY OAKVILLE WINDOWS & DOORS</span>
+          <span>{{ dateFormat "January 2, 2006" .Params.Date }}</span>
+      </p>
+      <span id="blogSocial">
+          <a href="#"><img class="social footerImg" id="instagram" alt="instagram" src="/img/instagramOrange.png" /></a>
+          <a href="#"><img class="social footerImg" id="facebook" alt="facebook" src="/img/facebookOrange.png" /></a>
+          <a href="#"><img class="social footerImg" id="twitter" alt="twitter" src="/img/twitterOrange.png" /></a>
+          <a href="#"><img class="social footerImg" id="linkedIn" alt="linkedIn" src="/img/linkedInOrange.png" /></a>
+          <a href="#"><img class="social footerImg" id="email" alt="email" src="/img/emailOrange.png" /></a>
+      </span>
+      <div id="blogPost">
+        {{ range $i, $section := .Params.section }}
+        <div class="contents" id="content{{ $i }}">
+        <h2>{{$section.heading}}</h2>
+        <p>{{$section.content}}</p>
+        {{ end }}
+      </div>
+  </div>
+  {{ else if eq .Section "gallery" }}
+  {{ end }}
   {{ .Content }}
 </div>
 
