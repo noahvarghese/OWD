@@ -27,8 +27,10 @@
       <div id="blogPost">
         {{ range $i, $section := .Params.section }}
         <div class="contents" id="content{{ $i }}">
+          {{ if ne (trim $section.heading " ") "" }}
           <h2 class="BlogPost">{{ safeHTML $section.heading}}</h2>
-          {{ safeHTML $section.content}}
+          {{ end }}
+          <p>{{ safeHTML $section.content}}</p>
         </div>
         {{ end }}
       </div>

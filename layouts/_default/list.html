@@ -17,7 +17,7 @@
                     <div id="newestDescription">
                         <h2>{{ .Params.title }}</h2>
                         <p class="blogDescription" id="bannerDescription">
-                            {{- truncate 255 " " .Params.description -}}
+                            {{- safeHTML (truncate 255 " " .Params.description) -}}
                             <span class="readMore">...READ MORE</span>
                         </p>
                     </div>
@@ -38,7 +38,7 @@
                             <div>
                                 <h2>{{ .Params.title }}</h2>
                                 <p class="blogDescription" id="bannerDescription">
-                                    {{- truncate 255 " " .Params.description -}}
+                                    {{- truncate 255 " " (safeHTML .Params.description) -}}
                                     <span class="readMore">...READ MORE</span>
                                 </p>
                             </div>
