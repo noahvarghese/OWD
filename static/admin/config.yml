@@ -32,6 +32,7 @@ collections:
         name: 'section'
         widget: 'list'
         fields: 
+          - { label: 'Context Image', name: 'contextImage', widget: 'image', required: false}
           - { label: 'Heading', name: 'heading', widget: 'string', required: false }
           - { label: 'Content', name: 'content', widget: 'markdown'}    
       

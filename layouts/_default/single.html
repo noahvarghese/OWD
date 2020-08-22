@@ -10,9 +10,9 @@
   </div>
   <h1 class="BlogPost title">{{ upper .Params.title }}</h1>
   <div id="description">
-      <div>
+      <p>
           <strong>{{ safeHTML .Params.description }}</strong>
-      </div>
+      </p>
       <p id="author">
           <span>BY OAKVILLE WINDOWS & DOORS</span>
           <span>{{ dateFormat "January 2, 2006" .Params.Date }}</span>
@@ -27,8 +27,9 @@
       <div id="blogPost">
         {{ range $i, $section := .Params.section }}
         <div class="contents" id="content{{ $i }}">
-        <h2 class="BlogPost">{{ safeHTML $section.heading}}</h2>
-        <div>{{ safeHTML $section.content}}</div>
+          <h2 class="BlogPost">{{ safeHTML $section.heading}}</h2>
+          {{ safeHTML $section.content}}
+        </div>
         {{ end }}
       </div>
   </div>
