@@ -40,12 +40,12 @@ url: /contact/
                         <label for="garage" class="grayTxt">GARAGE DOORS</label>
                     </div>
                     <div>
-                        <input type="checkbox" id="porch" name="porch" />
-                        <label for="porch" class="grayTxt">PORCH ENCLOSURES</label>
-                    </div>
-                    <div>
                         <input type="checkbox" id="egress" name="egress" />
                         <label for="egress" class="grayTxt">EGRESS WINDOWS</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" id="repairs" name="repairs" />
+                        <label for="repairs" class="grayTxt">WINDOW REPAIRS</label>
                     </div>
                     <div>
                         <input type="checkbox" id="other" name="other" />
