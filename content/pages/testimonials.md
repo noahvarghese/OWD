@@ -4,7 +4,7 @@ title: Testimonials
 url: /testimonials/
 ---
 
-<h1 class="Testimonials">TESTIMONIALS</h1>
+<h1 class="Testimonials title">TESTIMONIALS</h1>
 <h2 id="blurb" class="Testimonials">
     Find out first-hand why our customers love<br />
     working with Oakville Windows & Doors!
