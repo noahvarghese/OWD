@@ -22,7 +22,7 @@
 
 @media only screen and ( min-width: 1200px )
 {
-    #main > h1 {
+    h1.Blog {
         margin-left: 0.5em;
         margin-bottom: 0.75em;
     }
@@ -88,15 +88,15 @@
         color: var(--orange);
     }
 
-    a:not(#newest) > div > h2 {
+    a#older  > div > h2 {
         color: black;
     }
 
-    a:not(#newest) > div > p {
+    a#older > div > p {
         color: var(--gray);
     }
 
-    a:not(#newest) > div > p > span {
+    a#older  > div > p > span {
         color: var(--orange);
     }
 

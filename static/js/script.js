@@ -2,7 +2,6 @@
 
 var path = window.location.pathname;
 var page = path.substring(path.indexOf('/') - 1);
-console.log(page);
 
 switch ( page ) {
 
@@ -38,7 +37,7 @@ switch ( page ) {
     case "/blog/":
         window.addEventListener("load", () => {
             var newestDesc = document.getElementById("newestDescription");
-            var banner = document.getElementById("banner");
+            var banner = document.getElementById("blogBanner");
         
             newestDesc.addEventListener("mouseenter", () => {
                 banner.style.transform = "scale(1.1)";
@@ -59,6 +58,7 @@ switch ( page ) {
         
         
         // Load more blogs? may not keep with hugo
+        /*
         window.addEventListener("scroll", () => {
         
             var snackbar = document.getElementById("loadSnackbar");
@@ -81,6 +81,7 @@ switch ( page ) {
                 snackbar.classList.remove("show");  
             }
         });
+        */
         break;
 }
 

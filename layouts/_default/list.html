@@ -3,7 +3,7 @@
 
 <div class="content container">
     {{ if eq .Section "blog" }}
-    <h1>OUR BLOG</h1>
+    <h1 class="Blog title">OUR BLOG</h1>
     <p id="pageDescription">
         At Oakville Windows & Doors, we’re committed to providing you with excellent
         service – even after your window or door installation is finished. Stay up to date
@@ -17,12 +17,12 @@
                     <div id="newestDescription">
                         <h2>{{ .Params.title }}</h2>
                         <p class="blogDescription" id="bannerDescription">
-                            {{ .Params.description }}
+                            {{- truncate 255 " " .Params.description -}}
                             <span class="readMore">...READ MORE</span>
                         </p>
                     </div>
                     <div id="bannerImgContainer">
-                        <img id="banner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
+                        <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
                     </div>
                 </a>
                 <div id="older">
@@ -31,14 +31,14 @@
                 {{ if eq (mod $i 2) 1 }}
                     <div class="horizontal">
                 {{ end }}
-                        <a href="" class="blogLink">
+                        <a id="older" href="" class="blogLink">
                             <div class="imgContainer"> 
                                 <img src="{{ .Params.image }}" class="banner">
                             </div>
                             <div>
                                 <h2>{{ .Params.title }}</h2>
                                 <p class="blogDescription" id="bannerDescription">
-                                    {{ .Params.description }}
+                                    {{- truncate 255 " " .Params.description -}}
                                     <span class="readMore">...READ MORE</span>
                                 </p>
                             </div>
