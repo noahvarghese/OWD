@@ -29,5 +29,5 @@ section:
 
 
       <p>Roofs, windows and doors are the main culprits when it comes to heat loss in the winter and cool air loss in the summer. That’s why it is so important to have your roof inspected regularly and have new windows installed if they’re starting to leak excessively. This will be the best way to prevent the growth of mildew in these parts of your home.</p>
-    heading: \n
+    heading: ""
 ---
