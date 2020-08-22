@@ -1,1 +1,29 @@
 <!-- Display list of gallery and blogs -->
+{{ partial "header" . }}
+
+<div class="content container">
+    {{ if eq .Section "blog" }}
+    <h1>OUR BLOG</h1>
+    <p id="pageDescription">
+        At Oakville Windows & Doors, we’re committed to providing you with excellent
+        service – even after your window or door installation is finished. Stay up to date
+        with all of the latest industry trends, maintenance advice and need-to-know
+        information for your new windows and doors with our blog.
+    </p>
+    <div id="container">
+        {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
+            <p>{{ $taxonomyname }}</p>
+            <p>{{ $taxonomy }}</p>
+            {{ $count := 0 }}
+            <p>Count: {{ $count }}</p>
+            {{ range $key, $value := $taxonomy }}
+            <p>YOLO</p>
+                <p>{{ $key }}</p>
+                <p>{{ $value }}</p>
+            {{ end }}
+        {{ end }}
+    </div>
+    {{ end }}
+</div>
+
+{{ partial "footer" . }}

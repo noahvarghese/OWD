@@ -1,8 +1,11 @@
 backend:
     name: git-gateway
-    branch: master # Branch to update (optional; defaults to master)
+    branch: hugo # Branch to update (optional; defaults to master)
+
 media_folder: static/img
+
 public_folder: /img
+
 collections:
   - name: 'blog'
     label: 'Blog'
@@ -12,6 +15,14 @@ collections:
     editor:
       preview: false
     fields:
+      - label: 'Type'
+        name: 'type'
+        widget: 'string'
+        default: 'blog'
+      - label: 'Category'
+        name: 'category'
+        widget: 'string'
+        default: 'blog'
       - label: 'Title'
         name: 'title'
         widget: 'string' 
