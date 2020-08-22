@@ -4,7 +4,7 @@ date: 2016-06-29T17:01:00.000Z
 description: >-
   For many homeowners in Oakville and beyond, one of the most important parts
   about owning a home is keeping the temperature consistent. We like to have our
-  homes cool in the summer and warm in the winter.<br />
+  homes cool in the summer and warm in the winter.<br /><br />
 
   That’s why it’s important to understand how balloons work. The theory behind balloons states that objects with high density, like a helium balloon or a hot air balloon, will always rise. Hot air balloons rise because hot air has a higher density than cool air.
 image: /img/balloon-theory-e1500913183227.jpg
