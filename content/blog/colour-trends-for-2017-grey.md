@@ -21,4 +21,5 @@ section:
       any home.</p>
 
       <p>Another grey colour that we cannot leave out is Iron Ore by Gentek Building Products. Iron Ore has been a top seller for years but recently has really taken off as it has become the standard ‘go-to’ dark grey in the industry. Not only are homeowners ordering it for their new front doors, but windows are also being ordered in this colour. Its popularity continues to grow more and more each season. Without a doubt, Iron Ore is our top selling grey.</p>
+    contextImage: /img/oakville-windows-doors-grey-colour-trend-2017.png
 ---
