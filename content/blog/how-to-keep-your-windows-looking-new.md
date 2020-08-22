@@ -11,10 +11,13 @@ image: /img/istock-496794278-1.jpg
 section:
   - heading: How To Clean Your Windows
     content: >+
-      <p>While you should always consult your window manufacturer’s cleaning
+      While you should always consult your window manufacturer’s cleaning
       instructions, there are a few general tips for window cleaning that are
-      safe for all kinds of windows.</p>
+      safe for all kinds of windows.
 
+
+
+  - content: >-
       <ol>
 
       <li><strong>Start with clean water and no soap.</strong> Using a soft cloth, gently rub the water over the glass, then wipe clean with a damp cloth. If your windows aren’t clean enough after this, add a very small amount of a mild detergent or dish soap to the water and repeat.</li>
@@ -26,29 +29,32 @@ section:
       <li>If vinyl frames or window tracks need to be cleaned, use the same mild cleanser and water mixture.</li>
 
       </ol>
-
-
-
   - heading: How Not To Clean Your Windows
     content: >+
-      <p>Just as important as knowing how to clean your windows, is how not to
+      Just as important as knowing how to clean your windows, is how not to
       clean your windows. Avoid these common mistakes so you don’t damage your
-      new windows:</p>
+      new windows:
 
+  - content: >+
       <ol>
 
       <li><strong>Never use a power washer or high pressure spray.</strong> These can damage the window seals, and your windows may not be airtight or as watertight as before.</li>
 
-      <li><strong>Keep strong detergents and solvents away from your windows.</strong> These types of cleaners can weaken the protective coating on the glass and can even cause damage to the vinyl, wood or fibreglass portions of the windows.</li>
+      <li><strong>Keep strong detergents and solvents away from your windows.
+
+      </strong> These types of cleaners can weaken the protective coating on the glass and can even cause damage to the vinyl, wood or fibreglass portions of the windows.</li>
 
       <li><strong>Avoid using WD-40 or oil-based lubricants.</strong> These can attract dirt and make your windows dirtier and more difficult to clean.</li>
 
-      <li><strong>Avoid using sharp tools around your windows.</strong>. Sharp tools can damage the seal on your windows and can lead to decreased efficiency and increased moisture in your home.</li>
+      <li><strong>Avoid using sharp tools around your windows.</strong> Sharp tools can damage the seal on your windows and can lead to decreased efficiency and increased moisture in your home.</li>
 
       </ol>
 
-  - content: <p>If you think you might need new windows, <a
+
+
+  - heading: ""
+    content: If you think you might need new windows, <a
       href="https://oakvillewd.com/contact/"><strong>contact the knowledgeable
       and experienced team at Oakville Windows & Doors</strong></a> for help
-      choosing the best windows for your home!</p>
+      choosing the best windows for your home!
 ---
