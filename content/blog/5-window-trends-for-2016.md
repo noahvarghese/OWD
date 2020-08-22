@@ -1,5 +1,5 @@
 ---
-title: 5 Window Trends For 2016
+title: 4 Window Trends For 2016
 date: 2016-09-26T17:35:42.983Z
 description: Does your Oakville home need new windows? Keep your home looking
   great with these window trends for 2016
