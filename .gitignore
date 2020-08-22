@@ -1,3 +1,0 @@
-# These will be updated everytime composer is run in docker file
-vendor/
-composer.lock
