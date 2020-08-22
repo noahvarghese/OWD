@@ -11,17 +11,44 @@
         information for your new windows and doors with our blog.
     </p>
     <div id="container">
-        {{ range $taxonomyname, $taxonomy := .Site.Taxonomies }}
-            <p>{{ $taxonomyname }}</p>
-            <p>{{ $taxonomy }}</p>
-            {{ $count := 0 }}
-            <p>Count: {{ $count }}</p>
-            {{ range $key, $value := $taxonomy }}
-            <p>YOLO</p>
-                <p>{{ $key }}</p>
-                <p>{{ $value }}</p>
+        {{ range $i, $post := where .Pages "Section" "blog" }}
+            {{ if eq $i 0 }}
+                <a id="newest" href="" class="blogLink">
+                    <div id="newestDescription">
+                        <h2>{{ .Params.title }}</h2>
+                        <p class="blogDescription" id="bannerDescription">
+                            {{ .Params.description }}
+                            <span class="readMore">...READ MORE</span>
+                        </p>
+                    </div>
+                    <div id="bannerImgContainer">
+                        <img id="banner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
+                    </div>
+                </a>
+                <div id="older">
+            {{ else }}
+                <!-- Odd number post, since 1st (0) is displayed at top-->
+                {{ if eq (mod $i 2) 1 }}
+                    <div class="horizontal">
+                {{ end }}
+                        <a href="" class="blogLink">
+                            <div class="imgContainer"> 
+                                <img src="{{ .Params.image }}" class="banner">
+                            </div>
+                            <div>
+                                <h2>{{ .Params.title }}</h2>
+                                <p class="blogDescription" id="bannerDescription">
+                                    {{ .Params.description }}
+                                    <span class="readMore">...READ MORE</span>
+                                </p>
+                            </div>
+                        </a>
+                {{ if eq (mod $i 2) 0 }}
+                    </div>
+                {{ end }}
             {{ end }}
         {{ end }}
+        </div>
     </div>
     {{ end }}
 </div>

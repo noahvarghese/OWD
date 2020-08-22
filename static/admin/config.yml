@@ -15,14 +15,6 @@ collections:
     editor:
       preview: false
     fields:
-      - label: 'Type'
-        name: 'type'
-        widget: 'string'
-        default: 'blog'
-      - label: 'Category'
-        name: 'category'
-        widget: 'string'
-        default: 'blog'
       - label: 'Title'
         name: 'title'
         widget: 'string' 

@@ -1,6 +1,4 @@
 ---
-type: blog
-category: blog
 title: DOES HUMIDITY AFFECT WINDOWS?
 date: 2019-12-02T14:49:34.687Z
 description: Humidity is excess moisture circulating in your home. If your home
@@ -8,7 +6,7 @@ description: Humidity is excess moisture circulating in your home. If your home
   will likely be on your windows — but this doesn’t mean that your windows are
   the problem. If you’ve             ever asked the question, “Does Humidity
   Affect Windows?” read on for the answer and some helpful solutions.
-image: /img/tempblog1.jpg
+image: /img/blog/tempblog1.jpg
 section:
   - heading: Understanding Humidity In Your Home
     content: >-
