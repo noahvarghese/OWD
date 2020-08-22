@@ -24,6 +24,7 @@ collections:
       - label: 'Description No HTML'
         name: 'descNoHMTL'
         widget: 'markdown'
+        required: false
       - label: 'Description'
         name: 'description'
         widget: 'markdown' 
