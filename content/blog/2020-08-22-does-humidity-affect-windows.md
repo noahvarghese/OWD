@@ -1,5 +1,5 @@
 ---
-title: DOES HUMIDITY AFFECT WINDOWS?
+title: Does Humidity Affect Windows?
 date: 2019-12-02T14:49:34.687Z
 description: Humidity is excess moisture circulating in your home. If your home
   has too much humidity, the first place that you             will notice this

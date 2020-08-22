@@ -13,7 +13,7 @@
     <div id="container">
         {{ range $i, $post := where .Pages "Section" "blog" }}
             {{ if eq $i 0 }}
-                <a id="newest" href="" class="blogLink">
+                <a id="newest" href="{{ .Permalink }}" class="blogLink">
                     <div id="newestDescription">
                         <h2>{{ .Params.title }}</h2>
                         <p class="blogDescription" id="bannerDescription">
@@ -31,7 +31,7 @@
                 {{ if eq (mod $i 2) 1 }}
                     <div class="horizontal">
                 {{ end }}
-                        <a id="older" href="" class="blogLink">
+                        <a id="older" href="{{ .Permalink }}" class="blogLink">
                             <div class="imgContainer"> 
                                 <img src="{{ .Params.image }}" class="banner">
                             </div>
