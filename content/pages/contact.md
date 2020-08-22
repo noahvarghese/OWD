@@ -33,7 +33,7 @@ url: /contact/
                     </div>
                     <div>
                         <input type="checkbox" id="sliding" name="sliding" />
-                        <label for="sliding" class="grayTxt">SLIDING PATIO DOORS</label>
+                        <label for="sliding" class="grayTxt">PATIO DOORS</label>
                     </div>
                     <div>
                         <input type="checkbox" id="garage" name="garage" />
@@ -114,7 +114,7 @@ url: /contact/
             </p>
             <p class="orangeTxt">
                 <span>Saturday<span class="gray">*</span></span>
-                <span>By Appointment Only</span>
+                <span>By Appointment</span>
             </p>
             <p class="orangeTxt">
                 <span>Sunday</span>
