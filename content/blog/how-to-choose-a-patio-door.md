@@ -1,6 +1,6 @@
 ---
 title: How To Choose A Patio Door
-date: 2020-08-22T19:50:44.584Z
+date: 2019-03-15T19:50:44.584Z
 description: >+
   Patio doors often go overlooked, but they’re an important part of your home.
   They connect the interior with your outdoor space and allow you to truly enjoy
@@ -56,7 +56,7 @@ section:
       certifications are a good indicator of energy efficiency, so keep an eye
       out for those ratings when selecting your new windows and doors.
 
-  - content: >+
+  - content: >
       For expert help in choosing the best patio doors for your home and your
       needs, <a href="https://oakvillewd.com"><strong>contact the team at
       Oakville Windows & Doors.</strong></a>
