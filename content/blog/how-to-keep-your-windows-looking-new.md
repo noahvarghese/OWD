@@ -47,8 +47,8 @@ section:
 
       </ol>
 
-  - content: If you think you might need new windows, <a
+  - content: <p>If you think you might need new windows, <a
       href="https://oakvillewd.com/contact/"><strong>contact the knowledgeable
       and experienced team at Oakville Windows & Doors</strong></a> for help
-      choosing the best windows for your home!
+      choosing the best windows for your home!</p>
 ---
