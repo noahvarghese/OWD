@@ -7,7 +7,7 @@ description: At Oakville Windows & Doors, we take the safety and security of
   windows and doors to prevent break-ins.
 image: /img/break-ins-e1500913086456.jpg
 section:
-  - heading: \n
+  - heading: ""
     content: >-
       <p>That’s why all of our vinyl windows have a multi-point locking system.
       This system is the highest quality and most secure option available to
