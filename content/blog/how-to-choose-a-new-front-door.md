@@ -1,9 +1,12 @@
 ---
 title: How To Choose A New Front Door
 date: 2019-07-01T19:55:29.696Z
+descNoHMTL: "Your front door is a major part of your home, both aesthetically
+  and functionally, so it’s important to choose the right one. If you are
+  looking to replace your front door, here’s what you should consider:"
 description: >+
-  Your <a href="https://oakvillewd.com/doors"><strong>front door</strong> is a
-  major part of your home, both aesthetically and functionally, so it’s
+  Your <a href="https://oakvillewd.com/doors"><strong>front door</strong></a> is
+  a major part of your home, both aesthetically and functionally, so it’s
   important to choose the right one. If you are looking to replace your front
   door, here’s what you should consider:
 
@@ -46,7 +49,7 @@ section:
       make sure you are comfortable with that before you purchase a door with
       decorative glass.
 
-  - content: >+
+  - content: >
       Looking for a new front door for your home? <a
       href="https://oakvillewd.com/contact><strong>Get a free quote from
       Oakville Windows & Doors.</strong></a>
