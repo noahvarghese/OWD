@@ -1,6 +1,12 @@
 ---
 title: "Window Installations: Retrofit Vs. Brick-To-Brick"
 date: 2020-08-22T19:17:33.417Z
+descNoHMTL: At Oakville Windows & Doors, it’s important to us that you
+  understand the window installation process so you can make informed decisions.
+  Some homeowners may not realize that there are two types of window
+  installations, and it’s essential to choose the right one. Always be sure to
+  ask your window salesperson what type of installation you are being quoted
+  for.
 description: >+
   At Oakville Windows & Doors, it’s important to us that you understand the <a
   href="https://oakvillewd.com/windows/"><strong>window</strong></a>
@@ -40,7 +46,7 @@ section:
       window possible. The window can be leveled properly, and foam insulated to
       guarantee a perfect seal and the most energy efficient window possible.
 
-  - content: >+
+  - content: >
       If you’re looking for a window installation for your home, <a
       href="https://oakvillewd.com/contact/"><strong>get a free
       quote</strong></a> from Oakville Windows & Doors.
