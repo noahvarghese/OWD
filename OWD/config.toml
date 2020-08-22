@@ -1,0 +1,46 @@
+baseURL = "/"
+languageCode = "en-us"
+title = "Oakville Windows and Doors"
+
+[markup.goldmark.renderer]
+    unsafe= true
+
+[params]
+    description="OWD"
+
+[menu]
+    [[menu.main]]
+        name = "HOME"
+        url = "/"
+        weight = 1
+
+    [[menu.main]]
+        name = "SERVICES"
+        url = "/services/"
+        weight = 2
+
+    [[menu.main]]
+        name = "CONTACT"
+        url = "/contact/"
+        weight = 3
+
+    [[menu.main]]
+        name = "COMMERCIAL"
+        url = "/commercial/"
+        weight = 4
+
+    [[menu.main]]
+        name = "GALLERY"
+        url = "/gallery/"
+        weight = 5
+
+    [[menu.main]]
+        name = "BLOG"
+        url = "/blog/"
+        weight = 6
+
+    [[menu.main]]
+        name = "TESTIMONIALS"
+        url = "/testimonials/"
+        weight = 7
+
