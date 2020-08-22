@@ -1,6 +1,13 @@
 ---
 title: "Door Hardware: Levers Vs. Door Knobs"
 date: 2019-06-01T19:53:00.417Z
+descNoHMTL: >-
+  When it comes to choosing doors for your home, many homeowners focus on
+  aesthetic features and materials. While those are important considerations,
+  choosing your hardware is also essential.<br /><br />
+
+
+  While door knobs have been a popular option for decades, we encourage our customers to purchase levers as we expect changes to building code to be rolled out across the country. Recently, British Columbia has begun to ban door knobs from residences and we expect to see more of these bans throughout the country and in Ontario. Here’s why you should consider levers for your doors:
 description: >+
   When it comes to choosing <a
   href="https://oakvillewd.com/doors"><strong>doors</strong></a> for your home,
@@ -45,7 +52,7 @@ section:
       styles, they can look out of place for other styles of homes. If you are
       looking for a modern upgrade, levers are an ideal choice.
 
-  - content: >+
+  - content: >
       The team at Oakville Windows & Doors is here to help if you have any
       questions about door hardware and how they may be impacted by building
       codes, so please don’t hesitate to <a
