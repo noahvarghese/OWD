@@ -31,3 +31,7 @@ Done
             eg image name/blog anme in url instead of id
                 make it look like a directory without file extensions 
                     www.owd.com/blog instead of www.owd.com/index?action=blog
+
+https://enerview.ca/
+https://www.palmadoor.com/
+https://goldhillwindows.com/
