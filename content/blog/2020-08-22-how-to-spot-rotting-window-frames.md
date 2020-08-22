@@ -1,15 +1,15 @@
 ---
 title: How To Spot Rotting Window Frames
 date: 2016-07-28T17:07:00.000Z
-description: If you’re a homeowner, you know that your home has ways of telling
-  you when it needs repairs. Some home damage can be really obvious, like a
-  broken window or a major water leak. But some home damage can be a little
-  harder to identify unless you go looking for it, like rotten wood.\nRotten
-  wood is especially dangerous because even if it starts at a specific point in
-  your house, it can quickly and easily spread throughout, wherever there is
-  wood. And the most likely place to find rotten wood is your window frames, as
-  they are exposed to the elements on a daily basis. Here’s how to tell if your
-  window frames are rotten.
+description: >-
+  If you’re a homeowner, you know that your home has ways of telling you when it
+  needs repairs. Some home damage can be really obvious, like a broken window or
+  a major water leak. But some home damage can be a little harder to identify
+  unless you go looking for it, like rotten wood.
+
+  <br/> <br/>
+
+  Rotten wood is especially dangerous because even if it starts at a specific point in your house, it can quickly and easily spread throughout, wherever there is wood. And the most likely place to find rotten wood is your window frames, as they are exposed to the elements on a daily basis. Here’s how to tell if your window frames are rotten.
 image: /img/rotting-window-e1500388833295.jpg
 section:
   - heading: 1. You Can See The Rot
