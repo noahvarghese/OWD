@@ -1,7 +1,7 @@
 ---
 title: "Window Installations: Retrofit Vs. Brick-To-Brick"
 date: 2020-08-22T19:17:33.417Z
-descNoHMTL: At Oakville Windows & Doors, it’s important to us that you
+descNoHTML: At Oakville Windows & Doors, it’s important to us that you
   understand the window installation process so you can make informed decisions.
   Some homeowners may not realize that there are two types of window
   installations, and it’s essential to choose the right one. Always be sure to

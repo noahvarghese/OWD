@@ -1,7 +1,7 @@
 ---
 title: How To Choose A New Front Door
 date: 2019-07-01T19:55:29.696Z
-descNoHMTL: "Your front door is a major part of your home, both aesthetically
+descNoHTML: "Your front door is a major part of your home, both aesthetically
   and functionally, so it’s important to choose the right one. If you are
   looking to replace your front door, here’s what you should consider:"
 description: >+

@@ -22,7 +22,7 @@ collections:
         name: 'date'
         widget: 'datetime' 
       - label: 'Description No HTML'
-        name: 'descNoHMTL'
+        name: 'descnohtml'
         widget: 'markdown'
         required: false
       - label: 'Description'

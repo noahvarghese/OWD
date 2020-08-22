@@ -43,9 +43,9 @@
                                 <h2>{{ .Params.title }}</h2>
                                 <p class="blogDescription" id="bannerDescription">
                                     {{ if ne (trim .Params.descNoHTML " ") "" }}
-                                      {{- safeHTML (truncate 255 " "  .Params.descNoHTML) -}}
+                                      {{- truncate 150 " " (safeHTML .Params.descNoHTML) -}}
                                     {{ else }}
-                                        {{- truncate 255 " " (safeHTML .Params.description) -}}
+                                        {{- truncate 150 " " (safeHTML .Params.description) -}}
                                     {{ end }}
                                     <span class="readMore">...READ MORE</span>
                                 </p>

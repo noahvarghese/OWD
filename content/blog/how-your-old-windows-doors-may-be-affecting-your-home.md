@@ -1,7 +1,7 @@
 ---
 title: How Your Old Windows & Doors May Be Affecting Your Home
 date: 2019-10-01T19:24:20.671Z
-descNoHMTL: Every homeowner knows that windows and doors are an important part
+descNoHTML: Every homeowner knows that windows and doors are an important part
   of their house, but do you know how your old windows and doors might be
   impacting your home?
 description: >+

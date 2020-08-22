@@ -1,7 +1,7 @@
 ---
 title: How To Increase Your Home’s Natural Light With Windows
 date: 2019-08-01T19:11:41.704Z
-descNoHMTL: While electricity and lighting can do wonders in your home, nothing
+descNoHTML: While electricity and lighting can do wonders in your home, nothing
   beats having natural light. While there are certain tricks you can use in your
   home to bring more light into your space, like installing mirrors or using a
   light colour palette on your walls and floors, the best way to bring light in

@@ -1,7 +1,7 @@
 ---
 title: "Door Hardware: Levers Vs. Door Knobs"
 date: 2019-06-01T19:53:00.417Z
-descNoHMTL: >-
+descNoHTML: >-
   When it comes to choosing doors for your home, many homeowners focus on
   aesthetic features and materials. While those are important considerations,
   choosing your hardware is also essential.<br /><br />

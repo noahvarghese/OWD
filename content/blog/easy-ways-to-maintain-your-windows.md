@@ -1,7 +1,7 @@
 ---
 title: Easy Ways To Maintain Your Windows
 date: 2019-05-07T19:09:32.163Z
-descNoHMTL: "If you’ve just had new windows installed in your home, here are a
+descNoHTML: "If you’ve just had new windows installed in your home, here are a
   few tips on how to keep them looking newer for longer. While vinyl windows are
   known for being virtually maintenance-free, there are a few easy things that
   you can do to ensure your new windows stay in great shape:"
