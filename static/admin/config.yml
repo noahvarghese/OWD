@@ -12,23 +12,34 @@ collections:
     editor:
       preview: false
     fields:
-      - label: 'Title', name: 'title', widget: 'string' 
-      - label: 'Publish Date', name: 'date', widget: 'datetime' 
-      - label: 'Description', name: 'description', widget: 'string' 
-      - label: 'Banner Image', name: 'image', widget: 'image', allow_multiple: false 
-      - label: 'Section', name: 'section', widget: 'list'
+      - label: 'Title'
+        name: 'title'
+        widget: 'string' 
+      - label: 'Publish Date'
+        name: 'date'
+        widget: 'datetime' 
+      - label: 'Description'
+        name: 'description'
+        widget: 'string' 
+      - label: 'Banner Image'
+        name: 'image'
+        widget: 'image'
+        allow_multiple: false 
+      - label: 'Section'
+        name: 'section'
+        widget: 'list'
         fields: 
           - { label: 'Heading', name: 'heading', widget: 'string' }
           - { label: 'Content', name: 'content', widget: 'markdown'}    
       
-      - name: 'gallery'
-        label: 'Gallery'
-        folder: 'content/gallery'
-        create: true
-        slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
-        editor: 
-          preview: false
-        fields: 
-          - { label: 'Title', name: 'title', widget: 'string' }
-          - { label: 'Description', name: 'description', widget: 'string' }
-          - { label: 'Image', name: 'image', widget: 'image', allow_multiple: false }
+  - name: 'gallery'
+    label: 'Gallery'
+    folder: 'content/gallery'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    editor: 
+      preview: false
+    fields: 
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: 'Image', name: 'image', widget: 'image', allow_multiple: false }
