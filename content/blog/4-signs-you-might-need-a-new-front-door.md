@@ -41,8 +41,8 @@ section:
       closed. Sticking and gaps can be a sign of your door warping, which can
       become a safety issue as well as a comfort issue.</p>
 
-  - content: If you think it might be time to replace your front door, <a
-      href="https://oakvillewd.com/contact/">contact us for a free quote!</a>
-      We’ll get back to you as soon as we can and get your home on track to
-      looking its best again.
+  - content: <p>If you think it might be time to replace your front door, <a
+      href="https://oakvillewd.com/contact/"><strong>contact us for a free
+      quote!</strong></a> We’ll get back to you as soon as we can and get your
+      home on track to looking its best again.</p>
 ---
