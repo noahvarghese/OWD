@@ -28,7 +28,7 @@
         {{ range $i, $section := .Params.section }}
         <div class="contents" id="content{{ $i }}">
         <h2 class="BlogPost">{{$section.heading}}</h2>
-        <p>{{$section.content}}</p>
+        <div>{{$section.content}}</div>
         {{ end }}
       </div>
   </div>
