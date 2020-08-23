@@ -58,8 +58,8 @@ Carousel.prototype.slide = function (index) {
                 }
             }
         }
-    } else {
     }
+    
     if ( index <= 0 )
     {
         this.current += 1;
