@@ -5,6 +5,7 @@
 <div class="content container">
 
   {{ if eq .Section "blog" }}
+  {{ $title := .Params.title }}
   <div id="blogPostBannerImgContainer">
       <img id="blogPostBanner" alt="bannerImage" src="{{ .Params.image }}" class="blogPostBanner" />
   </div>
@@ -37,17 +38,22 @@
   </div>
   <div id="recent">
       <h3 class="BlogPost">RECENT POSTS</h3>
-      <div>
-        {{ range $_, $post := where .Site.Pages "Section" "blog" }}
-          {{ if .Params.title }}
-          <a class="recentBlog" href="{{ .Permalink }}">
-              <div class="recentImgContainer">
-                  <img alt="small1" src="{{ .Params.image }}"/>
-              </div>
-              <h4 class="BlogPost">{{ .Params.title }}</h4>
-          </a>
+      <div id="carousel">
+        <div id="prev">&#10094;</div>
+        <div id="postCarousel">
+          {{ range $_, $post := where .Site.Pages "Section" "blog" }}
+          <!-- Hide current blog post from recent -->
+            {{ if and ( .Params.title ) ( ne .Params.title $title ) }}
+            <a class="recentBlog fade" href="{{ .Permalink }}">
+                <div class="recentImgContainer">
+                    <img alt="small1" src="{{ .Params.image }}"/>
+                </div>
+                <h4 class="BlogPost">{{ .Params.title }}</h4>
+            </a>
+            {{ end }}
           {{ end }}
-        {{ end }}
+        </div>
+        <div id="next">&#10095;</div>
       </div>
   </div>
   {{ else if eq .Section "gallery" }}

@@ -51,6 +51,6 @@ section:
 
   - content: >
       Looking for a new front door for your home? <a
-      href="https://oakvillewd.com/contact><strong>Get a free quote from
+      href="https://oakvillewd.com/contact"><strong>Get a free quote from
       Oakville Windows & Doors.</strong></a>
 ---

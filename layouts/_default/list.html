@@ -29,14 +29,14 @@
                         <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
                     </div>
                 </a>
-                <div id="older">
+                <div>
             {{ else }}
                 <!-- Odd number post, since 1st (0) is displayed at top-->
                 {{ if eq (mod $i 2) 1 }}
-                    <div class="horizontal">
+                    <div class='horizontal'>
                 {{ end }}
                         <a id="older" href="{{ .Permalink }}" class="blogLink">
-                            <div class="imgContainer"> 
+                            <div class="blogImgContainer"> 
                                 <img src="{{ .Params.image }}" class="banner">
                             </div>
                             <div>
@@ -58,6 +58,7 @@
         {{ end }}
         </div>
     </div>
+    <div id="loadSnackbar">Load More...</div>
     {{ end }}
 </div>
 

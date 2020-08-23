@@ -56,5 +56,5 @@ section:
       The team at Oakville Windows & Doors is here to help if you have any
       questions about door hardware and how they may be impacted by building
       codes, so please don’t hesitate to <a
-      href="https://oakvillewd.com/contact/"><strong>contact us.</strong</a>
+      href="https://oakvillewd.com/contact/"><strong>contact us.</strong></a>
 ---
