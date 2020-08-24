@@ -1370,6 +1370,49 @@ html {
         transform: scale(1.1);
     }
 
+    /* GALLERY */
+
+
+    .galleryLinks {
+        color: var(--orange);
+        transition: color 0.25s;
+        display: inline-block;
+        text-decoration: none;
+        height: 1.75em;
+    }
+
+    .galleryLinks > h2 {
+        margin-top: 0em;
+    }
+
+    ul#galleryNav {
+        margin-top: -3em;
+        margin-bottom: 8em;
+        margin-left: 1.5em;
+    }
+
+    ul#galleryNav > li {
+        display: inline-block;
+    }
+
+    ul#galleryNav > li:hover > a {
+        color: var(--gray);
+        cursor: pointer;
+    }
+
+    #galleryNav > li:not(:last-of-type) {
+        padding-right: 1.5em;
+        border-right: 3px solid var(--orange);
+    }
+
+    #galleryNav > li:not(:first-of-type) {
+        padding-left: 1.5em;
+    }
+
+    #thirdAboutLink {
+        margin-right: 1.5em;
+    }
+
     /* FOOTER */
 
     footer {

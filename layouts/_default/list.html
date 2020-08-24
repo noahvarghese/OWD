@@ -3,62 +3,103 @@
 
 <div class="content container">
     {{ if eq .Section "blog" }}
-    <h1 class="Blog title">OUR BLOG</h1>
-    <p id="pageDescription">
-        At Oakville Windows & Doors, we’re committed to providing you with excellent
-        service – even after your window or door installation is finished. Stay up to date
-        with all of the latest industry trends, maintenance advice and need-to-know
-        information for your new windows and doors with our blog.
-    </p>
-    <div id="container">
-        {{ range $i, $post := where .Pages "Section" "blog" }}
-            {{ if eq $i 0 }}
-                <a id="newest" href="{{ .Permalink }}" class="blogLink">
-                    <div id="newestDescription">
-                        <h2>{{ .Params.title }}</h2>
-                        <p class="blogDescription" id="bannerDescription">
-                            {{ if ne (trim .Params.descNoHTML " ") "" }}
-                              {{- safeHTML (truncate 255 " " .Params.descNoHTML) -}}
-                            {{ else }}
-                                {{- safeHTML (truncate 255 " " .Params.description) -}}
-                            {{ end }}
-                            <span class="readMore">...READ MORE</span>
-                        </p>
-                    </div>
-                    <div id="bannerImgContainer">
-                        <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
-                    </div>
-                </a>
-                <div>
-            {{ else }}
-                <!-- Odd number post, since 1st (0) is displayed at top-->
-                {{ if eq (mod $i 2) 1 }}
-                    <div class='horizontal'>
-                {{ end }}
-                        <a id="older" href="{{ .Permalink }}" class="blogLink">
-                            <div class="blogImgContainer"> 
-                                <img src="{{ .Params.image }}" class="banner">
-                            </div>
-                            <div>
-                                <h2>{{ .Params.title }}</h2>
-                                <p class="blogDescription" id="bannerDescription">
-                                    {{ if ne (trim .Params.descNoHTML " ") "" }}
-                                      {{- truncate 150 " " (safeHTML .Params.descNoHTML) -}}
-                                    {{ else }}
-                                        {{- truncate 150 " " (safeHTML .Params.description) -}}
-                                    {{ end }}
-                                    <span class="readMore">...READ MORE</span>
-                                </p>
-                            </div>
-                        </a>
-                {{ if eq (mod $i 2) 0 }}
-                    </div>
+        <h1 class="Blog title">OUR BLOG</h1>
+        <p id="pageDescription">
+            At Oakville Windows & Doors, we’re committed to providing you with excellent
+            service – even after your window or door installation is finished. Stay up to date
+            with all of the latest industry trends, maintenance advice and need-to-know
+            information for your new windows and doors with our blog.
+        </p>
+        <div id="container">
+            {{ range $i, $post := where .Pages "Section" "blog" }}
+                {{ if eq $i 0 }}
+                    <a id="newest" href="{{ .Permalink }}" class="blogLink">
+                        <div id="newestDescription">
+                            <h2>{{ .Params.title }}</h2>
+                            <p class="blogDescription" id="bannerDescription">
+                                {{ if ne (trim .Params.descNoHTML " ") "" }}
+                                {{- safeHTML (truncate 255 " " .Params.descNoHTML) -}}
+                                {{ else }}
+                                    {{- safeHTML (truncate 255 " " .Params.description) -}}
+                                {{ end }}
+                                <span class="readMore">...READ MORE</span>
+                            </p>
+                        </div>
+                        <div id="bannerImgContainer">
+                            <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
+                        </div>
+                    </a>
+                    <div>
+                {{ else }}
+                    <!-- Odd number post, since 1st (0) is displayed at top-->
+                    {{ if eq (mod $i 2) 1 }}
+                        <div class='horizontal'>
+                    {{ end }}
+                            <a id="older" href="{{ .Permalink }}" class="blogLink">
+                                <div class="blogImgContainer"> 
+                                    <img src="{{ .Params.image }}" class="banner">
+                                </div>
+                                <div>
+                                    <h2>{{ .Params.title }}</h2>
+                                    <p class="blogDescription" id="bannerDescription">
+                                        {{ if ne (trim .Params.descNoHTML " ") "" }}
+                                        {{- truncate 150 " " (safeHTML .Params.descNoHTML) -}}
+                                        {{ else }}
+                                            {{- truncate 150 " " (safeHTML .Params.description) -}}
+                                        {{ end }}
+                                        <span class="readMore">...READ MORE</span>
+                                    </p>
+                                </div>
+                            </a>
+                    {{ if eq (mod $i 2) 0 }}
+                        </div>
+                    {{ end }}
                 {{ end }}
             {{ end }}
-        {{ end }}
+            </div>
         </div>
-    </div>
-    <div id="loadSnackbar">Load More...</div>
+        <div id="loadSnackbar">Load More...</div>
+    {{ else if eq .Section "gallery" }}
+        <h1 class="Gallery title">Gallery</h1>
+        <ul id="galleryNav">
+            <li>
+                <a href="" class="galleryLinks">
+                    <h2>FIBREGLASS DOORS</h2>
+                </a>
+            </li>
+            <li>
+                <a href="" class="galleryLinks">
+                    <h2>STEEL DOORS</h2>
+                </a>
+            </li>
+            <li>
+                <a href="" class="galleryLinks">
+                    <h2>WINDOWS</h2>
+                </a>
+            </li>
+            <li>
+                <a href="" class="galleryLinks">
+                    <h2>WOOD PRODUCTS</h2>
+                </a>
+            </li>
+            <li>
+                <a href="" class="galleryLinks">
+                    <h2>OTHER</h2>
+                </a>
+            </li>
+        </ul>
+        <div class="">
+            <!-- Need to get the category and put each into its own div-->
+            {{ range $i, $image := where .Pages "Section" "gallery" }}
+                {{ if eq (mod $i 8) 0 }}
+                    <!-- Big picture -->
+                {{ else if ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
+                    <!-- Pictures to the left of big picture-->
+                {{ else if eq (mod $i 8) 6 }}
+                    <!-- Beneath big picture -->
+                {{ end }}
+            {{ end }}
+        </div>
     {{ end }}
 </div>
 
