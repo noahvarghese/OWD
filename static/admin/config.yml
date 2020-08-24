@@ -49,5 +49,5 @@ collections:
       preview: false
     fields: 
       - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Tag', name: 'tag', widget: 'list', defaults: ['Fibreglass Doors', 'Steel Doors', 'Windows', 'Wood Products', 'Other'] }
+      - { label: 'Tag', name: 'tag', widget: 'select', options: ['Fibreglass Doors', 'Steel Doors', 'Windows', 'Wood Products', 'Other'] }
       - { label: 'Image', name: 'image', widget: 'image', allow_multiple: false }
