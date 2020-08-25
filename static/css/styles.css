@@ -1311,9 +1311,10 @@ html {
 
     #blogSocial {
         display: block;
+        width: auto;
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
-        width: 25em;
         margin-bottom: 5em;
     }
 
@@ -1707,9 +1708,10 @@ html {
 
     footer {
         margin-top: 2em;
+        margin-bottom: 2em !important;
         padding: 0;
         position: relative;
-        height: 20em;
+        height: 25em;
         padding-bottom: 8em;
     }
 
