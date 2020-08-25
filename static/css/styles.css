@@ -320,6 +320,82 @@ html {
         display: inline-block;
     }
 
+    /* COMMERCIL */
+
+    .types {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #commercial { 
+        width: 85%;
+        margin-left: 5%;
+    }
+
+    #cubicelServices > div > img {
+        display: block;
+    }
+
+    #commercial > h2 {
+        width: 30em;
+        margin-bottom: 2em;
+        line-height: 1.5em;
+    }
+
+    .Services {
+        font-size: 1em;
+    }
+
+    #commercial > p {
+        margin-bottom: 2em;
+        color: var(--gray);
+        line-height: 1.5em;
+    }
+
+    .commercialSection {
+        margin-top: 8em;
+        margin-bottom: 8em;
+        display: flex;
+    }
+
+    .details > ul > li {
+        font-size: 1.2em;
+        line-height: 1.5em;
+    }
+
+    .details { 
+        width: 45%;
+    }
+
+    .details > h2 {
+        margin-left: 1.5em;
+        margin-top: 1em;
+        margin-bottom: 2em;
+        font-size: 2em;
+    }
+
+    .details > p {
+        margin-left: 2.25em;
+    }
+
+    .floatRight {
+        width: auto;
+        margin-left: auto;
+        margin-right: 0;
+    }
+
+    .floatLeft {
+        width: auto;
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    #commercialContainer > hr {
+        margin-top: 2em;
+        margin-bottom: 2em;
+        border: 1px solid var(--orange);
+    }
+
     /* SERVICES */
 
     #banner > img {
