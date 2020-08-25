@@ -63,33 +63,35 @@
         <h1 class="Gallery title">Gallery</h1>
         <ul id="galleryNav">
             <li>
-                <a href="" class="galleryLinks">
+                <a href="" class="galleryLinks" id="fibreglassDoorsLink">
                     <h2>FIBREGLASS DOORS</h2>
                 </a>
             </li>
             <li>
-                <a href="" class="galleryLinks">
+                <a href="" class="galleryLinks" id="steelDoorsLink">
                     <h2>STEEL DOORS</h2>
                 </a>
             </li>
             <li>
-                <a href="" class="galleryLinks">
+                <a href="" class="galleryLinks" id="windowsLink">
                     <h2>WINDOWS</h2>
                 </a>
             </li>
             <li>
-                <a href="" class="galleryLinks">
+                <a href="" class="galleryLinks" id="woodProductsLink">
                     <h2>WOOD PRODUCTS</h2>
                 </a>
             </li>
             <li>
-                <a href="" class="galleryLinks">
+                <a href="" class="galleryLinks" id="otherLink">
                     <h2>OTHER</h2>
                 </a>
             </li>
         </ul>
         <div class="gallerySection" id="fibreglassDoors">
             <!-- Need to get the category and put each into its own div-->
+            {{ $list := where (where .Pages "Section" "gallery") ".Params.category" "Fibreglass Doors" }}
+            {{ $len := (sub (len $list) 1) }}
             {{ range $i, $image := where (where .Pages "Section" "gallery") ".Params.category" "Fibreglass Doors" }}
                 {{ if eq (mod $i 8) 0 }}
                     <!-- Big picture -->
@@ -97,6 +99,9 @@
                         <div class="largeImg jsContainer">
                             <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                         </div>
+                    {{ if eq $i $len }}
+                        </div>
+                    {{ end }}
                 {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
                     <!-- Pictures to the left of big picture-->
                     {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
@@ -104,10 +109,17 @@
                             <div class="galleryImgContainer jsContainer">
                                 <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
+                            {{ if eq $i $len }}
+                                </div>
+                                </div>
+                            {{ end }}
                     {{ else }}
                             <div class="galleryImgContainer jsContainer">
                                 <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
                         </div>
                     {{ end }}
                     {{ if  eq (mod $i 8) 4 }}
@@ -120,11 +132,18 @@
                             <div class="medLrgImg jsContainer">
                                 <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
                     {{ else if eq (mod $i 8) 6 }}
                             <div class="row">
                                 <div class="otherImgContainer firstMedLrgImg jsContainer">
                                     <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                                 </div>
+                                {{ if eq $i $len }}
+                                    </div>
+                                    </div>
+                                {{ end }}
                     {{ else }}
                                 <div class="otherImgContainer lastMedLrgImg jsContainer">
                                     <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
@@ -135,20 +154,284 @@
                 {{ end }}
             {{ end }}
         </div>
-    </div>
-    <div id="overlay">
-        <div id="galleryCarousel">
-            <div id="galleryCarouselPrev" class="prev">&#10094;</div>
-            <div id="overlayImgContainer">
-                <div id="mdiv">
-                    <div class="mdiv">
-                      <div class="md"></div>
+        <div class="gallerySection" id="steelDoors">
+            <!-- Need to get the category and put each into its own div-->
+            {{ $list := where (where .Pages "Section" "gallery") ".Params.category" "Steel Doors" }}
+            {{ $len := (sub (len $list) 1) }}
+            {{ range $i, $image := where (where .Pages "Section" "gallery") ".Params.category" "Steel Doors" }}
+                {{ if eq (mod $i 8) 0 }}
+                    <!-- Big picture -->
+                    <div class="largeRow">
+                        <div class="largeImg jsContainer">
+                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                        </div>
+                    {{ if eq $i $len }}
+                        </div>
+                    {{ end }}
+                {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
+                    <!-- Pictures to the left of big picture-->
+                    {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
+                        <div class="largSideRow">
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                                </div>
+                            {{ end }}
+                    {{ else }}
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if  eq (mod $i 8) 4 }}
+                    </div>
+                    {{ end }}
+                {{ else }}
+                    {{ if eq (mod $i 8) 5 }}
+                    <!-- Beneath big picture -->
+                        <div class="smRow">
+                            <div class="medLrgImg jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                    {{ else if eq (mod $i 8) 6 }}
+                            <div class="row">
+                                <div class="otherImgContainer firstMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                                </div>
+                                {{ if eq $i $len }}
+                                    </div>
+                                    </div>
+                                {{ end }}
+                    {{ else }}
+                                <div class="otherImgContainer lastMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg steelDoors" id="{{$i}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+
+        <div class="gallerySection" id="windows">
+            <!-- Need to get the category and put each into its own div-->
+            {{ $list := where (where .Pages "Section" "gallery") ".Params.category" "Windows" }}
+            {{ $len := (sub (len $list) 1) }}
+            {{ range $i, $image := where (where .Pages "Section" "gallery") ".Params.category" "Windows" }}
+                {{ if eq (mod $i 8) 0 }}
+                    <!-- Big picture -->
+                    <div class="largeRow">
+                        <div class="largeImg jsContainer">
+                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                        </div>
+                    {{ if eq $i $len }}
+                        </div>
+                    {{ end }}
+                {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
+                    <!-- Pictures to the left of big picture-->
+                    {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
+                        <div class="largSideRow">
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                                </div>
+                            {{ end }}
+                    {{ else }}
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if  eq (mod $i 8) 4 }}
+                    </div>
+                    {{ end }}
+                {{ else }}
+                    {{ if eq (mod $i 8) 5 }}
+                    <!-- Beneath big picture -->
+                        <div class="smRow">
+                            <div class="medLrgImg jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                    {{ else if eq (mod $i 8) 6 }}
+                            <div class="row">
+                                <div class="otherImgContainer firstMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                                </div>
+                                {{ if eq $i $len }}
+                                    </div>
+                                    </div>
+                                {{ end }}
+                    {{ else }}
+                                <div class="otherImgContainer lastMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg windows" id="{{$i}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div> 
+        <div class="gallerySection" id="woodProducts">
+            <!-- Need to get the category and put each into its own div-->
+            {{ $list := where (where .Pages "Section" "gallery") ".Params.category" "Wood Products" }}
+            {{ $len := (sub (len $list) 1) }}
+            {{ range $i, $image := where (where .Pages "Section" "gallery") ".Params.category" "Wood Products" }}
+                {{ if eq (mod $i 8) 0 }}
+                    <!-- Big picture -->
+                    <div class="largeRow">
+                        <div class="largeImg jsContainer">
+                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                        </div>
+                    {{ if eq $i $len }}
+                        </div>
+                    {{ end }}
+                {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
+                    <!-- Pictures to the left of big picture-->
+                    {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
+                        <div class="largSideRow">
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                                </div>
+                            {{ end }}
+                    {{ else }}
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if  eq (mod $i 8) 4 }}
+                    </div>
+                    {{ end }}
+                {{ else }}
+                    {{ if eq (mod $i 8) 5 }}
+                    <!-- Beneath big picture -->
+                        <div class="smRow">
+                            <div class="medLrgImg jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                    {{ else if eq (mod $i 8) 6 }}
+                            <div class="row">
+                                <div class="otherImgContainer firstMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                                </div>
+                                {{ if eq $i $len }}
+                                    </div>
+                                    </div>
+                                {{ end }}
+                    {{ else }}
+                                <div class="otherImgContainer lastMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg woodProducts" id="{{$i}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <div class="gallerySection" id="other">
+            <!-- Need to get the category and put each into its own div-->
+            {{ $list := where (where .Pages "Section" "gallery") ".Params.category" "Other" }}
+            {{ $len := (sub (len $list) 1) }}
+            {{ range $i, $image := where (where .Pages "Section" "gallery") ".Params.category" "Other" }}
+                {{ if eq (mod $i 8) 0 }}
+                    <!-- Big picture -->
+                    <div class="largeRow">
+                        <div class="largeImg jsContainer">
+                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                        </div>
+                    {{ if eq $i $len }}
+                        </div>
+                    {{ end }}
+                {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
+                    <!-- Pictures to the left of big picture-->
+                    {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
+                        <div class="largSideRow">
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                                </div>
+                            {{ end }}
+                    {{ else }}
+                            <div class="galleryImgContainer jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                        </div>
+                    {{ end }}
+                    {{ if  eq (mod $i 8) 4 }}
+                    </div>
+                    {{ end }}
+                {{ else }}
+                    {{ if eq (mod $i 8) 5 }}
+                    <!-- Beneath big picture -->
+                        <div class="smRow">
+                            <div class="medLrgImg jsContainer">
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                            </div>
+                            {{ if eq $i $len }}
+                                </div>
+                            {{ end }}
+                    {{ else if eq (mod $i 8) 6 }}
+                            <div class="row">
+                                <div class="otherImgContainer firstMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                                </div>
+                                {{ if eq $i $len }}
+                                    </div>
+                                    </div>
+                                {{ end }}
+                    {{ else }}
+                                <div class="otherImgContainer lastMedLrgImg jsContainer">
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg other" id="{{$i}}"/>
+                                </div>
+                            </div>
+                        </div>
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+        </div>
+        <div id="overlay">
+            <div id="galleryCarousel">
+                <div id="galleryCarouselPrev" class="prev">&#10094;</div>
+                <div id="overlayImgContainer">
+                    <div id="mdiv">
+                        <div class="mdiv">
+                        <div class="md"></div>
+                        </div>
                     </div>
                 </div>
+                <div id="galleryCarouselNext" class="next">&#10095;</div>
             </div>
-            <div id="galleryCarouselNext" class="next">&#10095;</div>
         </div>
-    </div>
     {{ end }}
 </div>
 

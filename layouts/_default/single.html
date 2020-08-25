@@ -43,7 +43,8 @@
         <div id="postCarousel">
           {{ range $_, $post := where .Site.Pages "Section" "blog" }}
           <!-- Hide current blog post from recent -->
-            {{ if and ( .Params.title ) ( ne .Params.title $title ) }}
+          <!-- hide _index.md -->
+            {{ if and (and ( .Params.title ) ( ne .Params.title $title )) (ne .Params.title "Blog" ) }}
             <a class="recentBlog fade" href="{{ .Permalink }}">
                 <div class="recentImgContainer">
                     <img alt="small1" src="{{ .Params.image }}"/>

@@ -82,6 +82,41 @@ switch (page) {
     case "/gallery/":
 
         window.addEventListener("load", () => {
+            let galleryLinks = document.getElementsByClassName("galleryLinks");
+            galleryLinks[0].classList.add("selected");
+            document.getElementById("fibreglassDoors").style.display = "block";
+
+            for ( let i = 0; i < galleryLinks.length; i++ )
+            {
+                galleryLinks[i].addEventListener("click", (e) => {
+                    e.preventDefault();
+
+                    let galleryLinks = document.getElementsByClassName("galleryLinks");
+                        
+                    for ( let i = 0; i < galleryLinks.length; i++ )
+                    {
+                        if ( galleryLinks[i].classList.contains("selected") )
+                        {
+                            galleryLinks[i].classList.remove("selected");
+                            let oldDivID = galleryLinks[i].id.replace("Link", "");
+                            document.getElementById(oldDivID).style.display = "none";
+                            break;
+                        }
+                    }
+
+                    let selectedItem = e.path[1];
+                    let selectedItemID = selectedItem.id;
+                    selectedItem.classList.add("selected");
+
+                    let divID = selectedItemID.replace("Link", "");
+
+                    let div = document.getElementById(divID);
+                    div.style.display = "block";
+                });
+            }
+        });
+
+        window.addEventListener("load", () => {
             var galleryImgs = document.getElementsByClassName("galleryImg");
             
             for ( i = 0; i < galleryImgs.length; i++ )
