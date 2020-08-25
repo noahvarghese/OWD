@@ -110,7 +110,6 @@ html {
         width: 1000px;
         margin-left: 0em;
         float: right;
-        z-index: 2;
         position: absolute;
         top: 4em;
         right: -7em;
@@ -148,7 +147,6 @@ html {
         height: 5em;
         max-width: 100%;
         margin-top: 2em;
-        z-index: 1;
     }
 
     /* HOME */
@@ -1554,6 +1552,7 @@ html {
         background-color: rgba(0,0,0,0.5);
         color: var(--orange);
         z-index: 1;
+        vertical-align: middle;
     }
 
     #overlayImgContainer {
@@ -1563,6 +1562,14 @@ html {
         margin: auto;
         overflow: auto;
         break-after: always;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
+        -ms-transform: translate(-50%, -50%);     /* IE9+ */
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
     }
 
     #overlayImgContainer > img {
@@ -1578,6 +1585,7 @@ html {
         display: block;
         word-wrap: normal;
         max-width: 600px;
+        padding: 0;
         width: auto;
     }
 
