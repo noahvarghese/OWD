@@ -1505,6 +1505,10 @@ html {
         cursor: pointer;
     }
 
+    .galleryImg {
+        transition: transform .2s; 
+    }
+
     #mdiv {
         width: 25px;
         height: 25px;

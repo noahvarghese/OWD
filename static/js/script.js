@@ -82,6 +82,22 @@ switch (page) {
     case "/gallery/":
 
         window.addEventListener("load", () => {
+            var galleryImgs = document.getElementsByClassName("galleryImg");
+            
+            for ( i = 0; i < galleryImgs.length; i++ )
+            {
+                console.log(galleryImgs[i])
+                galleryImgs[i].addEventListener("mouseenter", (e) => {
+                    e.path[0].style.transform = "scale(1.1)";
+                });
+
+                galleryImgs[i].addEventListener("mouseleave", (e) => {
+                    e.path[0].style.transform = "scale(1)";
+                });
+            }
+        });
+
+        window.addEventListener("load", () => {
 
             let galleryImages = document.getElementsByClassName("galleryImg");
             
