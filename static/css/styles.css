@@ -1418,7 +1418,6 @@ html {
     }
 
     .gallerySection {
-        display: none;
         background-color: var(--lightgray);
         margin-left: 4em;
         width: 1100px;

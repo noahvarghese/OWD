@@ -85,6 +85,10 @@ switch (page) {
             let galleryLinks = document.getElementsByClassName("galleryLinks");
             galleryLinks[0].classList.add("selected");
             document.getElementById("fibreglassDoors").style.display = "block";
+            document.getElementById("steelDoors").style.display = "none";
+            document.getElementById("windows").style.display = "none";
+            document.getElementById("woodProducts").style.display = "none";
+            document.getElementById("other").style.display = "none";
 
             for ( let i = 0; i < galleryLinks.length; i++ )
             {
