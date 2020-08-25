@@ -2,6 +2,7 @@
 date: 2020-08-21
 title: Testimonials
 url: /testimonials/
+description: Find out first-hand why our customers love working with Oakville Windows & Doors!
 ---
 
 <h1 class="Testimonials title">TESTIMONIALS</h1>

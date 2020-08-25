@@ -3,6 +3,11 @@ title: "Contact"
 date: 2020-08-20T16:12:15-04:00
 draft: false
 url: /contact/
+description: To get started working with us, or if you
+            have any questions, please contact us
+            using the form above. You can also give us
+            a call at (905) 827-3200 or email us at
+            sales@oakvillewindows.com.
 ---
 
 <h1 class="title">CONTACT US</h1>
