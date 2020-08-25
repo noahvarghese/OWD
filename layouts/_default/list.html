@@ -35,9 +35,9 @@
                     {{ if eq (mod $i 2) 1 }}
                         <div class='horizontal'>
                     {{ end }}
-                            <a id="older" href="{{ .Permalink }}" class="blogLink">
+                            <a href="{{ .Permalink }}" class="blogLink older">
                                 <div class="blogImgContainer"> 
-                                    <img src="{{ .Params.image }}" class="banner">
+                                    <img src="{{ .Params.image }}" class="banner" alt="{{ .Params.title }}">
                                 </div>
                                 <div>
                                     <h2>{{ .Params.title }}</h2>

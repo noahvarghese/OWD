@@ -647,6 +647,11 @@ html {
     }
     
     /* CONTACT */
+
+    .hiddenLabel {
+        display: none;
+    }
+
     .orangeTxt {
         color: var(--orange);
     }
@@ -1068,19 +1073,19 @@ html {
         line-height: 1.5em;
     }
 
-    #older > div > p > span {
+    .older > div > p > span {
         color: var(--orange);
     }
 
-    a#older  > div > h2 {
+    a.older  > div > h2 {
         color: black;
     }
 
-    a#older > div > p {
+    a.older > div > p {
         color: var(--gray);
     }
 
-    a#older  > div > p > span {
+    a.older  > div > p > span {
         color: var(--orange);
     }
 

@@ -14,7 +14,7 @@ url: /contact/
                 <input type="text" name="lname" placeholder="LAST NAME*" class="border" id="lname"/>
             </div>
             <div>
-                <input type="email" name="email" placeholder="E-MAIL*" class="border" id="email" />
+                <input type="email" name="email" placeholder="E-MAIL*" class="border" id="emailInput" />
                 <input type="tel" name="phone" placeholder="PHONE*" class="border" id="phone" />
             </div>
             <div>
@@ -53,7 +53,7 @@ url: /contact/
                     </div>
                 </div>
             </div>
-            <div id="messageDiv">
+            <div>
                 <textarea id="message" placeholder="MESSAGE*"></textarea>
             </div>
             <input type="submit" value="REQUEST QUOTE" id="submit" class="g-recaptcha" data-sitekey="6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw" data-callback='recaptchaCallback' data-action='submit' />
@@ -126,7 +126,7 @@ url: /contact/
             </div>
         </div>
     </div>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.800801278461!2d-79.71486178383195!3d43.422988475303114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b5dba16866961%3A0x715961398c0fb8a8!2sOakville%20Windows%20%26%20Doors!5e0!3m2!1sen!2sca!4v1595081496207!5m2!1sen!2sca" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+    <iframe title="Oakville Windows and Doors Location" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2897.800801278461!2d-79.71486178383195!3d43.422988475303114!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b5dba16866961%3A0x715961398c0fb8a8!2sOakville%20Windows%20%26%20Doors!5e0!3m2!1sen!2sca!4v1595081496207!5m2!1sen!2sca" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 </div>
 <div id="snackbar">Message Sent...</div>
 
