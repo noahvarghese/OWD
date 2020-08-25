@@ -76,8 +76,53 @@ Carousel.prototype.slide = function (index) {
 var path = window.location.pathname;
 var page = path.substring(path.indexOf('/') - 1);
 
-console.log(page);
+
 switch (page) {
+
+    case "/gallery/":
+
+        window.addEventListener("load", () => {
+
+            let galleryImages = document.getElementsByClassName("galleryImg");
+            
+            for ( i = 0; i < galleryImages.length; i++ )
+            {
+                galleryImages[i].addEventListener("click", (e) => {
+
+                    let image = new Image();
+                    image.src = e.path[0].src;
+                    image.setAttribute("alt", e.path[0].alt);
+                    image.setAttribute("id", "overlayImg");
+
+                    let header = document.createElement("h3");
+                    header.innerHTML = image.alt;
+                    header.setAttribute("id", "overlayHeader");
+
+                    let container = document.getElementById("overlayImgContainer");
+                    container.appendChild(image);
+                    container.appendChild(header);
+
+                    let overlay = document.getElementById("overlay");
+                    overlay.style.display = "block";
+                    document.getElementsByTagName("html")[0].style.overflow = "hidden";
+                });
+            }
+
+            let closeBtn = document.getElementById("mdiv");
+            closeBtn.addEventListener("click", () => {
+                document.getElementsByTagName("html")[0].style.overflow = "visible";
+                let overlay = document.getElementById("overlay");
+                overlay.style.display = "none";
+
+                let container = document.getElementById("overlayImgContainer");
+                container.removeChild(document.getElementById("overlayImg"));
+                container.removeChild(document.getElementById("overlayHeader"));
+                
+            });
+        });
+        
+
+        break;
 
     case "/contact/":
         break;

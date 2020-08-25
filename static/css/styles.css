@@ -2,6 +2,7 @@
     --orange: #FFA800;
     --gray: #888C8D;
     --darkgray: #696969;
+    --lightgray: #d3d3d3;
     --offwhite: #F2F2F2;
     --orangeOpaque: rgba(255, 170, 0, 0.7);
 }
@@ -1409,9 +1410,165 @@ html {
         padding-left: 1.5em;
     }
 
-    #thirdAboutLink {
-        margin-right: 1.5em;
+    .gallerySection {
+        background-color: var(--lightgray);
+        margin-left: 4em;
+        width: 1100px;
+        padding: 2em;
+        margin-bottom: 10em;
     }
+
+    .largeRow {
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+
+    .largeImg {
+        width: 525px;
+        height: 600px;
+        overflow: hidden;
+        display: inline-block;
+    }
+    
+    .largeImg > img {
+        max-width: 800px;
+        max-height: 1000px;
+        width: auto;
+        height: auto
+    }
+
+    .galleryImgContainer {
+        width: 230px;
+        height: 290px;
+        overflow: hidden;
+        margin-left: 1em;
+    }
+
+    .galleryImgContainer > img {
+        max-width: 500px;
+        max-height: 600px;
+        width: auto;
+        height: auto;
+        margin-lefT: -2em;
+    }
+
+    .otherImgContainer > img {
+        max-width: 400px;
+        max-height: 400px;
+        width: auto;
+        height: auto
+    }
+
+    .medLrgImg > img {
+        max-width: 600px;
+        max-height: 600px;
+        width: auto;
+        height: auto;
+        margin-top: -5em;
+    }
+
+    .row, .largSideRow {
+        display: inline-block;
+    }
+
+    .smRow {
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+
+    .otherImgContainer {
+        width: 230px;
+        height: 160px;
+        display: inline-block;
+        overflow: hidden;
+    }
+
+    .medLrgImg {
+        display: inline-block;
+        width: 525px;
+        height: 160px;
+        overflow: hidden;
+        margin-right: 1em;
+    }
+
+    .medLrgImg > img.galleryImg{
+        width: 525px !important;
+    }
+
+    .firstMedLrgImg{
+        margin-right: 1em;
+    }
+
+    .largSideRow > div:first-of-type{
+        margin-bottom: 1em;
+    }
+
+    .galleryImg:hover {
+        cursor: pointer;
+    }
+
+    #mdiv {
+        width: 25px;
+        height: 25px;
+        background-color: rgba(0,0,0,0.5);
+    }
+      
+    .mdiv {
+        height: 25px;
+        width: 2px;
+        margin-left: 12px;
+        background-color: white;
+        transform: rotate(45deg);
+        Z-index: 1;
+    }
+
+    #mdiv:hover {
+        cursor: pointer;
+    }
+      
+    .md {
+        height: 25px;
+        width: 2px;
+        background-color: white;
+        transform: rotate(90deg);
+        Z-index: 2;
+    }
+
+    #overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0,0,0,0.5);
+        color: var(--orange);
+        z-index: 20;
+    }
+
+    #overlayImgContainer {
+        background-color: white;
+        padding: 2em;
+        display: inline-block;
+        margin: auto;
+        overflow: auto;
+        break-after: always;
+    }
+
+    #overlayImgContainer > img {
+        height: 850px;
+        width: auto;
+    }
+
+    #overlayImgcontainer > div {
+        display: flex;
+    }
+
+    #overlayImgContainer > h3 {
+        display: block;
+        word-wrap: normal;
+    }
+
 
     /* FOOTER */
 

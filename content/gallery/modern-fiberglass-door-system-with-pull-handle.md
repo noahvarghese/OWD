@@ -1,5 +1,5 @@
 ---
 title: MODERN FIBERGLASS DOOR SYSTEM WITH PULL HANDLE
-tag: Fibreglass Doors
+category: Fibreglass Doors
 image: /img/modern-fiberglass-door-system-with-pull-handle-1.jpg
 ---
