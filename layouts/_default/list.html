@@ -95,18 +95,18 @@
                     <!-- Big picture -->
                     <div class="largeRow">
                         <div class="largeImg jsContainer">
-                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                            <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                         </div>
                 {{ else if and ( gt (mod $i 8) 0 ) ( lt (mod $i 8) 5 ) }}
                     <!-- Pictures to the left of big picture-->
                     {{ if or (eq (mod $i 8) 1) (eq (mod $i 8) 3) }}
                         <div class="largSideRow">
                             <div class="galleryImgContainer jsContainer">
-                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
                     {{ else }}
                             <div class="galleryImgContainer jsContainer">
-                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
                         </div>
                     {{ end }}
@@ -118,16 +118,16 @@
                     <!-- Beneath big picture -->
                         <div class="smRow">
                             <div class="medLrgImg jsContainer">
-                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                                <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                             </div>
                     {{ else if eq (mod $i 8) 6 }}
                             <div class="row">
                                 <div class="otherImgContainer firstMedLrgImg jsContainer">
-                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                                 </div>
                     {{ else }}
                                 <div class="otherImgContainer lastMedLrgImg jsContainer">
-                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg"/>
+                                    <img alt="{{ .Params.title }}" src="{{ .Params.image }}" class="galleryImg fibreglassDoors" id="{{$i}}"/>
                                 </div>
                             </div>
                         </div>
@@ -137,12 +137,16 @@
         </div>
     </div>
     <div id="overlay">
-        <div id="overlayImgContainer">
-            <div id="mdiv">
-                <div class="mdiv">
-                  <div class="md"></div>
+        <div id="galleryCarousel">
+            <div id="galleryCarouselPrev" class="prev">&#10094;</div>
+            <div id="overlayImgContainer">
+                <div id="mdiv">
+                    <div class="mdiv">
+                      <div class="md"></div>
+                    </div>
                 </div>
             </div>
+            <div id="galleryCarouselNext" class="next">&#10095;</div>
         </div>
     </div>
     {{ end }}

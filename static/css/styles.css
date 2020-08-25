@@ -1310,11 +1310,11 @@ html {
         vertical-align: top;
     }
 
-    #recent:hover > #carousel > #prev, #recent:hover > #carousel  > #next {
+    #recent:hover > #carousel > .prev, #recent:hover > #carousel  > .next {
         visibility: visible;
     }
 
-    #prev, #next {
+    .prev, .next {
         visibility: hidden;
         background-color: rgba(0,0,0,0.5);
         cursor: pointer;
@@ -1330,13 +1330,13 @@ html {
     }
 
     /* Position the "next button" to the right */
-    #next {
+    .next {
         right: 0.75em;
         border-radius: 3px;
     }
 
     /* On hover, add a black background color with a little bit see-through */
-    #prev:hover, #next:hover {
+    .prev:hover, .next:hover {
         background-color: rgba(0,0,0,0.9);
     }
 
@@ -1554,7 +1554,6 @@ html {
         width: 100vw;
         height: 100vh;
         background-color: rgba(0,0,0,0.5);
-        color: var(--orange);
         z-index: 1;
         vertical-align: middle;
     }
@@ -1562,6 +1561,11 @@ html {
     #overlayImgContainer {
         background-color: white;
         padding: 2em;
+        padding-right: -2em;
+    }
+
+
+    #galleryCarousel {
         display: inline-block;
         margin: auto;
         overflow: auto;
@@ -1574,11 +1578,14 @@ html {
         -ms-transform: translate(-50%, -50%);     /* IE9+ */
         -o-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
     }
 
     #overlayImgContainer > img {
         height: 850px;
         width: auto;
+        margin: auto;
+        padding: auto;
     }
 
     #overlayImgcontainer > div {
@@ -1586,11 +1593,28 @@ html {
     }
 
     #overlayImgContainer > h3 {
+        color: var(--orange);
         display: block;
         word-wrap: normal;
-        max-width: 600px;
+        max-width: 500px;
         padding: 0;
         width: auto;
+        margin-right: -4em;
+        padding-right: 0;
+    }
+
+    #galleryCarousel:hover > .prev, #galleryCarousel:hover > .next {
+        visibility: visible;
+    }
+
+    #galleryCarousel > .prev {
+        margin-left: 1em;
+
+        display: block;
+    }
+
+    #galleryCarousel > .next {
+        display: block;
     }
 
 

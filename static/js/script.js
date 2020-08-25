@@ -44,8 +44,8 @@ Carousel.prototype.stop = function () {
 Carousel.prototype.slide = function (index) {
     if (index >= 0 && index <= (this.total - 3)) {
         
-        document.getElementById("prev").style.display = "block";
-        document.getElementById("next").style.display = "block";
+        document.getElementById("carouselPrev").style.display = "block";
+        document.getElementById("carouselNext").style.display = "block";
         
         this.stop();
         for (var s = 0; s <= this.total; s++) {
@@ -63,13 +63,13 @@ Carousel.prototype.slide = function (index) {
     if ( index <= 0 )
     {
         this.current += 1;
-        document.getElementById("prev").style.display = "none";
+        document.getElementById("carouselPrev").style.display = "none";
     }
     
     if ( index >= (this.total - 3))
     {
         this.current -= 1;
-        document.getElementById("next").style.display = "none";
+        document.getElementById("carouselNext").style.display = "none";
     }
 };
 
@@ -86,7 +86,6 @@ switch (page) {
             
             for ( i = 0; i < galleryImgs.length; i++ )
             {
-                console.log(galleryImgs[i])
                 galleryImgs[i].addEventListener("mouseenter", (e) => {
                     e.path[0].style.transform = "scale(1.1)";
                 });
@@ -95,6 +94,118 @@ switch (page) {
                     e.path[0].style.transform = "scale(1)";
                 });
             }
+        });
+
+        window.addEventListener("load", () => {
+            let prev = document.getElementById("galleryCarouselPrev");
+
+            prev.addEventListener("click", () => {
+                // get image
+                // get id from image
+                // decrement id
+                // get className from image
+                // get image with id matching decremented and className matching className
+                // replace source
+                // replace alt
+                // replace id
+                // replace header
+                // hide prev button if id = 0
+                
+                let overlayImg = document.getElementsByClassName("overlayImg")[0];
+
+                let id = overlayImg.id - 1;
+
+                let classArray = [].slice.call(overlayImg.classList);
+                let type = classArray.filter((value) => {
+                    return value != "overlayImg";
+                });
+
+                let images = document.getElementsByClassName(type);
+                let nextImage = "";
+
+                for ( i = 0; i < images.length; i++ )
+                {
+                    if ( images[i].id == id )
+                    {
+                        nextImage = images[i];
+                        break;
+                    }
+                }
+
+                overlayImg.setAttribute("id", id);
+                overlayImg.setAttribute("src", nextImage.src);
+                overlayImg.setAttribute("alt", nextImage.alt);
+
+                let header = document.getElementById("overlayHeader");
+                header.innerHTML = nextImage.alt.toUpperCase();
+
+
+                if ( id == 0 )
+                {
+                    document.getElementById("galleryCarouselPrev").style.display = "none";
+                }
+
+                let nextBtn = document.getElementById("galleryCarouselNext");
+                
+                if ( nextBtn.style.display === "none" )
+                {
+                    nextBtn.style.display = "block"
+                }
+
+            });
+
+
+            let next = document.getElementById("galleryCarouselNext");
+
+            next.addEventListener("click", () => {
+                
+                let overlayImg = document.getElementsByClassName("overlayImg")[0];
+
+                let id = parseInt(overlayImg.id) + 1;
+                console.log(id);
+
+                let classArray = [].slice.call(overlayImg.classList);
+                let type = classArray.filter((value) => {
+                    return value != "overlayImg";
+                });
+
+                let images = document.getElementsByClassName(type);
+                let nextImage = "";
+
+                for ( i = 0; i < images.length; i++ )
+                {
+                    if ( images[i].id == id )
+                    {
+                        console.log(images[i]);
+                        nextImage = images[i];
+                        break;
+                    }
+                }
+
+                overlayImg.setAttribute("id", id);
+                overlayImg.setAttribute("src", nextImage.src);
+                overlayImg.setAttribute("alt", nextImage.alt);
+
+                let header = document.getElementById("overlayHeader");
+                header.innerHTML = nextImage.alt.toUpperCase();
+
+                // subtract 2 because accounting for array indexing and when creating the overlay is an extra one
+                let max = document.getElementsByClassName(type).length - 2;
+
+                if ( id == max )
+                {
+                    document.getElementById("galleryCarouselNext").style.display = "none";
+                }
+
+                let prevBtn = document.getElementById("galleryCarouselPrev");
+                
+                if ( prevBtn.style.display === "none" )
+                {
+                    prevBtn.style.display = "block"
+                }
+                
+            });
+
         });
 
         window.addEventListener("load", () => {
@@ -108,10 +219,19 @@ switch (page) {
                     let image = new Image();
                     image.src = e.path[0].src;
                     image.setAttribute("alt", e.path[0].alt);
-                    image.setAttribute("id", "overlayImg");
+                    let id = e.path[0].id;
+
+                    image.setAttribute("id", id);
+                    image.classList.add("overlayImg");
+
+                    let classArray = [].slice.call(e.path[0].classList);
+                    let type = classArray.filter((value) => {
+                        return value != "galleryImg";
+                    });
+                    image.classList.add(type[0]);
 
                     let header = document.createElement("h3");
-                    header.innerHTML = image.alt;
+                    header.innerHTML = image.alt.toUpperCase();
                     header.setAttribute("id", "overlayHeader");
 
                     let container = document.getElementById("overlayImgContainer");
@@ -121,6 +241,27 @@ switch (page) {
                     let overlay = document.getElementById("overlay");
                     overlay.style.display = "block";
                     document.getElementsByTagName("html")[0].style.overflow = "hidden";
+
+                    if ( id == 0 )
+                    {
+                        document.getElementById("galleryCarouselPrev").style.display = "none";
+                    }
+                    else 
+                    {
+                        document.getElementById("galleryCarouselPrev").style.display = "block";
+                    }
+
+                    // subtract 2 because accounting for array indexing and when creating the overlay is an extra one
+                    let max = document.getElementsByClassName(type).length - 2;
+
+                    if ( id == max )
+                    {
+                        document.getElementById("galleryCarouselNext").style.display = "none";
+                    }
+                    else 
+                    {
+                        document.getElementById("galleryCarouselNext").style.display = "block";
+                    }
                 });
             }
 
@@ -131,7 +272,7 @@ switch (page) {
                 overlay.style.display = "none";
 
                 let container = document.getElementById("overlayImgContainer");
-                container.removeChild(document.getElementById("overlayImg"));
+                container.removeChild(document.getElementsByClassName("overlayImg")[0]);
                 container.removeChild(document.getElementById("overlayHeader"));
                 
             });
@@ -274,11 +415,11 @@ switch (page) {
 
                 var carousel = new Carousel("carousel");
 
-                document.getElementById("prev").addEventListener("click", () => {
+                document.getElementById("carouselPrev").addEventListener("click", () => {
                     carousel.prev();
                 });
 
-                document.getElementById("next").addEventListener("click", () => {
+                document.getElementById("carouselNext").addEventListener("click", () => {
                     carousel.next();
                 });
             });
