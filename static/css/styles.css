@@ -1510,16 +1510,25 @@ html {
     #mdiv {
         width: 25px;
         height: 25px;
-        background-color: rgba(0,0,0,0.5);
+        float: right;
+        margin-left: -1px;
+        background-color: rgba(0,0,0,0.7);
+        border-radius: 5px;
+        padding: 1.5em;
+        z-index: 7;
+        position:relative;
+        top: 2em;
+        right: 4em;
     }
       
     .mdiv {
-        height: 25px;
-        width: 2px;
-        margin-left: 12px;
+        height: 15px;
+        width: 3px;
+        margin-top: -5px;
+        margin-left: -1px;
         background-color: white;
         transform: rotate(45deg);
-        Z-index: 1;
+        Z-index: 5;
     }
 
     #mdiv:hover {
@@ -1527,8 +1536,9 @@ html {
     }
       
     .md {
-        height: 25px;
-        width: 2px;
+        height: 15px;
+        width: 3px;
+        margin-top: -5px;
         background-color: white;
         transform: rotate(90deg);
         Z-index: 2;
@@ -1543,7 +1553,7 @@ html {
         height: 100vh;
         background-color: rgba(0,0,0,0.5);
         color: var(--orange);
-        z-index: 20;
+        z-index: 1;
     }
 
     #overlayImgContainer {
@@ -1567,6 +1577,8 @@ html {
     #overlayImgContainer > h3 {
         display: block;
         word-wrap: normal;
+        max-width: 600px;
+        width: auto;
     }
 
 
