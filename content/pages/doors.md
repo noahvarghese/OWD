@@ -2,6 +2,7 @@
 date: 2020-08-21
 title: Doors
 url: /doors/
+description: Whether you need a replacement for your front door, back door, garden door, patio door or any other type of exterior door, we have a wide selection to fit your needs and style. Our doors feature a 3 lock system to keep your home safe.
 ---
 <div class="content container">
     <h1 class="title">DOOR INSTALLATION</h1>

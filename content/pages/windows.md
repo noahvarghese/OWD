@@ -2,6 +2,7 @@
 date: 2020-08-21
 title: Windows
 url: /windows/
+description: If you’re looking for a window installation by a knowledgeable, experienced and family owned company, Oakville Windows & Doors can help. Our experienced team can help you choose the best type of window for your home’s look and your family’s needs.
 ---
 <div class="content container">
     <h1 class="title">WINDOW INSTALLATION</h1>

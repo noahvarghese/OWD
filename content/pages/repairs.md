@@ -2,23 +2,15 @@
 date: 2020-08-21
 title: Repairs
 url: /repairs/
+description: At Oakville Windows, we provide double pane glass replacement, window hardware repairs, exterior window caulking and more.
 ---
 <div class="content container">
     <h1 class="title">REPAIRS</h1>
     <div class="banner">
         <img alt="banner" src="/img/repairsBanner.png" />
         <h2>
-            At Oakville Windows, we
-            provide double pane glass
-            replacement, window
-            hardware repairs, exterior
-            window caulking and more.
-            <br />
-            <br />
-            <a href="#" id="contactLink">Contact us</a> to inquire about
-            repairs and to make sure
-            your windows are
-            functioning properly.
+            At Oakville Windows, we provide double pane glass replacement, window hardware repairs, exterior window caulking and more. <br /><br />
+            <a href="#" id="contactLink">Contact us</a> to inquire about repairs and to make sure your windows are functioning properly.
         </h2>
     </div>
     <div id="items">
