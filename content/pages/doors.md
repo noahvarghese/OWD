@@ -28,9 +28,9 @@ description: Whether you need a replacement for your front door, back door, gard
             </div>
             <div id="fibreglassDesc" class="descriptionContainer right">
                 <div id="fibreglassHeader">
-                    <h4 class="Services">01</h4>
+                    <h3 class="Services">01</h3>
                     <hr class="Services" />
-                    <h4 class="Services">Fibreglass Doors</h4>
+                    <h3 class="Services">Fibreglass Doors</h3>
                 </div>
                 <p>
                     Fibreglass doors are a high quality, durable alternative to wood and steel
@@ -56,9 +56,9 @@ description: Whether you need a replacement for your front door, back door, gard
             </div>
             <div id="steelDesc" class="descriptionContainer left">
                 <div id="steelHeader">
-                    <h4 class="Services">02</h4>
+                    <h3 class="Services">02</h3>
                     <hr class="Services" />
-                    <h4 class="Services">Steel Doors</h4>
+                    <h3 class="Services">Steel Doors</h3>
                 </div>
                 <p>
                     You may not realize it, but steel doors are a remarkably

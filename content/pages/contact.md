@@ -1,5 +1,5 @@
 ---
-title: "Contact"
+title: Contact
 date: 2020-08-20T16:12:15-04:00
 draft: false
 url: /contact/

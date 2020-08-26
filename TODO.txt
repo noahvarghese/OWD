@@ -12,6 +12,20 @@ Deploying
 #SEO
 - robots.txt
 
+
+Lighthouse Scores
+    performance, accessibility, best practices, seo
+    home - 98, 95, 100, 100
+    windows - 96, 95, 100, 100
+    doors - 91, 95, 100, 100
+    repairs - 99, 95, 100, 100
+    contact - 100, 89, 92, 100
+        - form labels
+    commercial - 95, 95, 100, 100
+    gallery - 81, 95, 92, 100
+    blog - 97, 95, 92, 100
+    testimonials - 97, 95, 92, 100
+
 https://enerview.ca/
 https://www.palmadoor.com/
 https://goldhillwindows.com/

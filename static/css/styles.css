@@ -9,17 +9,20 @@
 
 @font-face {
     font-family: Arimo;
-    src: url(../fonts/Arimo-Bold.ttf)
+    src: url(../fonts/Arimo-Bold.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Arimo-Italic;
-    src: url(../fonts/Arimo-Italic.ttf)
+    src: url(../fonts/Arimo-Italic.ttf);
+    font-display: swap;
 }
 
 @font-face {
     font-family: Arimo-Regular;
-    src: url(fonts/Arimo-Regular.ttf)
+    src: url(fonts/Arimo-Regular.ttf);
+    font-display: swap;
 }
 
 * {
@@ -302,7 +305,7 @@ html {
         transform: translateX(50%);
     }
 
-    .types > div > h4 {
+    .types > div > h3 {
         font-size: 1.5em;
         padding-bottom: 0;
         margin-bottom: 0;
@@ -487,7 +490,7 @@ html {
         display: block;
     }
 
-    h4.Services {
+    h3.Services {
         display: inline-block;
         color: var(--orange);
         font-size: 1.5em;
@@ -525,6 +528,11 @@ html {
         text-decoration: none;
         color: white;
         transition: color 0.25s;
+    }
+
+    #repairsBanner {
+        height: 45em;
+        overflow: hidden;
     }
     
     /* CONTACT */

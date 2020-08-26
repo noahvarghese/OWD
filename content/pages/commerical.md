@@ -39,7 +39,7 @@ description: Easily divide and partition any work space to create a safer work a
                 <img alt="offices" src="/img/officeSpace.png"/>
             </div> 
             <div>
-                <h4 class="Services">OFFICES / EDUCATIONAL</h4>
+                <h3>OFFICES / EDUCATIONAL</h3>
                 <p>Learn how you can make your office and educational spaces safer</p>
             </div>
             <img alt="arrow" class="downArrow" src="/img/arrowGrey.png" />
@@ -49,7 +49,7 @@ description: Easily divide and partition any work space to create a safer work a
                 <img alt="healthcare" src="/img/healthcare.png"/>
             </div> 
             <div>
-                <h4 class="Services">HEALTHCARE</h4>
+                <h3>HEALTHCARE</h3>
                 <p>Easily create safe work spaces for healthcare and essential businesses</p>
             </div>
             <img alt="arrow" class="downArrow" src="/img/arrowGrey.png" />
@@ -59,7 +59,7 @@ description: Easily divide and partition any work space to create a safer work a
                 <img alt="partitions" src="/img/cubicle.png"/>
             </div> 
             <div>
-                <h4 class="Services">SAFE DISTANCING</h4>
+                <h3>SAFE DISTANCING</h3>
                 <p>Easily divide and partition any work space to create a safer work area.</p>
             </div>
             <img alt="arrow" class="downArrow" src="/img/arrowGrey.png" />

@@ -24,9 +24,9 @@ description: If you’re looking for a window installation by a knowledgeable, e
                 </div>
                 <div id="vinylDesc" class="descriptionContainer right">
                     <div id="vinylHeader">
-                        <h4 class="Services">01</h4>
+                        <h3 class="Services">01</h3>
                         <hr class="Services" />
-                        <h4 class="Services">Vinyl Windows</h4>
+                        <h3 class="Services">Vinyl Windows</h3>
                     </div>
                     <p>
                         Vinyl windows are the most common types of windows we install, and
@@ -50,9 +50,9 @@ description: If you’re looking for a window installation by a knowledgeable, e
                 </div>
                 <div id="woodDesc" class="descriptionContainer left">
                     <div id="woodHeader">
-                        <h4 class="Services">02</h4>
+                        <h3 class="Services">02</h3>
                         <hr class="Services" />
-                        <h4 class="Services">Wood Windows</h4>
+                        <h3 class="Services">Wood Windows</h3>
                     </div>
                     <p>
                         If you want a timeless and classic look for your home, wood

@@ -76,9 +76,6 @@ Carousel.prototype.slide = function (index) {
 var path = window.location.pathname;
 var page = path.substring(path.indexOf('/') - 1);
 
-console.log(page);
-
-
 switch (page) {
 
     case "/":
