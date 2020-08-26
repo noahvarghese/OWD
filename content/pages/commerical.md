@@ -5,7 +5,7 @@ url: /commercial/
 description: Easily divide and partition any work space to create a safer work area. Our system is a proven architectural product that can transform any space into the space you need to help keep staff, patients, and customers safe and protected. 
 ---
 <div class="content container">
-    <div id="banner">
+    <div class="banner" id="commercialBanner">
         <img alt="banner" src="/img/commercialBanner.png" />
     </div>
     <div id="commercial">

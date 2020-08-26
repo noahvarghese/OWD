@@ -53,6 +53,10 @@ description: To get started working with us, or if you
                             <label for="repairs" class="grayTxt">WINDOW REPAIRS</label>
                         </div>
                         <div>
+                            <input type="checkbox" id="commercial" name="commercial" />
+                            <label for="commercial" class="grayTxt">COMMERCIAL</label>
+                        </div>
+                        <div>
                             <input type="checkbox" id="other" name="other" />
                             <label for="other" class="grayTxt">OTHER</label>
                         </div>
@@ -61,6 +65,7 @@ description: To get started working with us, or if you
                 <div>
                     <textarea id="message" placeholder="MESSAGE*"></textarea>
                 </div>
+                <input type="file" id="files" name="files" multiple/>
                 <input type="submit" value="REQUEST QUOTE" id="submit" class="g-recaptcha" data-sitekey="6LePVLMZAAAAAPLLObfHwB3bRCZySVKpNHgZyIqw" data-callback='recaptchaCallback' data-action='submit' />
             </form>
             <div id="error" class="error"></div>

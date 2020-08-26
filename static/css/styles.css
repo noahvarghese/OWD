@@ -77,6 +77,22 @@ html {
     ul {
         list-style-type: none;
     }
+
+    .downArrow {
+        width: 2em;
+        visibility: hidden;
+        opacity: 0;
+        transition: visibility 0s, opacity 0.5s linear;
+    }
+
+    .types:hover > .downArrow {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    #contactLink:hover {
+        color: black;
+    }
     
     /* HEADER */
 
@@ -300,10 +316,11 @@ html {
         height: 10em;
     }
 
-    #services, #items {
-    }
+    /* COMMERCIAL */
 
-    /* COMMERCIL */
+    #commercialBanner {
+        margin-top: 6em;
+    }
 
     #commercial { 
         width: 85%;
@@ -370,140 +387,59 @@ html {
         border: 1px solid var(--orange);
     }
 
-    /* SERVICES */
+    /* DOORS WINDOWS */
 
-    #banner > img {
-        margin-top: 3em;
+    .banner {
+        position: relative;
         width: 1250px;
+        margin: auto;
+    }
+
+    .banner > img {
+        width: 100%;
+        margin: auto;
         margin-bottom: 2em;
     }
 
-    #windowInstallation > div, #doorInstallation > div {
+    .banner > h2 {
+        font-size: 2.5em;
+        line-height: 1.5em;
+        width: 80%;
+        display: inline-block;
+        margin: auto;
+        overflow: auto;
+        break-after: always;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);    /* Older Gecko browser */
+        -ms-transform: translate(-50%, -50%);     /* IE9+ */
+        -o-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
+
+    .description {
+        margin-top: 4em;
+        margin-bottom: 6em;
+    }
+
+    .description > p {
+        width: 90%;
+        margin: auto;
+        line-height: 1.4em;
+    }
+
+    .description > p:first-of-type {
+        margin-bottom: 2em;
+    }
+
+    #doorTypes {
+        width: 100%;
+        margin: auto;
         position: relative;
     }
 
-    #windowInstallation > .orange, #doorInstallation > .gray {
-        height: 37vh;
-        color: white;
-        vertical-align: bottom;
-        width: 60%;
-    }
-
-    #windowInstallation > .orange {
-        background-color: var(--orange);
-        margin-left: 40%;
-    }
-
-    #doorInstallation > .gray {
-        background-color: var(--gray);
-        margin-right: 40%;
-    }
-
-    h2.Services, .arrow {
-        position: absolute;
-        bottom: 0;
-    }
-
-    h2.Services {
-        font-size: 2.5em;
-        margin-bottom: 75px;
-    }
-
-    .arrow {
-        width: 2.5em;
-        bottom: 1.75em;
-    }
-
-    #windowInstallation, #doorInstallation {
-        background-color: var(--offwhite);
-    }
-
-    #windowInstallation > div > div > .arrow {
-        left: 400px;
-    }
-
-    #windowInstallation > div > div > h2 {
-        margin-left: 300px;
-    }
-
-    #doorInstallation > div > div > .arrow {
-        left: 250px;
-    }
-
-    #doorInstallation > div > div > h2 {
-        margin-left: 150px;
-    }
-
-    #windowInstallation:hover, #doorInstallation:hover {
-        cursor: pointer;
-    }
-
-    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #windowInstallation > div > div > #windowArrow, #doorInstallation > div > div > #doorArrow {
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.5s linear;
-    }
-
-    #windowInstallation:hover > div > div > #windowArrow, #doorInstallation:hover > div > div > #doorArrow {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .blurb {
-        width: 55%;
-        padding-top: 1.5em;
-        padding-bottom: 1.5em;
-        background-color: var(--offwhite);
-        border-radius: 5px;
-        z-index: 2;
-        line-height: 1.5em;
-        margin-top: 5em;
-        font-size: 1em;
-        line-height: 1.75em;
-    }
-
-    #doorInstallation > .blurb {
-        float: right;
-        margin-right: 2em;
-        padding-left: 2em;
-    }
-
-    #windowInstallation > .blurb {
-        float: left;
-        margin-left: 2em;
-        padding-right: 1.25em;
-    }
-
-    h3.Services {
-        letter-spacing: 0.1pt;
-        font-size: 2em
-    }
-
-    .servicesSeperator {
-        background-color: var(--orange);
-        font-size: 2.25em;
-        letter-spacing: 1.5px;
-        line-height: 1.75em;
-        padding: 3em 5em;
-    }
-
-    a#threePoint {
-        color: white;
-        text-decoration: none;
-        padding-bottom: 5px;
-        margin-bottom: -5em;
-        border-bottom: 3px solid white;
-    }
-
-    a#threePoint:visited {
-        color: white;
-        text-decoration: none;
-    }
 
     img.example {
         width: 425px;
@@ -513,65 +449,42 @@ html {
         box-shadow: 20px 20px 20px var(--gray);
     }
 
-    #windows, #doors {
-        margin-left: 3em;
-        margin-right: 4em;
-        display: block;
-    }
-
-    #doors {
-        margin-top: 8em;
-    }
-
-    #windows > p, #doors > p {
-        margin-right: 5em;
-        margin-bottom: 5em;
-        line-height: 1.5em;
-    }
-
     .descriptionContainer {
-        width: 550px;
+        width: 60%;
     }
 
     .imageContainer.left {
-        margin-right: 50%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
     }
 
     .imageContainer.right {
-        margin-left: 50%;
+        position: absolute;
+        right: 0;
+        top: 0;
+        display: block;
+    }
+
+    .item { 
+        position: relative;
+        display: block;
+        height: 40em;
     }
 
     .descriptionContainer.left {
-        margin-right: 750px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: block;
     }
 
     .descriptionContainer.right {
-        margin-left: 500px;
-    }
-
-    .item {
-        position: relative;
-    }
-
-    .item > .left {
         position: absolute;
-        left: 0;
-    }
-
-    #vinylDiv {
-        margin-bottom: 12em;
-    }
-
-    #woodDiv {
-        margin-bottom: 10em;
-    }
-
-    #fibreglassDiv {
-        margin-bottom: 12em;
-    }
-
-    #steelDiv {
-        margin-bottom: 10em;
+        right: 0;
+        top: 0;
+        display: block;
     }
 
     h4.Services {
@@ -605,60 +518,13 @@ html {
         margin-bottom: 2em;
     }
 
-    #repairs {
-        margin-top: 15em;
-        margin-bottom: 10em;
-    }
 
-    #repairs > div {
-        height: 100%;
-        width: 45%;
-        display: inline-block;
-        margin-top: 0;
-        padding-top: 0;
-        vertical-align: top;
-    }
-
-    #repairs > div > h2 {
-        position: relative;
-        color: var(--orange);
-        text-decoration: underline;
-    }
-
-    #repairsText {
-        margin-left: 5em;
-        line-height: 2em;
-    }
-
-    #repairsText > p {
-        width: 70%;
-        font-size: 1.5em;
-    }
-
-    #windowRender {
-        width: 100%;
-    }
+    /* REPAIRS */
 
     #contactLink, #contactLink:visited {
         text-decoration: none;
-        color: var(--orange);
+        color: white;
         transition: color 0.25s;
-    }
-
-    .downArrow {
-        width: 2em;
-        visibility: hidden;
-        opacity: 0;
-        transition: visibility 0s, opacity 0.5s linear;
-    }
-
-    .types:hover > .downArrow {
-        visibility: visible;
-        opacity: 1;
-    }
-
-    #contactLink:hover {
-        color: var(--gray);
     }
     
     /* CONTACT */
@@ -946,6 +812,7 @@ html {
         position: absolute;
         z-index: 3;
         top: -5em;
+        font-family: Arimo;
     }
 
     .quote > img {
@@ -1646,10 +1513,10 @@ html {
     /* FOOTER */
 
     footer {
-        width: 1250px;
         margin-bottom: 2em !important;
         padding: 0;
         position: relative;
+        width: 1465px;
         height: 25em;
         padding-bottom: 8em;
         margin: auto;
