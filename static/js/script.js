@@ -76,12 +76,21 @@ Carousel.prototype.slide = function (index) {
 var path = window.location.pathname;
 var page = path.substring(path.indexOf('/') - 1);
 
+console.log(page);
+
 
 switch (page) {
+
+    case "/":
+
+        break;
 
     case "/gallery/":
 
         window.addEventListener("load", () => {
+
+            // Sets the intial selected section (fibreglass doors)
+
             let galleryLinks = document.getElementsByClassName("galleryLinks");
             galleryLinks[0].classList.add("selected");
             document.getElementById("fibreglassDoors").style.display = "block";
@@ -92,6 +101,7 @@ switch (page) {
 
             for ( let i = 0; i < galleryLinks.length; i++ )
             {
+                // Shows section when gallery nav items clicked
                 galleryLinks[i].addEventListener("click", (e) => {
                     e.preventDefault();
 
@@ -120,6 +130,7 @@ switch (page) {
             }
         });
 
+        // Scales image on mouseover
         window.addEventListener("load", () => {
             var galleryImgs = document.getElementsByClassName("galleryImg");
             
@@ -136,6 +147,9 @@ switch (page) {
         });
 
         window.addEventListener("load", () => {
+
+            // Gallery carousel, previous and next image
+
             let prev = document.getElementById("galleryCarouselPrev");
 
             prev.addEventListener("click", () => {
@@ -247,6 +261,8 @@ switch (page) {
 
         });
 
+        // Handles loading the carousel and first image
+
         window.addEventListener("load", () => {
 
             let galleryImages = document.getElementsByClassName("galleryImg");
@@ -304,6 +320,8 @@ switch (page) {
                 });
             }
 
+            // Close carousel
+
             let closeBtn = document.getElementById("mdiv");
             closeBtn.addEventListener("click", () => {
                 document.getElementsByTagName("html")[0].style.overflow = "visible";
@@ -324,32 +342,12 @@ switch (page) {
         break;
 
     case "/services/":
-        // Services
-        window.addEventListener('load', () => {
-            var windows = document.getElementById("windowServices");
-            var doors = document.getElementById("doorServices");
-            var repairs = document.getElementById("repairServices");
-
-            windows.onclick = (e) => {
-                e.preventDefault();
-                document.getElementById("windows").scrollIntoView();
-            };
-
-            doors.onclick = (e) => {
-                e.preventDefault();
-                console.log("What");
-                document.getElementById("doors").scrollIntoView();
-            };
-
-            repairs.onclick = (e) => {
-                e.preventDefault();
-                document.getElementById("repairs").scrollIntoView();
-            };
-        });
-
         break;
 
     case "/blog/":
+
+        // Handles zoom of image on mouseover
+
         window.addEventListener("load", () => {
             var newestDesc = document.getElementById("newestDescription");
             var banner = document.getElementById("blogBanner");
@@ -371,6 +369,8 @@ switch (page) {
             });
         });
 
+        // hide blog posts so that not too many are shown at a time, allows for load more button to be useful
+
         window.addEventListener("load", () => {
             let horizontals = document.getElementsByClassName("horizontal");
 
@@ -382,7 +382,8 @@ switch (page) {
         });
 
 
-        // Load more blogs? may not keep with hugo
+        // Load more blogs
+
         window.addEventListener("scroll", () => {
 
             var snackbar = document.getElementById("loadSnackbar");
@@ -405,6 +406,8 @@ switch (page) {
                 snackbar.classList.remove("show");
             }
         });
+
+        // Display snackbar to load more
 
         window.addEventListener("load", () => {
             var snackbar = document.getElementById("loadSnackbar");
@@ -434,7 +437,7 @@ switch (page) {
         });
         break;
     default:
-        // check for blog post
+        // check for blog post, use carousel 
         const regex = /\/blog\/[a-zA-Z]*/;
         const found = page.match(regex);
 

@@ -43,7 +43,6 @@ html {
         color: black;
         background-color: white;
         font-family: "Arimo";
-        width: 1250px;
         letter-spacing: 0.4pt;
         overflow-x: hidden;
         scroll-behavior: smooth;
@@ -62,8 +61,10 @@ html {
         line-height: 1.5em;
     }
 
-    #main {
+    .content {
+        width: 1250px;
         text-align: left;
+        margin: auto;
     }
 
     h1.title {
@@ -84,12 +85,11 @@ html {
     }
 
     nav {
-        display: inline-block;
+        display: block;
         height: 5em;
-        margin-bottom: 2em;
         width: 1250px;
+        margin: auto;
         direction: ltr;
-        position: relative;
         /*
         can do a fixed nav
         
@@ -107,12 +107,7 @@ html {
     }
 
     ul#nav {
-        width: 1000px;
-        margin-left: 0em;
-        float: right;
-        position: absolute;
-        top: 4em;
-        right: -7em;
+        margin-top: 5em;
     }
 
     ul#nav > li {
@@ -151,54 +146,18 @@ html {
 
     /* HOME */
 
-    h1.Home {
-        margin-left: 0em;
-        margin-bottom: 2.25em;
-        font-size: 3.5em;
+    #services > .types:hover {
+        transform: scale(1.1);
     }
 
-    .aboutLinks {
-        color: var(--orange);
-        transition: color 0.25s;
-        display: inline-block;
-        text-decoration: none;
-        height: 1.75em;
-    }
-
-    .aboutLinks > h2 {
-        margin-top: 0em;
-    }
-
-    ul#aboutNav {
-        margin-top: -7em;
-        margin-left: -2.5em;
-    }
-
-    ul#aboutNav > li {
-        display: inline-block;
-    }
-
-    ul#aboutNav > li:hover > a {
-        color: var(--gray);
-    }
-
-    #firstAboutLink, #secondAboutLink, #thirdAboutLink {
-        padding-right: 1.5em;
-        border-right: 3px solid var(--orange);
-    }
-
-    #secondAboutLink, #thirdAboutLink, #fourthLink {
-        padding-left: 1.5em;
-    }
-
-    #thirdAboutLink {
-        margin-right: 1.5em;
-    }
-
-    #bannerLogo {
-        text-align: center;
-        margin-top: 15em;
-        margin-bottom: 15em;
+    #slider {
+        margin-top: 10em;
+        margin-bottom: 0;
+        margin-left: 5vw;
+        margin-right: 5vw;
+        width: 90vw;
+        height: 40em;
+        background-color: rgba(0,0,0,0.2);
     }
 
     .contentHeader {
@@ -237,6 +196,7 @@ html {
         padding-left: 8em;
         padding-top: 3em;
         padding-bottom: 6em;
+        margin: auto;
     }
 
     .seperator > p {
@@ -252,27 +212,34 @@ html {
     #items {
         margin-top: 5em;
         margin-bottom: 15em;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .icon#localIcon {
         width: 5em;
+        margin: auto;
     }
 
     .icon#pricingIcon {
         width: 10em;
+        margin: auto;
     }
 
     .icon#showroomIcon {
         width: 8em;
+        margin: auto;
     }
 
     .icon#warrantyIcon {
         width: 6em;
+        margin: auto;
     }
 
     .icon {
         width: 7em;
         margin-bottom: 2em;
+        margin: auto;
     }
 
     .layer { 
@@ -327,6 +294,7 @@ html {
         align-items: center;
         justify-content: center;
     }
+
     #commercial { 
         width: 85%;
         margin-left: 5%;
@@ -1707,12 +1675,14 @@ html {
     /* FOOTER */
 
     footer {
-        margin-top: 2em;
+        width: 1250px;
         margin-bottom: 2em !important;
         padding: 0;
         position: relative;
         height: 25em;
         padding-bottom: 8em;
+        margin: auto;
+        margin-top: 4em;
     }
 
     footer > hr {
