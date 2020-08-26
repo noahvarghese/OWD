@@ -1,5 +1,13 @@
 {{ partial "header" . }}
 <div id="slider">
+    <div id="sliderOverlay"></div>
+    <img alt="Oakville" src="/img/oakville.jpg"/>
+    <p>
+        We believe that windows and doors really impact the look of your
+        home. Not only will a stunning new door or a set of windows
+        improve your home’s curb appeal and overall look – they’ll also
+        make your home safer, more secure and more energy efficient.
+    </p>
 </div>
 <div class="content container">
     <div id="services">
@@ -7,25 +15,31 @@
             <div>
                 <img alt="windows" src="/img/windowOrange.png" class="servicesLinks"/>
             </div>
-            <h4 class="Services">WINDOWS</h4>
-            <p>Choose from a selection of vinyl and wood windows</p>
+            <div>
+                <h4>WINDOWS</h4>
+                <p>Choose from a selection of vinyl and wood windows</p>
+            </div>
         </a>
         <a id="doorServices" class="types" href="/doors/">
             <div>
                 <img alt="doors" src="/img/doorOrange.png" class="servicesLinks" />
             </div>
-            <h4 class="Services">DOORS</h4>
-            <p>Choose from our selection of fibreglass and steel doors</p>
+            <div>
+                <h4>DOORS</h4>
+                <p>Choose from our selection of fibreglass and steel doors</p>
+            </div>
         </a>
         <a id="repairServices" class="types" href="/repairs/">
             <div>
                 <img alt="repairs" src="/img/wrenchOrange.png" class="servicesLinks" />
             </div>
-            <h4 class="Services">REPAIRS</h4>
-            <p>We provide efficient, quality and friendly repair services.</p>
+            <div>
+                <h4>REPAIRS</h4>
+                <p>We provide efficient, quality and friendly repair services.</p>
+            </div>
         </a>
     </div>
-    <div class="orangeBg seperator">
+    <div class="seperator orangeBg ">
         <h2 class="contentHeader blackHeader" id="who">Who We Are</h2>
         <p>
             Oakville Windows & Doors is a small family business which sells
@@ -34,13 +48,81 @@
             with a dedication to our customers and to our company.
         </p>
     </div>
+    <div id="items">
+        <div class="types">
+            <div>
+                <img class="icon" id="localIcon" alt="local" src="img/location.png"/>
+            </div>
+            <div>
+                <h4>LOCAL MATTERS</h4>
+                <p>
+                    Oakville Windows & Doors is a
+                    local, family owned business,
+                    commited to providing care and
+                    service for our community.
+                </p>
+            </div>
+        </div>
+        <div class="types">
+            <div>
+                <img class="icon" id="canadaIcon" alt="canada" src="img/canada.png"/>
+            </div>
+            <div>
+                <h4>MADE IN CANADA</h4>
+                <p>
+                    We are proud to partner with local
+                    Canadian manufacturers
+                </p>
+            </div>
+        </div>
+        <div class="types">
+            <div>
+                <img class="icon" id="pricingIcon" alt="pricing" src="img/financing.png" />
+            </div>
+            <div>
+                <h4>PRICING OPTIONS</h4>
+                <p>
+                    We accept cash, credit, debit and
+                    offer monthly payment options to fit
+                    your needs
+                </p>
+            </div>
+        </div>
+        <div class="types">
+            <div>
+                <img class="icon" id="warrantyIcon" alt="warranty" src="img/warranty.png" />
+            </div>
+            <div>
+                <h4>WARRANTY</h4>
+                <p>
+                    <a href="" class="orange">Palma waranty - DOORS</a>
+                    <a href="" class="orange">Enerview waranty - WINDOWS</a>
+                </p>
+            </div>
+        </div>
+        <div class="types">
+            <div>
+                <img class="icon" id="showroomIcon" alt="showroom" src="img/storeFront.png"/>
+            </div>
+            <div>
+                <h4>SHOWROOM</h4>
+                <p>
+                    Visit our showroom and meet with
+                    our experienced team who will help
+                    you find the style, materials and size
+                    that works best for your home and
+                    your needs
+                </p>
+            </div>
+        </div>
+    </div>
     <div class="seperator">
         <h2 class="contentHeader orangeHeader" id="what">What We Do</h2>
-        <p class="block">
+        <p>
             Oakville Windows & Doors has been helping people find the
             perfect window or door for their home since 2010.
         </p>
-        <p class="block">
+        <p>
             We believe that windows and doors really impact the look of your
             home. Not only will a stunning new door or a set of windows
             improve your home’s curb appeal and overall look – they’ll also
@@ -51,88 +133,6 @@
             one-size-fits-all solution. That’s why our experienced team will work
             with you one-on-one from day one to find the style, material and size
             that works best for your home and your needs. We carry full insurance and our workers are covered by WSIB.
-        </p>
-    </div>
-    <div id="items">
-        <div id="firstLayer" class="layer icons">
-            <div>
-                <img class="icon" id="localIcon" alt="local" src="img/location.png"/>
-            </div>
-            <div>
-                <img class="icon" id="canadaIcon" alt="canada" src="img/canada.png"/>
-            </div>
-            <div>
-                <img class="icon" id="pricingIcon" alt="pricing" src="img/financing.png" />
-            </div>
-        </div>
-        <div id="secondLayer" class="layer labels">
-            <div class="firstLabel">
-                <h3>LOCAL MATTERS</h3>
-                <p>
-                    Oakville Windows & Doors is a
-                    local, family owned business,
-                    commited to providing care and
-                    service for our community.
-                </p>
-            </div>
-            <div class="secondLabel">
-                <h3>MADE IN CANADA</h3>
-                <p>
-                    We are proud to partner with local
-                    Canadian manufacturers
-                </p>
-            </div>
-            <div>
-                <h3>PRICING OPTIONS</h3>
-                <p>
-                    We accept cash, credit, debit and
-                    offer monthly payment options to fit
-                    your needs
-                </p>
-            </div>
-        </div>
-        <div id="thirdLayer" class="layer icons">
-            <div>
-                <img class="icon" id="warrantyIcon" alt="warranty" src="img/warranty.png" />
-            </div>
-            <div>
-                <img class="icon" id="showroomIcon" alt="showroom" src="img/storeFront.png"/>
-            </div>
-            <div>
-                <img class="icon" id="approvalIcon" alt="pre-approval" src="img/certified.png"/>
-            </div>
-        </div>
-        <div id="fourthLayer" class="layer labels">
-            <div class="firstLabel">
-                <h3>WARRANTY</h3>
-                <p>
-                </p>
-            </div>
-            <div class="secondLabel">
-                <h3>SHOWROOM</h3>
-                <p>
-                    Visit our showroom and meet with
-                    our experienced team who will help
-                    you find the style, materials and size
-                    that works best for your home and
-                    your needs
-                </p>
-            </div>
-            <div>
-                <h3>PRE-APPROVAL</h3>
-                <p>
-
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="orangeBg seperator">
-        <h2 class="contentHeader blackHeader" id="warranty">Warranty</h2>
-        <p>
-            We believe that windows and doors really impact the look of your
-            home. Not only will a stunning new door or a set of windows
-            improve your home’s curb appeal and overall look – they’ll also
-            make your home safer, more secure and more energy efficient.
         </p>
     </div>
     <!--

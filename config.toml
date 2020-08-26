@@ -15,32 +15,42 @@ title = "Oakville Windows and Doors"
         weight = 1
 
     [[menu.main]]
-        name = "SERVICES"
-        url = "/services/"
+        name = "WINDOWS"
+        url = "/windows/"
         weight = 2
+
+    [[menu.main]]
+        name = "DOORS"
+        url = "/doors/"
+        weight = 3
+
+    [[menu.main]]
+        name = "REPAIRS"
+        url = "/repairs/"
+        weight = 4
 
     [[menu.main]]
         name = "CONTACT"
         url = "/contact/"
-        weight = 3
+        weight = 5
 
     [[menu.main]]
         name = "COMMERCIAL"
         url = "/commercial/"
-        weight = 4
+        weight = 6
 
     [[menu.main]]
         name = "GALLERY"
         url = "/gallery/"
-        weight = 5
+        weight = 7
 
     [[menu.main]]
         name = "BLOG"
         url = "/blog/"
-        weight = 6
+        weight = 8
 
     [[menu.main]]
         name = "TESTIMONIALS"
         url = "/testimonials/"
-        weight = 7
+        weight = 9
 

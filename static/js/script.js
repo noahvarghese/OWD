@@ -341,9 +341,6 @@ switch (page) {
     case "/contact/":
         break;
 
-    case "/services/":
-        break;
-
     case "/blog/":
 
         // Handles zoom of image on mouseover
