@@ -1,0 +1,61 @@
+<h1 class="Blog title">OUR BLOG</h1>
+<p id="pageDescription">
+    At Oakville Windows & Doors, we’re committed to providing you with excellent
+    service – even after your window or door installation is finished. Stay up to date
+    with all of the latest industry trends, maintenance advice and need-to-know
+    information for your new windows and doors with our blog.
+</p>
+<div id="container">
+    {{ $list := where .Pages "Section" "blog" }}
+    {{ $len := (sub (len $list) 1) }}
+    {{ range $i, $post := where .Pages "Section" "blog" }}
+        {{ if eq $i 0 }}
+            <a id="newest" href="{{ .Permalink }}" class="blogLink" alt="{{ .Params.title }}">
+                <div id="newestDescription">
+                    <h2>{{ .Params.title }}</h2>
+                    <p class="blogDescription" id="bannerDescription">
+                        {{ if ne (trim .Params.descNoHTML " ") "" }}
+                            {{- safeHTML (truncate 255 " " .Params.descNoHTML) -}}
+                        {{ else }}
+                            {{- safeHTML (truncate 255 " " .Params.description) -}}
+                        {{ end }}
+                        <span class="readMore">...READ MORE</span>
+                    </p>
+                </div>
+                <div id="bannerImgContainer">
+                    <img id="blogBanner" alt="bannerImage" src="{{ .Params.image }}" class="banner" />
+                </div>
+            </a>
+            <div>
+        {{ else }}
+            <!-- Odd number post, since 1st (0) is displayed at top-->
+            {{ if eq (mod $i 2) 1 }}
+                <div class='horizontal'>
+            {{ end }}
+                    <a href="{{ .Permalink }}" class="blogLink older">
+                        <div class="blogImgContainer"> 
+                            <img src="{{ .Params.image }}" class="banner" alt="{{ .Params.title }}">
+                        </div>
+                        <div>
+                            <h2>{{ .Params.title }}</h2>
+                            <p class="blogDescription" id="bannerDescription">
+                                {{ if ne (trim .Params.descNoHTML " ") "" }}
+                                    {{- truncate 150 " " (safeHTML .Params.descNoHTML) -}}
+                                {{ else }}
+                                    {{- truncate 150 " " (safeHTML .Params.description) -}}
+                                {{ end }}
+                                <span class="readMore">...READ MORE</span>
+                            </p>
+                        </div>
+                    </a>
+            {{ if eq $i $len }}
+                </div>
+            {{ end }}
+            {{ if eq (mod $i 2) 0 }}
+                </div>
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    </div>
+</div>
+<div id="loadSnackbar">Load More...</div>

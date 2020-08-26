@@ -1,13 +1,9 @@
-Backend
-- Connect and test gallery upload
-- Connect and test gallery display
-
-               
 Frontend
+- Style file upload button
+- Add labels for form, overlay on top of input
 - Set up custom 404 page
-- Do gallery template (desktop)
-- Test design ideas
 - Wait for mobile
+
 
 Deploying
 - Direct domain
