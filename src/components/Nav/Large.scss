@@ -1,0 +1,33 @@
+@import "../../assets/scss/fonts.scss";
+
+nav#Nav > #LargeNav {
+    z-index: 10;
+    box-shadow: 0px 4px 8px rgba(43.9, 43.9, 43.9, 0.2);
+    display: flex;
+    padding: 1rem 2rem;
+    align-items: center;
+    align-content: space-between;
+    justify-content: space-between;
+    gap: 3rem;
+    .logoContainer {
+        width: 18rem;
+        img {
+            width: 100%;
+        }
+    }
+
+    & > ul {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 2rem;
+
+        li > div {
+            display: none;
+        }
+    }
+
+    li > a {
+        font-family: Arimo;
+    }
+}

@@ -1,0 +1,20 @@
+@import "../../assets/scss/colors.scss";
+
+.Button {
+    padding: 0.5rem 3rem;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    box-shadow: 4px 8px 8px rgba(43.9, 43.9, 43.9, 0.2);
+    transition: all 0.3s ease-in-out;
+
+    &.Primary {
+        background-color: $orange;
+        color: white;
+        font-family: Arimo;
+    }
+
+    &:hover {
+        z-index: 100;
+        box-shadow: 4px 8px 10px rgba(43.9, 43.9, 43.9, 0.5);
+    }
+}
