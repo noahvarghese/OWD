@@ -43,12 +43,13 @@ nav#Nav {
                 }
             }
         }
-        ul {
+        & > ul {
             position: absolute;
-            top: 105%;
+            top: 100%;
             z-index: 1;
             background-color: white;
             width: 15rem;
+            max-width: 100vw;
             height: min-content;
             box-shadow: 0px 4px 4px rgba(43.9, 43.9, 43.9, 0.2);
             max-height: 0;
@@ -60,18 +61,14 @@ nav#Nav {
             align-items: center;
             justify-content: space-evenly;
 
-            li {
+            & > li {
                 padding: 1rem 0;
                 width: 85%;
                 text-align: center;
-            }
-            li:not(:last-child) {
-                bottom: 0px;
-                border-bottom: 1px solid rgba(43.9, 43.9, 43.9, 0.1);
-            }
-
-            .SmallSubMenuContainer {
-                display: none;
+                &:not(:last-child) {
+                    bottom: 0px;
+                    border-bottom: 1px solid rgba(43.9, 43.9, 43.9, 0.1);
+                }
             }
 
             &.show {

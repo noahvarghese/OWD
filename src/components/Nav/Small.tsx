@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import { getNavMapping } from "./pages";
+import { pages } from "./pages";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
 import "./Small.scss";
+import Item from "./Item";
 
 const SmallNav: React.FC = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -18,7 +19,12 @@ const SmallNav: React.FC = () => {
     }, []);
 
     return (
-        <div id="SmallNav">
+        <div
+            id="SmallNav"
+            onMouseLeave={() => {
+                if (showMenu) toggleMenu();
+            }}
+        >
             <div id="SmallNavContainer">
                 <button id="menuToggle" onClick={toggleMenu}>
                     <div className="first"></div>
@@ -29,7 +35,11 @@ const SmallNav: React.FC = () => {
                     <img src={Logo} alt="Logo" />
                 </Link>
             </div>
-            <ul className={showMenu ? "show" : ""}>{getNavMapping(false)}</ul>
+            <ul className={showMenu ? "show" : ""}>
+                {pages.map((page, index) => (
+                    <Item page={page} key={index} large={false} />
+                ))}
+            </ul>
         </div>
     );
 };

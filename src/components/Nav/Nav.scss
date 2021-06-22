@@ -1,10 +1,31 @@
 @import "../../assets/scss/fonts.scss";
 nav#Nav {
-    a {
-        text-transform: uppercase;
-    }
+    text-transform: uppercase;
+
     li > a {
         font-family: Arimo;
+    }
+
+    li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+
+        // &:hover > .SubMenuContainer {
+        //     visibility: visible;
+        //     opacity: 1;
+        // }
+
+        button {
+            width: 1.5rem;
+            background-color: transparent;
+            border: none;
+            outline: none;
+            img {
+                width: 100%;
+            }
+        }
     }
     & > #subNav {
         display: flex;

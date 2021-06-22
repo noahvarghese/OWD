@@ -7,6 +7,7 @@ nav#Nav > #LargeNav {
     align-content: space-between;
     justify-content: space-between;
     gap: 3rem;
+
     .logoContainer {
         width: 18rem;
         img {
@@ -20,8 +21,13 @@ nav#Nav > #LargeNav {
         flex-wrap: nowrap;
         gap: 2rem;
 
-        li > div {
-            display: none;
+        li {
+            justify-content: center;
+
+            &.Item > .SubMenuContainer {
+                top: 1rem;
+                width: 20rem;
+            }
         }
     }
 }

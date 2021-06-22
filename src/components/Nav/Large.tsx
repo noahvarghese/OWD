@@ -2,7 +2,8 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./Large.scss";
 import Logo from "../../assets/img/logo.png";
-import { getNavMapping } from "./pages";
+import Item from "./Item";
+import { pages } from "./pages";
 
 const LargeNav: React.FC = () => {
     return (
@@ -10,7 +11,11 @@ const LargeNav: React.FC = () => {
             <Link to="/" className="logoContainer">
                 <img src={Logo} alt="logo" />
             </Link>
-            <ul>{getNavMapping(true)}</ul>
+            <ul>
+                {pages.map((page, index) => (
+                    <Item page={page} key={index} large={true} />
+                ))}
+            </ul>
         </div>
     );
 };

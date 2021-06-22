@@ -1,0 +1,48 @@
+@import "../assets/scss/colors.scss";
+
+.DropdownArrow {
+    cursor: pointer;
+    width: 2rem;
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+
+    button {
+        position: relative;
+        height: 100%;
+        width: 1.5rem;
+        background-color: white;
+
+        div {
+            position: absolute;
+            width: 50%;
+            height: 2px;
+            background-color: $gray;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .first {
+            transform: rotate(45deg);
+            left: 35%;
+        }
+
+        .second {
+            transform: rotate(-45deg);
+            left: 65%;
+        }
+    }
+
+    &.show {
+        .first {
+            transform: rotate(-45deg);
+            left: 35%;
+        }
+
+        .second {
+            transform: rotate(45deg);
+        }
+
+        div {
+            background-color: $orange;
+        }
+    }
+}
