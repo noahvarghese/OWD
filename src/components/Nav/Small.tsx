@@ -1,14 +1,18 @@
-import React from "react";
+import React, { useState } from "react";
 import { pages } from "./pages";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
 import "./Small.scss";
 
 const SmallNav: React.FC = () => {
+    const [showMenu, setShowMenu] = useState(false);
+
+    const toggleMenu = () => setShowMenu(!showMenu);
+
     return (
         <div id="SmallNav">
             <div id="SmallNavContainer">
-                <button id="menuToggle">
+                <button id="menuToggle" onClick={toggleMenu}>
                     <div className="first"></div>
                     <div className="second"></div>
                     <div className="third"></div>
@@ -17,7 +21,7 @@ const SmallNav: React.FC = () => {
                     <img src={Logo} alt="Logo" />
                 </Link>
             </div>
-            <ul>
+            <ul className={showMenu ? "show" : ""}>
                 {pages.map((page, index) => (
                     <li key={index}>
                         <Link to={page.path}>{page.title}</Link>

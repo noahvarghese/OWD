@@ -1,6 +1,10 @@
+@import "../../assets/scss/fonts.scss";
 nav#Nav {
     a {
         text-transform: uppercase;
+    }
+    li > a {
+        font-family: Arimo;
     }
     & > #subNav {
         display: flex;
