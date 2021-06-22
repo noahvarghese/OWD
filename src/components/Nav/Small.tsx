@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { pages } from "./pages";
 import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
@@ -9,14 +9,6 @@ const SmallNav: React.FC = () => {
     const [showMenu, setShowMenu] = useState(false);
 
     const toggleMenu = () => setShowMenu(!showMenu);
-
-    useEffect(() => {
-        document
-            .getElementsByTagName("body")[0]
-            .addEventListener("click", () => {
-                if (showMenu) toggleMenu();
-            });
-    }, []);
 
     return (
         <div

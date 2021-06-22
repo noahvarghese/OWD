@@ -15,7 +15,6 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
 
     const triggerDisplay = () => {
         if (page.subMenu) {
-            console.log("YOLO");
             setShow(!show);
         }
     };
@@ -26,12 +25,10 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
             onMouseLeave={() => {
                 if (isBrowser) {
                     triggerDisplay();
-                    console.log("DESKTOP");
                 }
             }}
             onClick={() => {
                 if (isMobile) {
-                    console.log("MOBILE");
                     triggerDisplay();
                 }
             }}
@@ -42,7 +39,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                 <div className="SubMenuContainer">
                     {page.subMenu.map((sub) => {
                         return (
-                            <>
+                            <div key={sub.title}>
                                 <h4>{sub.title}</h4>
                                 <ul>
                                     {sub.list.map((item, listIndex) => (
@@ -53,7 +50,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                                         </li>
                                     ))}
                                 </ul>
-                            </>
+                            </div>
                         );
                     })}
                 </div>

@@ -15,27 +15,36 @@ li.Item {
         padding: 1rem;
         transition: opacity 0.3s ease-in-out;
         box-shadow: 0px 4px 8px rgba(43.9, 43.9, 43.9, 0.2);
+        visibility: hidden;
         display: flex;
         flex-direction: column;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
         align-items: flex-start;
-        justify-content: flex-start;
-        visibility: hidden;
+        justify-content: center;
         gap: 1rem;
 
-        h4 {
-            width: min-content;
-            padding-bottom: 0.25rem;
-            text-align: left;
-            border-bottom: 3px solid $orange;
-        }
-        ul {
+        & > div {
             display: flex;
+            flex-direction: column;
             flex-wrap: wrap;
+            align-items: flex-start;
+            justify-content: flex-start;
             gap: 1rem;
-            li > a {
-                font-family: Roboto !important;
-                text-transform: capitalize;
+
+            h4 {
+                width: min-content;
+                padding-bottom: 0.25rem;
+                text-align: left;
+                border-bottom: 3px solid $orange;
+            }
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                li > a {
+                    font-family: Roboto !important;
+                    text-transform: capitalize;
+                }
             }
         }
     }
