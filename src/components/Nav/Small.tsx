@@ -26,7 +26,11 @@ const SmallNav: React.FC = () => {
             }}
         >
             <div id="SmallNavContainer">
-                <button id="menuToggle" onClick={toggleMenu}>
+                <button
+                    id="menuToggle"
+                    className={showMenu ? "open" : ""}
+                    onClick={toggleMenu}
+                >
                     <div className="first"></div>
                     <div className="second"></div>
                     <div className="third"></div>
