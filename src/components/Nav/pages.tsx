@@ -1,3 +1,6 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
 export interface PagesSubMenuAttributes {
     title: string;
     list: { title: string; path: string }[];
@@ -8,6 +11,38 @@ export interface PagesAttributes {
     path: string;
     subMenu?: PagesSubMenuAttributes[];
 }
+
+export const getNavMapping = (large: boolean) => {
+    return pages.map((page, index) => (
+        <li key={index}>
+            <Link to={page.path}>{page.title}</Link>
+            {page.subMenu ? (
+                <div
+                    className={
+                        `${large ? "Large" : "Small"}` + "SubMenuContainer"
+                    }
+                >
+                    {page.subMenu.map((sub) => {
+                        return (
+                            <>
+                                <h4>{sub.title}</h4>
+                                <ul>
+                                    {sub.list.map((item, listIndex) => (
+                                        <li key={listIndex}>
+                                            <Link to={item.path}>
+                                                {item.title}
+                                            </Link>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </>
+                        );
+                    })}
+                </div>
+            ) : null}
+        </li>
+    ));
+};
 
 export const pages = [
     {
