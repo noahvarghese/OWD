@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { pages } from "./pages";
-import { Link } from "react-router-dom";
 import Logo from "../../assets/img/logo.png";
 import "./Small.scss";
 import Item from "./Item";
+import LinkTracker from "../Routing/LinkTracker";
 
 const SmallNav: React.FC = () => {
     const [showMenu, setShowMenu] = useState(false);
@@ -27,9 +27,9 @@ const SmallNav: React.FC = () => {
                     <div className="second"></div>
                     <div className="third"></div>
                 </button>
-                <Link to="/" className="logoContainer">
+                <LinkTracker to="/" className="logoContainer">
                     <img src={Logo} alt="Logo" />
-                </Link>
+                </LinkTracker>
             </div>
             <ul className={showMenu ? "show" : ""}>
                 {pages.map((page, index) => (

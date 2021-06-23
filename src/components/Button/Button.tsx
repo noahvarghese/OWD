@@ -1,5 +1,5 @@
 import React, { MouseEvent } from "react";
-import { Link } from "react-router-dom";
+import LinkTracker from "../Routing/LinkTracker";
 import "./Button.scss";
 
 export interface ButtonProps {
@@ -14,9 +14,12 @@ const Button: React.FC<ButtonProps> = (props) => {
 
     if (props.link) {
         return (
-            <Link onClick={props.onClick} to={props.link} className={classes}>
-                {props.text}
-            </Link>
+            <LinkTracker
+                onClick={props.onClick}
+                to={props.link}
+                className={classes}
+                text={props.text}
+            />
         );
     } else {
         return (

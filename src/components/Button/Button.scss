@@ -3,7 +3,6 @@
 .Button {
     padding: 0.5rem 2.5rem;
     border-radius: 5px;
-    font-size: 1rem;
     box-shadow: 4px 8px 8px rgba(43.9, 43.9, 43.9, 0.2);
     transition: all 0.3s ease-in-out;
 
@@ -16,5 +15,12 @@
     &:hover {
         z-index: 100;
         box-shadow: 4px 8px 10px rgba(43.9, 43.9, 43.9, 0.5);
+    }
+
+    @media only screen and (min-width: 1367px) {
+        font-size: 1rem;
+    }
+    @media only screen and (max-width: 1366px) {
+        font-size: 0.9rem;
     }
 }

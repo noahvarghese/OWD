@@ -4,8 +4,8 @@ import MediaQuery from "react-responsive";
 import LargeNav from "./Large";
 import SmallNav from "./Small";
 import PrimaryButton from "../Button/PrimaryButton";
-import { Link } from "react-router-dom";
 import "./Nav.scss";
+import LinkTracker from "../Routing/LinkTracker";
 
 export interface NavProps {
     component: () => JSX.Element;
@@ -22,9 +22,9 @@ const Nav: React.FC = () => {
             </MediaQuery>
             <div id="subNav">
                 <p id="breadcrumbs">
-                    <Link to="/" id="Home">
+                    <LinkTracker to="/" id="Home">
                         <img src={Home} alt="Home" />
-                    </Link>
+                    </LinkTracker>
                 </p>
                 <PrimaryButton text="Request a quote" link="/contact" />
             </div>

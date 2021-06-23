@@ -1,6 +1,7 @@
 @import "../../assets/scss/fonts.scss";
 nav#Nav {
     text-transform: uppercase;
+    position: sticky;
 
     li > a {
         font-family: Arimo;
@@ -11,11 +12,6 @@ nav#Nav {
         align-items: center;
         justify-content: space-between;
         gap: 1rem;
-
-        // &:hover > .SubMenuContainer {
-        //     visibility: visible;
-        //     opacity: 1;
-        // }
 
         button {
             width: 1.5rem;
@@ -30,14 +26,15 @@ nav#Nav {
     & > #subNav {
         display: flex;
         flex-wrap: nowrap;
-        height: 4rem;
 
         @media only screen and (min-width: 1366px) {
             padding: 0.5rem 5rem;
+            height: 4rem;
         }
 
         @media only screen and (max-width: 1365px) and (min-width: 340px) {
             padding: 0.5rem 1rem;
+            height: 3rem;
         }
 
         @media only screen and(max-width: 339px) {
@@ -55,7 +52,17 @@ nav#Nav {
             align-items: center;
             height: 100%;
             & > a#Home {
-                width: 1.75rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @media only screen and(min-width: 1367px) {
+                    width: 1.75rem;
+                }
+
+                @media only screen and (max-width: 1366px) {
+                    width: 1.5rem;
+                }
                 img {
                     width: 100%;
                 }
