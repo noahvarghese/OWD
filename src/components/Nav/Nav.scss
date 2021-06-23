@@ -25,42 +25,86 @@ nav#Nav {
     }
     & > #subNav {
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
+
+        box-shadow: 0px 4px 4px rgba(43.9, 43.9, 43.9, 0.2);
+        z-index: 5;
+        align-items: center;
+        // flex-wrap: nowrap;
 
         @media only screen and (min-width: 1366px) {
             padding: 0.5rem 5rem;
             height: 4rem;
+            justify-content: space-between;
         }
 
-        @media only screen and (max-width: 1365px) and (min-width: 340px) {
+        @media only screen and (max-width: 1365px) and (min-width: 444px) {
             padding: 0.5rem 1rem;
             height: 3rem;
+            justify-content: space-between;
         }
 
-        @media only screen and(max-width: 339px) {
-            padding: 0.5rem 0;
+        @media only screen and(max-width: 443px) {
+            display: none;
         }
 
-        box-shadow: 0px 4px 4px rgba(43.9, 43.9, 43.9, 0.2);
-        justify-content: space-between;
-        align-items: center;
-        z-index: 5;
-
-        p#breadcrumbs {
+        ul#breadcrumbs {
             display: flex;
             flex-wrap: nowrap;
             align-items: center;
             height: 100%;
-            & > a#Home {
+
+            li {
+                position: relative;
+            }
+
+            li.path::after {
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                content: " ";
+                border-left: 2px solid black;
+                text-align: center;
+                transform: rotate(20deg);
+            }
+
+            @media only screen and (min-width: 1366px) {
+                li:not(:first-child) {
+                    padding-left: 2rem;
+                }
+
+                li:not(:last-child) {
+                    padding-right: 2rem;
+                }
+            }
+
+            @media only screen and (max-width: 1365px) and (min-width: 444px) {
+                li:not(:first-child) {
+                    padding-left: 1rem;
+                }
+
+                li:not(:last-child) {
+                    padding-right: 1rem;
+                }
+            }
+
+            a {
+                color: black;
+                font-family: Roboto;
+                text-transform: capitalize;
+            }
+
+            a#Home {
                 display: flex;
                 align-items: center;
                 justify-content: center;
 
-                @media only screen and(min-width: 1367px) {
+                @media only screen and(min-width: 1366px) {
                     width: 1.75rem;
                 }
 
-                @media only screen and (max-width: 1366px) {
+                @media only screen and (max-width: 1365px) {
                     width: 1.5rem;
                 }
                 img {

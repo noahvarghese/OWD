@@ -1,31 +1,29 @@
-import React, { useEffect } from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
-import { server } from "./util/permalink";
+import React, { ReactNode, useEffect } from "react";
 // import ProtectedRoute from "./components/ProtectedRoute";
 import { State } from "./types/state";
-import Home from "./pages/Home";
 import { connect } from "react-redux";
-import Nav from "./components/Nav/Nav";
+import { CustomAction } from "./types/customAction";
+import { useLocation } from "react-router-dom";
 
 interface AppRouterProps {
-    loggedIn: boolean;
+    path: { title: string; path: string }[];
+    setPath: (path: string) => CustomAction;
+    children?: ReactNode;
 }
+const AppRouter: React.FC<AppRouterProps> = ({ setPath, ...props }) => {
+    const location = useLocation();
 
-const AppRouter: React.FC<AppRouterProps> = (props) => {
     useEffect(() => {
-        window.addEventListener("beforeunload", async () => {
-            await fetch(server + "auth/logout", {
-                method: "POST",
-                credentials: "include",
-            });
-        });
-    }, []);
-    return (
-        <Router>
-            {!props.loggedIn ? <Nav /> : null}
-            <Route exact path="/" component={Home} />
-        </Router>
-    );
+        setPath(location.pathname);
+    }, [location, setPath]);
+
+    return <>{props.children}</>;
 };
 
-export default connect(({ auth }: State) => ({ loggedIn: auth }))(AppRouter);
+export default connect(
+    ({ path }: State) => ({ path }),
+    (dispatch) => ({
+        setPath: (path: string) =>
+            dispatch({ type: "SET_PATH", payload: path }),
+    })
+)(AppRouter);

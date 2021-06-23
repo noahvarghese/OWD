@@ -3,7 +3,7 @@ import DropdownArrow from "../DropdownArrow";
 import { PagesAttributes } from "../../types/page";
 import "./Item.scss";
 import { isBrowser, isMobile } from "react-device-detect";
-import LinkTracker from "../Routing/LinkTracker";
+import { Link } from "react-router-dom";
 
 interface ItemAttributes {
     page: PagesAttributes;
@@ -33,7 +33,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                 }
             }}
         >
-            <LinkTracker to={page.path} text={page.title} />
+            <Link to={page.path}>{page.title}</Link>
             {page.subMenu ? <DropdownArrow show={show} /> : null}
             {page.subMenu ? (
                 <div className="SubMenuContainer">
@@ -44,10 +44,9 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                                 <ul>
                                     {sub.list.map((item, listIndex) => (
                                         <li key={listIndex}>
-                                            <LinkTracker
-                                                to={item.path}
-                                                text={item.title}
-                                            />
+                                            <Link to={item.path}>
+                                                {item.title}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

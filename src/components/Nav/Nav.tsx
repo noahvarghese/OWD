@@ -5,13 +5,15 @@ import LargeNav from "./Large";
 import SmallNav from "./Small";
 import PrimaryButton from "../Button/PrimaryButton";
 import "./Nav.scss";
-import LinkTracker from "../Routing/LinkTracker";
+import { connect } from "react-redux";
+import { State } from "../../types/state";
+import { Link } from "react-router-dom";
 
 export interface NavProps {
-    component: () => JSX.Element;
+    paths: { title: string; path: string }[];
 }
 
-const Nav: React.FC = () => {
+const Nav: React.FC<NavProps> = ({ paths }) => {
     return (
         <nav id="Nav">
             <MediaQuery maxWidth={1365}>
@@ -21,15 +23,25 @@ const Nav: React.FC = () => {
                 <LargeNav />
             </MediaQuery>
             <div id="subNav">
-                <p id="breadcrumbs">
-                    <LinkTracker to="/" id="Home">
-                        <img src={Home} alt="Home" />
-                    </LinkTracker>
-                </p>
+                <ul id="breadcrumbs">
+                    <li>
+                        <Link to="/" id="Home">
+                            <img src={Home} alt="Home" />
+                        </Link>
+                    </li>
+                    {paths.map((path) => (
+                        <li key={path.title} className="path">
+                            <Link to={path.path}>{path.title}</Link>
+                        </li>
+                    ))}
+                </ul>
                 <PrimaryButton text="Request a quote" link="/contact" />
             </div>
         </nav>
     );
 };
 
-export default Nav;
+export default connect(
+    ({ path }: State) => ({ paths: path }),
+    (_) => ({})
+)(Nav);
