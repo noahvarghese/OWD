@@ -21,7 +21,6 @@ const setPath = (
     if (action.payload === "/") return path;
 
     const pieces = (action.payload as string).split("/");
-    console.log(pieces);
 
     let truePath = "";
 

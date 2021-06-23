@@ -33,7 +33,15 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                 }
             }}
         >
-            <Link to={page.path}>{page.title}</Link>
+            <Link
+                to={page.path}
+                onClick={(e) => {
+                    // prevent dropdown from opening when link is clicked
+                    e.stopPropagation();
+                }}
+            >
+                {page.title}
+            </Link>
             {page.subMenu ? <DropdownArrow show={show} /> : null}
             {page.subMenu ? (
                 <div className="SubMenuContainer">
