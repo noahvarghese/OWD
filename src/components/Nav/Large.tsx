@@ -9,7 +9,7 @@ const LargeNav: React.FC = () => {
     return (
         <div id="LargeNav">
             <Link to="/" className="logoContainer">
-                <img src={Logo} alt="logo" />
+                <img src={Logo} alt="logo" loading="eager" />
             </Link>
             <ul>
                 {pages.map((page, index) => (

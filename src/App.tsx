@@ -6,6 +6,7 @@ import Home from "./pages/Home";
 import { State } from "./types/state";
 import { server } from "./util/permalink";
 import AppRouter from "./AppRouter";
+import Footer from "./components/Footer";
 
 interface AppProps {
     loggedIn: boolean;
@@ -25,8 +26,9 @@ const App: React.FC<AppProps> = ({ loggedIn }) => {
     return (
         <Router>
             <AppRouter>
-                {!loggedIn ? <Nav /> : null}
+                {!loggedIn && <Nav />}
                 <Route exact path="/" component={Home} />
+                {!loggedIn && <Footer />}
             </AppRouter>
         </Router>
     );

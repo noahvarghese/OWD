@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import DropdownArrow from "../DropdownArrow";
+import DropdownArrow from "../Arrows/DropdownArrow";
 import { PagesAttributes } from "../../types/page";
 import "./Item.scss";
 import { isBrowser, isMobile } from "react-device-detect";

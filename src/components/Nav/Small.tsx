@@ -28,7 +28,7 @@ const SmallNav: React.FC = () => {
                     <div className="third"></div>
                 </button>
                 <Link to="/" className="logoContainer">
-                    <img src={Logo} alt="Logo" />
+                    <img src={Logo} alt="Logo" loading="eager" />
                 </Link>
             </div>
             <ul className={showMenu ? "show" : ""}>

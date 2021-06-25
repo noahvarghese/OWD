@@ -26,7 +26,7 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
                 <ul id="breadcrumbs">
                     <li>
                         <Link to="/" id="Home">
-                            <img src={Home} alt="Home" />
+                            <img src={Home} alt="Home" loading="lazy" />
                         </Link>
                     </li>
                     {paths.map((path) => (

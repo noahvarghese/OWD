@@ -1,5 +1,5 @@
 import React, { MouseEvent } from "react";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./Button.scss";
 
 export interface ButtonProps {
@@ -10,14 +10,23 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
+    const location = useHistory();
     const classes = `Button ${props.className}`;
 
     if (props.link) {
-        return (
-            <Link onClick={props.onClick} to={props.link} className={classes}>
-                {props.text}
-            </Link>
-        );
+        if (props.link !== location.location.pathname) {
+            return (
+                <Link
+                    onClick={props.onClick}
+                    to={props.link}
+                    className={classes}
+                >
+                    {props.text}
+                </Link>
+            );
+        } else {
+            return null;
+        }
     } else {
         return (
             <button onClick={props.onClick} className={classes}>
