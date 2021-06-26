@@ -37,9 +37,14 @@ footer#Footer {
 
             a {
                 width: 3rem;
+                transition: 0.3s ease-in-out;
                 img {
                     width: 100%;
                 }
+            }
+
+            a:hover {
+                transform: scale(1.05);
             }
         }
     }
