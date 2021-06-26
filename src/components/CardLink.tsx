@@ -6,7 +6,7 @@ import "./CardLink.scss";
 export interface CardProps {
     img: string;
     title: string;
-    description: string;
+    description?: string;
     to: string;
 }
 
@@ -17,7 +17,7 @@ const CardLink: React.FC<CardProps> = ({ description, img, title, to }) => {
                 <img src={img} alt={title} loading="lazy" />
             </div>
             <h2>{title}</h2>
-            <p>{description}</p>
+            {description && <p>{description}</p>}
             <DirectionalArrow direction="right" />
         </Link>
     );

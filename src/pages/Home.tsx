@@ -7,13 +7,14 @@ import LocalMatters from "../assets/img/support_local.png";
 import Pricing from "../assets/img/financing.png";
 import Showroom from "../assets/img/storeFront.png";
 import Warranty from "../assets/img/warranty.png";
+import "./page.scss";
 import "./Home.scss";
 import CardLink from "../components/CardLink";
 import CardRow from "../components/CardRow";
 
 const Home = () => {
     return (
-        <div id="Home">
+        <div id="Home" className="page">
             <div className="hero">
                 <div className="imgContainer">
                     <img src={Hero} alt="Showroom" loading="lazy" />
@@ -68,13 +69,13 @@ const Home = () => {
                     title="Warranty"
                     description="We offer an extended warranty through our manufacturers"
                     children={
-                        <>
+                        <div className="links">
                             {/* Need to link to actual pdfs */}
-                            <a href="#">Palma warranty - Doors, Enerview</a>
-                            <a href="#">Vinylbilt warranty - Windows</a>
-                            <a href="#">Dayside warranty - Windows</a>
-                            <a href="#">Marting warranty - Windows</a>
-                        </>
+                            <a href="#">Palma - Doors</a>
+                            <a href="#">Vinylbilt - Windows</a>
+                            <a href="#">Dayside - Windows</a>
+                            <a href="#">Martin - Windows</a>
+                        </div>
                     }
                 />
             </div>
@@ -85,7 +86,7 @@ const Home = () => {
                 material and size that works best for your home and your needs.
                 We carry full insurance and our workers are covered by WSIB.
             </p>
-        </div >
+        </div>
     );
 };
 
