@@ -8,7 +8,7 @@ import "./Nav.scss";
 import { connect } from "react-redux";
 import { State } from "../../types/state";
 import { Link } from "react-router-dom";
-import { isBrowser } from "react-device-detect";
+import { isBrowser, isMobile } from "react-device-detect";
 
 export interface NavProps {
     paths: { title: string; path: string }[];
@@ -23,7 +23,7 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
             <MediaQuery minWidth={1366}>
                 <LargeNav />
             </MediaQuery>
-            {isBrowser && (
+            {(isBrowser || isMobile) && (
                 <div id="subNav">
                     <ul id="breadcrumbs">
                         <li>
