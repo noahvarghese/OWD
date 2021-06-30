@@ -1,4 +1,4 @@
-import { pages } from "../../components/Nav/pages";
+import { pages } from "../../data/pages";
 import { CustomAction } from "../../types/customAction";
 import { State } from "../../types/state";
 import { createReducer } from "./util";

@@ -2,7 +2,7 @@ import React from "react";
 import "./Large.scss";
 import Logo from "../../assets/img/logo.png";
 import Item from "./Item";
-import { pages } from "./pages";
+import { pages } from "../../data/pages";
 import { Link } from "react-router-dom";
 
 const LargeNav: React.FC = () => {

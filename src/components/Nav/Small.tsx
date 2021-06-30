@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { pages } from "./pages";
+import { pages } from "../../data/pages";
 import Logo from "../../assets/img/logo.png";
 import "./Small.scss";
 import Item from "./Item";

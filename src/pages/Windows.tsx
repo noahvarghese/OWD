@@ -1,10 +1,12 @@
 import React from "react";
 import Hero from "../assets/img/window_banner.png";
 import CardLink from "../components/CardLink";
-import Wood from "../assets/img/wood.png";
-import Vinyl from "../assets/img/vinyl.png";
+import { materials } from "../data/products/windows/materials";
+import { styles } from "../data/products/windows/styles";
 import "./page.scss";
 import "./Windows.scss";
+
+const imageURL = `${process.env.PUBLIC_URL}/windows/`;
 
 const Windows = () => {
     return (
@@ -25,18 +27,28 @@ const Windows = () => {
                     family's needs.
                 </p>
             </div>
-            <div className="materials">
-                <h2>Materials</h2>
-                <div className="cards">
-                    <CardLink to="/windows/wood" img={Wood} title="Wood" />
-                    <CardLink to="/windows/vinyl" img={Vinyl} title="Vinyl" />
-                </div>
-            </div>
             <div className="styles">
                 <h2>Styles</h2>
                 <div className="cards">
-                    <CardLink to="/windows/wood" img={Wood} title="Wood" />
-                    <CardLink to="/windows/vinyl" img={Vinyl} title="Vinyl" />
+                    {styles.map((style) => (
+                        <CardLink
+                            to={style.to}
+                            img={imageURL + style.img}
+                            title={style.name}
+                        />
+                    ))}
+                </div>
+            </div>
+            <div className="materials">
+                <h2>Materials</h2>
+                <div className="cards">
+                    {materials.map((mat) => (
+                        <CardLink
+                            to={mat.to}
+                            img={imageURL + mat.img}
+                            title={mat.name}
+                        />
+                    ))}
                 </div>
             </div>
         </div>
