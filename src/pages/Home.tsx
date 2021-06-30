@@ -46,7 +46,7 @@ const Home = () => {
                 Oakville Windows & Doors is a small family business which sells
                 directly to the public. No commission or high pressure sales
                 tactics. Our team is made up of caring, personable individuals
-                with a dedication to our customers and our company
+                with a dedication to our customers and our community
             </p>
 
             <div className="rows">
