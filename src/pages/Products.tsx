@@ -22,15 +22,8 @@ const Products: React.FC<ProductProps> = (props) => {
             )
         );
 
-        console.log(els);
-
         for (const el of els) {
             const image = el as HTMLImageElement;
-            console.log(
-                image.naturalWidth,
-                image.naturalHeight,
-                image.namespaceURI
-            );
 
             if (image.naturalHeight > image.naturalWidth) {
                 image.style.width = "auto";

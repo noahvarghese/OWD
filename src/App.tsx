@@ -8,7 +8,6 @@ import { server } from "./util/permalink";
 import AppRouter from "./AppRouter";
 import Footer from "./components/Footer";
 import Products, { ProductProps } from "./pages/Products";
-import WebAR from "./pages/WebAR";
 
 import DoorHero from "./assets/img/doors.jpeg";
 import WindowHero from "./assets/img/window_banner.png";
@@ -18,6 +17,7 @@ import { styles } from "./data/products/windows/styles";
 import { patioDoors } from "./data/products/doors/patio";
 import { frontDoors } from "./data/products/doors/front";
 import { repairs } from "./data/products/repairs";
+import Commercial from "./pages/Commercial";
 
 interface AppProps {
     loggedIn: boolean;
@@ -110,7 +110,7 @@ const App: React.FC<AppProps> = ({ loggedIn }) => {
                     path="/repairs"
                     component={() => Products(repairProps)}
                 />
-                <Route path="/windows/*" component={WebAR} />
+                <Route exact path="/commercial" component={Commercial} />
                 {!loggedIn && <Footer />}
             </AppRouter>
         </Router>
