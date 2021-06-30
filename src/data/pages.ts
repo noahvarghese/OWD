@@ -64,7 +64,7 @@ export const pages = [
         path: "/doors",
         subMenu: [
             {
-                title: "Materials",
+                title: "Entry",
                 list: [
                     {
                         title: "Fibreglass",
@@ -73,6 +73,27 @@ export const pages = [
                     {
                         title: "Steel",
                         path: "/doors/steel",
+                    },
+                ],
+            },
+            {
+                title: "Patio",
+                list: [
+                    {
+                        title: "Bifold",
+                        path: "/doors/bifold",
+                    },
+                    {
+                        title: "French",
+                        path: "/doors/french",
+                    },
+                    {
+                        title: "Multi Slide",
+                        path: "/doors/multi-slide",
+                    },
+                    {
+                        title: "Sliding",
+                        path: "/doors/sliding",
                     },
                 ],
             },

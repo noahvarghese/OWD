@@ -7,20 +7,32 @@ export interface CardProps {
     img: string;
     title: string;
     description?: string;
-    to: string;
+    to?: string;
 }
 
 const CardLink: React.FC<CardProps> = ({ description, img, title, to }) => {
-    return (
-        <Link to={to} className="CardLink">
-            <div className="imgContainer">
-                <img src={img} alt={title} loading="lazy" />
+    if (to) {
+        return (
+            <Link to={to} className="CardLink">
+                <div className="imgContainer">
+                    <img src={img} alt={title} loading="lazy" />
+                </div>
+                <h2>{title}</h2>
+                {description && <p>{description}</p>}
+                <DirectionalArrow direction="right" />
+            </Link>
+        );
+    } else {
+        return (
+            <div className="CardLink">
+                <div className="imgContainer">
+                    <img src={img} alt={title} loading="lazy" />
+                </div>
+                <h2>{title}</h2>
+                {description && <p>{description}</p>}
             </div>
-            <h2>{title}</h2>
-            {description && <p>{description}</p>}
-            <DirectionalArrow direction="right" />
-        </Link>
-    );
+        );
+    }
 };
 
 export default CardLink;

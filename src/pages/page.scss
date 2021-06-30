@@ -12,7 +12,7 @@
     z-index: 1;
 
     .hero {
-        // width: 100%;
+        width: 100%;
         z-index: 1;
         position: relative;
         .imgContainer {
@@ -38,5 +38,9 @@
                 z-index: 2;
             }
         }
+    }
+
+    p {
+        margin: auto;
     }
 }

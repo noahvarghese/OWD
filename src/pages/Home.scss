@@ -1,4 +1,18 @@
 #Home {
+    .hero .imgContainer {
+        img {
+            transform: rotateZ(0.25deg);
+            width: 100%;
+
+            @media only screen and (min-width: 430px) {
+                margin-top: 20%;
+            }
+
+            @media only screen and (max-width: 429px) {
+                margin-top: 0;
+            }
+        }
+    }
     .cards {
         margin: 10rem 0;
         display: flex;

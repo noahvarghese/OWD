@@ -1,5 +1,6 @@
 import React from "react";
-import Hero from "../assets/img/doorlight2000.png";
+// import Hero from "../assets/img/doorlight2000.png";
+import Hero from "../assets/img/hero.jpeg";
 import Window from "../assets/img/windowOrange.png";
 import Door from "../assets/img/doorOrange.png";
 import Repair from "../assets/img/wrenchOrange.png";
@@ -71,10 +72,22 @@ const Home = () => {
                     children={
                         <div className="links">
                             {/* Need to link to actual pdfs */}
-                            <a href="#">Palma - Doors</a>
-                            <a href="#">Vinylbilt - Windows</a>
-                            <a href="#">Dayside - Windows</a>
-                            <a href="#">Martin - Windows</a>
+                            <a href="/warranty/palma.pdf" target="_blank">
+                                Palma - Doors
+                            </a>
+                            <a href="/warranty/vinylbilt.pdf" target="_blank">
+                                Vinylbilt - Windows
+                            </a>
+                            <a href="/warranty/dayside.pdf" target="_blank">
+                                Dayside - Windows
+                            </a>
+                            <a
+                                href="https://fenetresmartin.com/en/warranty/"
+                                target="_blank"
+                                rel="noreferrer"
+                            >
+                                Martin - Windows
+                            </a>
                         </div>
                     }
                 />
