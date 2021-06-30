@@ -35,6 +35,15 @@
         }
     }
 
+    .styles {
+        .cards {
+            .CardLink .imgContainer img {
+                height: auto;
+                width: 100%;
+            }
+        }
+    }
+
     .materials,
     .styles {
         flex-direction: column;
