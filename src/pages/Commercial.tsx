@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import CommercialHero from "../assets/img/commercial/divider.jpg";
 import Office from "../assets/img/commercial/officeSpace.png";
 import Educational from "../assets/img/commercial/officesEducational.png";
