@@ -49,17 +49,12 @@ footer#Footer {
         }
     }
 
-    // @media only screen and (min-width: 901px) {
-    //     .row {
-    //         gap: 10rem;
-    //     }
-    // }
-
-    // @media only screen and(max-width: 900px) {
-    //     .row {
-    //         justify-content: center;
-    //     }
-    // }
+    h3 {
+        span {
+            font-family: Arimo;
+            font-size: 1.5rem;
+        }
+    }
     p {
         font-weight: 300;
         font-size: 1.5rem;

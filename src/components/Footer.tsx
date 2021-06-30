@@ -15,9 +15,10 @@ const Footer: React.FC = () => {
                         <img src={Location} alt="location" />
                     </div>
                     <h3>
-                        1380 Speers Rd Unit #7
+                        <span>1380 Speers Rd </span>
+                        <span>Unit #7</span>
                         <br />
-                        Oakville, Ontario
+                        <span>Oakville, Ontario</span>
                     </h3>
                 </div>
                 <div className="socialMedia">
