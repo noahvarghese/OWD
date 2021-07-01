@@ -2,11 +2,15 @@ import React from "react";
 import PrimaryButton from "../components/Button/PrimaryButton";
 import Checkbox from "../components/Checkbox";
 import Input from "../components/Input";
+import Notification from "../components/Notification";
 import "./page.scss";
 import "./Contact.scss";
 import FileInput from "../components/FileInput";
+import { useState } from "react";
 
 const Contact: React.FC = () => {
+    const [submitted, setSub] = useState(false);
+
     return (
         <div id="Contact" className="page">
             <h1>Contact Us</h1>
@@ -73,8 +77,10 @@ const Contact: React.FC = () => {
                         name="images"
                         label="Drag and drop files, or click to select"
                         multipleFiles={true}
+                        accept="image/*"
                     />
-                    <PrimaryButton text="Request Quote" />
+                    <PrimaryButton text="Request Quote" onClick={(e) => { e.preventDefault(); setSub(true); }} />
+                    {submitted && <Notification message="Message sent" hide={() => setSub(false)} />}
                 </form>
                 <div className="blurb">
                     <div className="section">

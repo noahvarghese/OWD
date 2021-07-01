@@ -1,0 +1,23 @@
+@import "../assets/scss/colors.scss";
+
+.Notification {
+    padding: 0.25rem 2.5rem;
+    box-shadow: 4px 8px 8px rgba(43.9, 43.9, 43.9, 0.2);
+    background-color: $orange;
+    width: max-content;
+    height: max-content;
+    max-width: 66%;
+    position: absolute;
+    bottom: -100%;
+
+    transition: bottom 0.3s ease;
+
+    p {
+        font-family: Arimo;
+        color: white;
+    }
+
+    &.show {
+        bottom: 5rem;
+    }
+}
