@@ -1,6 +1,6 @@
 @import "../../assets/scss/colors.scss";
 
-button.Button {
+.Button {
     &:not(:disabled) {
         border: none;
     }

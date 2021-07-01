@@ -12,7 +12,7 @@ const Notification: React.FC<NotificationProps> = (props) => {
         if (props.display) {
             setTimeout(() => {
                 props.hide();
-            }, 2500);
+            }, 2000);
         }
     }, [props]);
     return (
