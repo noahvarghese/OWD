@@ -5,6 +5,7 @@ import "./Button.scss";
 export interface ButtonProps {
     className?: string;
     text: string;
+    disabled?: boolean;
     link?: string;
     onClick?: (e: MouseEvent<unknown, unknown>) => void;
 }
@@ -29,7 +30,11 @@ const Button: React.FC<ButtonProps> = (props) => {
         }
     } else {
         return (
-            <button onClick={props.onClick} className={classes}>
+            <button
+                onClick={props.onClick}
+                className={classes}
+                disabled={props.disabled}
+            >
                 {props.text}
             </button>
         );

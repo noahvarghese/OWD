@@ -1,38 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect } from "react";
 import "./Notification.scss";
 
 interface NotificationProps {
     message: string;
-    delay?: number;
+    display: boolean;
     hide: () => void;
 }
 
 const Notification: React.FC<NotificationProps> = (props) => {
-    const [timeUp, setTimeUp] = useState(false);
-    const delay = props.delay ? props.delay / 3 : 300;
-
-    setTimeout(() => {
-        setTimeUp(true);
-
-        // setTimeout(() => {
-        //     setTimeUp(false);
-        //     setTimeout(() => {
-        //         props.hide();
-        //     }, delay)
-        // }, delay)
-    }, delay)
-
-    // setTimeout(() => {
-    //     setTimeUp(true);
-    //     props.hide();
-    // }, props.delay ?? 300);
-
-
+    useEffect(() => {
+        if (props.display) {
+            setTimeout(() => {
+                props.hide();
+            }, 2500);
+        }
+    }, [props]);
     return (
-        <div className={(!timeUp ? "show " : "") + "Notification"}>
+        <div className={(props.display ? "show " : "") + "Notification"}>
             <p>{props.message}</p>
         </div>
-    )
-}
+    );
+};
 
-export default Notification
+export default Notification;

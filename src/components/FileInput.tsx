@@ -14,38 +14,43 @@ const FileInput: React.FC<FileInputProps> = (props) => {
     const [dragged, setDrag] = useState(false);
     const [inputRef, setInputRef] = useState<HTMLInputElement | null>(null);
 
-    const filesDropped = useCallback((e: DragEvent<HTMLLabelElement>) => {
-        if (inputRef !== null) {
-            console.log(e);
-            if (e.dataTransfer) {
-                const newFiles = Array.from(e.dataTransfer.files).map((file) => file.name);
-                console.log("Changed")
-                setFiles(newFiles);
+    const filesDropped = useCallback(
+        (e: DragEvent<HTMLLabelElement>) => {
+            if (inputRef !== null) {
+                if (e.dataTransfer) {
+                    const newFiles = Array.from(e.dataTransfer.files).map(
+                        (file) => file.name
+                    );
+                    setFiles(newFiles);
 
-                inputRef.files = e.dataTransfer.files;
+                    inputRef.files = e.dataTransfer.files;
+                }
             }
-        }
-        e.preventDefault();
-    }, [setFiles, inputRef]);
+            e.preventDefault();
+        },
+        [setFiles, inputRef]
+    );
 
-    const filesAdded = useCallback((e: ChangeEvent<HTMLInputElement>) => {
-        const files = e.currentTarget.files;
-        const newFiles: string[] = [];
+    const filesAdded = useCallback(
+        (e: ChangeEvent<HTMLInputElement>) => {
+            const files = e.currentTarget.files;
+            const newFiles: string[] = [];
 
-        if (!files) {
-            console.log("Earased")
-            setFiles([]);
-            return;
-        }
+            if (!files) {
+                setFiles([]);
+                return;
+            }
 
-        for (let i = 0; i < files.length; i++) {
-            const file = files[i];
-            newFiles.push(file.name);
-        }
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                newFiles.push(file.name);
+            }
 
-        setFiles(newFiles);
-        e.preventDefault();
-    }, [setFiles]);
+            setFiles(newFiles);
+            e.preventDefault();
+        },
+        [setFiles]
+    );
 
     return (
         <div className="FileInput">
@@ -60,15 +65,16 @@ const FileInput: React.FC<FileInputProps> = (props) => {
                 onDragLeave={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    setDrag(false)
+                    setDrag(false);
                 }}
                 onDrop={(e) => {
                     e.preventDefault();
                     e.stopPropagation();
-                    e.dataTransfer.dropEffect = 'copy';
+                    e.dataTransfer.dropEffect = "copy";
                     filesDropped(e);
                     setDrag(false);
-                }} >
+                }}
+            >
                 <div className="imgContainer">
                     <img src={File} alt="file" />
                 </div>

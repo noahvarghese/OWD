@@ -79,8 +79,19 @@ const Contact: React.FC = () => {
                         multipleFiles={true}
                         accept="image/*"
                     />
-                    <PrimaryButton text="Request Quote" onClick={(e) => { e.preventDefault(); setSub(true); }} />
-                    {submitted && <Notification message="Message sent" hide={() => setSub(false)} />}
+                    <PrimaryButton
+                        text="Request Quote"
+                        onClick={(e) => {
+                            e.preventDefault();
+                            setSub(true);
+                        }}
+                        disabled={submitted}
+                    />
+                    <Notification
+                        message="Message sent"
+                        hide={() => setSub(false)}
+                        display={submitted}
+                    />
                 </form>
                 <div className="blurb">
                     <div className="section">

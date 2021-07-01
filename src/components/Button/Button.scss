@@ -1,17 +1,31 @@
 @import "../../assets/scss/colors.scss";
 
-.Button {
+button.Button {
+    &:not(:disabled) {
+        border: none;
+    }
+
+    &:disabled {
+        background-color: white;
+        border: 2px solid $orange;
+    }
+
     padding: 0.5rem 2.5rem;
     border-radius: 5px;
     box-shadow: 4px 8px 8px rgba(43.9, 43.9, 43.9, 0.2);
-    transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease;
     outline: none;
-    border: none;
 
     &.Primary {
+        &:not(:disabled) {
+            background-color: $orange;
+            color: white;
+        }
+
+        &:disabled {
+            color: $gray;
+        }
         text-transform: uppercase;
-        background-color: $orange;
-        color: white;
         font-family: Arimo;
     }
 
