@@ -1,3 +1,5 @@
+@import "../assets/scss/colors.scss";
+
 #Home {
     .hero .imgContainer {
         img {
@@ -61,23 +63,20 @@
             flex-wrap: wrap;
             flex-basis: min-content;
             align-items: center;
+            padding-top: 0.5rem;
 
-            @media only screen and (min-width: 1120px) {
-                gap: 0.5rem;
+            @media only screen and (min-width: 765px) {
+                gap: 0.75rem;
                 justify-content: flex-start;
             }
 
             @media only screen and (max-width: 764px) {
-                // gap: 0.5rem;
+                gap: 1rem;
                 justify-content: center;
-                padding-top: 1rem;
-                *:last-of-type {
-                    padding-top: 1rem;
-                }
-            }
-
-            *:not(:last-of-type) {
-                padding-right: 2rem;
+                padding: 0.5rem;
+                // *:last-of-type {
+                //     padding-top: 1rem;
+                // }
             }
         }
     }
