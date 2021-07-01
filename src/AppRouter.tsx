@@ -15,6 +15,7 @@ const AppRouter: React.FC<AppRouterProps> = ({ setPath, ...props }) => {
 
     useEffect(() => {
         setPath(location.pathname);
+        window.scrollTo({ top: 0 });
     }, [location, setPath]);
 
     return <>{props.children}</>;

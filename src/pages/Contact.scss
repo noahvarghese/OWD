@@ -1,0 +1,141 @@
+@import "../assets/scss/colors.scss";
+
+#Contact {
+    width: calc(100% - 4rem);
+    h1 {
+        margin: 5rem 0;
+        width: 100%;
+    }
+    .contents {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        // align-items: center;
+        min-height: 750px;
+        max-height: max-content;
+        min-width: 100%;
+
+        & > * {
+            flex-basis: 0 0 400px;
+            min-width: 300px;
+            max-width: 95%;
+        }
+
+        form {
+            width: 48%;
+            // min-width: 400px;
+            max-width: 95%;
+            border: 1px solid $orange;
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: space-between;
+
+            .inputs {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                div.Input {
+                    flex: 0 0 250px;
+                    // flex-basis: 50%;
+                }
+            }
+
+            .checkboxes {
+                margin: 2rem 0;
+
+                &,
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                }
+                & > div {
+                    gap: 0.2rem;
+                }
+                gap: 1rem;
+            }
+
+            strong {
+                font-family: Arimo;
+                text-transform: uppercase;
+            }
+
+            button {
+                align-self: flex-end;
+            }
+            textarea {
+                width: 100%;
+                height: 10rem;
+                margin-bottom: 2rem;
+                padding: 0.25rem;
+                font-size: 1.2rem;
+                outline: none;
+                &::placeholder {
+                    text-transform: capitalize;
+                }
+            }
+            em {
+                font-size: 1rem;
+            }
+        }
+
+        .blurb {
+            width: 48%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .section {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1rem;
+                & > p > em {
+                    font-size: 1.25rem;
+                    line-height: 2rem;
+                }
+
+                p.location {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    margin-left: 0;
+                }
+
+                div {
+                    &.phone > p {
+                        display: flex;
+                        // justify-content: space-between;
+                        gap: 2rem;
+                    }
+                    &.hours {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 0.5rem;
+
+                        div {
+                            display: flex;
+                            width: 100%;
+                            align-items: flex-start;
+                            justify-content: space-between;
+                        }
+                    }
+                    margin: 0;
+                    width: 100%;
+                }
+                &.small > p {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+
+    iframe {
+        width: 100%;
+        margin: 5rem 2rem;
+        height: 450px;
+        border: 2px solid $orange;
+    }
+}
