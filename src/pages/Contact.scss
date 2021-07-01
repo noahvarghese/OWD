@@ -8,17 +8,28 @@
     }
     .contents {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
+        @media only screen and (min-width: 935px) {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        @media only screen and (max-width: 934px) {
+            flex-direction: column-reverse;
+            justify-content: center;
+            align-items: center;
+            gap: 5rem;
+
+            & > form,
+            & > .blurb {
+                width: 95% !important;
+            }
+        }
         // align-items: center;
         min-height: 750px;
         max-height: max-content;
         min-width: 100%;
 
         & > * {
-            flex-basis: 0 0 400px;
-            min-width: 300px;
             max-width: 95%;
         }
 
@@ -69,27 +80,78 @@
                 align-self: flex-end;
                 z-index: 1;
             }
-            textarea {
-                width: 100%;
+            div.textAreaContainer {
+                border: 1px solid $gray;
                 height: 10rem;
+                width: 100%;
                 margin-bottom: 2rem;
-                padding: 0.25rem;
-                font-size: 1.2rem;
-                outline: none;
-                &::placeholder {
-                    text-transform: capitalize;
+                position: relative;
+
+                svg {
+                    overflow: visible;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+
+                    rect {
+                        fill: transparent;
+                        stroke: $orange;
+                        stroke-width: 5px;
+                        stroke-dasharray: 400%;
+                        stroke-dashoffset: 400%;
+                        z-index: 1;
+                    }
+                }
+
+                textarea:focus-within + svg > rect {
+                    animation: stroke 0.5s linear forwards;
+                    -webkit-animation: stroke 0.5s linear forwards;
+                }
+
+                textarea:not(:focus-within) + svg > rect {
+                    animation: unstroke 0.5s linear forwards;
+                    -webkit-animation: unstroke 0.5s linear forwards;
+                }
+
+                textarea {
+                    height: 100%;
+                    width: 100%;
+                    padding: 0.25rem;
+                    font-size: 1.2rem;
+                    outline: none;
+                    border: none;
+                    z-index: 2;
+                    position: relative;
+
+                    &::placeholder {
+                        text-transform: capitalize;
+                    }
                 }
             }
+
             em {
                 font-size: 1rem;
             }
         }
 
         .blurb {
+            @media only screen and (min-width: 935px) {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-between;
+            }
+            @media only screen and (max-width: 934px) {
+                height: max-content;
+                gap: 2rem;
+            }
             width: 48%;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+
             .section {
                 display: flex;
                 flex-direction: column;
@@ -140,5 +202,41 @@
         margin: 5rem 2rem;
         height: 450px;
         border: 2px solid $orange;
+    }
+}
+
+@keyframes stroke {
+    from {
+        stroke-dashoffset: 400%;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@-webkit-keyframes stroke {
+    from {
+        stroke-dashoffset: 400%;
+    }
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes unstroke {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 400%;
+    }
+}
+
+@-webkit-keyframes unstroke {
+    from {
+        stroke-dashoffset: 0;
+    }
+    to {
+        stroke-dashoffset: 400%;
     }
 }

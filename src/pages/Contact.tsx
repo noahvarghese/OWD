@@ -65,11 +65,16 @@ const Contact: React.FC = () => {
                             <Checkbox name="Other" />
                         </div>
                     </div>
-                    <textarea
-                        id="message"
-                        placeholder="message"
-                        name="message"
-                    ></textarea>
+                    <div className="textAreaContainer">
+                        <textarea
+                            id="message"
+                            placeholder="message"
+                            name="message"
+                        ></textarea>
+                        <svg preserveAspectRatio="none">
+                            <rect x={0} y={0} width="100%" height="100%" />
+                        </svg>
+                    </div>
                     <span>
                         <em>Add optional images here</em>
                     </span>
