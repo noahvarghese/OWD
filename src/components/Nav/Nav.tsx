@@ -1,5 +1,6 @@
 import React from "react";
 import Home from "../../assets/img/home.png";
+import { useLocation } from "react-router-dom";
 import MediaQuery from "react-responsive";
 import LargeNav from "./Large";
 import SmallNav from "./Small";
@@ -15,6 +16,7 @@ export interface NavProps {
 }
 
 const Nav: React.FC<NavProps> = ({ paths }) => {
+    const location = useLocation();
     return (
         <nav id="Nav">
             <MediaQuery maxWidth={1365}>
@@ -23,23 +25,26 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
             <MediaQuery minWidth={1366}>
                 <LargeNav />
             </MediaQuery>
-            {(isBrowser || isMobile) && (
-                <div id="subNav">
-                    <ul id="breadcrumbs">
-                        <li>
-                            <Link to="/" id="Home">
-                                <img src={Home} alt="Home" loading="lazy" />
-                            </Link>
-                        </li>
-                        {paths.map((path) => (
-                            <li key={path.title} className="path">
-                                <Link to={path.path}>{path.title}</Link>
+            {(isBrowser || isMobile) &&
+                // hide subnav because it is empty for the contact page on mobile
+                isBrowser &&
+                location.pathname !== "/contact" && (
+                    <div id="subNav">
+                        <ul id="breadcrumbs">
+                            <li>
+                                <Link to="/" id="Home">
+                                    <img src={Home} alt="Home" loading="lazy" />
+                                </Link>
                             </li>
-                        ))}
-                    </ul>
-                    <PrimaryButton text="Request a quote" link="/contact" />
-                </div>
-            )}
+                            {paths.map((path) => (
+                                <li key={path.title} className="path">
+                                    <Link to={path.path}>{path.title}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                        <PrimaryButton text="Request a quote" link="/contact" />
+                    </div>
+                )}
         </nav>
     );
 };
