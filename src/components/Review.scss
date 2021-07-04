@@ -1,0 +1,145 @@
+@import "../assets/scss/colors.scss";
+
+.Review {
+    // position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    // flex-direction: column;
+    // align-items: flex-start;
+    // justify-content: center;
+
+    gap: 2rem;
+    margin: 0 5rem;
+    // justify-content: center;
+    align-items: center;
+    width: 95%;
+
+    h2 {
+        border-bottom: 3px solid $orange;
+        padding-bottom: 0.5rem;
+        // width: max-content;
+        max-width: 20rem;
+    }
+
+    .rating {
+        position: absolute;
+        height: 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        top: 5%;
+        img {
+            height: 100%;
+        }
+        span {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-45%);
+            color: white;
+            font-family: Arimo;
+        }
+    }
+
+    &:nth-of-type(odd) {
+        flex-direction: row;
+        h2 {
+            padding-right: 3rem;
+        }
+
+        .contents {
+            &::after {
+                border-left: 0;
+                left: 10%;
+                margin-left: -10px;
+            }
+            .imgContainer {
+                transform: rotateZ(180deg);
+                right: -1.5rem;
+            }
+            .rating {
+                left: 2%;
+            }
+        }
+    }
+
+    &:nth-of-type(even) {
+        flex-direction: row-reverse;
+        h2 {
+            padding-left: 3rem;
+        }
+
+        .contents {
+            &::after {
+                border-right: 0;
+                right: 10%;
+                margin-right: -10px;
+            }
+            .imgContainer {
+                left: -1.5rem;
+            }
+            .rating {
+                right: 2%;
+            }
+        }
+    }
+
+    .contents {
+        align-self: center;
+        justify-self: center;
+        padding: 2rem 5rem;
+        border-radius: 0.25rem;
+        box-shadow: 8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2);
+        background-color: $gray;
+        max-width: 800px;
+
+        // max-height: 15rem;
+        // overflow: hidden;
+        position: relative;
+        border: none;
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+            border: 25px solid transparent;
+            border-top-color: $gray;
+            border-bottom: 0;
+            // hides the border as the border appears lighter than the background color
+            margin-bottom: -24px;
+            // box-shadow: 8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2);
+            filter: drop-shadow(8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2));
+        }
+
+        .imgContainer {
+            position: absolute;
+            top: -1.5rem;
+            width: 75px;
+            height: max-content;
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+
+        p {
+            // height: calc(100% - 12rem);
+            overflow: hidden;
+            font-style: italic;
+        }
+
+        p,
+        div {
+            color: white;
+            line-height: 2rem;
+        }
+        .tail {
+            position: absolute;
+            bottom: 0;
+            width: 0;
+            height: 0;
+        }
+    }
+}

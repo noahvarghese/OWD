@@ -104,8 +104,8 @@ const Contact: React.FC = () => {
                             <em>
                                 To get started working with us, or if you have
                                 any questions, please contact us using the form
-                                above. You can also give us a call at (905)
-                                827-3200 or email us at
+                                on this page. You can also give us a call at
+                                (905) 827-3200 or email us at
                                 info@oakvillewindows.com.
                             </em>
                         </p>

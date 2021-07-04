@@ -19,6 +19,7 @@ import { frontDoors } from "./data/products/doors/front";
 import { repairs } from "./data/products/repairs";
 import Commercial from "./pages/Commercial";
 import Contact from "./pages/Contact";
+import Testimonials from "./pages/Testimonials";
 
 interface AppProps {
     loggedIn: boolean;
@@ -113,6 +114,7 @@ const App: React.FC<AppProps> = ({ loggedIn }) => {
                 />
                 <Route exact path="/contact" component={Contact} />
                 <Route exact path="/commercial" component={Commercial} />
+                <Route exact path="/testimonials" component={Testimonials} />
                 {!loggedIn && <Footer />}
             </AppRouter>
         </Router>
