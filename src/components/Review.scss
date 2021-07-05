@@ -1,23 +1,17 @@
 @import "../assets/scss/colors.scss";
 
 .Review {
-    // position: relative;
     display: flex;
     flex-wrap: wrap;
-    // flex-direction: column;
-    // align-items: flex-start;
-    // justify-content: center;
-
     gap: 2rem;
     margin: 0 5rem;
-    // justify-content: center;
     align-items: center;
     width: 95%;
+    transition: all 0.3s ease;
 
     h2 {
         border-bottom: 3px solid $orange;
         padding-bottom: 0.5rem;
-        // width: max-content;
         max-width: 20rem;
         transition: all 0.3s ease;
     }
@@ -93,6 +87,8 @@
         background-color: $gray;
         padding-top: 2rem;
         padding-bottom: 2rem;
+        display: flex;
+        flex-direction: column;
 
         @media only screen and (min-width: 852px) {
             max-width: 800px;
@@ -117,12 +113,7 @@
             padding-left: 2rem;
             padding-right: 2rem;
         }
-        display: flex;
-        flex-direction: column;
-        max-height: 100vh;
 
-        // max-height: 15rem;
-        // overflow: hidden;
         position: relative;
         border: none;
         transition: all 0.3s ease;
@@ -157,16 +148,17 @@
         }
 
         p {
-            // height: calc(100% - 12rem);
-            // overflow: hidden;
-            overflow-y: hidden;
+            overflow: hidden;
             font-style: italic;
             padding-right: 0.25rem;
             line-height: 2rem;
+            max-height: 4rem;
             transition: all 0.3s ease;
+            text-overflow: ellipsis;
 
             &.show {
                 height: max-content;
+                max-height: 100vh;
             }
         }
 
@@ -200,7 +192,6 @@
         }
     }
 
-    transition: all 0.3s ease;
     &:hover {
         transform: scale(1.01);
         h2 {
