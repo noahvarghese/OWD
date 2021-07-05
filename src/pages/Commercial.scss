@@ -21,8 +21,8 @@
 
     .blurb {
         flex-direction: column;
-        align-items: flex-start;
         gap: 2rem;
+        padding: 0 2rem;
 
         p {
             max-width: 95%;
@@ -32,6 +32,19 @@
             text-align: center;
             font-size: 1.5rem;
             margin: 2rem 0;
+        }
+
+        @media only screen and (min-width: 654px) {
+            & {
+                align-items: flex-start;
+            }
+        }
+
+        @media only screen and (max-width: 653px) {
+            & {
+                align-items: center;
+                text-align: center;
+            }
         }
     }
 
@@ -73,8 +86,7 @@
         transform-style: preserve-3d;
         transform: rotateY(180deg);
         border-radius: 10px;
-        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3),
-            0 12px 40px 0 rgba(0, 0, 0, 0.29);
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.3), 0 12px 40px 0 rgba(0, 0, 0, 0.29);
 
         .frontCard,
         .backCard {
@@ -168,8 +180,7 @@
         max-height: 100vh;
         .innerCard {
             transform: rotateY(0deg);
-            box-shadow: 0 4px 8px 0 rgba(43.9, 43.9, 43.9, 0.2),
-                0 6px 20px 0 rgba(43.9, 43.9, 43.9, 0.2);
+            box-shadow: 0 4px 8px 0 rgba(43.9, 43.9, 43.9, 0.2), 0 6px 20px 0 rgba(43.9, 43.9, 43.9, 0.2);
         }
     }
 }

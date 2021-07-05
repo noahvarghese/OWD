@@ -1,12 +1,22 @@
 #Testimonials {
     .blurb {
+        display: flex;
         flex-direction: column;
-        align-items: flex-start;
         gap: 2rem;
         margin-top: 5rem;
         margin-bottom: 5rem;
         width: 100%;
-        padding: 2rem;
+        padding: 0 2rem;
+        @media only screen and (min-width: 654px) {
+            & {
+                align-items: flex-start;
+            }
+        }
+        @media only screen and (max-width: 653px) {
+            & {
+                align-items: center;
+            }
+        }
 
         p {
             max-width: 95%;
@@ -15,7 +25,6 @@
             line-height: 3rem;
             text-align: center;
             font-size: 1.5rem;
-            margin: 2rem 0;
         }
     }
     .cards {
