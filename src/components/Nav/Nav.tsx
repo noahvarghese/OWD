@@ -38,10 +38,10 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
 
     return (
         <nav id="Nav">
-            <MediaQuery maxWidth={1365}>
+            <MediaQuery maxWidth={1530}>
                 <SmallNav />
             </MediaQuery>
-            <MediaQuery minWidth={1366}>
+            <MediaQuery minWidth={1531}>
                 <LargeNav />
             </MediaQuery>
             {showNav && (
