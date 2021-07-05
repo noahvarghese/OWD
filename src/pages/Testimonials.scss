@@ -7,6 +7,16 @@
         margin-bottom: 5rem;
         width: 100%;
         padding: 2rem;
+
+        p {
+            max-width: 95%;
+            font-weight: 300;
+            font-style: italic;
+            line-height: 3rem;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 2rem 0;
+        }
     }
     .cards {
         display: flex;

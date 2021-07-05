@@ -4,6 +4,8 @@ import "./DropdownArrow.scss";
 interface DropdownArrowProps {
     show?: boolean;
     onClick?: (e: MouseEvent<unknown, unknown>) => void;
+    initColor?: string;
+    finalColor?: string;
 }
 const DropdownArrow: React.FC<DropdownArrowProps> = (props) => {
     const [display, setDisplay] = useState(props.show);
@@ -23,8 +25,22 @@ const DropdownArrow: React.FC<DropdownArrowProps> = (props) => {
             onClick={onClick}
         >
             <button onClick={onClick}>
-                <div className="first"></div>
-                <div className="second"></div>
+                <div
+                    className="first"
+                    style={{
+                        backgroundColor: display
+                            ? props.initColor
+                            : props.finalColor,
+                    }}
+                ></div>
+                <div
+                    className="second"
+                    style={{
+                        backgroundColor: display
+                            ? props.initColor
+                            : props.finalColor,
+                    }}
+                ></div>
             </button>
         </div>
     );

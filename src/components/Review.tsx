@@ -3,18 +3,29 @@ import Quote from "../assets/img/quotation1.png";
 // import Star from "../assets/img/star.png";
 import "./Review.scss";
 import { ReviewAttributes } from "../data/reviews";
+import DropdownArrow from "./Arrows/DropdownArrow";
 
 const Review: React.FC<ReviewAttributes> = (props) => {
     const [contentRef, setContentRef] = useState<HTMLDivElement | null>(null);
     const [pRef, setPRef] = useState<HTMLParagraphElement | null>(null);
+    const [display, setDisplay] = useState<boolean>(
+        props.review.length <= 140 || false
+    );
 
     const changeHeight = useCallback(
-        (e?: any) => {
+        (_?: any) => {
             if (contentRef !== null && pRef !== null) {
-                contentRef.style.height = `${pRef.clientHeight + 4 * 16}px`;
+                if (!display) {
+                    contentRef.style.height = `${
+                        pRef.clientHeight +
+                        (props.review.length > 140 ? 7 : 4) * 16
+                    }px`;
+                } else {
+                    contentRef.style.height = "max-content";
+                }
             }
         },
-        [contentRef, pRef]
+        [contentRef, pRef, props.review.length, display]
     );
 
     useEffect(() => {
@@ -39,12 +50,24 @@ const Review: React.FC<ReviewAttributes> = (props) => {
                     <img src={Star} alt="star" />
                     <span>{props.rating}</span>
                 </div> */}
-                <p ref={setPRef}>
+                <p ref={setPRef} className={display ? "show" : ""}>
                     {props.review.length > 140
-                        ? props.review.substr(0, 140)
+                        ? display
+                            ? props.review
+                            : props.review.substr(0, 140)
                         : props.review}
                 </p>
-                <div className="tail"></div>
+                {props.review.length > 140 && (
+                    <div className="tail">
+                        <DropdownArrow
+                            initColor="white"
+                            finalColor="white"
+                            onClick={() => setDisplay(!display)}
+                            show={display}
+                        />
+                        <span>Show {display ? "Less" : "More"}</span>
+                    </div>
+                )}
             </div>
         </div>
     );

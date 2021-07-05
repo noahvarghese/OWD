@@ -4,13 +4,16 @@
     cursor: pointer;
     width: 2rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
     transition: transform 0.3s ease-in-out;
 
     button {
         position: relative;
         height: 100%;
         width: 1.5rem;
-        background-color: white;
+        background-color: transparent;
+        border: none;
 
         div {
             position: absolute;
@@ -22,19 +25,19 @@
 
         .first {
             transform: rotate(45deg);
-            left: 35%;
+            left: 15%;
         }
 
         .second {
             transform: rotate(-45deg);
-            left: 65%;
+            left: 45%;
         }
     }
 
     &.show {
         .first {
             transform: rotate(-45deg);
-            left: 35%;
+            left: 15%;
         }
 
         .second {

@@ -19,6 +19,7 @@
         padding-bottom: 0.5rem;
         // width: max-content;
         max-width: 20rem;
+        transition: all 0.3s ease;
     }
 
     .rating {
@@ -87,18 +88,47 @@
     .contents {
         align-self: center;
         justify-self: center;
-        padding: 2rem 5rem;
         border-radius: 0.25rem;
         box-shadow: 8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2);
         background-color: $gray;
-        max-width: 800px;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+
+        @media only screen and (min-width: 852px) {
+            max-width: 800px;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding-left: 5rem;
+            padding-right: 5rem;
+        }
+
+        @media only screen and (max-width: 851px) and (min-width: 480px) {
+            max-width: calc(100% - 4rem);
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        @media only screen and (max-width: 479px) {
+            max-width: calc(100% - 2rem);
+            justify-content: center;
+            align-items: center;
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            padding-left: 2rem;
+            padding-right: 2rem;
+        }
+        display: flex;
+        flex-direction: column;
+        max-height: 100vh;
 
         // max-height: 15rem;
         // overflow: hidden;
         position: relative;
         border: none;
+        transition: all 0.3s ease;
 
         &::after {
+            transition: all 0.3s ease;
             content: "";
             position: absolute;
             bottom: 0;
@@ -121,25 +151,70 @@
             img {
                 width: 100%;
                 height: auto;
+                transition: all 0.3s ease;
+                filter: drop-shadow(8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2));
             }
         }
 
         p {
             // height: calc(100% - 12rem);
-            overflow: hidden;
+            // overflow: hidden;
+            overflow-y: hidden;
             font-style: italic;
+            padding-right: 0.25rem;
+            line-height: 2rem;
+            transition: all 0.3s ease;
+
+            &.show {
+                height: max-content;
+            }
         }
 
         p,
         div {
             color: white;
-            line-height: 2rem;
         }
+
         .tail {
-            position: absolute;
-            bottom: 0;
-            width: 0;
-            height: 0;
+            margin-bottom: -1rem;
+            align-self: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            &:hover {
+                span {
+                    opacity: 1;
+                }
+            }
+            .DropdownArrow {
+                height: 2rem;
+            }
+            span {
+                transition: all 0.3s ease;
+                opacity: 0;
+                color: white;
+                font-size: 0.8rem;
+                text-align: center;
+            }
+        }
+    }
+
+    transition: all 0.3s ease;
+    &:hover {
+        transform: scale(1.01);
+        h2 {
+            filter: drop-shadow(8px 8px 12px rgba(44, 44, 44, 0.3));
+        }
+
+        .contents {
+            box-shadow: 8px 8px 14px rgba(44, 44, 44, 0.5);
+            &::after {
+                filter: drop-shadow(8px 8px 14px rgba(43.9, 43.9, 43.9, 0.5));
+            }
+            img {
+                filter: drop-shadow(8px 8px 14px rgba(43.9, 43.9, 43.9, 0.5));
+            }
         }
     }
 }
