@@ -1,11 +1,11 @@
 import React from "react";
 import PrimaryButton from "../components/Button/PrimaryButton";
-import Checkbox from "../components/Checkbox";
-import Input from "../components/Input";
+import Checkbox from "../components/Form/Checkbox";
+import Input from "../components/Form/Input";
 import Notification from "../components/Notification";
 import "./page.scss";
 import "./Contact.scss";
-import FileInput from "../components/FileInput";
+import FileInput from "../components/Form/FileInput";
 import { useState } from "react";
 
 const Contact: React.FC = () => {
