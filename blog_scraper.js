@@ -1,6 +1,6 @@
 (async () => {
     clear();
-    const rootURL = "https://cocky-shannon-ef353a.netlify.app/";
+    const rootURL = "https://cocky-shannon-ef353a.netlify.app";
 
     const mainPage = await fetch(rootURL + "/blog").then(async (res) => await res.text());
 
