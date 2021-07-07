@@ -1,0 +1,117 @@
+@import "../assets/scss/colors.scss";
+
+.BlogLink {
+    &:first-child {
+        transition: all 0.3s ease;
+        &:hover,
+        &:focus,
+        &:active {
+            transform: scale(1.01);
+            .imgContainer {
+                box-shadow: 8px 8px 12px rgba(44, 44, 44, 0.7);
+                img {
+                    transform: scale(1.05);
+                }
+            }
+
+            .description {
+                transform: scale(1.05);
+            }
+        }
+        position: relative;
+
+        .imgContainer {
+            height: 100%;
+        }
+
+        .description {
+            background-color: rgba(254, 168, 0, 0.7);
+            position: absolute;
+            bottom: 4rem;
+            right: 4rem;
+            padding: 2rem;
+            gap: 2rem;
+            width: 40%;
+            max-height: 70%;
+
+            * {
+                color: white;
+            }
+
+            p {
+                height: 10rem;
+            }
+        }
+    }
+
+    .imgContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        img {
+            width: 100%;
+            transition: all 0.3s ease;
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            box-shadow: 8px 8px 12px rgba(44, 44, 44, 0.7);
+            img {
+                transform: scale(1.05);
+            }
+        }
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: all 0.3s ease;
+
+        & > p {
+            span {
+                line-height: 2rem;
+                max-height: 50%;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: inline;
+            }
+            em {
+                display: inline;
+                // font-family: Arimo;
+                // text-transform: uppercase;
+                font-style: italic;
+            }
+        }
+    }
+
+    &:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h2 {
+            transition: all 0.3s ease;
+        }
+
+        &:hover {
+            h2 {
+                color: $orange;
+            }
+        }
+        .imgContainer {
+            height: 50%;
+            max-height: 50%;
+            min-height: 50%;
+        }
+
+        .description {
+            gap: 1rem;
+        }
+    }
+}

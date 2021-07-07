@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import "./BlogLink.scss";
 
 interface BlogLinkProps {
     post: any;
@@ -11,7 +12,6 @@ const BlogLink: React.FC<BlogLinkProps> = ({ post, index }) => {
         <Link
             to={post.slug}
             className="BlogLink"
-            id={index === 0 ? "firstBlogPost" : ""}
         >
             <div className="imgContainer">
                 <img
@@ -22,9 +22,11 @@ const BlogLink: React.FC<BlogLinkProps> = ({ post, index }) => {
             <div className="description">
                 <h2>{post.title}</h2>
                 <p>
-                    {post.description.length > 140
+                    <span>{index === 0 ? post.description.length > 240 ? post.description.substring(0, 240) : post.description : post.description.length > 140 ? post.description.substring(0, 140) : post.description}</span>
+                    {/* {post.description.length > 140
                         ? post.description.substring(0, 140)
-                        : post.description}
+                        : post.description} */}
+                    <em> ...Read More</em>
                 </p>
             </div>
         </Link>
