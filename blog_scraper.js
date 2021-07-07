@@ -21,6 +21,7 @@
         doc = parser.parseFromString(page, "text/html");
 
         let val = {};
+        val.banner = doc.getElementById("blogPostBanner").getAttribute("src");
         val.title = doc.getElementsByClassName("title")[0].textContent;
         val.description = doc.getElementById("description").getElementsByTagName("strong")[0].textContent;
         val.date = doc.getElementById("description").getElementsByTagName("span")[1].textContent;
