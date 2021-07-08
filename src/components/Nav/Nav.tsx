@@ -17,7 +17,6 @@ export interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ paths }) => {
     const [showNav, setShowNav] = useState(true);
-
     const location = useLocation();
 
     useEffect(() => {

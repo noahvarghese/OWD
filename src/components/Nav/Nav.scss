@@ -1,4 +1,5 @@
 @import "../../assets/scss/fonts.scss";
+@import "../../assets/scss/colors.scss";
 nav#Nav {
     text-transform: uppercase;
     position: sticky;
@@ -6,8 +7,17 @@ nav#Nav {
     background-color: white;
     z-index: 10;
 
+    .active > a {
+        // To override the black hover
+        color: $orange !important;
+    }
+
     li > a {
         font-family: Arimo;
+
+        &:hover {
+            color: black;
+        }
     }
 
     li {

@@ -20,7 +20,7 @@ const Blog: React.FC = () => {
             </div>
             <div className="posts">
                 {blogPosts.map((post, index) => (
-                    <BlogLink index={index} post={post} />
+                    <BlogLink index={index} post={post} key={post.banner} />
                 ))}
             </div>
         </div>

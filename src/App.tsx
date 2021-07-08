@@ -118,7 +118,7 @@ const App: React.FC<AppProps> = ({ loggedIn }) => {
                 <Route exact path="/commercial" component={Commercial} />
                 <Route exact path="/testimonials" component={Testimonials} />
                 <Route exact path="/blog" component={Blog} />
-                <Route exact path="/blog/:slug" component={BlogPost} />
+                <Route path="/blog/:slug" component={BlogPost} />
                 {!loggedIn && <Footer />}
             </AppRouter>
         </Router>

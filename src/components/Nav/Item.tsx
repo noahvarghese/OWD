@@ -8,9 +8,11 @@ import { Link } from "react-router-dom";
 interface ItemAttributes {
     page: PagesAttributes;
     large: boolean;
+    onClick: () => any;
+    classes: string[];
 }
 
-const Item: React.FC<ItemAttributes> = ({ page, large }) => {
+const Item: React.FC<ItemAttributes> = ({ page, large, onClick, classes }) => {
     const [show, setShow] = useState(false);
 
     const triggerDisplay = () => {
@@ -20,7 +22,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
     };
     return (
         <li
-            className={`${show ? "show " : ""}Item`}
+            className={`${show ? "show " : ""}Item ${classes.join(" ")}`}
             onMouseEnter={() => (isBrowser ? triggerDisplay() : null)}
             onMouseLeave={() => {
                 if (isBrowser) {
@@ -28,6 +30,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large }) => {
                 }
             }}
             onClick={() => {
+                onClick();
                 if (isMobile) {
                     triggerDisplay();
                 }
