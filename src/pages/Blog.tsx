@@ -1,9 +1,9 @@
 import React from "react";
-import { blogPosts } from "@data/blogs";
+import { blogPosts } from "../data/blogs";
 import "./page.scss";
 import "./Blog.scss";
 import BlogPost from "./BlogPost";
-import BlogLink from "@src/components/BlogLink";
+import BlogLink from "../components/BlogLink";
 
 const Blog: React.FC = () => {
     return (
