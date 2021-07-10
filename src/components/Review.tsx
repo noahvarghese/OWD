@@ -2,7 +2,7 @@ import React, { useCallback, useEffect, useState } from "react";
 import Quote from "../assets/img/quotation1.png";
 // import Star from "../assets/img/star.png";
 import "./Review.scss";
-import { ReviewAttributes, reviews } from "../data/reviews";
+import { ReviewAttributes } from "../data/reviews";
 import DropdownArrow from "./Arrows/DropdownArrow";
 
 const Review: React.FC<ReviewAttributes> = (props) => {
