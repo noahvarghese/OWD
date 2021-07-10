@@ -2,6 +2,10 @@
 
 .BlogLink {
     perspective: 100px;
+
+    @media only screen and (max-width: 641px) {
+        height: max-content;
+    }
     .imgContainer {
         display: flex;
         align-items: center;
@@ -30,6 +34,9 @@
         flex-direction: column;
         // overflow: hidden;
         transition: all 0.3s ease;
+        * {
+            transition: all 0.3s ease;
+        }
 
         & > p {
             span {
@@ -47,7 +54,7 @@
             }
         }
     }
-    @media only screen and (min-width: 1264px) {
+    @media only screen and (min-width: 1265px) {
         &:not(:first-child) {
             .imgContainer {
                 height: 50%;
@@ -70,11 +77,25 @@
         }
     }
 
-    @media only screen and (max-width: 1263px) {
+    @media only screen and (max-width: 1264px) {
         &:not(:first-child) {
             position: relative;
+
             .imgContainer {
-                height: 100%;
+                @media only screen and (max-width: 641px) {
+                    width: 100%;
+                }
+                @media only screen and (min-width: 732px) {
+                    & {
+                        height: 100%;
+                    }
+                }
+                @media only screen and (max-width: 731px) and(min-width: 642px) {
+                    & {
+                        width: 90%;
+                        max-height: 90%;
+                    }
+                }
             }
             &:hover,
             &:focus,
@@ -88,23 +109,67 @@
                 }
 
                 .description {
-                    transform: scale(1.05);
+                    @media only screen and (max-width: 504px) {
+                        h2 {
+                            font-size: 1.25rem;
+                        }
+                    }
+                    @media only screen and (min-width: 642px) {
+                        transform: scale(1.05);
+                    }
+                    @media only screen and (max-width: 641px) {
+                        * {
+                            transform: scale(1.05);
+                        }
+                    }
                 }
             }
 
             .description {
-                background-color: rgba(44, 44, 44, 0.8);
-                filter: drop-shadow(4px 8px 8px rgba(44, 44, 44, 0.4));
                 position: absolute;
                 @media only screen and (min-width: 1120px) {
+                    background-color: rgba(44, 44, 44, 0.8);
+                    filter: drop-shadow(4px 8px 8px rgba(44, 44, 44, 0.4));
                     bottom: 4rem;
                     right: 4rem;
                 }
 
                 @media only screen and (max-width: 1119px) and (min-width: 732px) {
+                    background-color: rgba(44, 44, 44, 0.8);
+                    filter: drop-shadow(4px 8px 8px rgba(44, 44, 44, 0.4));
                     bottom: 2rem;
                     right: 2rem;
                 }
+
+                @media only screen and (max-width: 731px) and (min-width: 642px) {
+                    background-color: rgba(44, 44, 44, 0.8);
+                    filter: drop-shadow(4px 8px 8px rgba(44, 44, 44, 0.4));
+                    bottom: 0;
+                    right: 0;
+                    max-width: 70%;
+                    max-height: max-content;
+                }
+
+                // @media only screen and (max-width: 731px) and (min-width: 642px) {
+                //     background-color: rgba(254, 168, 0, 0.7);
+                //     bottom: 0;
+                //     right: 0;
+                //     max-width: 70%;
+                //     max-height: max-content;
+                // }
+
+                @media only screen and (max-width: 641px) {
+                    bottom: 0;
+                    left: 0;
+                    width: 100%;
+                    // background-image: radial-gradient(ellipse at bottom, rgb(254, 168, 0), transparent);
+                    background-image: linear-gradient(to top, rgba(44, 44, 44, 1), transparent);
+                    text-align: center;
+                    p {
+                        display: none;
+                    }
+                }
+
                 padding: 2rem;
                 gap: 2rem;
                 width: 30rem;
@@ -138,26 +203,68 @@
             }
 
             .description {
-                transform: scale(1.05);
+                @media only screen and (min-width: 642px) {
+                    transform: scale(1.05);
+                }
+                @media only screen and (max-width: 641px) {
+                    * {
+                        transform: scale(1.05);
+                    }
+                }
             }
         }
 
         .imgContainer {
-            height: 100%;
+            @media only screen and (min-width: 732px) {
+                & {
+                    height: 100%;
+                }
+            }
+            @media only screen and (max-width: 731px) and (min-width: 642px) {
+                & {
+                    width: 90%;
+                    max-height: 90%;
+                }
+            }
+
+            @media only screen and (max-width: 641px) {
+                width: 100%;
+            }
         }
 
         .description {
-            background-color: rgba(254, 168, 0, 0.7);
             position: absolute;
 
             @media only screen and (min-width: 1120px) {
+                background-color: rgba(254, 168, 0, 0.7);
                 bottom: 4rem;
                 right: 4rem;
             }
 
             @media only screen and (max-width: 1119px) and (min-width: 732px) {
+                background-color: rgba(254, 168, 0, 0.7);
                 bottom: 2rem;
                 right: 2rem;
+            }
+
+            @media only screen and (max-width: 731px) and (min-width: 642px) {
+                background-color: rgba(254, 168, 0, 0.7);
+                bottom: 0;
+                right: 0;
+                max-width: 70%;
+                max-height: max-content;
+            }
+
+            @media only screen and (max-width: 641px) {
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                // background-image: radial-gradient(ellipse at bottom, rgb(254, 168, 0), transparent);
+                background-image: linear-gradient(to top, $orange, transparent);
+                text-align: center;
+                p {
+                    display: none;
+                }
             }
 
             padding: 2rem;
