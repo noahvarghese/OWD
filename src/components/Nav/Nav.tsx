@@ -29,8 +29,6 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
                 pages.find((page) => {
                     const pathPieces = page.path.split("/");
                     const locationPieces = location.pathname.split("/");
-                    console.log(page.path);
-                    console.log(location.pathname);
                     if (pathPieces.length !== locationPieces.length)
                         return false;
 
@@ -40,14 +38,14 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
                     return true;
                 }) ?? pages.find((page) => page.path === "/")!
             ).title,
-        [location]
+        [location.pathname]
     );
 
     const [active, setActive] = useState(getActiveTitle());
 
     useEffect(() => {
         setActive(getActiveTitle());
-    }, [location, getActiveTitle]);
+    }, [getActiveTitle]);
 
     const [showMenu, setShowMenu] = useState(false);
 

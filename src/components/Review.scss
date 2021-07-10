@@ -152,13 +152,13 @@
             font-style: italic;
             padding-right: 0.25rem;
             line-height: 2rem;
-            max-height: 4rem;
+            // max-height: 50vh;
             transition: all 0.3s ease;
             text-overflow: ellipsis;
 
             &.show {
-                height: max-content;
-                max-height: 100vh;
+                max-height: 100vh !important;
+                height: max-content !important;
             }
         }
 
