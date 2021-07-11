@@ -1,6 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Quote from "../assets/img/quotation1.png";
-// import Star from "../assets/img/star.png";
 import "./Review.scss";
 import { ReviewAttributes } from "../data/reviews";
 import DropdownArrow from "./Arrows/DropdownArrow";
@@ -21,17 +20,18 @@ const Review: React.FC<ReviewAttributes> = (props) => {
                 pRef.style.maxHeight = "max-content";
                 pRef.textContent = props.review.substring(0, 140);
                 setMinHeight(pRef.clientHeight);
-                console.log(pRef.clientHeight);
-                // pRef.style.maxHeight = pRef.clientHeight + "px";
                 pRef.textContent = props.review;
                 setMaxHeight(pRef.clientHeight);
-                console.log(pRef.clientHeight);
                 pRef.style.maxHeight = minHeight + "px";
             }
         }
     }, [pRef, props.review, minHeight]);
 
     useEffect(() => {
+        try {
+            window.removeEventListener("resize", (_) => reset());
+        } catch (_) {}
+
         window.addEventListener("resize", (_) => reset());
     }, [reset]);
 
@@ -61,7 +61,6 @@ const Review: React.FC<ReviewAttributes> = (props) => {
                     el.classList.add("show");
                 }
             }
-            console.log(newMin, newMax);
         }
     };
 

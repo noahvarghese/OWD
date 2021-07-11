@@ -2,7 +2,7 @@
 
 .Review {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     gap: 2rem;
     margin: 0 5rem;
     align-items: center;
@@ -14,72 +14,11 @@
         padding-bottom: 0.5rem;
         max-width: 20rem;
         transition: all 0.3s ease;
-    }
-
-    .rating {
-        position: absolute;
-        height: 55px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        top: 5%;
-        img {
-            height: 100%;
-        }
-        span {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-45%);
-            color: white;
-            font-family: Arimo;
-        }
-    }
-
-    &:nth-of-type(odd) {
-        flex-direction: row;
-        h2 {
-            padding-right: 3rem;
-        }
-
-        .contents {
-            &::after {
-                border-left: 0;
-                left: 10%;
-                margin-left: -10px;
-            }
-            .imgContainer {
-                transform: rotateZ(180deg);
-                right: -1.5rem;
-            }
-            .rating {
-                left: 2%;
-            }
-        }
-    }
-
-    &:nth-of-type(even) {
-        flex-direction: row-reverse;
-        h2 {
-            padding-left: 3rem;
-        }
-
-        .contents {
-            &::after {
-                border-right: 0;
-                right: 10%;
-                margin-right: -10px;
-            }
-            .imgContainer {
-                left: -1.5rem;
-            }
-            .rating {
-                right: 2%;
-            }
-        }
+        padding: 0 1rem 0.5rem 1rem;
     }
 
     .contents {
+        perspective: 100px;
         align-self: center;
         justify-self: center;
         border-radius: 0.25rem;
@@ -132,10 +71,15 @@
             margin-bottom: -24px;
             // box-shadow: 8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2);
             filter: drop-shadow(8px 8px 12px rgba(43.9, 43.9, 43.9, 0.2));
+            border-left: 0;
+            left: 10%;
+            margin-left: -10px;
         }
 
         .imgContainer {
             position: absolute;
+            transform: rotateZ(180deg);
+            right: -1.5rem;
             top: -1.5rem;
             width: 75px;
             height: max-content;

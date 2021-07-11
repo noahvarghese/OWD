@@ -7,6 +7,7 @@
         margin-bottom: 5rem;
         width: 100%;
         padding: 0 2rem;
+
         @media only screen and (min-width: 654px) {
             & {
                 align-items: flex-start;
@@ -30,14 +31,6 @@
     .cards {
         display: flex;
         flex-direction: column;
-        & > *:nth-of-type(odd) {
-            justify-self: flex-start;
-        }
-
-        & > :nth-of-type(even) {
-            justify-self: flex-end;
-        }
-        // justify-content: space-between;
         align-items: center;
         gap: 5rem;
         margin-bottom: 10rem;
