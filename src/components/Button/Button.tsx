@@ -1,4 +1,4 @@
-import React, { MouseEvent } from "react";
+import React, { MouseEvent, useState } from "react";
 import { Link, useHistory } from "react-router-dom";
 import "./Button.scss";
 
@@ -11,8 +11,10 @@ export interface ButtonProps {
 }
 
 const Button: React.FC<ButtonProps> = (props) => {
+    console.log(props);
     const location = useHistory();
-    const classes = `Button ${props.className}`;
+    const [classes, _] = useState(`Button ${props.className}`);
+    console.log(classes);
 
     if (props.link) {
         if (props.link !== location.location.pathname) {
