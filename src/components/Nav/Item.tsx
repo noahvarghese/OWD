@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 interface ItemAttributes {
     page: PagesAttributes;
     large: boolean;
-    onClick: () => any;
+    onClick?: () => any;
     classes: string[];
 }
 
@@ -30,7 +30,7 @@ const Item: React.FC<ItemAttributes> = ({ page, large, onClick, classes }) => {
                 }
             }}
             onClick={() => {
-                onClick();
+                if (onClick) onClick();
                 if (isMobile) {
                     triggerDisplay();
                 }
@@ -45,26 +45,28 @@ const Item: React.FC<ItemAttributes> = ({ page, large, onClick, classes }) => {
             >
                 {page.title}
             </Link>
-            {page.subMenu ? <DropdownArrow show={show} /> : null}
             {page.subMenu ? (
-                <div className="SubMenuContainer">
-                    {page.subMenu.map((sub) => {
-                        return (
-                            <div key={sub.title}>
-                                <h4>{sub.title}</h4>
-                                <ul>
-                                    {sub.list.map((item, listIndex) => (
-                                        <li key={listIndex}>
-                                            <Link to={item.path}>
-                                                {item.title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                            </div>
-                        );
-                    })}
-                </div>
+                <>
+                    <DropdownArrow show={show} />
+                    <div className="SubMenuContainer">
+                        {page.subMenu.map((sub) => {
+                            return (
+                                <div key={sub.title}>
+                                    <h4>{sub.title}</h4>
+                                    <ul>
+                                        {sub.list.map((item, listIndex) => (
+                                            <li key={listIndex}>
+                                                <Link to={item.path}>
+                                                    {item.title}
+                                                </Link>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            );
+                        })}
+                    </div>
+                </>
             ) : null}
         </li>
     );

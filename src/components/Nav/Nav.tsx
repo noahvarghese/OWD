@@ -11,8 +11,6 @@ import { Link } from "react-router-dom";
 import { isMobile } from "react-device-detect";
 import { pages } from "../../data/pages";
 import Item from "./Item";
-import "./Small.scss";
-import "./Large.scss";
 
 export interface NavProps {
     paths: { title: string; path: string }[];
@@ -21,7 +19,7 @@ export interface NavProps {
 const Nav: React.FC<NavProps> = ({ paths }) => {
     const [showNav, setShowNav] = useState(true);
     const location = useLocation();
-    const isLarge = useMediaQuery({ query: "(min-width: 1530px)" });
+    const isLarge = useMediaQuery({ query: "(min-width: 1380px)" });
 
     const getActiveTitle = useCallback(
         (): string =>
@@ -44,7 +42,9 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
     const [active, setActive] = useState(getActiveTitle());
 
     useEffect(() => {
-        setActive(getActiveTitle());
+        const title = getActiveTitle();
+        console.log(title);
+        setActive(title);
     }, [getActiveTitle]);
 
     const [showMenu, setShowMenu] = useState(false);
@@ -99,7 +99,6 @@ const Nav: React.FC<NavProps> = ({ paths }) => {
                     {pages.map((page, index) => (
                         <Item
                             classes={active === page.title ? ["active"] : []}
-                            onClick={() => setActive(page.title)}
                             page={page}
                             key={index}
                             large={isLarge}
