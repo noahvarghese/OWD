@@ -1,17 +1,34 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useMediaQuery } from "react-responsive";
 import "./BlogLink.scss";
+import PrimaryButton from "./Button/PrimaryButton";
 
 interface BlogLinkProps {
     post: any;
     index: number;
+    className?: string;
 }
 
-const BlogLink: React.FC<BlogLinkProps> = ({ post, index }) => {
+const BlogLink: React.FC<BlogLinkProps> = ({ post, index, className }) => {
+    const isMedium = useMediaQuery({ maxWidth: 1144, minWidth: 637 });
+    const isSmall = useMediaQuery({ maxWidth: 636 });
+
+    const maxDescriptionLength = !isSmall && index === 0 ? 240 : 140;
+    const description =
+        post.description.length > maxDescriptionLength
+            ? post.description.substring(0, maxDescriptionLength) + "..."
+            : post.description;
+
     return (
-        <Link
-            to={post.slug}
-            className="BlogLink"
+        <div
+            className={`${
+                className ?? (!isMedium && !isSmall)
+                    ? "large"
+                    : isMedium && !isSmall
+                    ? "small"
+                    : "tiny"
+            } BlogLink`}
         >
             <div className="imgContainer">
                 <img
@@ -22,14 +39,15 @@ const BlogLink: React.FC<BlogLinkProps> = ({ post, index }) => {
             <div className="description">
                 <h2>{post.title}</h2>
                 <p>
-                    <span>{index === 0 ? post.description.length > 240 ? post.description.substring(0, 240) : post.description : post.description.length > 140 ? post.description.substring(0, 140) : post.description}</span>
-                    {/* {post.description.length > 140
-                        ? post.description.substring(0, 140)
-                        : post.description} */}
-                    <em> ...Read More</em>
+                    <span>{description}</span>
                 </p>
+                <PrimaryButton
+                    link={post.slug}
+                    text="Read More"
+                    className="secondary"
+                />
             </div>
-        </Link>
+        </div>
     );
 };
 

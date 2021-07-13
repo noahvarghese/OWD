@@ -29,57 +29,61 @@
     }
 
     .posts {
-        @media only screen and (min-width: 1265px) {
-            flex-direction: row;
-            & > :not(:first-child) {
-                width: 48%;
-            }
-        }
-
-        @media only screen and (max-width: 1264px) {
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            & > :not(:first-child) {
-                width: 100%;
-            }
-        }
-
-        perspective: 100px;
+        width: 100%;
         display: flex;
         flex-wrap: wrap;
         gap: 3rem;
         margin-bottom: 5rem;
-        padding: 0 2rem;
+        align-items: center;
 
-        & > :first-child {
-            width: 100%;
-            @media only screen and (min-width: 642px) {
-                & {
-                    height: 30rem;
-                }
-            }
-            @media only screen and (max-width: 641px) {
-                height: max-content;
-            }
-            margin-bottom: 5rem;
+        @media only screen and (min-width: 1145px) {
+            flex-direction: row;
+            justify-content: center;
         }
 
-        & > :not(:first-child) {
-            @media only screen and (min-width: 1265px) {
-                & {
-                    height: 25rem;
-                }
-            }
-
-            @media only screen and (max-width: 1264px) and (min-width: 642px) {
-                & {
-                    height: 30rem;
-                }
-            }
-            @media only screen and (max-width: 641px) {
-                height: max-content;
-            }
+        @media only screen and (max-width: 1144px) {
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
         }
+
+        // @media only screen and (max-width: 1264px) {
+        //     flex-direction: column;
+        //     align-items: center;
+        //     justify-content: center;
+        //     & > :not(:first-child) {
+        //         width: 100%;
+        //     }
+        // }
+
+        // & > :first-child {
+        //     width: 100%;
+        //     @media only screen and (min-width: 642px) {
+        //         & {
+        //             height: 30rem;
+        //         }
+        //     }
+        //     @media only screen and (max-width: 641px) {
+        //         height: max-content;
+        //     }
+        //     margin-bottom: 5rem;
+        // }
+
+        // & > :not(:first-child) {
+        //     @media only screen and (min-width: 1265px) {
+        //         & {
+        //             height: 25rem;
+        //         }
+        //     }
+
+        //     @media only screen and (max-width: 1264px) and (min-width: 642px) {
+        //         & {
+        //             height: 30rem;
+        //         }
+        //     }
+        //     @media only screen and (max-width: 641px) {
+        //         height: max-content;
+        //     }
+        // }
     }
 }

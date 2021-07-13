@@ -34,6 +34,9 @@
         background-color: white;
         // color: $gray;
         color: black;
+        &:hover {
+            transform: scale(1.05);
+        }
     }
 
     &:hover {
