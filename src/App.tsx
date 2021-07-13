@@ -22,6 +22,7 @@ import Contact from "./pages/Contact";
 import Testimonials from "./pages/Testimonials";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Gallery from "./pages/Gallery";
 
 interface AppProps {
     loggedIn: boolean;
@@ -119,6 +120,7 @@ const App: React.FC<AppProps> = ({ loggedIn }) => {
                 <Route exact path="/testimonials" component={Testimonials} />
                 <Route exact path="/blog" component={Blog} />
                 <Route path="/blog/:slug" component={BlogPost} />
+                <Route exact path="/gallery" component={Gallery} />
                 {!loggedIn && <Footer />}
             </AppRouter>
         </Router>
