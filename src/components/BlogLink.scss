@@ -58,7 +58,7 @@
     // @media only screen and (min-width: 0) {
     &.small {
         flex-direction: column;
-        width: clamp(200px, 700px, 95vw);
+        width: clamp(200px, 700px, 90vw);
         // height: clamp(max-content, 600px, 800px);
 
         height: 600px;
@@ -74,25 +74,33 @@
     }
 
     &.tiny {
-        height: 600px;
         flex-direction: column;
         width: 95%;
 
         @media only screen and (min-width: 480px) {
+            height: 600px;
             .imgContainer {
-                height: 40%;
+                height: 50%;
             }
             .description {
-                height: 60%;
+                height: 50%;
             }
         }
 
         @media only screen and (max-width: 479px) {
+            height: 550px;
             .imgContainer {
-                height: 30%;
+                height: 60%;
             }
             .description {
-                height: 70%;
+                height: 40%;
+                &.hidden {
+                    align-items: center;
+                    text-align: center;
+                    .secondary {
+                        align-self: center;
+                    }
+                }
             }
         }
         .imgContainer {

@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { useMediaQuery } from "react-responsive";
 import "./BlogLink.scss";
 import PrimaryButton from "./Button/PrimaryButton";
@@ -13,6 +12,7 @@ interface BlogLinkProps {
 const BlogLink: React.FC<BlogLinkProps> = ({ post, index, className }) => {
     const isMedium = useMediaQuery({ maxWidth: 1144, minWidth: 637 });
     const isSmall = useMediaQuery({ maxWidth: 636 });
+    const isTiny = useMediaQuery({ maxWidth: 480 });
 
     const maxDescriptionLength = !isSmall && index === 0 ? 240 : 140;
     const description =
@@ -36,11 +36,13 @@ const BlogLink: React.FC<BlogLinkProps> = ({ post, index, className }) => {
                     alt="blog post banner"
                 />
             </div>
-            <div className="description">
+            <div className={(isTiny ? "hidden " : "") + "description"}>
                 <h2>{post.title}</h2>
-                <p>
-                    <span>{description}</span>
-                </p>
+                {!isTiny && (
+                    <p>
+                        <span>{description}</span>
+                    </p>
+                )}
                 <PrimaryButton
                     link={post.slug}
                     text="Read More"
