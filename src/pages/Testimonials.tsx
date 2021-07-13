@@ -8,11 +8,11 @@ import Hero from "../assets/img/testimonials.jpg";
 const Testimonials: React.FC = (props) => {
     return (
         <div id="Testimonials" className="page">
-            <div className="hero">
+            {/* <div className="hero">
                 <div className="imgContainer">
                     <img src={Hero} alt="hero" />
                 </div>
-            </div>
+            </div> */}
             <div className="blurb">
                 <h1>Testimonials</h1>
                 <p>
