@@ -3,16 +3,10 @@ import Review from "../components/Review";
 import { reviews } from "../data/reviews";
 import "./page.scss";
 import "./Testimonials.scss";
-import Hero from "../assets/img/testimonials.jpg";
 
-const Testimonials: React.FC = (props) => {
+const Testimonials: React.FC = () => {
     return (
         <div id="Testimonials" className="page">
-            {/* <div className="hero">
-                <div className="imgContainer">
-                    <img src={Hero} alt="hero" />
-                </div>
-            </div> */}
             <div className="blurb">
                 <h1>Testimonials</h1>
                 <p>
